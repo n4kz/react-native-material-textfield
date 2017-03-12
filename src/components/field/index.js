@@ -9,6 +9,7 @@ export default class TextField extends Component {
     underlineColorAndroid: 'transparent',
     disableFullscreenUI: true,
     autoCapitalize: 'sentences',
+    editable: true,
 
     animationDuration: 225,
 
@@ -18,7 +19,6 @@ export default class TextField extends Component {
 
     errorColor: 'rgb(213, 0, 0)',
 
-    editable: true,
     disabled: false,
   };
 
@@ -31,10 +31,9 @@ export default class TextField extends Component {
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
 
+    label: PropTypes.string.isRequired,
     error: PropTypes.string,
     errorColor: PropTypes.string,
-
-    placeholder: PropTypes.string.isRequired,
 
     disabled: PropTypes.bool,
   };
@@ -143,7 +142,7 @@ export default class TextField extends Component {
   }
 
   render() {
-    let { style, error, editable, disabled, animationDuration, placeholder, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
+    let { style, error, editable, disabled, animationDuration, label, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
     let { focused, focus, text, error: hint } = this.state;
 
     let active = !!text;
@@ -197,7 +196,7 @@ export default class TextField extends Component {
             {disabled && <View style={[styles.border, borderStyle]} pointerEvents='none' />}
 
             <Label {...{ tintColor, baseColor, errorColor, animationDuration, focused, errored, active }}>
-              {placeholder}
+              {label}
             </Label>
 
             <TextInput
