@@ -1,0 +1,21 @@
+{
+	"name": "react-native-material-textfield",
+	"version": "0.0.1",
+	"license": "BSD-3-Clause",
+	"author": "Alexander Nazarov <n4kz@n4kz.com>",
+
+	"description": "Material textfield",
+	"keywords": ["react", "react-component", "react-native", "ios", "android", "input", "textinput", "field", "textfield", "material"],
+
+	"main": "index.js",
+
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/n4kz/react-native-material-textfield.git"
+	},
+
+	"peerDependencies": {
+		"react": "*",
+		"react-native": "*"
+	}
+}
