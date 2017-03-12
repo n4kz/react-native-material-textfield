@@ -2,6 +2,8 @@
 
 Material texfield with consistent behaviour on iOS and Android
 
+![Example](https://cloud.githubusercontent.com/assets/2055622/23831653/145e6bc8-0737-11e7-8663-c31454c639cb.gif)
+
 ## Installation
 
 ```bash
