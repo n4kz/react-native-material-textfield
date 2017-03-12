@@ -168,6 +168,11 @@ export default class TextField extends Component {
       outputRange: [12, 0, 0],
     });
 
+    let opacity = focus.interpolate({
+      inputRange: [-1, 0, 1],
+      outputRange: [1, 0, 0],
+    });
+
     let containerStyle = {
       ...(disabled?
         { overflow: 'hidden' }:
@@ -184,7 +189,7 @@ export default class TextField extends Component {
     };
 
     let hintStyle = {
-      height, fontSize,
+      height, fontSize, opacity,
       color: errorColor,
       paddingVertical: 4,
     };
