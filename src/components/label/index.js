@@ -3,6 +3,8 @@ import { Animated, Easing } from 'react-native';
 
 export default class AnimatedLabel extends Component {
   static defaultProps = {
+    numberOfLines: 1,
+
     active: false,
     focused: false,
     errored: false,

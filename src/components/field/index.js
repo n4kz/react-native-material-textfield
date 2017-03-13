@@ -219,7 +219,7 @@ export default class TextField extends Component {
             />
           </Animated.View>
 
-          <Animated.Text style={hintStyle}>{hint}</Animated.Text>
+          <Animated.Text style={hintStyle} numberOfLines={1}>{hint}</Animated.Text>
         </View>
       </TouchableWithoutFeedback>
     );
