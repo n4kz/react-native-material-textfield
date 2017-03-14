@@ -131,7 +131,7 @@ export default class TextField extends Component {
     let { onChangeText } = this.props;
 
     if (typeof onChangeText === 'function') {
-      onChangeText(value);
+      onChangeText(text);
     }
 
     this.setState({ text });
