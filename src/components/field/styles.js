@@ -14,14 +14,4 @@ export default StyleSheet.create({
     padding: 0,
     margin: 0,
   },
-
-  border: {
-    position: 'absolute',
-    top: -1,
-    left: -1.5,
-    right: -1.5,
-    bottom: 0,
-    borderStyle: 'dotted',
-    borderWidth: 1,
-  },
 });

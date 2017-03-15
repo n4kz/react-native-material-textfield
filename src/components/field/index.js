@@ -1,8 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import { TextInput, View, Animated, Easing, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 
+import Line from '../line';
 import Label from '../label';
 import Helper from '../helper';
+
 import styles from './styles.js';
 
 export default class TextField extends Component {
@@ -162,10 +164,6 @@ export default class TextField extends Component {
       )
     };
 
-    let borderStyle = {
-      borderColor: baseColor,
-    };
-
     let inputStyle = {
       color: disabled? baseColor : textColor,
     };
@@ -210,7 +208,7 @@ export default class TextField extends Component {
       <TouchableWithoutFeedback onPress={this.onPress}>
         <View>
           <Animated.View style={[styles.container, containerStyle]}>
-            {disabled && <View style={[styles.border, borderStyle]} pointerEvents='none' />}
+            {disabled && <Line type='dotted' color={baseColor} />}
 
             <Label {...{ tintColor, baseColor, errorColor, animationDuration, focused, errored, active }}>
               {label}
