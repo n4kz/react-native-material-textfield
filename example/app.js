@@ -26,10 +26,15 @@ export default function init() {
       this.onSubmit = this.onSubmit.bind(this);
       this.onSubmitFirstName = this.onSubmitFirstName.bind(this);
       this.onSubmitLastName = this.onSubmitLastName.bind(this);
+      this.onChangeLastName = this.onChangeLastName.bind(this);
       this.onSubmitEmail = this.onSubmitEmail.bind(this);
       this.onSubmitPassword = this.onSubmitPassword.bind(this);
 
-      this.state = { firstname: 'Robert', lastname: 'Stark', house: 'Baratheon' };
+      this.state = {
+        firstname: 'Eddard',
+        lastname: 'Stark',
+        house: 'Stark',
+      };
     }
 
     onBlur() {
@@ -61,6 +66,10 @@ export default function init() {
 
     onSubmitLastName() {
       this.refs.email.focus();
+    }
+
+    onChangeLastName(lastname) {
+      this.setState({ house: lastname, lastname });
     }
 
     onSubmitEmail() {
@@ -116,6 +125,7 @@ export default function init() {
               enablesReturnKeyAutomatically={true}
               onFocus={this.onFocus}
               onBlur={this.onBlur}
+              onChangeText={this.onChangeLastName}
               onSubmitEditing={this.onSubmitLastName}
               returnKeyType='next'
               label='Last Name'
@@ -150,13 +160,15 @@ export default function init() {
               returnKeyType='done'
               label='Password'
               error={errors.password}
+              title='Choose wisely'
             />
 
             <TextField
               ref='house'
               value={data.house}
               label='House'
-              disabled={true}
+              title='Derived from last name'
+              disabled
             />
           </View>
 
