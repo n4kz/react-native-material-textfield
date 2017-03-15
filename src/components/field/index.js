@@ -47,7 +47,7 @@ export default class TextField extends Component {
     this.onBlur = this.onBlur.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
-    this.onPress = this.onPress.bind(this);
+    this.onPress = this.focus.bind(this);
 
     this.state = {
       text: props.value,
@@ -79,7 +79,7 @@ export default class TextField extends Component {
         duration: props.animationDuration,
         easing: Easing.inOut(Easing.ease),
       }).start(() => {
-        this.setState((state, props) => ({ error: props.error }));
+        this.setState((state, { error }) => ({ error }));
       });
     }
   }
@@ -109,8 +109,7 @@ export default class TextField extends Component {
   }
 
   onFocus() {
-    let { onFocus, error, animationDuration } = this.props;
-    let { focus } = this.state;
+    let { onFocus } = this.props;
 
     if (typeof onFocus === 'function') {
       onFocus();
@@ -120,8 +119,7 @@ export default class TextField extends Component {
   }
 
   onBlur() {
-    let { onBlur, error, animationDuration } = this.props;
-    let { focus } = this.state;
+    let { onBlur } = this.props;
 
     if (typeof onBlur === 'function') {
       onBlur();
@@ -138,10 +136,6 @@ export default class TextField extends Component {
     }
 
     this.setState({ text });
-  }
-
-  onPress() {
-    this.focus();
   }
 
   render() {
