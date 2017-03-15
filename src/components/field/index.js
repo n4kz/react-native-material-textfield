@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { TextInput, View, Animated, Easing, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 
 import Label from '../label';
+import Helper from '../helper';
 import styles from './styles.js';
 
 export default class TextField extends Component {
@@ -32,6 +33,8 @@ export default class TextField extends Component {
     baseColor: PropTypes.string,
 
     label: PropTypes.string.isRequired,
+    title: PropTypes.string,
+
     error: PropTypes.string,
     errorColor: PropTypes.string,
 
@@ -142,11 +145,11 @@ export default class TextField extends Component {
   }
 
   render() {
-    let { style, error, editable, disabled, animationDuration, label, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
-    let { focused, focus, text, error: hint } = this.state;
+    let { style, error: errorProp, editable, disabled, animationDuration, label, title, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
+    let { focused, focus, text, error } = this.state;
 
     let active = !!text;
-    let errored = !!error;
+    let errored = !!errorProp;
 
     let borderBottomColor = focus.interpolate({
       inputRange: [-1, 0, 1],
@@ -156,21 +159,6 @@ export default class TextField extends Component {
     let borderBottomWidth = focus.interpolate({
       inputRange: [-1, 0, 1],
       outputRange: [2, StyleSheet.hairlineWidth, 2],
-    });
-
-    let height = focus.interpolate({
-      inputRange: [-1, 0, 1],
-      outputRange: [24, 8, 8],
-    });
-
-    let fontSize = focus.interpolate({
-      inputRange: [-1, 0, 1],
-      outputRange: [12, 0, 0],
-    });
-
-    let opacity = focus.interpolate({
-      inputRange: [-1, 0, 1],
-      outputRange: [1, 0, 0],
     });
 
     let containerStyle = {
@@ -188,10 +176,40 @@ export default class TextField extends Component {
       color: disabled? baseColor : textColor,
     };
 
-    let hintStyle = {
-      height, fontSize, opacity,
+    let errorStyle = {
       color: errorColor,
-      paddingVertical: 4,
+
+      opacity: focus.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [1, 0, 0],
+      }),
+
+      fontSize: title?
+        12:
+        focus.interpolate({
+          inputRange:  [-1, 0, 1],
+          outputRange: [12, 0, 0],
+        }),
+    };
+
+    let titleStyle = {
+      color: baseColor,
+
+      opacity: focus.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [0, 1, 1],
+      }),
+
+      fontSize: 12,
+    };
+
+    let helperContainerStyle = {
+      height: title?
+        24:
+        focus.interpolate({
+          inputRange:  [-1, 0, 1],
+          outputRange: [24, 8, 8],
+        }),
     };
 
     return (
@@ -219,7 +237,10 @@ export default class TextField extends Component {
             />
           </Animated.View>
 
-          <Animated.Text style={hintStyle} numberOfLines={1}>{hint}</Animated.Text>
+          <Animated.View style={helperContainerStyle}>
+            {error && <Helper style={errorStyle} text={error} />}
+            {title && <Helper style={titleStyle} text={title} />}
+          </Animated.View>
         </View>
       </TouchableWithoutFeedback>
     );
