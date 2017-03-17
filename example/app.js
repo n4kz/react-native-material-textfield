@@ -161,6 +161,8 @@ export default function init() {
               label='Password'
               error={errors.password}
               title='Choose wisely'
+              maxLength={30}
+              characterRestriction={20}
             />
 
             <TextField
