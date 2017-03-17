@@ -38,23 +38,25 @@ export default class Example extends Component {
 
 ## Properties
 
-* `tintColor`         - Text field accent color (default: rgb(0, 145, 234))
-* `textColor`         - Text input color (default: rgba(0, 0, 0, .87)
-* `baseColor`         - Text field base color (default: rgba(0, 0, 0, .38))
-* `label`             - Text field label text
-* `error`             - Text field error text
-* `errorColor`        - Text field color for errored state (default: rgb(213, 0, 0))
-* `animationDuration` - Text field animation duration in ms (default: 225)
-* `onFocus`           - Focus callback
-* `onBlur`            - Blur callback
+* `tintColor`            - Text field accent color (default: rgb(0, 145, 234))
+* `textColor`            - Text input color (default: rgba(0, 0, 0, .87)
+* `baseColor`            - Text field base color (default: rgba(0, 0, 0, .38))
+* `label`                - Text field label text
+* `error`                - Text field error text
+* `errorColor`           - Text field color for errored state (default: rgb(213, 0, 0))
+* `animationDuration`    - Text field animation duration in ms (default: 225)
+* `characterRestriction` - Text field soft limit for character counter
+* `onFocus`              - Focus callback
+* `onBlur`               - Blur callback
 
 ## Methods
 
-* `focus()`     - Acquire focus
-* `blur()`      - Release focus
-* `clear()`     - Clear text field
-* `value()`     - Get current value
-* `isFocused()` - Get current focus state
+* `focus()`        - Acquire focus
+* `blur()`         - Release focus
+* `clear()`        - Clear text field
+* `value()`        - Get current value
+* `isFocused()`    - Get current focus state
+* `isRestricted()` - Get current restriction state
 
 ## Example
 
