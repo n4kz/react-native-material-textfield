@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { TextInput, View, Animated, Easing, TouchableWithoutFeedback, StyleSheet } from 'react-native';
+import { TextInput, View, Animated, Easing, StyleSheet } from 'react-native';
 
 import Line from '../line';
 import Label from '../label';
@@ -224,40 +224,38 @@ export default class TextField extends Component {
     };
 
     return (
-      <TouchableWithoutFeedback onPress={this.onPress}>
-        <View>
-          <Animated.View style={[styles.container, containerStyle]}>
-            {disabled && <Line type='dotted' color={baseColor} />}
+      <View onStartShouldSetResponder={ () => true } onResponderRelease={this.onPress}>
+        <Animated.View style={[styles.container, containerStyle]}>
+          {disabled && <Line type='dotted' color={baseColor} />}
 
-            <Label {...{ tintColor, baseColor, errorColor, animationDuration, focused, errored, restricted, active }}>
-              {label}
-            </Label>
+          <Label {...{ tintColor, baseColor, errorColor, animationDuration, focused, errored, restricted, active }}>
+            {label}
+          </Label>
 
-            <TextInput
-              style={[styles.input, inputStyle]}
-              selectionColor={tintColor}
+          <TextInput
+            style={[styles.input, inputStyle]}
+            selectionColor={tintColor}
 
-              {...props}
+            {...props}
 
-              editable={!disabled && editable}
-              onChangeText={this.onChangeText}
-              onFocus={this.onFocus}
-              onBlur={this.onBlur}
-              value={text}
-              ref='input'
-            />
-          </Animated.View>
+            editable={!disabled && editable}
+            onChangeText={this.onChangeText}
+            onFocus={this.onFocus}
+            onBlur={this.onBlur}
+            value={text}
+            ref='input'
+          />
+        </Animated.View>
 
-          <Animated.View style={helperContainerStyle}>
-            <View style={styles.flex}>
-              {error && <Helper style={errorStyle} text={error} />}
-              {title && <Helper style={titleStyle} text={title} />}
-            </View>
+        <Animated.View style={helperContainerStyle}>
+          <View style={styles.flex}>
+            {error && <Helper style={errorStyle} text={error} />}
+            {title && <Helper style={titleStyle} text={title} />}
+          </View>
 
-            {limit && <Counter {...{ baseColor, errorColor, count, limit }} />}
-          </Animated.View>
-        </View>
-      </TouchableWithoutFeedback>
+          {limit && <Counter {...{ baseColor, errorColor, count, limit }} />}
+        </Animated.View>
+      </View>
     );
   }
 }
