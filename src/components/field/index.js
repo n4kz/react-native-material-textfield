@@ -58,14 +58,17 @@ export default class TextField extends Component {
 
     this.state = {
       text: value,
-      error: error,
+
       focus: new Animated.Value(error? -1 : 0),
       focused: false,
+
+      error: error,
+      errored: !!error,
     };
   }
 
   componentWillReceiveProps(props) {
-    let { text, error } = this.state;
+    let { text, error, errored } = this.state;
 
     if (props.value !== text) {
       this.setState({ text: props.value });
@@ -73,6 +76,10 @@ export default class TextField extends Component {
 
     if (props.error && props.error !== error) {
       this.setState({ error: props.error });
+    }
+
+    if (props.error !== this.props.error) {
+      this.setState({ errored: !!props.error });
     }
   }
 
@@ -153,12 +160,11 @@ export default class TextField extends Component {
   }
 
   render() {
-    let { style, label, title, error: errorProp, characterRestriction: limit, editable, disabled, animationDuration, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
-    let { focused, focus, error, text = '' } = this.state;
+    let { style, label, title, characterRestriction: limit, editable, disabled, animationDuration, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
+    let { focused, focus, error, errored, text = '' } = this.state;
 
     let count = text.length;
     let active = !!text;
-    let errored = !!errorProp;
     let restricted = limit < count;
 
     let borderBottomColor = restricted?
