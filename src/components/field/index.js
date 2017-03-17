@@ -54,10 +54,12 @@ export default class TextField extends Component {
     this.onChangeText = this.onChangeText.bind(this);
     this.onPress = this.focus.bind(this);
 
+    let { value, error } = this.props;
+
     this.state = {
-      text: props.value,
-      error: props.error,
-      focus: new Animated.Value(props.error? -1 : 0),
+      text: value,
+      error: error,
+      focus: new Animated.Value(error? -1 : 0),
       focused: false,
     };
   }
@@ -111,6 +113,13 @@ export default class TextField extends Component {
 
   isFocused() {
     return this.refs.input.isFocused();
+  }
+
+  isRestricted() {
+    let { characterRestriction } = this.props;
+    let { text = '' } = this.state;
+
+    return characterRestriction < text.length;
   }
 
   onFocus() {
