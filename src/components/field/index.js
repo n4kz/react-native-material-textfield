@@ -4,6 +4,7 @@ import { TextInput, View, Animated, Easing, TouchableWithoutFeedback, StyleSheet
 import Line from '../line';
 import Label from '../label';
 import Helper from '../helper';
+import Counter from '../counter';
 
 import styles from './styles.js';
 
@@ -36,6 +37,8 @@ export default class TextField extends Component {
 
     label: PropTypes.string.isRequired,
     title: PropTypes.string,
+
+    characterRestriction: PropTypes.number,
 
     error: PropTypes.string,
     errorColor: PropTypes.string,
@@ -141,21 +144,27 @@ export default class TextField extends Component {
   }
 
   render() {
-    let { style, error: errorProp, editable, disabled, animationDuration, label, title, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
-    let { focused, focus, text, error } = this.state;
+    let { style, label, title, error: errorProp, characterRestriction: limit, editable, disabled, animationDuration, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
+    let { focused, focus, error, text = '' } = this.state;
 
+    let count = text.length;
     let active = !!text;
     let errored = !!errorProp;
+    let restricted = limit < count;
 
-    let borderBottomColor = focus.interpolate({
-      inputRange: [-1, 0, 1],
-      outputRange: [errorColor, baseColor, tintColor],
-    });
+    let borderBottomColor = restricted?
+      errorColor:
+      focus.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [errorColor, baseColor, tintColor],
+      });
 
-    let borderBottomWidth = focus.interpolate({
-      inputRange: [-1, 0, 1],
-      outputRange: [2, StyleSheet.hairlineWidth, 2],
-    });
+    let borderBottomWidth = restricted?
+      2:
+      focus.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [2, StyleSheet.hairlineWidth, 2],
+      });
 
     let containerStyle = {
       ...(disabled?
@@ -196,7 +205,8 @@ export default class TextField extends Component {
     };
 
     let helperContainerStyle = {
-      height: title?
+      flexDirection: 'row',
+      height: (title || limit)?
         24:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
@@ -210,7 +220,7 @@ export default class TextField extends Component {
           <Animated.View style={[styles.container, containerStyle]}>
             {disabled && <Line type='dotted' color={baseColor} />}
 
-            <Label {...{ tintColor, baseColor, errorColor, animationDuration, focused, errored, active }}>
+            <Label {...{ tintColor, baseColor, errorColor, animationDuration, focused, errored, restricted, active }}>
               {label}
             </Label>
 
@@ -230,8 +240,12 @@ export default class TextField extends Component {
           </Animated.View>
 
           <Animated.View style={helperContainerStyle}>
-            {error && <Helper style={errorStyle} text={error} />}
-            {title && <Helper style={titleStyle} text={title} />}
+            <View style={styles.flex}>
+              {error && <Helper style={errorStyle} text={error} />}
+              {title && <Helper style={titleStyle} text={title} />}
+            </View>
+
+            {limit && <Counter {...{ baseColor, errorColor, count, limit }} />}
           </Animated.View>
         </View>
       </TouchableWithoutFeedback>

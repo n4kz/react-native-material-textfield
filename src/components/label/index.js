@@ -8,6 +8,7 @@ export default class AnimatedLabel extends Component {
     active: false,
     focused: false,
     errored: false,
+    restricted: false,
   };
 
   static propTypes = {
@@ -16,6 +17,7 @@ export default class AnimatedLabel extends Component {
     active: PropTypes.bool,
     focused: PropTypes.bool,
     errored: PropTypes.bool,
+    restricted: PropTypes.bool,
 
     tintColor: PropTypes.string.isRequired,
     baseColor: PropTypes.string.isRequired,
@@ -57,13 +59,15 @@ export default class AnimatedLabel extends Component {
   }
 
   render() {
-    let { children, errorColor, baseColor, tintColor, ...props } = this.props;
+    let { children, restricted, errorColor, baseColor, tintColor, ...props } = this.props;
     let { focus, input } = this.state;
 
-    let color = focus.interpolate({
-      inputRange: [-1, 0, 1],
-      outputRange: [errorColor, baseColor, tintColor],
-    });
+    let color = restricted?
+      errorColor:
+      focus.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [errorColor, baseColor, tintColor],
+      });
 
     let top = input.interpolate({
       inputRange: [0, 1],

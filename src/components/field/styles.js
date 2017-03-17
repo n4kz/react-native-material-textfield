@@ -14,4 +14,8 @@ export default StyleSheet.create({
     padding: 0,
     margin: 0,
   },
+
+  flex: {
+    flex: 1,
+  },
 });
