@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { TextInput, View, Animated, Easing, StyleSheet } from 'react-native';
+import { TextInput, View, Animated, Easing, StyleSheet, Platform } from 'react-native';
 
 import Line from '../line';
 import Label from '../label';
@@ -51,8 +51,9 @@ export default class TextField extends Component {
 
     this.onBlur = this.onBlur.bind(this);
     this.onFocus = this.onFocus.bind(this);
-    this.onChangeText = this.onChangeText.bind(this);
     this.onPress = this.focus.bind(this);
+    this.onChangeText = this.onChangeText.bind(this);
+    this.onContentSizeChange = this.onContentSizeChange.bind(this);
 
     let { value, error } = this.props;
 
@@ -64,6 +65,8 @@ export default class TextField extends Component {
 
       error: error,
       errored: !!error,
+
+      height: 24,
     };
   }
 
@@ -161,9 +164,16 @@ export default class TextField extends Component {
     this.setState({ text });
   }
 
+  onContentSizeChange({ nativeEvent }) {
+    let { height } = nativeEvent.contentSize;
+
+    this.setState({ height: Math.ceil(height) });
+  }
+
   render() {
     let { style, label, title, characterRestriction: limit, editable, disabled, animationDuration, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
-    let { focused, focus, error, errored, text = '' } = this.state;
+    let { focused, focus, error, errored, height, text = '' } = this.state;
+    let { multiline } = props;
 
     let count = text.length;
     let active = !!text;
@@ -186,12 +196,21 @@ export default class TextField extends Component {
     let containerStyle = {
       ...(disabled?
         { overflow: 'hidden' }:
-        { borderBottomColor, borderBottomWidth }
-      )
+        { borderBottomColor, borderBottomWidth }),
+
+      ...(multiline?
+        { height: 40 + height }:
+        {}),
     };
 
     let inputStyle = {
-      color: disabled? baseColor : textColor,
+      color: disabled?
+        baseColor:
+        textColor,
+
+      ...(multiline?
+        { height: 24 + height, ...Platform.select({ ios: { left: 1, top: -1 } }) }:
+        {}),
     };
 
     let errorStyle = {
@@ -248,6 +267,7 @@ export default class TextField extends Component {
 
             editable={!disabled && editable}
             onChangeText={this.onChangeText}
+            onContentSizeChange={this.onContentSizeChange}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
             value={text}
