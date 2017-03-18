@@ -42,19 +42,23 @@ export default class AnimatedLabel extends Component {
     let { active, focused, errored, animationDuration } = this.props;
 
     if ((focused ^ props.focused) || (active ^ props.active)) {
-      Animated.timing(input, {
-        toValue: (props.active || props.focused)? 1 : 0,
-        duration: animationDuration,
-        easing: Easing.inOut(Easing.ease),
-      }).start();
+      Animated
+        .timing(input, {
+          toValue: (props.active || props.focused)? 1 : 0,
+          duration: animationDuration,
+          easing: Easing.inOut(Easing.ease),
+        })
+        .start();
     }
 
     if ((focused ^ props.focused) || (errored ^ props.errored)) {
-      Animated.timing(focus, {
-        toValue: props.errored? -1 : (props.focused? 1 : 0),
-        duration: animationDuration,
-        easing: Easing.inOut(Easing.ease),
-      }).start();
+      Animated
+        .timing(focus, {
+          toValue: props.errored? -1 : (props.focused? 1 : 0),
+          duration: animationDuration,
+          easing: Easing.inOut(Easing.ease),
+        })
+        .start();
     }
   }
 

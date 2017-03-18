@@ -84,17 +84,19 @@ export default class TextField extends Component {
   }
 
   componentWillUpdate(props, state) {
-    let { error } = this.props;
+    let { error, animationDuration } = this.props;
     let { focus, focused } = this.state;
 
     if (props.error !== error || focused ^ state.focused) {
-      Animated.timing(focus, {
-        toValue: props.error? -1 : (state.focused? 1 : 0),
-        duration: props.animationDuration,
-        easing: Easing.inOut(Easing.ease),
-      }).start(() => {
-        this.setState((state, { error }) => ({ error }));
-      });
+      Animated
+        .timing(focus, {
+          toValue: props.error? -1 : (state.focused? 1 : 0),
+          duration: animationDuration,
+          easing: Easing.inOut(Easing.ease),
+        })
+        .start(() => {
+          this.setState((state, { error }) => ({ error }));
+        });
     }
   }
 
