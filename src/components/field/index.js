@@ -252,7 +252,7 @@ export default class TextField extends Component {
 
     return (
       <View onStartShouldSetResponder={ () => true } onResponderRelease={this.onPress}>
-        <Animated.View style={[styles.container, containerStyle]}>
+        <Animated.View style={[ styles.container, containerStyle ]}>
           {disabled && <Line type='dotted' color={baseColor} />}
 
           <Label {...{ tintColor, baseColor, errorColor, animationDuration, focused, errored, restricted, active }}>
@@ -260,7 +260,7 @@ export default class TextField extends Component {
           </Label>
 
           <TextInput
-            style={[styles.input, inputStyle]}
+            style={[ styles.input, inputStyle, style ]}
             selectionColor={tintColor}
 
             {...props}
