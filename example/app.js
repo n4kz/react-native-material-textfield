@@ -34,13 +34,14 @@ export default function init() {
         firstname: 'Eddard',
         lastname: 'Stark',
         house: 'Stark',
+        about: 'Stoic, dutiful, and honorable man, considered to embody the values of the North',
       };
     }
 
     onBlur() {
       let { errors, ...data } = this.state;
 
-      ['firstname', 'lastname', 'email', 'password']
+      ['firstname', 'lastname', 'email', 'password', 'about']
         .forEach((field) => data[field] = this.refs[field].value());
 
       this.setState({ ...data });
@@ -130,6 +131,18 @@ export default function init() {
               returnKeyType='next'
               label='Last Name'
               error={errors.lastname}
+            />
+
+            <TextField
+              ref='about'
+              value={data.about}
+              onFocus={this.onFocus}
+              onBlur={this.onBlur}
+              onSubmitEditing={this.onSubmitEmail}
+              returnKeyType='next'
+              multiline={true}
+              label='About (optional)'
+              characterRestriction={140}
             />
 
             <TextField
