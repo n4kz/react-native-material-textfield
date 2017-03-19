@@ -4,6 +4,18 @@ Material texfield with consistent behaviour on iOS and Android
 
 ![Example](https://cloud.githubusercontent.com/assets/2055622/23831653/145e6bc8-0737-11e7-8663-c31454c639cb.gif)
 
+## Features
+
+* Material design [guidelines](https://material.io/guidelines/components/text-fields.html) compliance
+* Consistent look and feel on iOS and Android
+* Animated state transitions (normal, focused and errored)
+* Customizable colors and animation duration
+* Disabled state (with dotted underline)
+* Helper text
+* Character counter
+* Multiline text input
+* Pure javascript implementation
+
 ## Installation
 
 ```bash
@@ -38,16 +50,24 @@ export default class Example extends Component {
 
 ## Properties
 
+* `textColor`            - Text input color (default: rgba(0, 0, 0, .87))
 * `tintColor`            - Text field accent color (default: rgb(0, 145, 234))
-* `textColor`            - Text input color (default: rgba(0, 0, 0, .87)
 * `baseColor`            - Text field base color (default: rgba(0, 0, 0, .38))
 * `label`                - Text field label text
+* `title`                - Text field helper text
 * `error`                - Text field error text
 * `errorColor`           - Text field color for errored state (default: rgb(213, 0, 0))
 * `animationDuration`    - Text field animation duration in ms (default: 225)
 * `characterRestriction` - Text field soft limit for character counter
+* `disabled`             - Text field availability (default: false)
+* `editable`             - Text field text can be edited (default: true)
+* `multiline`            - Text filed multiline input (default: false)
+
+* `onChangeText`         - Change text callback
 * `onFocus`              - Focus callback
 * `onBlur`               - Blur callback
+
+Other [TextInput](https://facebook.github.io/react-native/docs/textinput.html#props) properties will also work
 
 ## Methods
 
