@@ -209,7 +209,14 @@ export default class TextField extends Component {
         textColor,
 
       ...(multiline?
-        { height: 24 + height, ...Platform.select({ ios: { left: 1, top: -1 } }) }:
+        {
+          height: 24 + height,
+
+          ...Platform.select({
+            ios: { left: 1, top: -1 },
+            android: { textAlignVertical: 'top' },
+          })
+        }:
         {}),
     };
 
