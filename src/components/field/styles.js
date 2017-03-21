@@ -5,6 +5,7 @@ export default StyleSheet.create({
     height: 64,
     paddingTop: 32,
     paddingBottom: 8,
+    backgroundColor: 'transparent',
   },
 
   input: {
