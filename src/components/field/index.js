@@ -17,6 +17,8 @@ export default class TextField extends Component {
 
     animationDuration: 225,
 
+    fontSize: 16,
+
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
     baseColor: 'rgba(0, 0, 0, .38)',
@@ -30,6 +32,8 @@ export default class TextField extends Component {
     ...TextInput.propTypes,
 
     animationDuration: PropTypes.number,
+
+    fontSize: PropTypes.number,
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
@@ -171,7 +175,7 @@ export default class TextField extends Component {
   }
 
   render() {
-    let { style, label, title, characterRestriction: limit, editable, disabled, animationDuration, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
+    let { style, label, title, characterRestriction: limit, editable, disabled, animationDuration, fontSize, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
     let { focused, focus, error, errored, height, text = '' } = this.state;
     let { multiline } = props;
 
@@ -200,24 +204,26 @@ export default class TextField extends Component {
 
       ...(multiline?
         { height: 40 + height }:
-        {}),
+        { height: 40 + fontSize * 1.5 }),
     };
 
     let inputStyle = {
+      fontSize,
+
       color: disabled?
         baseColor:
         textColor,
 
       ...(multiline?
         {
-          height: 24 + height,
+          height: fontSize * 1.5 + height,
 
           ...Platform.select({
             ios: { left: 1, top: -1 },
             android: { textAlignVertical: 'top' },
           })
         }:
-        {}),
+        { height: fontSize * 1.5 }),
     };
 
     let errorStyle = {
@@ -262,7 +268,7 @@ export default class TextField extends Component {
         <Animated.View style={[ styles.container, containerStyle ]}>
           {disabled && <Line type='dotted' color={baseColor} />}
 
-          <Label {...{ tintColor, baseColor, errorColor, animationDuration, focused, errored, restricted, active }}>
+          <Label {...{ fontSize, tintColor, baseColor, errorColor, animationDuration, focused, errored, restricted, active }}>
             {label}
           </Label>
 

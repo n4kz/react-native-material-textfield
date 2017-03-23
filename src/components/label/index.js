@@ -19,6 +19,8 @@ export default class AnimatedLabel extends Component {
     errored: PropTypes.bool,
     restricted: PropTypes.bool,
 
+    fontSize: PropTypes.number.isRequired,
+
     tintColor: PropTypes.string.isRequired,
     baseColor: PropTypes.string.isRequired,
     errorColor: PropTypes.string.isRequired,
@@ -63,7 +65,7 @@ export default class AnimatedLabel extends Component {
   }
 
   render() {
-    let { children, restricted, errorColor, baseColor, tintColor, ...props } = this.props;
+    let { children, restricted, fontSize, errorColor, baseColor, tintColor, ...props } = this.props;
     let { focus, input } = this.state;
 
     let color = restricted?
@@ -75,16 +77,16 @@ export default class AnimatedLabel extends Component {
 
     let top = input.interpolate({
       inputRange: [0, 1],
-      outputRange: [36, 16],
-    });
-
-    let fontSize = input.interpolate({
-      inputRange: [0, 1],
-      outputRange: [16, 12],
+      outputRange: [32 + fontSize * 0.25, 16],
     });
 
     let textStyle = {
-      fontSize, color,
+      fontSize: input.interpolate({
+        inputRange: [0, 1],
+        outputRange: [fontSize, 12],
+      }),
+
+      color,
     };
 
     let containerStyle = {
