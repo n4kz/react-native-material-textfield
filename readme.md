@@ -9,7 +9,7 @@ Material texfield with consistent behaviour on iOS and Android
 * Material design [guidelines](https://material.io/guidelines/components/text-fields.html) compliance
 * Consistent look and feel on iOS and Android
 * Animated state transitions (normal, focused and errored)
-* Customizable colors and animation duration
+* Customizable font size, colors and animation duration
 * Disabled state (with dotted underline)
 * Helper text
 * Character counter
@@ -51,6 +51,7 @@ export default class Example extends Component {
 ## Properties
 
 * `textColor`            - Text input color (default: rgba(0, 0, 0, .87))
+* `fontSize`             - Text input font size
 * `tintColor`            - Text field accent color (default: rgb(0, 145, 234))
 * `baseColor`            - Text field base color (default: rgba(0, 0, 0, .38))
 * `label`                - Text field label text
