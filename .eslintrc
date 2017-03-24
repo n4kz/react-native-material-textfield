@@ -1,0 +1,18 @@
+{
+  'parser': 'babel-eslint',
+
+  'plugins': [
+    'react',
+  ],
+
+  'extends': [
+    'eslint:recommended',
+    'plugin:react/recommended',
+  ],
+
+  'rules': {
+    'comma-dangle': ['error', 'always-multiline'],
+  },
+}
+
+/* vim: set ft=javascript : */

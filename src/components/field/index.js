@@ -221,7 +221,7 @@ export default class TextField extends Component {
           ...Platform.select({
             ios: { left: 1, top: -1 },
             android: { textAlignVertical: 'top' },
-          })
+          }),
         }:
         { height: fontSize * 1.5 }),
     };
