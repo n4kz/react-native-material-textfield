@@ -75,7 +75,7 @@ export default class TextField extends Component {
   }
 
   componentWillReceiveProps(props) {
-    let { text, error, errored } = this.state;
+    let { text, error } = this.state;
 
     if (props.value !== text) {
       this.setState({ text: props.value });
