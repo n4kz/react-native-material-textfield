@@ -36,7 +36,7 @@ npm install --save react-native-material-textfield
 import React, { Component } from 'react';
 import { TextField } from 'react-native-material-textfield';
 
-export default class Example extends Component {
+class Example extends Component {
   state = {
     phone: '',
   };
@@ -47,9 +47,8 @@ export default class Example extends Component {
     return (
       <TextField
         label='Phone number'
-        ref='phone'
         value={phone}
-        onBlur={ () => this.setState({ phone: this.refs.phone.value() }) }
+        onChangeText={ (phone) => this.setState({ phone }) }
       />
     );
   }
