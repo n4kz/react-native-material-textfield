@@ -57,34 +57,37 @@ class Example extends Component {
 
 ## Properties
 
-* `textColor`            - Text input color (default: rgba(0, 0, 0, .87))
-* `fontSize`             - Text input font size
-* `tintColor`            - Text field accent color (default: rgb(0, 145, 234))
-* `baseColor`            - Text field base color (default: rgba(0, 0, 0, .38))
-* `label`                - Text field label text
-* `title`                - Text field helper text
-* `error`                - Text field error text
-* `errorColor`           - Text field color for errored state (default: rgb(213, 0, 0))
-* `animationDuration`    - Text field animation duration in ms (default: 225)
-* `characterRestriction` - Text field soft limit for character counter
-* `disabled`             - Text field availability (default: false)
-* `editable`             - Text field text can be edited (default: true)
-* `multiline`            - Text filed multiline input (default: false)
-
-* `onChangeText`         - Change text callback
-* `onFocus`              - Focus callback
-* `onBlur`               - Blur callback
+name                 | description                                 | type     | default
+-------------------- | ------------------------------------------- | --------:| ------------------
+textColor            | Text input color                            |   String | rgba(0, 0, 0, .87)
+fontSize             | Text input font size                        |   Number | 16
+tintColor            | Text field accent color                     |   String | rgb(0, 145, 234)
+baseColor            | Text field base color                       |   String | rgba(0, 0, 0, .38)
+label                | Text field label text                       |   String | -
+title                | Text field helper text                      |   String | -
+error                | Text field error text                       |   String | -
+errorColor           | Text field color for errored state          |   String | rgb(213, 0, 0)
+animationDuration    | Text field animation duration in ms         |   Number | 225
+characterRestriction | Text field soft limit for character counter |   Number | -
+disabled             | Text field availability                     |  Boolean | false
+editable             | Text field text can be edited               |  Boolean | true
+multiline            | Text filed multiline input                  |  Boolean | false
+onChangeText         | Change text callback                        | Function | -
+onFocus              | Focus callback                              | Function | -
+onBlur               | Blur callback                               | Function | -
 
 Other [TextInput](https://facebook.github.io/react-native/docs/textinput.html#props) properties will also work
 
 ## Methods
 
-* `focus()`        - Acquire focus
-* `blur()`         - Release focus
-* `clear()`        - Clear text field
-* `value()`        - Get current value
-* `isFocused()`    - Get current focus state
-* `isRestricted()` - Get current restriction state
+name           | description                   | return type
+-------------- | ----------------------------- | -----------:
+focus()        | Acquire focus                 |   undefined
+blur()         | Release focus                 |   undefined
+clear()        | Clear text field              |   undefined
+value()        | Get current value             |      String
+isFocused()    | Get current focus state       |     Boolean
+isRestricted() | Get current restriction state |     Boolean
 
 ## Example
 
