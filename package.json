@@ -20,10 +20,10 @@
 	},
 
 	"devDependencies": {
-		"babel-eslint": "*",
-		"eslint": "*",
-		"eslint-plugin-import": "*",
-		"eslint-plugin-react": "*"
+		"babel-eslint": "^7.2.0",
+		"eslint": "^3.18.0",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-react": "^6.10.0"
 	},
 
 	"scripts": {
