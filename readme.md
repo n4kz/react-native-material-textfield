@@ -10,7 +10,7 @@
 
 Material texfield with consistent behaviour on iOS and Android
 
-![Example](https://cloud.githubusercontent.com/assets/2055622/23831653/145e6bc8-0737-11e7-8663-c31454c639cb.gif)
+![example](https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif)
 
 ## Features
 
@@ -89,7 +89,7 @@ Other [TextInput](https://facebook.github.io/react-native/docs/textinput.html#pr
 ## Example
 
 ```bash
-git clone https://github.com/n4kz/react-native-material-textfield.git
+git clone https://github.com/n4kz/react-native-material-textfield
 cd react-native-material-textfield/example
 npm install
 react-native run-ios # or run-android
