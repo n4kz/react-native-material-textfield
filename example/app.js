@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, ScrollView, View } from 'react-native';
+import { AppRegistry, ScrollView, View } from 'react-native';
 import { RaisedTextButton } from 'react-native-material-buttons';
 import { TextField } from 'react-native-material-textfield';
 
@@ -22,33 +22,22 @@ export default function init() {
       super(props);
 
       this.onFocus = this.onFocus.bind(this);
-      this.onBlur = this.onBlur.bind(this);
       this.onSubmit = this.onSubmit.bind(this);
+      this.onChangeText = this.onChangeText.bind(this);
       this.onSubmitFirstName = this.onSubmitFirstName.bind(this);
       this.onSubmitLastName = this.onSubmitLastName.bind(this);
-      this.onChangeLastName = this.onChangeLastName.bind(this);
       this.onSubmitEmail = this.onSubmitEmail.bind(this);
       this.onSubmitPassword = this.onSubmitPassword.bind(this);
 
       this.state = {
         firstname: 'Eddard',
         lastname: 'Stark',
-        house: 'Stark',
         about: 'Stoic, dutiful, and honorable man, considered to embody the values of the North',
       };
     }
 
-    onBlur() {
-      let { errors, ...data } = this.state;
-
-      ['firstname', 'lastname', 'email', 'password', 'about']
-        .forEach((field) => data[field] = this.refs[field].value());
-
-      this.setState({ ...data });
-    }
-
     onFocus() {
-      let { errors = {}, ...data } = this.state;
+      let { errors = {} } = this.state;
 
       for (let name in errors) {
         let ref = this.refs[name];
@@ -61,16 +50,23 @@ export default function init() {
       this.setState({ errors });
     }
 
+    onChangeText(text) {
+      for (let key in this.refs) {
+        let ref = this.refs[key];
+
+        if (ref.isFocused()) {
+          this.setState({ [key]: text });
+          break;
+        }
+      }
+    }
+
     onSubmitFirstName() {
       this.refs.lastname.focus();
     }
 
     onSubmitLastName() {
       this.refs.email.focus();
-    }
-
-    onChangeLastName(lastname) {
-      this.setState({ house: lastname, lastname });
     }
 
     onSubmitEmail() {
@@ -82,7 +78,7 @@ export default function init() {
     }
 
     onSubmit() {
-      let errors = {}; 
+      let errors = {};
 
       ['firstname', 'lastname', 'email', 'password']
         .forEach((field) => {
@@ -112,7 +108,7 @@ export default function init() {
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
               onFocus={this.onFocus}
-              onBlur={this.onBlur}
+              onChangeText={this.onChangeText}
               onSubmitEditing={this.onSubmitFirstName}
               returnKeyType='next'
               label='First Name'
@@ -125,8 +121,7 @@ export default function init() {
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
               onFocus={this.onFocus}
-              onBlur={this.onBlur}
-              onChangeText={this.onChangeLastName}
+              onChangeText={this.onChangeText}
               onSubmitEditing={this.onSubmitLastName}
               returnKeyType='next'
               label='Last Name'
@@ -137,7 +132,7 @@ export default function init() {
               ref='about'
               value={data.about}
               onFocus={this.onFocus}
-              onBlur={this.onBlur}
+              onChangeText={this.onChangeText}
               onSubmitEditing={this.onSubmitEmail}
               returnKeyType='next'
               multiline={true}
@@ -153,7 +148,7 @@ export default function init() {
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
               onFocus={this.onFocus}
-              onBlur={this.onBlur}
+              onChangeText={this.onChangeText}
               onSubmitEditing={this.onSubmitEmail}
               returnKeyType='next'
               label='Email Address'
@@ -168,7 +163,7 @@ export default function init() {
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
               onFocus={this.onFocus}
-              onBlur={this.onBlur}
+              onChangeText={this.onChangeText}
               onSubmitEditing={this.onSubmitPassword}
               returnKeyType='done'
               label='Password'
@@ -180,7 +175,7 @@ export default function init() {
 
             <TextField
               ref='house'
-              value={data.house}
+              value={data.lastname}
               label='House'
               title='Derived from last name'
               disabled
