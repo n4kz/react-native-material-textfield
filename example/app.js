@@ -5,13 +5,14 @@ import { TextField } from 'react-native-material-textfield';
 
 let styles = {
   scroll: {
-    padding: 4,
-    paddingTop: 44,
+    paddingHorizontal: 4,
+    paddingVertical: 30,
     backgroundColor: '#E8EAF6',
   },
 
   container: {
-    margin: 4,
+    marginHorizontal: 4,
+    marginVertical: 8,
     paddingHorizontal: 8,
   },
 };
@@ -26,6 +27,7 @@ export default function init() {
       this.onChangeText = this.onChangeText.bind(this);
       this.onSubmitFirstName = this.onSubmitFirstName.bind(this);
       this.onSubmitLastName = this.onSubmitLastName.bind(this);
+      this.onSubmitAbout = this.onSubmitAbout.bind(this);
       this.onSubmitEmail = this.onSubmitEmail.bind(this);
       this.onSubmitPassword = this.onSubmitPassword.bind(this);
 
@@ -66,7 +68,11 @@ export default function init() {
     }
 
     onSubmitLastName() {
-      this.refs.email.focus();
+      this.refs.about.focus();
+    }
+
+    onSubmitAbout() {
+        this.refs.email.focus();
     }
 
     onSubmitEmail() {
@@ -87,7 +93,7 @@ export default function init() {
           if (!value) {
             errors[field] = 'Should not be empty';
           } else {
-            if (field === 'password' && value.length < 4) {
+            if (field === 'password' && value.length < 6) {
               errors[field] = 'Too short';
             }
           }
@@ -133,7 +139,7 @@ export default function init() {
               value={data.about}
               onFocus={this.onFocus}
               onChangeText={this.onChangeText}
-              onSubmitEditing={this.onSubmitEmail}
+              onSubmitEditing={this.onSubmitAbout}
               returnKeyType='next'
               multiline={true}
               label='About (optional)'
@@ -178,7 +184,7 @@ export default function init() {
               value={data.lastname}
               label='House'
               title='Derived from last name'
-              disabled
+              disabled={true}
             />
           </View>
 
