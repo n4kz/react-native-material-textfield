@@ -291,8 +291,8 @@ export default class TextField extends Component {
 
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            {error && <Helper style={errorStyle} text={error} />}
-            {title && <Helper style={titleStyle} text={title} />}
+            <Helper style={errorStyle} text={error} />
+            <Helper style={titleStyle} text={title} />
           </View>
 
           <Counter {...{ baseColor, errorColor, count, limit }} />

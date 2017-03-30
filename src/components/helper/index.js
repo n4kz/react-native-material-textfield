@@ -9,16 +9,16 @@ export default class Helper extends Component {
   };
 
   static propTypes = {
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
   };
 
   render() {
     let { text, ...props } = this.props;
 
-    return (
+    return text? (
       <View style={styles.container}>
         <Animated.Text {...props}>{text}</Animated.Text>
       </View>
-    );
+    ) : null;
   }
 }
