@@ -6,7 +6,7 @@ import styles from './styles';
 export default class Counter extends Component {
   static propTypes = {
     count: PropTypes.number.isRequired,
-    limit: PropTypes.number.isRequired,
+    limit: PropTypes.number,
 
     baseColor: PropTypes.string.isRequired,
     errorColor: PropTypes.string.isRequired,
@@ -19,12 +19,12 @@ export default class Counter extends Component {
       color: count > limit? errorColor : baseColor,
     };
 
-    return (
+    return limit? (
       <View style={styles.container}>
         <Text style={[ styles.text, textStyle ]}>
             {count} / {limit}
         </Text>
       </View>
-    );
+    ) : null;
   }
 }

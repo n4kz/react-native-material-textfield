@@ -295,7 +295,7 @@ export default class TextField extends Component {
             {title && <Helper style={titleStyle} text={title} />}
           </View>
 
-          {limit && <Counter {...{ baseColor, errorColor, count, limit }} />}
+          <Counter {...{ baseColor, errorColor, count, limit }} />
         </Animated.View>
       </View>
     );
