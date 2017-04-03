@@ -102,8 +102,11 @@ export default class TextField extends Component {
           duration: animationDuration,
           easing: Easing.inOut(Easing.ease),
         })
-        .start(() => {
-          this.setState((state, { error }) => ({ error }));
+        .start((completion) => {
+          if (completion.finished)
+          {
+            this.setState((state, { error }) => ({ error }));
+          }
         });
     }
   }
