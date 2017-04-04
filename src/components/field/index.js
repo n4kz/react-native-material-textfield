@@ -62,6 +62,7 @@ export default class TextField extends Component {
 
     let { value, error } = this.props;
 
+    this.mounted = false;
     this.state = {
       text: value,
 
@@ -91,6 +92,14 @@ export default class TextField extends Component {
     }
   }
 
+  componentDidMount() {
+    this.mounted = true;
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
   componentWillUpdate(props, state) {
     let { error, animationDuration } = this.props;
     let { focus, focused } = this.state;
@@ -103,7 +112,9 @@ export default class TextField extends Component {
           easing: Easing.inOut(Easing.ease),
         })
         .start(() => {
-          this.setState((state, { error }) => ({ error }));
+          if (this.mounted) {
+            this.setState((state, { error }) => ({ error }));
+          }
         });
     }
   }
