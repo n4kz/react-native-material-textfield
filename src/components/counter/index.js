@@ -1,9 +1,9 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
 import { View, Text } from 'react-native';
 
 import styles from './styles';
 
-export default class Counter extends Component {
+export default class Counter extends PureComponent {
   static propTypes = {
     count: PropTypes.number.isRequired,
     limit: PropTypes.number,

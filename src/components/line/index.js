@@ -1,9 +1,9 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
 import { View } from 'react-native';
 
 import styles from './styles';
 
-export default class Line extends Component {
+export default class Line extends PureComponent {
   static defaultProps = {
     pointerEvents: 'none',
   };

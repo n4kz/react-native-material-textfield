@@ -1,7 +1,7 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
 import { Animated, Easing } from 'react-native';
 
-export default class AnimatedLabel extends Component {
+export default class AnimatedLabel extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
 

@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
 import { TextInput, View, Animated, Easing, StyleSheet, Platform } from 'react-native';
 
 import Line from '../line';
@@ -8,7 +8,7 @@ import Counter from '../counter';
 
 import styles from './styles.js';
 
-export default class TextField extends Component {
+export default class TextField extends PureComponent {
   static defaultProps = {
     underlineColorAndroid: 'transparent',
     disableFullscreenUI: true,

@@ -1,9 +1,9 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
 import { View, Animated } from 'react-native';
 
 import styles from './styles';
 
-export default class Helper extends Component {
+export default class Helper extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
   };
