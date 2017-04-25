@@ -2,18 +2,21 @@
   'parser': 'babel-eslint',
 
   'plugins': [
-    'import',
     'react',
   ],
 
   'extends': [
     'eslint:recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
     'plugin:react/recommended',
   ],
 
   'rules': {
+    'no-unused-vars': ['error', {
+      'vars': 'all',
+      'args': 'none',
+      'ignoreRestSiblings': true,
+    }],
+
     'comma-dangle': ['error', 'always-multiline'],
   },
 }
