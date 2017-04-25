@@ -79,7 +79,7 @@ export default class TextField extends PureComponent {
   componentWillReceiveProps(props) {
     let { text, error } = this.state;
 
-    if (props.value !== text) {
+    if (null != props.value && props.value !== text) {
       this.setState({ text: props.value });
     }
 
