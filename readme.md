@@ -95,7 +95,7 @@ isRestricted() | Get current restriction state |     Boolean
 git clone https://github.com/n4kz/react-native-material-textfield
 cd react-native-material-textfield/example
 npm install
-react-native run-ios # or run-android
+npm run ios # or npm run android
 ```
 
 ## Copyright and License
