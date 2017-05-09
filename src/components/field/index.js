@@ -292,6 +292,7 @@ export default class TextField extends PureComponent {
 
             editable={!disabled && editable}
             onChangeText={this.onChangeText}
+            onChange={this.onContentSizeChange}
             onContentSizeChange={this.onContentSizeChange}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
