@@ -1,32 +1,31 @@
 {
-	"name": "react-native-material-textfield",
-	"version": "0.2.7",
-	"license": "BSD-3-Clause",
-	"author": "Alexander Nazarov <n4kz@n4kz.com>",
+  "name": "react-native-material-textfield",
+  "version": "0.3.0",
+  "license": "BSD-3-Clause",
+  "author": "Alexander Nazarov <n4kz@n4kz.com>",
 
-	"description": "Material textfield",
-	"keywords": ["react", "react-component", "react-native", "ios", "android", "input", "textinput", "field", "textfield", "material"],
+  "description": "Material textfield",
+  "keywords": ["react", "react-component", "react-native", "ios", "android", "input", "textinput", "field", "textfield", "material"],
 
-	"main": "index.js",
+  "main": "index.js",
 
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/n4kz/react-native-material-textfield.git"
-	},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/n4kz/react-native-material-textfield.git"
+  },
 
-	"peerDependencies": {
-		"react": "*",
-		"react-native": "*"
-	},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
 
-	"devDependencies": {
-		"babel-eslint": "^7.2.0",
-		"eslint": "^3.18.0",
-		"eslint-plugin-import": "^2.2.0",
-		"eslint-plugin-react": "^6.10.0"
-	},
+  "devDependencies": {
+    "babel-eslint": "^7.2.0",
+    "eslint": "^3.18.0",
+    "eslint-plugin-react": "^6.10.0"
+  },
 
-	"scripts": {
-		"test": "node_modules/.bin/eslint src example/app.js"
-	}
+  "scripts": {
+    "test": "node_modules/.bin/eslint src example/app.js"
+  }
 }
