@@ -57,6 +57,7 @@ export default class TextField extends PureComponent {
     this.onBlur = this.onBlur.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onPress = this.focus.bind(this);
+    this.onChange = this.onChange.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
 
@@ -168,6 +169,19 @@ export default class TextField extends PureComponent {
     }
 
     this.setState({ focused: false });
+  }
+
+  onChange(event) {
+    let { onChange, multiline } = this.props;
+
+    if ('function' === typeof onChange) {
+      onChange(event);
+    }
+
+    /* XXX: onContentSizeChange is not called on RN 0.44 */
+    if (multiline && 'android' === Platform.OS) {
+      this.onContentSizeChange(event);
+    }
   }
 
   onChangeText(text) {
@@ -291,8 +305,8 @@ export default class TextField extends PureComponent {
             {...props}
 
             editable={!disabled && editable}
+            onChange={this.onChange}
             onChangeText={this.onChangeText}
-            onChange={this.onContentSizeChange}
             onContentSizeChange={this.onContentSizeChange}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
