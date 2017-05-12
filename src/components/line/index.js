@@ -14,7 +14,8 @@ export default class Line extends PureComponent {
     let { color: borderColor, type: borderStyle } = this.props;
 
     let lineStyle = {
-      borderColor, borderStyle,
+      borderColor,
+      borderStyle,
     };
 
     return (

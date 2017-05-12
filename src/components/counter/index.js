@@ -20,12 +20,16 @@ export default class Counter extends PureComponent {
       color: count > limit? errorColor : baseColor,
     };
 
-    return limit? (
+    if (!limit) {
+      return null;
+    }
+
+    return (
       <View style={styles.container}>
-        <Text style={[ styles.text, textStyle ]}>
-            {count} / {limit}
+        <Text style={[styles.text, textStyle]}>
+          {count} / {limit}
         </Text>
       </View>
-    ) : null;
+    );
   }
 }

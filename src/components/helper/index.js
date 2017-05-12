@@ -16,10 +16,14 @@ export default class Helper extends PureComponent {
   render() {
     let { text, ...props } = this.props;
 
-    return text? (
+    if (!text) {
+      return null;
+    }
+
+    return (
       <View style={styles.container}>
         <Animated.Text {...props}>{text}</Animated.Text>
       </View>
-    ) : null;
+    );
   }
 }
