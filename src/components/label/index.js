@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { Animated, Easing } from 'react-native';
 
-export default class AnimatedLabel extends PureComponent {
+export default class Label extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
 
