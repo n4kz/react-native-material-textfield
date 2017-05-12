@@ -1,6 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { TextInput, View, Animated, Easing, StyleSheet, Platform } from 'react-native';
+import {
+  View,
+  TextInput,
+  Animated,
+  Easing,
+  StyleSheet,
+  Platform,
+} from 'react-native';
 
 import Line from '../line';
 import Label from '../label';
@@ -62,7 +69,7 @@ export default class TextField extends PureComponent {
     this.onChangeText = this.onChangeText.bind(this);
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
 
-    this.updateInputRef = this.updateRef.bind(this, '_input');
+    this.updateRef = this.updateRef.bind(this, 'input');
 
     let { value, error } = this.props;
 
@@ -131,16 +138,16 @@ export default class TextField extends PureComponent {
     let { disabled, editable } = this.props;
 
     if (!disabled && editable) {
-      this._input.focus();
+      this.input.focus();
     }
   }
 
   blur() {
-    this._input.blur();
+    this.input.blur();
   }
 
   clear() {
-    this._input.clear();
+    this.input.clear();
   }
 
   value() {
@@ -148,7 +155,7 @@ export default class TextField extends PureComponent {
   }
 
   isFocused() {
-    return this._input.isFocused();
+    return this.input.isFocused();
   }
 
   isRestricted() {
@@ -161,7 +168,7 @@ export default class TextField extends PureComponent {
   onFocus() {
     let { onFocus } = this.props;
 
-    if (typeof onFocus === 'function') {
+    if ('function' === typeof onFocus) {
       onFocus();
     }
 
@@ -171,7 +178,7 @@ export default class TextField extends PureComponent {
   onBlur() {
     let { onBlur } = this.props;
 
-    if (typeof onBlur === 'function') {
+    if ('function' === typeof onBlur) {
       onBlur();
     }
 
@@ -194,7 +201,7 @@ export default class TextField extends PureComponent {
   onChangeText(text) {
     let { onChangeText } = this.props;
 
-    if (typeof onChangeText === 'function') {
+    if ('function' === typeof onChangeText) {
       onChangeText(text);
     }
 
@@ -208,9 +215,22 @@ export default class TextField extends PureComponent {
   }
 
   render() {
-    let { style, label, title, characterRestriction: limit, editable, disabled, animationDuration, fontSize, tintColor, baseColor, textColor, errorColor, ...props } = this.props;
     let { focused, focus, error, errored, height, text = '' } = this.state;
-    let { multiline } = props;
+    let {
+      style,
+      label,
+      title,
+      characterRestriction: limit,
+      editable,
+      disabled,
+      animationDuration,
+      fontSize,
+      tintColor,
+      baseColor,
+      textColor,
+      errorColor,
+      ...props
+    } = this.props;
 
     let count = text.length;
     let active = !!text;
@@ -235,7 +255,7 @@ export default class TextField extends PureComponent {
         { overflow: 'hidden' }:
         { borderBottomColor, borderBottomWidth }),
 
-      ...(multiline?
+      ...(props.multiline?
         { height: 40 + height }:
         { height: 40 + fontSize * 1.5 }),
     };
@@ -247,7 +267,7 @@ export default class TextField extends PureComponent {
         baseColor:
         textColor,
 
-      ...(multiline?
+      ...(props.multiline?
         {
           height: fontSize * 1.5 + height,
 
@@ -296,17 +316,27 @@ export default class TextField extends PureComponent {
         }),
     };
 
+    let labelProps = {
+      fontSize,
+      tintColor,
+      baseColor,
+      errorColor,
+      animationDuration,
+      active,
+      focused,
+      errored,
+      restricted,
+    };
+
     return (
       <View onStartShouldSetResponder={ () => true } onResponderRelease={this.onPress}>
-        <Animated.View style={[ styles.container, containerStyle ]}>
+        <Animated.View style={[styles.container, containerStyle]}>
           {disabled && <Line type='dotted' color={baseColor} />}
 
-          <Label {...{ fontSize, tintColor, baseColor, errorColor, animationDuration, focused, errored, restricted, active }}>
-            {label}
-          </Label>
+          <Label {...labelProps}>{label}</Label>
 
           <TextInput
-            style={[ styles.input, inputStyle, style ]}
+            style={[styles.input, inputStyle, style]}
             selectionColor={tintColor}
 
             {...props}
@@ -318,7 +348,7 @@ export default class TextField extends PureComponent {
             onFocus={this.onFocus}
             onBlur={this.onBlur}
             value={text}
-            ref={this.updateInputRef}
+            ref={this.updateRef}
           />
         </Animated.View>
 
