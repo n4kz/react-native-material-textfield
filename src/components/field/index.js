@@ -62,6 +62,8 @@ export default class TextField extends PureComponent {
     this.onChangeText = this.onChangeText.bind(this);
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
 
+    this.updateInputRef = this.updateRef.bind(this, '_input');
+
     let { value, error } = this.props;
 
     this.mounted = false;
@@ -121,20 +123,24 @@ export default class TextField extends PureComponent {
     }
   }
 
+  updateRef(name, ref) {
+    this[name] = ref;
+  }
+
   focus() {
     let { disabled, editable } = this.props;
 
     if (!disabled && editable) {
-      this.refs.input.focus();
+      this._input.focus();
     }
   }
 
   blur() {
-    this.refs.input.blur();
+    this._input.blur();
   }
 
   clear() {
-    this.refs.input.clear();
+    this._input.clear();
   }
 
   value() {
@@ -142,7 +148,7 @@ export default class TextField extends PureComponent {
   }
 
   isFocused() {
-    return this.refs.input.isFocused();
+    return this._input.isFocused();
   }
 
   isRestricted() {
@@ -312,7 +318,7 @@ export default class TextField extends PureComponent {
             onFocus={this.onFocus}
             onBlur={this.onBlur}
             value={text}
-            ref='input'
+            ref={this.updateInputRef}
           />
         </Animated.View>
 
