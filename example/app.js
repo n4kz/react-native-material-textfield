@@ -31,6 +31,12 @@ export default function init() {
       this.onSubmitEmail = this.onSubmitEmail.bind(this);
       this.onSubmitPassword = this.onSubmitPassword.bind(this);
 
+      this.firstnameRef = this.updateRef.bind(this, 'firstname');
+      this.lastnameRef = this.updateRef.bind(this, 'lastname');
+      this.aboutRef = this.updateRef.bind(this, 'about');
+      this.emailRef = this.updateRef.bind(this, 'email');
+      this.passwordRef = this.updateRef.bind(this, 'password');
+
       this.state = {
         firstname: 'Eddard',
         lastname: 'Stark',
@@ -42,7 +48,7 @@ export default function init() {
       let { errors = {} } = this.state;
 
       for (let name in errors) {
-        let ref = this.refs[name];
+        let ref = this[name];
 
         if (ref && ref.isFocused()) {
           delete errors[name];
@@ -53,53 +59,56 @@ export default function init() {
     }
 
     onChangeText(text) {
-      for (let key in this.refs) {
-        let ref = this.refs[key];
-
-        if (ref.isFocused()) {
-          this.setState({ [key]: text });
-          break;
-        }
-      }
+      ['firstname', 'lastname', 'about', 'email', 'password']
+        .map((name) => ({ name, ref: this[name] }))
+        .forEach(({ name, ref }) => {
+          if (ref.isFocused()) {
+            this.setState({ [name]: text });
+          }
+        });
     }
 
     onSubmitFirstName() {
-      this.refs.lastname.focus();
+      this.lastname.focus();
     }
 
     onSubmitLastName() {
-      this.refs.about.focus();
+      this.about.focus();
     }
 
     onSubmitAbout() {
-        this.refs.email.focus();
+      this.email.focus();
     }
 
     onSubmitEmail() {
-      this.refs.password.focus();
+      this.password.focus();
     }
 
     onSubmitPassword() {
-      this.refs.password.blur();
+      this.password.blur();
     }
 
     onSubmit() {
       let errors = {};
 
       ['firstname', 'lastname', 'email', 'password']
-        .forEach((field) => {
-          let value = this.refs[field].value();
+        .forEach((name) => {
+          let value = this[name].value();
 
           if (!value) {
-            errors[field] = 'Should not be empty';
+            errors[name] = 'Should not be empty';
           } else {
-            if (field === 'password' && value.length < 6) {
-              errors[field] = 'Too short';
+            if ('password' === name && value.length < 6) {
+              errors[name] = 'Too short';
             }
           }
         });
 
       this.setState({ errors });
+    }
+
+    updateRef(name, ref) {
+      this[name] = ref;
     }
 
     render() {
@@ -109,7 +118,7 @@ export default function init() {
         <ScrollView style={styles.scroll}>
           <View style={styles.container}>
             <TextField
-              ref='firstname'
+              ref={this.firstnameRef}
               value={data.firstname}
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
@@ -122,7 +131,7 @@ export default function init() {
             />
 
             <TextField
-              ref='lastname'
+              ref={this.lastnameRef}
               value={data.lastname}
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
@@ -135,7 +144,7 @@ export default function init() {
             />
 
             <TextField
-              ref='about'
+              ref={this.aboutRef}
               value={data.about}
               onFocus={this.onFocus}
               onChangeText={this.onChangeText}
@@ -147,7 +156,7 @@ export default function init() {
             />
 
             <TextField
-              ref='email'
+              ref={this.emailRef}
               value={data.email}
               keyboardType='email-address'
               autoCapitalize='none'
@@ -162,7 +171,7 @@ export default function init() {
             />
 
             <TextField
-              ref='password'
+              ref={this.passwordRef}
               value={data.password}
               secureTextEntry={true}
               autoCapitalize='none'
@@ -180,7 +189,6 @@ export default function init() {
             />
 
             <TextField
-              ref='house'
               value={data.lastname}
               label='House'
               title='Derived from last name'
