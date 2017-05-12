@@ -1,4 +1,5 @@
-import React, { PropTypes, PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import { TextInput, View, Animated, Easing, StyleSheet, Platform } from 'react-native';
 
 import Line from '../line';
