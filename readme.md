@@ -72,6 +72,7 @@ characterRestriction | Text field soft limit for character counter |   Number | 
 disabled             | Text field availability                     |  Boolean | false
 editable             | Text field text can be edited               |  Boolean | true
 multiline            | Text filed multiline input                  |  Boolean | false
+renderAccessory      | Render input accessory view                 | Function | -
 onChangeText         | Change text callback                        | Function | -
 onFocus              | Focus callback                              | Function | -
 onBlur               | Blur callback                               | Function | -
