@@ -209,9 +209,10 @@ export default class TextField extends PureComponent {
   }
 
   onContentSizeChange({ nativeEvent }) {
+    let { fontSize } = this.props;
     let { height } = nativeEvent.contentSize;
 
-    this.setState({ height: Math.ceil(height) });
+    this.setState({ height: Math.max(fontSize * 1.5, Math.ceil(height)) });
   }
 
   render() {
