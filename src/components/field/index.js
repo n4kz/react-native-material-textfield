@@ -289,7 +289,7 @@ export default class TextField extends PureComponent {
           height: fontSize * 1.5 + height,
 
           ...Platform.select({
-            ios: { left: 1, top: -1 },
+            ios: { top: -1 },
             android: { textAlignVertical: 'top' },
           }),
         }:
