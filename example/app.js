@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { AppRegistry, ScrollView, View } from 'react-native';
 import { RaisedTextButton } from 'react-native-material-buttons';
 import { TextField } from 'react-native-material-textfield';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 let styles = {
   scroll: {
@@ -30,6 +31,7 @@ export default function init() {
       this.onSubmitAbout = this.onSubmitAbout.bind(this);
       this.onSubmitEmail = this.onSubmitEmail.bind(this);
       this.onSubmitPassword = this.onSubmitPassword.bind(this);
+      this.onAccessoryPress = this.onAccessoryPress.bind(this);
 
       this.firstnameRef = this.updateRef.bind(this, 'firstname');
       this.lastnameRef = this.updateRef.bind(this, 'lastname');
@@ -37,10 +39,13 @@ export default function init() {
       this.emailRef = this.updateRef.bind(this, 'email');
       this.passwordRef = this.updateRef.bind(this, 'password');
 
+      this.renderPasswordAccessory = this.renderPasswordAccessory.bind(this);
+
       this.state = {
         firstname: 'Eddard',
         lastname: 'Stark',
         about: 'Stoic, dutiful, and honorable man, considered to embody the values of the North',
+        secureTextEntry: true,
       };
     }
 
@@ -66,6 +71,10 @@ export default function init() {
             this.setState({ [name]: text });
           }
         });
+    }
+
+    onAccessoryPress() {
+      this.setState(({ secureTextEntry }) => ({ secureTextEntry: !secureTextEntry }));
     }
 
     onSubmitFirstName() {
@@ -111,8 +120,26 @@ export default function init() {
       this[name] = ref;
     }
 
+    renderPasswordAccessory() {
+      let { secureTextEntry } = this.state;
+
+      let name = secureTextEntry?
+        'visibility':
+        'visibility-off';
+
+      return (
+        <MaterialIcon
+          size={24}
+          name={name}
+          color={TextField.defaultProps.baseColor}
+          onPress={this.onAccessoryPress}
+          suppressHighlighting
+        />
+      );
+    }
+
     render() {
-      let { errors = {}, ...data } = this.state;
+      let { errors = {}, secureTextEntry, ...data } = this.state;
 
       return (
         <ScrollView style={styles.scroll}>
@@ -173,7 +200,7 @@ export default function init() {
             <TextField
               ref={this.passwordRef}
               value={data.password}
-              secureTextEntry={true}
+              secureTextEntry={secureTextEntry}
               autoCapitalize='none'
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
@@ -186,6 +213,7 @@ export default function init() {
               title='Choose wisely'
               maxLength={30}
               characterRestriction={20}
+              renderAccessory={this.renderPasswordAccessory}
             />
 
             <TextField

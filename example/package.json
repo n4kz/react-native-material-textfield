@@ -10,7 +10,8 @@
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
     "react-native-material-buttons": "^0.2.0",
-    "react-native-material-textfield": "file:../"
+    "react-native-material-textfield": "file:../",
+    "react-native-vector-icons": "^4.1.1"
   },
   "devDependencies": {
     "babel-preset-react-native": "1.9.1"
