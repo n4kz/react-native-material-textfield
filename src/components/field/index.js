@@ -57,6 +57,8 @@ export default class TextField extends PureComponent {
     errorColor: PropTypes.string,
 
     disabled: PropTypes.bool,
+
+    renderAccessory: PropTypes.func,
   };
 
   constructor(props) {
@@ -215,6 +217,20 @@ export default class TextField extends PureComponent {
     this.setState({ height: Math.max(fontSize * 1.5, Math.ceil(height)) });
   }
 
+  renderAccessory() {
+    let { renderAccessory } = this.props;
+
+    if ('function' !== typeof renderAccessory) {
+      return null;
+    }
+
+    return (
+      <View style={styles.accessory}>
+        {renderAccessory()}
+      </View>
+    );
+  }
+
   render() {
     let { focused, focus, error, errored, height, text = '' } = this.state;
     let {
@@ -336,21 +352,25 @@ export default class TextField extends PureComponent {
 
           <Label {...labelProps}>{label}</Label>
 
-          <TextInput
-            style={[styles.input, inputStyle, style]}
-            selectionColor={tintColor}
+          <View style={styles.row}>
+            <TextInput
+              style={[styles.input, inputStyle, style]}
+              selectionColor={tintColor}
 
-            {...props}
+              {...props}
 
-            editable={!disabled && editable}
-            onChange={this.onChange}
-            onChangeText={this.onChangeText}
-            onContentSizeChange={this.onContentSizeChange}
-            onFocus={this.onFocus}
-            onBlur={this.onBlur}
-            value={text}
-            ref={this.updateRef}
-          />
+              editable={!disabled && editable}
+              onChange={this.onChange}
+              onChangeText={this.onChangeText}
+              onContentSizeChange={this.onContentSizeChange}
+              onFocus={this.onFocus}
+              onBlur={this.onBlur}
+              value={text}
+              ref={this.updateRef}
+            />
+
+            {this.renderAccessory()}
+          </View>
         </Animated.View>
 
         <Animated.View style={helperContainerStyle}>

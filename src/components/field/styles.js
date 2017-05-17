@@ -13,9 +13,19 @@ export default StyleSheet.create({
     fontSize: 16,
     padding: 0,
     margin: 0,
+    flex: 1,
+  },
+
+  row: {
+    flexDirection: 'row',
   },
 
   flex: {
     flex: 1,
+  },
+
+  accessory: {
+    justifyContent: 'center',
+    alignSelf: 'flex-start',
   },
 });
