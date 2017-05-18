@@ -2,6 +2,7 @@
 [npm-url]: https://npmjs.com/package/react-native-material-textfield
 [license-badge]: https://img.shields.io/npm/l/react-native-material-textfield.svg?colorB=448aff
 [license-url]: https://raw.githubusercontent.com/n4kz/react-native-material-textfield/master/license.txt
+[example-url]: https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif
 
 # react-native-material-textfield
 
@@ -10,7 +11,7 @@
 
 Material texfield with consistent behaviour on iOS and Android
 
-![example](https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif)
+![example][example-url]
 
 ## Features
 
@@ -57,38 +58,38 @@ class Example extends Component {
 
 ## Properties
 
-name                 | description                                 | type     | default
--------------------- | ------------------------------------------- | --------:| ------------------
-textColor            | Text input color                            |   String | rgba(0, 0, 0, .87)
-fontSize             | Text input font size                        |   Number | 16
-tintColor            | Text field accent color                     |   String | rgb(0, 145, 234)
-baseColor            | Text field base color                       |   String | rgba(0, 0, 0, .38)
-label                | Text field label text                       |   String | -
-title                | Text field helper text                      |   String | -
-error                | Text field error text                       |   String | -
-errorColor           | Text field color for errored state          |   String | rgb(213, 0, 0)
-animationDuration    | Text field animation duration in ms         |   Number | 225
-characterRestriction | Text field soft limit for character counter |   Number | -
-disabled             | Text field availability                     |  Boolean | false
-editable             | Text field text can be edited               |  Boolean | true
-multiline            | Text filed multiline input                  |  Boolean | false
-renderAccessory      | Render input accessory view                 | Function | -
-onChangeText         | Change text callback                        | Function | -
-onFocus              | Focus callback                              | Function | -
-onBlur               | Blur callback                               | Function | -
+ name                 | description                                 | type     | default
+:-------------------- |:------------------------------------------- | --------:|:------------------
+ textColor            | Text input color                            |   String | rgba(0, 0, 0, .87)
+ fontSize             | Text input font size                        |   Number | 16
+ tintColor            | Text field accent color                     |   String | rgb(0, 145, 234)
+ baseColor            | Text field base color                       |   String | rgba(0, 0, 0, .38)
+ label                | Text field label text                       |   String | -
+ title                | Text field helper text                      |   String | -
+ error                | Text field error text                       |   String | -
+ errorColor           | Text field color for errored state          |   String | rgb(213, 0, 0)
+ animationDuration    | Text field animation duration in ms         |   Number | 225
+ characterRestriction | Text field soft limit for character counter |   Number | -
+ disabled             | Text field availability                     |  Boolean | false
+ editable             | Text field text can be edited               |  Boolean | true
+ multiline            | Text filed multiline input                  |  Boolean | false
+ renderAccessory      | Render input accessory view                 | Function | -
+ onChangeText         | Change text callback                        | Function | -
+ onFocus              | Focus callback                              | Function | -
+ onBlur               | Blur callback                               | Function | -
 
 Other [TextInput](https://facebook.github.io/react-native/docs/textinput.html#props) properties will also work
 
 ## Methods
 
-name           | description                   | return type
--------------- | ----------------------------- | -----------:
-focus()        | Acquire focus                 |   undefined
-blur()         | Release focus                 |   undefined
-clear()        | Clear text field              |   undefined
-value()        | Get current value             |      String
-isFocused()    | Get current focus state       |     Boolean
-isRestricted() | Get current restriction state |     Boolean
+ name           | description                   | return type
+:-------------- |:----------------------------- | -----------:
+ focus()        | Acquire focus                 |   undefined
+ blur()         | Release focus                 |   undefined
+ clear()        | Clear text field              |   undefined
+ value()        | Get current value             |      String
+ isFocused()    | Get current focus state       |     Boolean
+ isRestricted() | Get current restriction state |     Boolean
 
 ## Example
 
