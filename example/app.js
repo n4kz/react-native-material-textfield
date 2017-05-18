@@ -140,6 +140,11 @@ export default function init() {
 
     render() {
       let { errors = {}, secureTextEntry, ...data } = this.state;
+      let { firstname = 'name', lastname = 'house' } = data;
+
+      let defaultEmail = `${firstname}@${lastname}.com`
+        .replace(/\s+/g, '_')
+        .toLowerCase();
 
       return (
         <ScrollView style={styles.scroll}>
@@ -185,6 +190,7 @@ export default function init() {
             <TextField
               ref={this.emailRef}
               value={data.email}
+              defaultValue={defaultEmail}
               keyboardType='email-address'
               autoCapitalize='none'
               autoCorrect={false}
