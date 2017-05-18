@@ -81,6 +81,7 @@ export default class TextField extends PureComponent {
 
       focus: new Animated.Value(error? -1 : 0),
       focused: false,
+      receivedFocus: false,
 
       error: error,
       errored: !!error,
@@ -153,7 +154,12 @@ export default class TextField extends PureComponent {
   }
 
   value() {
-    return this.state.text;
+    let { text, receivedFocus } = this.state;
+    let { value, defaultValue } = this.props;
+
+    return (receivedFocus || null != value || null == defaultValue)?
+      text:
+      defaultValue;
   }
 
   isFocused() {
@@ -174,7 +180,7 @@ export default class TextField extends PureComponent {
       onFocus();
     }
 
-    this.setState({ focused: true });
+    this.setState({ focused: true, receivedFocus: true });
   }
 
   onBlur() {
@@ -232,11 +238,13 @@ export default class TextField extends PureComponent {
   }
 
   render() {
-    let { focused, focus, error, errored, height, text = '' } = this.state;
+    let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
     let {
       style,
       label,
       title,
+      value,
+      defaultValue,
       characterRestriction: limit,
       editable,
       disabled,
@@ -249,8 +257,14 @@ export default class TextField extends PureComponent {
       ...props
     } = this.props;
 
-    let count = text.length;
-    let active = !!text;
+    let defaultVisible = !(receivedFocus || null != value || null == defaultValue);
+
+    value = defaultVisible?
+      defaultValue:
+      text;
+
+    let active = !!value;
+    let count = value.length;
     let restricted = limit < count;
 
     let borderBottomColor = restricted?
@@ -280,7 +294,7 @@ export default class TextField extends PureComponent {
     let inputStyle = {
       fontSize,
 
-      color: disabled?
+      color: (disabled || defaultVisible)?
         baseColor:
         textColor,
 
@@ -365,7 +379,7 @@ export default class TextField extends PureComponent {
               onContentSizeChange={this.onContentSizeChange}
               onFocus={this.onFocus}
               onBlur={this.onBlur}
-              value={text}
+              value={value}
               ref={this.updateRef}
             />
 
