@@ -267,7 +267,7 @@ export default class TextField extends PureComponent {
       defaultValue:
       text;
 
-    let active = !!value;
+    let active = !!(value || props.placeholder);
     let count = value.length;
     let restricted = limit < count;
 
