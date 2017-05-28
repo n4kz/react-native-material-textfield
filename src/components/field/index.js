@@ -73,7 +73,7 @@ export default class TextField extends PureComponent {
 
     this.updateRef = this.updateRef.bind(this, 'input');
 
-    let { value, error } = this.props;
+    let { value, error, fontSize } = this.props;
 
     this.mounted = false;
     this.state = {
@@ -86,7 +86,7 @@ export default class TextField extends PureComponent {
       error: error,
       errored: !!error,
 
-      height: 24,
+      height: fontSize * 1.5,
     };
   }
 
