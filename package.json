@@ -39,8 +39,9 @@
   },
 
   "scripts": {
-    "test": "node_modules/.bin/eslint src example/app.js"
+    "lint": "node_modules/.bin/eslint src example/app.js"
   },
+
   "dependencies": {
     "prop-types": "^15.5.9"
   }
