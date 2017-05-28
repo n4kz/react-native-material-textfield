@@ -21,6 +21,7 @@ export default class Label extends PureComponent {
     restricted: PropTypes.bool,
 
     fontSize: PropTypes.number.isRequired,
+    activeFontSize: PropTypes.number.isRequired,
 
     tintColor: PropTypes.string.isRequired,
     baseColor: PropTypes.string.isRequired,
@@ -66,8 +67,17 @@ export default class Label extends PureComponent {
   }
 
   render() {
-    let { children, restricted, fontSize, errorColor, baseColor, tintColor, ...props } = this.props;
     let { focus, input } = this.state;
+    let {
+      children,
+      restricted,
+      fontSize,
+      activeFontSize,
+      errorColor,
+      baseColor,
+      tintColor,
+      ...props
+    } = this.props;
 
     let color = restricted?
       errorColor:
@@ -78,13 +88,16 @@ export default class Label extends PureComponent {
 
     let top = input.interpolate({
       inputRange: [0, 1],
-      outputRange: [32 + fontSize * 0.25, 16],
+      outputRange: [
+        32 + fontSize * 0.25,
+        32 - fontSize * 0.25 - activeFontSize,
+      ],
     });
 
     let textStyle = {
       fontSize: input.interpolate({
         inputRange: [0, 1],
-        outputRange: [fontSize, 12],
+        outputRange: [fontSize, activeFontSize],
       }),
 
       color,

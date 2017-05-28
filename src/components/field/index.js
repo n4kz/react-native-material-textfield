@@ -353,6 +353,7 @@ export default class TextField extends PureComponent {
 
     let labelProps = {
       fontSize,
+      activeFontSize: 12,
       tintColor,
       baseColor,
       errorColor,
