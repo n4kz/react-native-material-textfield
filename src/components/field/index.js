@@ -27,6 +27,7 @@ export default class TextField extends PureComponent {
     animationDuration: 225,
 
     fontSize: 16,
+    labelFontSize: 12,
 
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
@@ -43,6 +44,7 @@ export default class TextField extends PureComponent {
     animationDuration: PropTypes.number,
 
     fontSize: PropTypes.number,
+    labelFontSize: PropTypes.number,
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
@@ -254,6 +256,7 @@ export default class TextField extends PureComponent {
       disabled,
       animationDuration,
       fontSize,
+      labelFontSize: activeFontSize,
       tintColor,
       baseColor,
       textColor,
@@ -353,7 +356,7 @@ export default class TextField extends PureComponent {
 
     let labelProps = {
       fontSize,
-      activeFontSize: 12,
+      activeFontSize,
       tintColor,
       baseColor,
       errorColor,
