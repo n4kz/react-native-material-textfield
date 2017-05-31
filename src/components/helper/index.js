@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { View, Animated } from 'react-native';
 
@@ -10,19 +9,15 @@ export default class Helper extends PureComponent {
   };
 
   static propTypes = {
-    text: PropTypes.string,
+    ...Animated.Text.propTypes,
   };
 
   render() {
-    let { text, ...props } = this.props;
-
-    if (!text) {
-      return null;
-    }
+    let { children, ...props } = this.props;
 
     return (
       <View style={styles.container}>
-        <Animated.Text {...props}>{text}</Animated.Text>
+        <Animated.Text {...props}>{children}</Animated.Text>
       </View>
     );
   }

@@ -397,8 +397,8 @@ export default class TextField extends PureComponent {
 
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            <Helper style={errorStyle} text={error} />
-            <Helper style={titleStyle} text={title} />
+            <Helper style={errorStyle}>{error}</Helper>
+            <Helper style={titleStyle}>{title}</Helper>
           </View>
 
           <Counter {...{ baseColor, errorColor, count, limit }} />
