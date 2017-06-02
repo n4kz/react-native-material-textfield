@@ -93,9 +93,9 @@ export default class TextField extends PureComponent {
   }
 
   componentWillReceiveProps(props) {
-    let { text, error } = this.state;
+    let { error } = this.state;
 
-    if (null != props.value && props.value !== text) {
+    if (null != props.value) {
       this.setState({ text: props.value });
     }
 
@@ -211,11 +211,11 @@ export default class TextField extends PureComponent {
   onChangeText(text) {
     let { onChangeText } = this.props;
 
+    this.setState({ text });
+
     if ('function' === typeof onChangeText) {
       onChangeText(text);
     }
-
-    this.setState({ text });
   }
 
   onContentSizeChange(event) {
