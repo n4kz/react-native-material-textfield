@@ -11,6 +11,7 @@ import {
 
 import Line from '../line';
 import Label from '../label';
+import Affix from '../affix';
 import Helper from '../helper';
 import Counter from '../counter';
 
@@ -61,6 +62,9 @@ export default class TextField extends PureComponent {
     disabled: PropTypes.bool,
 
     renderAccessory: PropTypes.func,
+
+    prefix: PropTypes.string,
+    suffix: PropTypes.string,
   };
 
   constructor(props) {
@@ -243,6 +247,27 @@ export default class TextField extends PureComponent {
     );
   }
 
+  renderAffix(type, active, focused) {
+    let { [type]: affix, fontSize, baseColor, animationDuration } = this.props;
+
+    if (null == affix) {
+      return null;
+    }
+
+    let props = {
+      type,
+      active,
+      focused,
+      fontSize,
+      baseColor,
+      animationDuration,
+    };
+
+    return (
+      <Affix {...props}>{affix}</Affix>
+    );
+  }
+
   render() {
     let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
     let {
@@ -375,6 +400,8 @@ export default class TextField extends PureComponent {
           <Label {...labelProps}>{label}</Label>
 
           <View style={styles.row}>
+            {this.renderAffix('prefix', active, focused)}
+
             <TextInput
               style={[styles.input, inputStyle, style]}
               selectionColor={tintColor}
@@ -391,6 +418,7 @@ export default class TextField extends PureComponent {
               ref={this.updateRef}
             />
 
+            {this.renderAffix('suffix', active, focused)}
             {this.renderAccessory()}
           </View>
         </Animated.View>
