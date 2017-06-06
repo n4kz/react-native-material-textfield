@@ -13,8 +13,6 @@ export default class Label extends PureComponent {
   };
 
   static propTypes = {
-    ...Animated.Text.propTypes,
-
     active: PropTypes.bool,
     focused: PropTypes.bool,
     errored: PropTypes.bool,
@@ -28,6 +26,11 @@ export default class Label extends PureComponent {
     errorColor: PropTypes.string.isRequired,
 
     animationDuration: PropTypes.number.isRequired,
+
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]),
   };
 
   constructor(props) {
