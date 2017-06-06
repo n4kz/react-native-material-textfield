@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Animated, Easing } from 'react-native';
+import { Animated } from 'react-native';
 
 export default class Label extends PureComponent {
   static defaultProps = {
@@ -53,7 +53,6 @@ export default class Label extends PureComponent {
         .timing(input, {
           toValue: (props.active || props.focused)? 1 : 0,
           duration: animationDuration,
-          easing: Easing.inOut(Easing.ease),
         })
         .start();
     }
@@ -63,7 +62,6 @@ export default class Label extends PureComponent {
         .timing(focus, {
           toValue: props.errored? -1 : (props.focused? 1 : 0),
           duration: animationDuration,
-          easing: Easing.inOut(Easing.ease),
         })
         .start();
     }

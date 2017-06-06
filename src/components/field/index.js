@@ -4,7 +4,6 @@ import {
   View,
   TextInput,
   Animated,
-  Easing,
   StyleSheet,
   Platform,
 } from 'react-native';
@@ -129,7 +128,6 @@ export default class TextField extends PureComponent {
         .timing(focus, {
           toValue: props.error? -1 : (state.focused? 1 : 0),
           duration: animationDuration,
-          easing: Easing.inOut(Easing.ease),
         })
         .start(() => {
           if (this.mounted) {
