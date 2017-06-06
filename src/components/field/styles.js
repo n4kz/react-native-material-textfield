@@ -23,6 +23,7 @@ export default StyleSheet.create({
   },
 
   accessory: {
+    top: 2,
     justifyContent: 'center',
     alignSelf: 'flex-start',
   },
