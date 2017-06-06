@@ -9,8 +9,6 @@ export default StyleSheet.create({
 
   input: {
     top: 2,
-    height: 24,
-    fontSize: 16,
     padding: 0,
     margin: 0,
     flex: 1,
