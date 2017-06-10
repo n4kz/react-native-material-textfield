@@ -5,5 +5,6 @@ export default StyleSheet.create({
     top: 2,
     alignSelf: 'flex-start',
     justifyContent: 'center',
+    fontFamily: 'Lato-Regular',
   },
 });
