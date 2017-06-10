@@ -4,7 +4,6 @@ import {
   View,
   TextInput,
   Animated,
-  StyleSheet,
   Platform,
 } from 'react-native';
 
@@ -26,7 +25,7 @@ export default class TextField extends PureComponent {
 
     animationDuration: 225,
 
-    fontSize: 16,
+    fontSize: 17,
     labelFontSize: 12,
 
     tintColor: 'rgb(0, 145, 234)',
@@ -297,24 +296,10 @@ export default class TextField extends PureComponent {
     let count = value.length;
     let restricted = limit < count;
 
-    let borderBottomColor = restricted?
-      errorColor:
-      focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
-      });
-
-    let borderBottomWidth = restricted?
-      2:
-      focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [2, StyleSheet.hairlineWidth, 2],
-      });
-
     let containerStyle = {
       ...(disabled?
         { overflow: 'hidden' }:
-        { borderBottomColor, borderBottomWidth }),
+        {}),
 
       ...(props.multiline?
         { height: 40 + height }:
@@ -405,7 +390,6 @@ export default class TextField extends PureComponent {
               selectionColor={tintColor}
 
               {...props}
-              underlineColorAndroid="transparent"
               editable={!disabled && editable}
               onChange={this.onChange}
               onChangeText={this.onChangeText}
