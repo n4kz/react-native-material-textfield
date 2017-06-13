@@ -10,6 +10,7 @@ export default class Helper extends PureComponent {
   };
 
   static propTypes = {
+    style: PropTypes.object,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
@@ -17,11 +18,13 @@ export default class Helper extends PureComponent {
   };
 
   render() {
-    let { children, ...props } = this.props;
+    let { children, style, ...props } = this.props;
 
     return (
       <View style={styles.container}>
-        <Animated.Text {...props}>{children}</Animated.Text>
+        <Animated.Text style={[styles.text, style]} {...props}>
+          {children}
+        </Animated.Text>
       </View>
     );
   }

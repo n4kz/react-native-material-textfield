@@ -5,4 +5,8 @@ export default StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     paddingVertical: 4,
   },
+
+  text: {
+    backgroundColor: 'transparent',
+  },
 });
