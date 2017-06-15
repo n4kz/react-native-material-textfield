@@ -26,6 +26,7 @@ Material texfield with consistent behaviour on iOS and Android
 * Character counter
 * Prefix and suffix
 * Accessory view
+* Helper text
 * Pure javascript implementation
 
 ## Installation
@@ -88,14 +89,14 @@ Other [TextInput][rn-textinput] properties will also work
 
 ## Methods
 
- name           | description                   | return type
-:-------------- |:----------------------------- | -----------:
- focus()        | Acquire focus                 |   undefined
- blur()         | Release focus                 |   undefined
- clear()        | Clear text field              |   undefined
- value()        | Get current value             |      String
- isFocused()    | Get current focus state       |     Boolean
- isRestricted() | Get current restriction state |     Boolean
+ name           | description                   | returns
+:-------------- |:----------------------------- | -------:
+ focus()        | Acquire focus                 |       -
+ blur()         | Release focus                 |       -
+ clear()        | Clear text field              |       -
+ value()        | Get current value             |  String
+ isFocused()    | Get current focus state       | Boolean
+ isRestricted() | Get current restriction state | Boolean
 
 ## Example
 
