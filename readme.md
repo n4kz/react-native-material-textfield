@@ -3,6 +3,8 @@
 [license-badge]: https://img.shields.io/npm/l/react-native-material-textfield.svg?colorB=448aff
 [license-url]: https://raw.githubusercontent.com/n4kz/react-native-material-textfield/master/license.txt
 [example-url]: https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif
+[rn-textinput]: https://facebook.github.io/react-native/docs/textinput.html#props
+[md-textfield]: https://material.io/guidelines/components/text-fields.html
 
 # react-native-material-textfield
 
@@ -15,14 +17,15 @@ Material texfield with consistent behaviour on iOS and Android
 
 ## Features
 
-* Material design [guidelines](https://material.io/guidelines/components/text-fields.html) compliance
+* Material design [guidelines][md-textfield] compliance
 * Consistent look and feel on iOS and Android
 * Animated state transitions (normal, focused and errored)
 * Customizable font size, colors and animation duration
 * Disabled state (with dotted underline)
-* Helper text
-* Character counter
 * Multiline text input
+* Character counter
+* Prefix and suffix
+* Accessory view
 * Pure javascript implementation
 
 ## Installation
@@ -81,7 +84,7 @@ class Example extends Component {
  onFocus              | Focus callback                              | Function | -
  onBlur               | Blur callback                               | Function | -
 
-Other [TextInput](https://facebook.github.io/react-native/docs/textinput.html#props) properties will also work
+Other [TextInput][rn-textinput] properties will also work
 
 ## Methods
 
