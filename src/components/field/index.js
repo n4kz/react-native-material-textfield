@@ -269,6 +269,7 @@ export default class TextField extends PureComponent {
     let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
     let {
       style,
+      containerStyle,
       label,
       title,
       value,
@@ -296,7 +297,7 @@ export default class TextField extends PureComponent {
     let count = value.length;
     let restricted = limit < count;
 
-    let containerStyle = {
+    let defaultContainerStyle = {
       ...(disabled?
         { overflow: 'hidden' }:
         {}),
@@ -377,7 +378,7 @@ export default class TextField extends PureComponent {
 
     return (
       <View onStartShouldSetResponder={ () => true } onResponderRelease={this.onPress}>
-        <Animated.View style={[styles.container, containerStyle]}>
+        <Animated.View style={[styles.container, defaultContainerStyle, containerStyle]}>
           {disabled && <Line type='dotted' color={baseColor} />}
 
           <Label {...labelProps}>{label}</Label>
