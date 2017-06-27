@@ -49,8 +49,9 @@
   },
 
   "scripts": {
+    "test": "npm run jest -- --silent",
     "lint": "eslint src example/app.js",
-    "test": "jest"
+    "jest": "jest"
   },
 
   "jest": {
