@@ -27,6 +27,10 @@
     "url": "git://github.com/n4kz/react-native-material-textfield.git"
   },
 
+  "dependencies": {
+    "prop-types": "^15.5.9"
+  },
+
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
@@ -34,15 +38,22 @@
 
   "devDependencies": {
     "babel-eslint": "^7.2.0",
+    "babel-jest": "^20.0.3",
+    "babel-preset-react-native": "2.0.0",
     "eslint": "^3.18.0",
-    "eslint-plugin-react": "^7.0.0"
+    "eslint-plugin-react": "^7.0.0",
+    "jest": "^20.0.4",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.45.1",
+    "react-test-renderer": "16.0.0-alpha.12"
   },
 
   "scripts": {
-    "lint": "node_modules/.bin/eslint src example/app.js"
+    "lint": "eslint src example/app.js",
+    "test": "jest"
   },
 
-  "dependencies": {
-    "prop-types": "^15.5.9"
+  "jest": {
+    "preset": "react-native"
   }
 }
