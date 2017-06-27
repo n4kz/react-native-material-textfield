@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders label 1`] = `
+<View
+  style={
+    Object {
+      "position": "absolute",
+      "top": 36,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    active={false}
+    allowFontScaling={true}
+    animationDuration={225}
+    disabled={false}
+    ellipsizeMode="tail"
+    errored={false}
+    focused={false}
+    numberOfLines={1}
+    style={
+      Object {
+        "color": "rgba(0, 0, 0, 1)",
+        "fontSize": 16,
+      }
+    }
+  >
+    test
+  </Text>
+</View>
+`;
