@@ -9,15 +9,15 @@ import Helper from '.';
 const string = 'helper';
 
 it('renders helper', () => {
-    let helper = renderer
-      .create(<Helper>{string}</Helper>)
-      .toJSON();
+  let helper = renderer
+    .create(<Helper>{string}</Helper>)
+    .toJSON();
 
-    let text = helper.children[0];
+  let text = helper.children[0];
 
-    expect(text.type).toBe('Text');
-    expect(text.children).toEqual([string]);
+  expect(text.type).toBe('Text');
+  expect(text.children).toEqual([string]);
 
-    expect(helper)
-      .toMatchSnapshot();
+  expect(helper)
+    .toMatchSnapshot();
 });
