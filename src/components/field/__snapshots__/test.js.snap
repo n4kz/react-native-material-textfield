@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders text field 1`] = `
+<View
+  onResponderRelease={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
+        "borderBottomWidth": 0.5,
+        "height": 64,
+        "paddingBottom": 8,
+        "paddingTop": 32,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "position": "absolute",
+          "top": 36,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        active={false}
+        allowFontScaling={true}
+        animationDuration={225}
+        disabled={false}
+        ellipsizeMode="tail"
+        errored={false}
+        focused={false}
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "rgba(0, 0, 0, 0.38)",
+            "fontSize": 16,
+          }
+        }
+      >
+        test
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        blurOnSubmit={true}
+        disableFullscreenUI={true}
+        editable={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onChangeText={[Function]}
+        onContentSizeChange={[Function]}
+        onFocus={[Function]}
+        selectionColor="rgb(0, 145, 234)"
+        style={
+          Array [
+            Object {
+              "flex": 1,
+              "margin": 0,
+              "padding": 0,
+              "top": 2,
+            },
+            Object {
+              "color": "rgba(0, 0, 0, .87)",
+              "fontSize": 16,
+              "height": 24,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 8,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "paddingVertical": 4,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          numberOfLines={1}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "color": "rgb(213, 0, 0)",
+              "fontSize": 0,
+              "opacity": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "paddingVertical": 4,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          numberOfLines={1}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "color": "rgba(0, 0, 0, .38)",
+              "fontSize": 12,
+              "opacity": 1,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
