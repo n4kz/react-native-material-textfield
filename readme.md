@@ -2,6 +2,8 @@
 [npm-url]: https://npmjs.com/package/react-native-material-textfield
 [license-badge]: https://img.shields.io/npm/l/react-native-material-textfield.svg?colorB=448aff
 [license-url]: https://raw.githubusercontent.com/n4kz/react-native-material-textfield/master/license.txt
+[travis-badge]: https://api.travis-ci.org/n4kz/react-native-material-textfield.svg?branch=master
+[travis-url]: https://travis-ci.org/n4kz/react-native-material-textfield?branch=master
 [example-url]: https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif
 [rn-textinput]: https://facebook.github.io/react-native/docs/textinput.html#props
 [md-textfield]: https://material.io/guidelines/components/text-fields.html
@@ -10,6 +12,7 @@
 
 [![npm][npm-badge]][npm-url]
 [![license][license-badge]][license-url]
+[![travis][travis-badge]][travis-url]
 
 Material texfield with consistent behaviour on iOS and Android
 
