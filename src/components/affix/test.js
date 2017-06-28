@@ -20,12 +20,6 @@ it('renders prefix', () => {
     .create(<Affix type='prefix' {...props}>{prefix}</Affix>)
     .toJSON();
 
-  let text = affix.children[0];
-
-  expect(text.type).toBe('Text');
-  expect(text.children).toEqual([prefix]);
-  expect(text.props.style.textAlign).toBe('left');
-
   expect(affix)
     .toMatchSnapshot();
 });
@@ -34,12 +28,6 @@ it('renders suffix', () => {
   let affix = renderer
     .create(<Affix type='suffix' {...props}>{suffix}</Affix>)
     .toJSON();
-
-  let text = affix.children[0];
-
-  expect(text.type).toBe('Text');
-  expect(text.children).toEqual([suffix]);
-  expect(text.props.style.textAlign).toBe('right');
 
   expect(affix)
     .toMatchSnapshot();

@@ -6,17 +6,12 @@ import Helper from '.';
 
 /* eslint-env jest */
 
-const string = 'helper';
+const text = 'helper';
 
 it('renders helper', () => {
   let helper = renderer
-    .create(<Helper>{string}</Helper>)
+    .create(<Helper>{text}</Helper>)
     .toJSON();
-
-  let text = helper.children[0];
-
-  expect(text.type).toBe('Text');
-  expect(text.children).toEqual([string]);
 
   expect(helper)
     .toMatchSnapshot();

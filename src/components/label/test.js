@@ -6,7 +6,7 @@ import Label from '.';
 
 /* eslint-env jest */
 
-const string = 'test';
+const text = 'test';
 const props = {
   fontSize: 16,
   activeFontSize: 12,
@@ -18,13 +18,8 @@ const props = {
 
 it('renders label', () => {
   let field = renderer
-    .create(<Label {...props}>{string}</Label>)
+    .create(<Label {...props}>{text}</Label>)
     .toJSON();
-
-  let text = field.children[0];
-
-  expect(text.type).toBe('Text');
-  expect(text.children).toEqual([string]);
 
   expect(field)
     .toMatchSnapshot();
