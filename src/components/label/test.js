@@ -17,10 +17,41 @@ const props = {
 };
 
 it('renders label', () => {
-  let field = renderer
-    .create(<Label {...props}>{text}</Label>)
-    .toJSON();
+  let label = renderer
+    .create(<Label {...props}>{text}</Label>);
 
-  expect(field)
+  expect(label.toJSON())
+    .toMatchSnapshot();
+});
+
+it('renders active label', () => {
+  let label = renderer
+    .create(<Label active {...props}>{text}</Label>);
+
+  expect(label.toJSON())
+    .toMatchSnapshot();
+});
+
+it('renders focused label', () => {
+  let label = renderer
+    .create(<Label focused {...props}>{text}</Label>);
+
+  expect(label.toJSON())
+    .toMatchSnapshot();
+});
+
+it('renders errored label', () => {
+  let label = renderer
+    .create(<Label errored {...props}>{text}</Label>);
+
+  expect(label.toJSON())
+    .toMatchSnapshot();
+});
+
+it('renders restricted label', () => {
+  let label = renderer
+    .create(<Label restricted {...props}>{text}</Label>);
+
+  expect(label.toJSON())
     .toMatchSnapshot();
 });
