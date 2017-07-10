@@ -2,6 +2,7 @@
 
 exports[`renders active label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
       "position": "absolute",
@@ -14,6 +15,7 @@ exports[`renders active label 1`] = `
     active={true}
     allowFontScaling={true}
     animationDuration={225}
+    collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
     errored={false}
@@ -33,6 +35,7 @@ exports[`renders active label 1`] = `
 
 exports[`renders errored label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
       "position": "absolute",
@@ -45,6 +48,7 @@ exports[`renders errored label 1`] = `
     active={false}
     allowFontScaling={true}
     animationDuration={225}
+    collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
     errored={true}
@@ -64,6 +68,7 @@ exports[`renders errored label 1`] = `
 
 exports[`renders focused label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
       "position": "absolute",
@@ -76,6 +81,7 @@ exports[`renders focused label 1`] = `
     active={false}
     allowFontScaling={true}
     animationDuration={225}
+    collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
     errored={false}
@@ -95,6 +101,7 @@ exports[`renders focused label 1`] = `
 
 exports[`renders label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
       "position": "absolute",
@@ -107,6 +114,7 @@ exports[`renders label 1`] = `
     active={false}
     allowFontScaling={true}
     animationDuration={225}
+    collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
     errored={false}
@@ -126,6 +134,7 @@ exports[`renders label 1`] = `
 
 exports[`renders restricted label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
       "position": "absolute",
@@ -138,6 +147,7 @@ exports[`renders restricted label 1`] = `
     active={false}
     allowFontScaling={true}
     animationDuration={225}
+    collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
     errored={false}

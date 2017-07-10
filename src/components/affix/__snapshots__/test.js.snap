@@ -2,6 +2,7 @@
 
 exports[`renders prefix 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
       "alignSelf": "flex-start",
@@ -16,6 +17,7 @@ exports[`renders prefix 1`] = `
   <Text
     accessible={true}
     allowFontScaling={true}
+    collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
     style={
@@ -33,6 +35,7 @@ exports[`renders prefix 1`] = `
 
 exports[`renders suffix 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
       "alignSelf": "flex-start",
@@ -47,6 +50,7 @@ exports[`renders suffix 1`] = `
   <Text
     accessible={true}
     allowFontScaling={true}
+    collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
     style={
