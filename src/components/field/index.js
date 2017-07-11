@@ -144,19 +144,19 @@ export default class TextField extends PureComponent {
   }
 
   focus() {
-    let { disabled, editable } = this.props;
+    let { disabled, editable, name } = this.props;
 
     if (!disabled && editable) {
-      this.input.focus();
+      this[name].focus();
     }
   }
 
   blur() {
-    this.input.blur();
+    this[this.props.name].blur();
   }
 
   clear() {
-    this.input.clear();
+    this[this.props.name].clear();
   }
 
   value() {
@@ -169,7 +169,7 @@ export default class TextField extends PureComponent {
   }
 
   isFocused() {
-    return this.input.isFocused();
+    return this[this.props.name].isFocused();
   }
 
   isRestricted() {
