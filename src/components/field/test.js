@@ -1,6 +1,7 @@
 import { Image } from 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import {shouldForwardToOnContentSizeChanged} from './funcs'
 
 import TextField from '.';
 
@@ -109,4 +110,16 @@ it('renders accessory', () => {
 
   expect(field)
     .toMatchSnapshot();
+});
+
+it('should forward onChange to onContentSizeChange', () => {
+  const shouldForward = shouldForwardToOnContentSizeChanged(true, 'android', {nativeEvent: {contentSize: {width: 1, height: 2}}});
+  
+  expect(shouldForward).toBe(true);
+});
+
+it('should not forward onChange to onContentSizeChange if no contentSize in event', () => {
+  const shouldForward = shouldForwardToOnContentSizeChanged(true, 'android', {nativeEvent: {}});
+
+  expect(shouldForward).toBe(false);
 });

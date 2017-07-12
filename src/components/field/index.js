@@ -15,6 +15,7 @@ import Helper from '../helper';
 import Counter from '../counter';
 
 import styles from './styles.js';
+import {shouldForwardToOnContentSizeChanged} from './funcs';
 
 export default class TextField extends PureComponent {
   static defaultProps = {
@@ -205,7 +206,7 @@ export default class TextField extends PureComponent {
     }
 
     /* XXX: onContentSizeChange is not called on RN 0.44 */
-    if (multiline && 'android' === Platform.OS) {
+    if (shouldForwardToOnContentSizeChanged(multiline, Platform.OS, event)) {
       this.onContentSizeChange(event);
     }
   }
