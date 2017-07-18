@@ -38,6 +38,7 @@ export default class TextField extends PureComponent {
     errorColor: 'rgb(213, 0, 0)',
 
     disabled: false,
+    name: 'input',
   };
 
   static propTypes = {
@@ -61,6 +62,7 @@ export default class TextField extends PureComponent {
     errorColor: PropTypes.string,
 
     disabled: PropTypes.bool,
+    name: PropTypes.string,
 
     renderAccessory: PropTypes.func,
 
@@ -78,9 +80,9 @@ export default class TextField extends PureComponent {
     this.onChangeText = this.onChangeText.bind(this);
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
 
-    this.updateRef = this.updateRef.bind(this, 'input');
+    this.updateRef = this.updateRef.bind(this, props.name);
 
-    let { value, error, fontSize } = this.props;
+    let { value, error, fontSize } = props;
 
     this.mounted = false;
     this.state = {
@@ -144,19 +146,19 @@ export default class TextField extends PureComponent {
   }
 
   focus() {
-    let { disabled, editable } = this.props;
+    let { disabled, editable, name } = this.props;
 
     if (!disabled && editable) {
-      this.input.focus();
+      this[name].focus();
     }
   }
 
   blur() {
-    this.input.blur();
+    this[this.props.name].blur();
   }
 
   clear() {
-    this.input.clear();
+    this[this.props.name].clear();
   }
 
   value() {
@@ -169,7 +171,7 @@ export default class TextField extends PureComponent {
   }
 
   isFocused() {
-    return this.input.isFocused();
+    return this[this.props.name].isFocused();
   }
 
   isRestricted() {
@@ -180,30 +182,30 @@ export default class TextField extends PureComponent {
   }
 
   onFocus() {
-    let { onFocus } = this.props;
+    let { onFocus, name } = this.props;
 
     if ('function' === typeof onFocus) {
-      onFocus();
+      onFocus(name);
     }
 
     this.setState({ focused: true, receivedFocus: true });
   }
 
   onBlur() {
-    let { onBlur } = this.props;
+    let { onBlur, name } = this.props;
 
     if ('function' === typeof onBlur) {
-      onBlur();
+      onBlur(name);
     }
 
     this.setState({ focused: false });
   }
 
   onChange(event) {
-    let { onChange, multiline } = this.props;
+    let { onChange, multiline, name } = this.props;
 
     if ('function' === typeof onChange) {
-      onChange(event);
+      onChange(event, name);
     }
 
     /* XXX: onContentSizeChange is not called on RN 0.44 and 0.45 */
@@ -215,12 +217,12 @@ export default class TextField extends PureComponent {
   }
 
   onChangeText(text) {
-    let { onChangeText } = this.props;
+    let { onChangeText, name } = this.props;
 
     this.setState({ text });
 
     if ('function' === typeof onChangeText) {
-      onChangeText(text);
+      onChangeText(text, name);
     }
   }
 

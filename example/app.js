@@ -18,6 +18,14 @@ let styles = {
   },
 };
 
+const [
+  firstnameField,
+  lastnameField,
+  aboutField,
+  emailField,
+  passwordField,
+] = ['firstname', 'lastname', 'about', 'email', 'password'];
+
 export default function init() {
   class Example extends Component {
     constructor(props) {
@@ -33,11 +41,11 @@ export default function init() {
       this.onSubmitPassword = this.onSubmitPassword.bind(this);
       this.onAccessoryPress = this.onAccessoryPress.bind(this);
 
-      this.firstnameRef = this.updateRef.bind(this, 'firstname');
-      this.lastnameRef = this.updateRef.bind(this, 'lastname');
-      this.aboutRef = this.updateRef.bind(this, 'about');
-      this.emailRef = this.updateRef.bind(this, 'email');
-      this.passwordRef = this.updateRef.bind(this, 'password');
+      this.firstnameRef = this.updateRef.bind(this, firstnameField);
+      this.lastnameRef = this.updateRef.bind(this, lastnameField);
+      this.aboutRef = this.updateRef.bind(this, aboutField);
+      this.emailRef = this.updateRef.bind(this, emailField);
+      this.passwordRef = this.updateRef.bind(this, passwordField);
 
       this.renderPasswordAccessory = this.renderPasswordAccessory.bind(this);
 
@@ -49,28 +57,22 @@ export default function init() {
       };
     }
 
-    onFocus() {
-      let { errors = {} } = this.state;
+    onFocus(name) {
+      let errors = { ...this.state.errors };
+      let ref = this[name];
 
-      for (let name in errors) {
-        let ref = this[name];
-
-        if (ref && ref.isFocused()) {
-          delete errors[name];
-        }
+      if (ref && ref.isFocused()) {
+        delete errors[name];
       }
 
       this.setState({ errors });
     }
 
-    onChangeText(text) {
-      ['firstname', 'lastname', 'about', 'email', 'password']
-        .map((name) => ({ name, ref: this[name] }))
-        .forEach(({ name, ref }) => {
-          if (ref.isFocused()) {
-            this.setState({ [name]: text });
-          }
-        });
+    onChangeText(text, name) {
+      const ref = this[name];
+      if (ref && ref.isFocused()) {
+        this.setState({ [name]: text });
+      }
     }
 
     onAccessoryPress() {
@@ -100,7 +102,7 @@ export default function init() {
     onSubmit() {
       let errors = {};
 
-      ['firstname', 'lastname', 'email', 'password']
+      [firstnameField, lastnameField, emailField, passwordField]
         .forEach((name) => {
           let value = this[name].value();
 
@@ -159,6 +161,7 @@ export default function init() {
               onSubmitEditing={this.onSubmitFirstName}
               returnKeyType='next'
               label='First Name'
+              name={firstnameField}
               error={errors.firstname}
             />
 
@@ -172,6 +175,7 @@ export default function init() {
               onSubmitEditing={this.onSubmitLastName}
               returnKeyType='next'
               label='Last Name'
+              name={lastnameField}
               error={errors.lastname}
             />
 
@@ -184,6 +188,7 @@ export default function init() {
               returnKeyType='next'
               multiline={true}
               label='About (optional)'
+              name={aboutField}
               characterRestriction={140}
             />
 
@@ -200,6 +205,7 @@ export default function init() {
               onSubmitEditing={this.onSubmitEmail}
               returnKeyType='next'
               label='Email Address'
+              name={emailField}
               error={errors.email}
             />
 
@@ -215,6 +221,7 @@ export default function init() {
               onSubmitEditing={this.onSubmitPassword}
               returnKeyType='done'
               label='Password'
+              name={passwordField}
               error={errors.password}
               title='Choose wisely'
               maxLength={30}
@@ -231,7 +238,12 @@ export default function init() {
           </View>
 
           <View style={styles.container}>
-            <RaisedTextButton onPress={this.onSubmit} title='submit' color={TextField.defaultProps.tintColor} titleColor='white' />
+            <RaisedTextButton
+              onPress={this.onSubmit}
+              title='submit'
+              color={TextField.defaultProps.tintColor}
+              titleColor='white'
+            />
           </View>
         </ScrollView>
       );
