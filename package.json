@@ -55,6 +55,7 @@
   },
 
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "modulePathIgnorePatterns": ["<rootDir>/example"]
   }
 }
