@@ -6,6 +6,7 @@ import {
   Animated,
   StyleSheet,
   Platform,
+  ViewPropTypes,
 } from 'react-native';
 
 import RN from 'react-native/package';
@@ -66,6 +67,8 @@ export default class TextField extends PureComponent {
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,
+
+    containerStyle: ViewPropTypes.style,
   };
 
   constructor(props) {
@@ -288,6 +291,7 @@ export default class TextField extends PureComponent {
       baseColor,
       textColor,
       errorColor,
+      containerStyle,
       ...props
     } = this.props;
 
@@ -315,7 +319,7 @@ export default class TextField extends PureComponent {
         outputRange: [2, StyleSheet.hairlineWidth, 2],
       });
 
-    let containerStyle = {
+    let inputContainerStyle = {
       ...(disabled?
         { overflow: 'hidden' }:
         { borderBottomColor, borderBottomWidth }),
@@ -395,8 +399,12 @@ export default class TextField extends PureComponent {
     };
 
     return (
-      <View onStartShouldSetResponder={ () => true } onResponderRelease={this.onPress}>
-        <Animated.View style={[styles.container, containerStyle]}>
+      <View
+        style={containerStyle}
+        onStartShouldSetResponder={ () => true }
+        onResponderRelease={this.onPress}>
+
+        <Animated.View style={[styles.inputContainer, inputContainerStyle]}>
           {disabled && <Line type='dotted' color={baseColor} />}
 
           <Label {...labelProps}>{label}</Label>

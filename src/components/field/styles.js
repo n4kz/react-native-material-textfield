@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  container: {
+  inputContainer: {
     paddingTop: 32,
     paddingBottom: 8,
     backgroundColor: 'transparent',

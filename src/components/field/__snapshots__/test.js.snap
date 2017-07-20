@@ -4,6 +4,7 @@ exports[`renders 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -170,6 +171,7 @@ exports[`renders accessory 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -348,6 +350,7 @@ exports[`renders counter 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -545,6 +548,7 @@ exports[`renders default value 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -711,6 +715,7 @@ exports[`renders disabled value 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -895,6 +900,7 @@ exports[`renders error 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -1064,6 +1070,7 @@ exports[`renders multiline value 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -1232,6 +1239,7 @@ exports[`renders prefix 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -1429,6 +1437,7 @@ exports[`renders suffix 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -1626,6 +1635,7 @@ exports[`renders title 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
@@ -1794,6 +1804,7 @@ exports[`renders value 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  style={undefined}
 >
   <View
     collapsable={undefined}
