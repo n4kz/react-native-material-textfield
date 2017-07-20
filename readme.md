@@ -83,6 +83,7 @@ class Example extends Component {
  disabled             | Text field availability                     |  Boolean | false
  editable             | Text field text can be edited               |  Boolean | true
  multiline            | Text filed multiline input                  |  Boolean | false
+ containerStyle       | Style for container view                    |   Object | -
  renderAccessory      | Render input accessory view                 | Function | -
  onChangeText         | Change text callback                        | Function | -
  onFocus              | Focus callback                              | Function | -
