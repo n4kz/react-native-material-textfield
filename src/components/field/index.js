@@ -68,7 +68,7 @@ export default class TextField extends PureComponent {
     prefix: PropTypes.string,
     suffix: PropTypes.string,
 
-    containerStyle: ViewPropTypes.style,
+    containerStyle: (ViewPropTypes || View.propTypes).style,
   };
 
   constructor(props) {
