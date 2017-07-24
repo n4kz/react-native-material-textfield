@@ -90,8 +90,8 @@ export default class Label extends PureComponent {
     let top = input.interpolate({
       inputRange: [0, 1],
       outputRange: [
-        32 + fontSize * 0.25,
-        32 - fontSize * 0.25 - activeFontSize,
+        35 + fontSize * 0.25,
+        35 - fontSize * 0.25 - activeFontSize,
       ],
     });
 

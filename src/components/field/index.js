@@ -90,7 +90,7 @@ export default class TextField extends PureComponent {
       error: error,
       errored: !!error,
 
-      height: fontSize * 1.5,
+      height: fontSize * 1.3,
     };
   }
 
@@ -227,7 +227,7 @@ export default class TextField extends PureComponent {
       onContentSizeChange(event);
     }
 
-    this.setState({ height: Math.max(fontSize * 1.5, Math.ceil(height)) });
+    this.setState({ height: Math.max(fontSize * 1.3, Math.ceil(height)) });
   }
 
   renderAccessory() {
@@ -304,7 +304,7 @@ export default class TextField extends PureComponent {
 
       ...(props.multiline?
         { height: 40 + height }:
-        { height: 40 + fontSize * 1.5 }),
+        { height: 40 + fontSize * 1.3 }),
     };
 
     let inputStyle = {
@@ -312,18 +312,18 @@ export default class TextField extends PureComponent {
 
       color: (disabled || defaultVisible)?
         baseColor:
-        textColor,
+        error ? errorColor : textColor,
 
       ...(props.multiline?
         {
-          height: fontSize * 1.5 + height,
+          height: fontSize * 1.3 + height,
 
           ...Platform.select({
             ios: { top: -1 },
             android: { textAlignVertical: 'top' },
           }),
         }:
-        { height: fontSize * 1.5 }),
+        { height: fontSize * 1.3 }),
     };
 
     let errorStyle = {
@@ -335,10 +335,10 @@ export default class TextField extends PureComponent {
       }),
 
       fontSize: title?
-        12:
+        11:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [12, 0, 0],
+          outputRange: [13, 13, 13],
         }),
     };
 
@@ -350,7 +350,7 @@ export default class TextField extends PureComponent {
         outputRange: [0, 1, 1],
       }),
 
-      fontSize: 12,
+      fontSize: 11,
     };
 
     let helperContainerStyle = {
@@ -359,7 +359,7 @@ export default class TextField extends PureComponent {
         24:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [24, 8, 8],
+          outputRange: [17, 17, 17],
         }),
     };
 
@@ -409,7 +409,6 @@ export default class TextField extends PureComponent {
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
             <Helper style={errorStyle}>{error}</Helper>
-            <Helper style={titleStyle}>{title}</Helper>
           </View>
 
           <Counter {...{ baseColor, errorColor, count, limit }} />
