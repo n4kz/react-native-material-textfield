@@ -30,6 +30,7 @@ export default class TextField extends PureComponent {
     animationDuration: 225,
 
     fontSize: 16,
+    titleFontSize: 12,
     labelFontSize: 12,
     labelHeight: 32,
     labelPadding: 4,
@@ -49,6 +50,7 @@ export default class TextField extends PureComponent {
     animationDuration: PropTypes.number,
 
     fontSize: PropTypes.number,
+    titleFontSize: PropTypes.number,
     labelFontSize: PropTypes.number,
     labelHeight: PropTypes.number,
     labelPadding: PropTypes.number,
@@ -290,6 +292,7 @@ export default class TextField extends PureComponent {
       disabled,
       animationDuration,
       fontSize,
+      titleFontSize,
       labelFontSize,
       labelHeight,
       labelPadding,
@@ -367,10 +370,10 @@ export default class TextField extends PureComponent {
       }),
 
       fontSize: title?
-        12:
+        titleFontSize:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [12, 0, 0],
+          outputRange: [titleFontSize, 0, 0],
         }),
     };
 
@@ -382,16 +385,16 @@ export default class TextField extends PureComponent {
         outputRange: [0, 1, 1],
       }),
 
-      fontSize: 12,
+      fontSize: titleFontSize,
     };
 
     let helperContainerStyle = {
       flexDirection: 'row',
       height: (title || limit)?
-        24:
+        titleFontSize * 2:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [24, 8, 8],
+          outputRange: [titleFontSize * 2, 8, 8],
         }),
     };
 
@@ -408,6 +411,14 @@ export default class TextField extends PureComponent {
       focused,
       errored,
       restricted,
+    };
+
+    let counterProps = {
+      baseColor,
+      errorColor,
+      count,
+      limit,
+      fontSize: titleFontSize,
     };
 
     return (
@@ -451,7 +462,7 @@ export default class TextField extends PureComponent {
             <Helper style={titleStyle}>{title}</Helper>
           </View>
 
-          <Counter {...{ baseColor, errorColor, count, limit, fontSize: 12 }} />
+          <Counter {...counterProps} />
         </Animated.View>
       </View>
     );
