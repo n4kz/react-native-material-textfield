@@ -8,6 +8,7 @@ import Label from '.';
 
 const text = 'test';
 const props = {
+  baseSize: 32,
   fontSize: 16,
   activeFontSize: 12,
   tintColor: 'blue',

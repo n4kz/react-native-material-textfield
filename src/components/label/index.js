@@ -18,6 +18,7 @@ export default class Label extends PureComponent {
     errored: PropTypes.bool,
     restricted: PropTypes.bool,
 
+    baseSize: PropTypes.number.isRequired,
     fontSize: PropTypes.number.isRequired,
     activeFontSize: PropTypes.number.isRequired,
 
@@ -77,6 +78,7 @@ export default class Label extends PureComponent {
       errorColor,
       baseColor,
       tintColor,
+      baseSize,
       ...props
     } = this.props;
 
@@ -90,8 +92,8 @@ export default class Label extends PureComponent {
     let top = input.interpolate({
       inputRange: [0, 1],
       outputRange: [
-        32 + fontSize * 0.25,
-        32 - fontSize * 0.25 - activeFontSize,
+        baseSize + fontSize * 0.25,
+        baseSize - fontSize * 0.25 - activeFontSize,
       ],
     });
 
