@@ -9,6 +9,7 @@ import Counter from '.';
 const props = {
   baseColor: 'blue',
   errorColor: 'red',
+  fontSize: 12,
 };
 
 it('renders null when limit is not set', () => {

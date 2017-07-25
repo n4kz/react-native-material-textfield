@@ -526,11 +526,11 @@ exports[`renders counter 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "fontSize": 12,
               "textAlign": "right",
             },
             Object {
               "color": "rgba(0, 0, 0, .38)",
+              "fontSize": 12,
             },
           ]
         }

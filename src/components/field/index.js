@@ -451,7 +451,7 @@ export default class TextField extends PureComponent {
             <Helper style={titleStyle}>{title}</Helper>
           </View>
 
-          <Counter {...{ baseColor, errorColor, count, limit }} />
+          <Counter {...{ baseColor, errorColor, count, limit, fontSize: 12 }} />
         </Animated.View>
       </View>
     );
