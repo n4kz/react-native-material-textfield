@@ -21,6 +21,7 @@ export default class Label extends PureComponent {
     baseSize: PropTypes.number.isRequired,
     fontSize: PropTypes.number.isRequired,
     activeFontSize: PropTypes.number.isRequired,
+    basePadding: PropTypes.number.isRequired,
 
     tintColor: PropTypes.string.isRequired,
     baseColor: PropTypes.string.isRequired,
@@ -79,6 +80,7 @@ export default class Label extends PureComponent {
       baseColor,
       tintColor,
       baseSize,
+      basePadding,
       ...props
     } = this.props;
 
@@ -93,7 +95,7 @@ export default class Label extends PureComponent {
       inputRange: [0, 1],
       outputRange: [
         baseSize + fontSize * 0.25,
-        baseSize - fontSize * 0.25 - activeFontSize,
+        baseSize - basePadding - activeFontSize,
       ],
     });
 
