@@ -70,6 +70,8 @@ class Example extends Component {
  textColor            | Text input color                            |   String | rgba(0, 0, 0, .87)
  fontSize             | Text input font size                        |   Number | 16
  labelFontSize        | Text field label font size                  |   Number | 12
+ labelHeight          | Text field label base height                |   Number | 32
+ labelPadding         | Text field label base padding               |   Number | 4
  tintColor            | Text field accent color                     |   String | rgb(0, 145, 234)
  baseColor            | Text field base color                       |   String | rgba(0, 0, 0, .38)
  label                | Text field label text                       |   String | -
