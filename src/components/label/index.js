@@ -29,6 +29,8 @@ export default class Label extends PureComponent {
 
     animationDuration: PropTypes.number.isRequired,
 
+    style: Animated.Text.propTypes.style,
+
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
@@ -81,6 +83,7 @@ export default class Label extends PureComponent {
       tintColor,
       baseSize,
       basePadding,
+      style,
       ...props
     } = this.props;
 
@@ -115,7 +118,9 @@ export default class Label extends PureComponent {
 
     return (
       <Animated.View style={containerStyle}>
-        <Animated.Text style={textStyle} {...props}>{children}</Animated.Text>
+        <Animated.Text style={[style, textStyle]} {...props}>
+          {children}
+        </Animated.Text>
       </Animated.View>
     );
   }
