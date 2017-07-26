@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import {
   View,
+  Text,
   TextInput,
   Animated,
   StyleSheet,
@@ -54,6 +55,10 @@ export default class TextField extends PureComponent {
     labelFontSize: PropTypes.number,
     labelHeight: PropTypes.number,
     labelPadding: PropTypes.number,
+
+    labelTextStyle: Text.propTypes.style,
+    titleTextStyle: Text.propTypes.style,
+    affixTextStyle: Text.propTypes.style,
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
@@ -259,7 +264,13 @@ export default class TextField extends PureComponent {
   }
 
   renderAffix(type, active, focused) {
-    let { [type]: affix, fontSize, baseColor, animationDuration } = this.props;
+    let {
+      [type]: affix,
+      fontSize,
+      baseColor,
+      animationDuration,
+      affixTextStyle,
+    } = this.props;
 
     if (null == affix) {
       return null;
@@ -275,7 +286,7 @@ export default class TextField extends PureComponent {
     };
 
     return (
-      <Affix {...props}>{affix}</Affix>
+      <Affix style={affixTextStyle} {...props}>{affix}</Affix>
     );
   }
 
@@ -296,6 +307,8 @@ export default class TextField extends PureComponent {
       labelFontSize,
       labelHeight,
       labelPadding,
+      labelTextStyle,
+      titleTextStyle,
       tintColor,
       baseColor,
       textColor,
@@ -411,6 +424,7 @@ export default class TextField extends PureComponent {
       focused,
       errored,
       restricted,
+      style: labelTextStyle,
     };
 
     let counterProps = {
@@ -419,6 +433,7 @@ export default class TextField extends PureComponent {
       count,
       limit,
       fontSize: titleFontSize,
+      style: titleTextStyle,
     };
 
     return (
@@ -458,8 +473,8 @@ export default class TextField extends PureComponent {
 
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            <Helper style={errorStyle}>{error}</Helper>
-            <Helper style={titleStyle}>{title}</Helper>
+            <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
+            <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
           </View>
 
           <Counter {...counterProps} />

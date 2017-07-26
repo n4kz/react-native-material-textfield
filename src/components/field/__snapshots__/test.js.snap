@@ -528,6 +528,7 @@ exports[`renders counter 1`] = `
               "backgroundColor": "transparent",
               "textAlign": "right",
             },
+            undefined,
             Object {
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
