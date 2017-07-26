@@ -82,6 +82,15 @@ it('renders counter', () => {
     .toMatchSnapshot();
 });
 
+it('renders restriction', () => {
+  let field = renderer
+    .create(<TextField {...props} value='text' characterRestriction={2} />)
+    .toJSON();
+
+  expect(field)
+    .toMatchSnapshot();
+});
+
 it('renders prefix', () => {
   let field = renderer
     .create(<TextField {...props} value='text' prefix='$' />)
