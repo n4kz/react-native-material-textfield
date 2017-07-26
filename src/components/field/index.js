@@ -317,6 +317,11 @@ export default class TextField extends PureComponent {
       ...props
     } = this.props;
 
+    if (props.multiline && props.height) {
+      /* Disable autogrow if height is passed as prop */
+      height = props.height;
+    }
+
     let defaultVisible = !(receivedFocus || null != value || null == defaultValue);
 
     value = defaultVisible?
