@@ -87,6 +87,9 @@ class Example extends Component {
  editable             | Text field text can be edited               |  Boolean | true
  multiline            | Text filed multiline input                  |  Boolean | false
  containerStyle       | Style for container view                    |   Object | -
+ labelTextStyle       | Style for label inner Text component        |   Object | -
+ titleTextStyle       | Style for title inner Text component        |   Object | -
+ affixTextStyle       | Style for affix inner Text component        |   Object | -
  renderAccessory      | Render input accessory view                 | Function | -
  onChangeText         | Change text callback                        | Function | -
  onFocus              | Focus callback                              | Function | -
