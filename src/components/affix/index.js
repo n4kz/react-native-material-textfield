@@ -24,6 +24,8 @@ export default class Affix extends PureComponent {
     baseColor: PropTypes.string.isRequired,
     animationDuration: PropTypes.number.isRequired,
 
+    style: Animated.Text.propTypes.style,
+
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
@@ -56,7 +58,7 @@ export default class Affix extends PureComponent {
 
   render() {
     let { opacity } = this.state;
-    let { children, type, fontSize, baseColor: color } = this.props;
+    let { style, children, type, fontSize, baseColor: color } = this.props;
 
     let containerStyle = {
       height: fontSize * 1.5,
@@ -82,7 +84,7 @@ export default class Affix extends PureComponent {
 
     return (
       <Animated.View style={[styles.container, containerStyle]}>
-        <Animated.Text style={textStyle}>{children}</Animated.Text>
+        <Animated.Text style={[style, textStyle]}>{children}</Animated.Text>
       </Animated.View>
     );
   }
