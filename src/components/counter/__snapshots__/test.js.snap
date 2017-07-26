@@ -20,6 +20,7 @@ exports[`renders when limit is exceeded 1`] = `
           "backgroundColor": "transparent",
           "textAlign": "right",
         },
+        undefined,
         Object {
           "color": "red",
           "fontSize": 12,
@@ -54,6 +55,7 @@ exports[`renders when limit is set 1`] = `
           "backgroundColor": "transparent",
           "textAlign": "right",
         },
+        undefined,
         Object {
           "color": "blue",
           "fontSize": 12,
