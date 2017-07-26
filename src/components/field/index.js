@@ -10,7 +10,7 @@ import {
   ViewPropTypes,
 } from 'react-native';
 
-import RN from 'react-native/package';
+import RN from 'react-native/package.json';
 
 import Line from '../line';
 import Label from '../label';
