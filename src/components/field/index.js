@@ -203,11 +203,11 @@ export default class TextField extends PureComponent {
     this.setState({ focused: true, receivedFocus: true });
   }
 
-  onBlur() {
+  onBlur(event) {
     let { onBlur } = this.props;
 
     if ('function' === typeof onBlur) {
-      onBlur();
+      onBlur(event);
     }
 
     this.setState({ focused: false });
