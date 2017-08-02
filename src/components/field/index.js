@@ -416,6 +416,15 @@ export default class TextField extends PureComponent {
         }),
     };
 
+    let containerProps = {
+      style: containerStyle,
+      onStartShouldSetResponder: () => true,
+      onResponderRelease: this.onPress,
+      pointerEvents: !disabled && editable?
+        'auto':
+        'none',
+    };
+
     let labelProps = {
       baseSize: labelHeight,
       basePadding: labelPadding,
@@ -442,11 +451,7 @@ export default class TextField extends PureComponent {
     };
 
     return (
-      <View
-        style={containerStyle}
-        onStartShouldSetResponder={ () => true }
-        onResponderRelease={this.onPress}>
-
+      <View {...containerProps}>
         <Animated.View style={[styles.inputContainer, inputContainerStyle]}>
           {disabled && <Line type='dotted' color={baseColor} />}
 

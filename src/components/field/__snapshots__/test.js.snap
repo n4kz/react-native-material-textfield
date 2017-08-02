@@ -4,6 +4,7 @@ exports[`renders 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -171,6 +172,7 @@ exports[`renders accessory 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -350,6 +352,7 @@ exports[`renders counter 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -549,6 +552,7 @@ exports[`renders default value 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -716,6 +720,7 @@ exports[`renders disabled value 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="none"
   style={undefined}
 >
   <View
@@ -901,6 +906,7 @@ exports[`renders error 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -1071,6 +1077,7 @@ exports[`renders multiline value 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -1240,6 +1247,7 @@ exports[`renders prefix 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -1438,6 +1446,7 @@ exports[`renders restriction 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -1637,6 +1646,7 @@ exports[`renders suffix 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -1835,6 +1845,7 @@ exports[`renders title 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
@@ -2004,6 +2015,7 @@ exports[`renders value 1`] = `
 <View
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
+  pointerEvents="auto"
   style={undefined}
 >
   <View
