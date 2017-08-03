@@ -193,21 +193,21 @@ export default class TextField extends PureComponent {
     return characterRestriction < text.length;
   }
 
-  onFocus() {
+  onFocus(event) {
     let { onFocus } = this.props;
 
     if ('function' === typeof onFocus) {
-      onFocus();
+      onFocus(event);
     }
 
     this.setState({ focused: true, receivedFocus: true });
   }
 
-  onBlur() {
+  onBlur(event) {
     let { onBlur } = this.props;
 
     if ('function' === typeof onBlur) {
-      onBlur();
+      onBlur(event);
     }
 
     this.setState({ focused: false });
