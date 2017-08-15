@@ -59,7 +59,6 @@ exports[`renders 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
@@ -227,7 +226,6 @@ exports[`renders accessory 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
@@ -407,7 +405,6 @@ exports[`renders counter 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
@@ -607,7 +604,6 @@ exports[`renders default value 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
@@ -793,7 +789,6 @@ exports[`renders disabled value 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={false}
         onBlur={[Function]}
@@ -961,7 +956,6 @@ exports[`renders error 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         error="message"
@@ -1132,7 +1126,6 @@ exports[`renders multiline value 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         multiline={true}
@@ -1332,7 +1325,6 @@ exports[`renders prefix 1`] = `
       </View>
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
@@ -1501,7 +1493,6 @@ exports[`renders restriction 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
@@ -1701,7 +1692,6 @@ exports[`renders suffix 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
@@ -1900,7 +1890,6 @@ exports[`renders title 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
@@ -2070,7 +2059,6 @@ exports[`renders value 1`] = `
     >
       <TextInput
         autoCapitalize="sentences"
-        blurOnSubmit={true}
         disableFullscreenUI={true}
         editable={true}
         onBlur={[Function]}
