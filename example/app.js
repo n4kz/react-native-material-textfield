@@ -183,6 +183,7 @@ export default function init() {
               onSubmitEditing={this.onSubmitAbout}
               returnKeyType='next'
               multiline={true}
+              blurOnSubmit={true}
               label='About (optional)'
               characterRestriction={140}
             />
