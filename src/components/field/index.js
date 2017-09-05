@@ -22,7 +22,7 @@ export default class TextField extends PureComponent {
     autoCapitalize: 'sentences',
     blurOnSubmit: true,
     editable: true,
-
+    titleTextStyle: {},
     animationDuration: 225,
 
     fontSize: 17,
@@ -406,13 +406,14 @@ export default class TextField extends PureComponent {
           </View>
         </Animated.View>
 
-        <Animated.View style={helperContainerStyle}>
+        {(title || error) && <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            <Helper style={errorStyle}>{error}</Helper>
+            <Helper numberOfLines={2} style={[ errorStyle, this.props.errorStyle]}>{error}</Helper>
+            <Helper numberOfLines={2} style={[ titleStyle, this.props.titleTextStyle]}>{title}</Helper>
           </View>
 
-          <Counter {...{ baseColor, errorColor, count, limit }} />
         </Animated.View>
+      }
       </View>
     );
   }
