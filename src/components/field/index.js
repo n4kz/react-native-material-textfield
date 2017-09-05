@@ -328,6 +328,7 @@ export default class TextField extends PureComponent {
 
     let errorStyle = {
       color: errorColor,
+      bottom:6,
 
       opacity: focus.interpolate({
         inputRange: [-1, 0, 1],
