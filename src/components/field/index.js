@@ -34,6 +34,7 @@ export default class TextField extends PureComponent {
     labelFontSize: 12,
     labelHeight: 32,
     labelPadding: 4,
+    inputContainerPadding: 8,
 
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
@@ -55,6 +56,7 @@ export default class TextField extends PureComponent {
     labelFontSize: PropTypes.number,
     labelHeight: PropTypes.number,
     labelPadding: PropTypes.number,
+    inputContainerPadding: PropTypes.number,
 
     labelTextStyle: Text.propTypes.style,
     titleTextStyle: Text.propTypes.style,
@@ -315,6 +317,7 @@ export default class TextField extends PureComponent {
       labelFontSize,
       labelHeight,
       labelPadding,
+      inputContainerPadding,
       labelTextStyle,
       titleTextStyle,
       tintColor,
@@ -355,18 +358,17 @@ export default class TextField extends PureComponent {
         outputRange: [2, StyleSheet.hairlineWidth, 2],
       });
 
-    let paddingBottom = 8;
     let inputContainerStyle = {
       paddingTop: labelHeight,
-      paddingBottom,
+      paddingBottom: inputContainerPadding,
 
       ...(disabled?
         { overflow: 'hidden' }:
         { borderBottomColor, borderBottomWidth }),
 
       ...(props.multiline?
-        { height: labelHeight + paddingBottom + height }:
-        { height: labelHeight + paddingBottom + fontSize * 1.5 }),
+        { height: labelHeight + inputContainerPadding + height }:
+        { height: labelHeight + inputContainerPadding + fontSize * 1.5 }),
     };
 
     let inputStyle = {
