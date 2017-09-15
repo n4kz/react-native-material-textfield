@@ -65,37 +65,38 @@ class Example extends Component {
 
 ## Properties
 
- name                 | description                                 | type     | default
-:-------------------- |:------------------------------------------- | --------:|:------------------
- textColor            | Text input color                            |   String | rgba(0, 0, 0, .87)
- fontSize             | Text input font size                        |   Number | 16
- titleFontSize        | Text field title and error fontSize         |   Number | 12
- labelFontSize        | Text field label font size                  |   Number | 12
- labelHeight          | Text field label base height                |   Number | 32
- labelPadding         | Text field label base padding               |   Number | 4
- tintColor            | Text field accent color                     |   String | rgb(0, 145, 234)
- baseColor            | Text field base color                       |   String | rgba(0, 0, 0, .38)
- label                | Text field label text                       |   String | -
- title                | Text field helper text                      |   String | -
- prefix               | Text field prefix text                      |   String | -
- suffix               | Text field suffix text                      |   String | -
- error                | Text field error text                       |   String | -
- errorColor           | Text field color for errored state          |   String | rgb(213, 0, 0)
- disabledLineType     | Text field line type in disabled state      |   String | dotted
- animationDuration    | Text field animation duration in ms         |   Number | 225
- characterRestriction | Text field soft limit for character counter |   Number | -
- disabled             | Text field availability                     |  Boolean | false
- editable             | Text field text can be edited               |  Boolean | true
- multiline            | Text filed multiline input                  |  Boolean | false
- inputContainerStyle  | Style for input container view              |   Object | -
- containerStyle       | Style for container view                    |   Object | -
- labelTextStyle       | Style for label inner Text component        |   Object | -
- titleTextStyle       | Style for title inner Text component        |   Object | -
- affixTextStyle       | Style for affix inner Text component        |   Object | -
- renderAccessory      | Render input accessory view                 | Function | -
- onChangeText         | Change text callback                        | Function | -
- onFocus              | Focus callback                              | Function | -
- onBlur               | Blur callback                               | Function | -
+ name                  | description                                 | type     | default
+:--------------------- |:------------------------------------------- | --------:|:------------------
+ textColor             | Text input color                            |   String | rgba(0, 0, 0, .87)
+ fontSize              | Text input font size                        |   Number | 16
+ titleFontSize         | Text field title and error fontSize         |   Number | 12
+ labelFontSize         | Text field label font size                  |   Number | 12
+ labelHeight           | Text field label base height                |   Number | 32
+ labelPadding          | Text field label base padding               |   Number | 4
+ inputContainerPadding | Text field input container base padding     |   Number | 8
+ tintColor             | Text field accent color                     |   String | rgb(0, 145, 234)
+ baseColor             | Text field base color                       |   String | rgba(0, 0, 0, .38)
+ label                 | Text field label text                       |   String | -
+ title                 | Text field helper text                      |   String | -
+ prefix                | Text field prefix text                      |   String | -
+ suffix                | Text field suffix text                      |   String | -
+ error                 | Text field error text                       |   String | -
+ errorColor            | Text field color for errored state          |   String | rgb(213, 0, 0)
+ disabledLineType      | Text field line type in disabled state      |   String | dotted
+ animationDuration     | Text field animation duration in ms         |   Number | 225
+ characterRestriction  | Text field soft limit for character counter |   Number | -
+ disabled              | Text field availability                     |  Boolean | false
+ editable              | Text field text can be edited               |  Boolean | true
+ multiline             | Text filed multiline input                  |  Boolean | false
+ inputContainerStyle   | Style for input container view              |   Object | -
+ containerStyle        | Style for container view                    |   Object | -
+ labelTextStyle        | Style for label inner Text component        |   Object | -
+ titleTextStyle        | Style for title inner Text component        |   Object | -
+ affixTextStyle        | Style for affix inner Text component        |   Object | -
+ renderAccessory       | Render input accessory view                 | Function | -
+ onChangeText          | Change text callback                        | Function | -
+ onFocus               | Focus callback                              | Function | -
+ onBlur                | Blur callback                               | Function | -
 
 Other [TextInput][rn-textinput] properties will also work
 
