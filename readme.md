@@ -81,11 +81,13 @@ class Example extends Component {
  suffix               | Text field suffix text                      |   String | -
  error                | Text field error text                       |   String | -
  errorColor           | Text field color for errored state          |   String | rgb(213, 0, 0)
+ disabledLineType     | Text field line type in disabled state      |   String | dotted
  animationDuration    | Text field animation duration in ms         |   Number | 225
  characterRestriction | Text field soft limit for character counter |   Number | -
  disabled             | Text field availability                     |  Boolean | false
  editable             | Text field text can be edited               |  Boolean | true
  multiline            | Text filed multiline input                  |  Boolean | false
+ inputContainerStyle  | Style for input container view              |   Object | -
  containerStyle       | Style for container view                    |   Object | -
  labelTextStyle       | Style for label inner Text component        |   Object | -
  titleTextStyle       | Style for title inner Text component        |   Object | -
