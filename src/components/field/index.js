@@ -81,6 +81,7 @@ export default class TextField extends PureComponent {
     suffix: PropTypes.string,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
+    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
   };
 
   constructor(props) {
@@ -299,7 +300,7 @@ export default class TextField extends PureComponent {
   render() {
     let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
     let {
-      style,
+      style: inputStyleOverrides,
       label,
       title,
       value,
@@ -321,6 +322,7 @@ export default class TextField extends PureComponent {
       textColor,
       errorColor,
       containerStyle,
+      inputContainerStyle: inputContainerStyleOverrides,
       ...props
     } = this.props;
 
@@ -432,6 +434,14 @@ export default class TextField extends PureComponent {
         'none',
     };
 
+    let inputContainerProps = {
+      style: [
+        styles.inputContainer,
+        inputContainerStyle,
+        inputContainerStyleOverrides,
+      ],
+    };
+
     let labelProps = {
       baseSize: labelHeight,
       basePadding: labelPadding,
@@ -459,7 +469,7 @@ export default class TextField extends PureComponent {
 
     return (
       <View {...containerProps}>
-        <Animated.View style={[styles.inputContainer, inputContainerStyle]}>
+        <Animated.View {...inputContainerProps}>
           {disabled && <Line type={disabledLineType} color={baseColor} />}
 
           <Label {...labelProps}>{label}</Label>
@@ -468,7 +478,7 @@ export default class TextField extends PureComponent {
             {this.renderAffix('prefix', active, focused)}
 
             <TextInput
-              style={[styles.input, inputStyle, style]}
+              style={[styles.input, inputStyle, inputStyleOverrides]}
               selectionColor={tintColor}
 
               {...props}
