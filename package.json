@@ -37,14 +37,14 @@
   },
 
   "devDependencies": {
-    "babel-eslint": "^7.2.0",
-    "babel-jest": "^20.0.3",
-    "babel-preset-react-native": "2.1.0",
-    "eslint": "^3.18.0",
+    "babel-eslint": "^8.0.0",
+    "babel-jest": "^21.0.0",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.6.0",
     "eslint-plugin-react": "^7.0.0",
-    "jest": "^20.0.4",
+    "jest": "^21.0.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "0.46.1",
+    "react-native": "0.47.2",
     "react-test-renderer": "16.0.0-alpha.12"
   },
 
