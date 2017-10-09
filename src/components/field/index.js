@@ -356,12 +356,7 @@ export default class TextField extends PureComponent {
 
     let helperContainerStyle = {
       flexDirection: 'row',
-      height: (title || limit)?
-        24:
-        focus.interpolate({
-          inputRange:  [-1, 0, 1],
-          outputRange: [17, 17, 17],
-        }),
+      height: 17,
     };
 
     let labelProps = {
