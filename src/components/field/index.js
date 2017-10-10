@@ -356,12 +356,7 @@ export default class TextField extends PureComponent {
 
     let helperContainerStyle = {
       flexDirection: 'row',
-      height: (title || limit)?
-        24:
-        focus.interpolate({
-          inputRange:  [-1, 0, 1],
-          outputRange: [17, 17, 17],
-        }),
+      height: 17,
     };
 
     let labelProps = {
@@ -407,14 +402,14 @@ export default class TextField extends PureComponent {
           </View>
         </Animated.View>
 
-        {(title || error) && <Animated.View style={helperContainerStyle}>
+        <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
             <Helper numberOfLines={2} style={[ errorStyle, this.props.errorStyle]}>{error}</Helper>
             <Helper numberOfLines={2} style={[ titleStyle, this.props.titleTextStyle]}>{title}</Helper>
           </View>
 
         </Animated.View>
-      }
+
       </View>
     );
   }
