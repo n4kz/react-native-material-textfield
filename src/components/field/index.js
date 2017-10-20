@@ -84,6 +84,8 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+
+    helperTextNumberOfLines: PropTypes.number,
   };
 
   constructor(props) {
@@ -326,6 +328,7 @@ export default class TextField extends PureComponent {
       errorColor,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
+      helperTextNumberOfLines,
       ...props
     } = this.props;
 
@@ -502,8 +505,8 @@ export default class TextField extends PureComponent {
 
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
-            <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
+            <Helper style={[errorStyle, titleTextStyle]} numberOfLines={helperTextNumberOfLines}>{error}</Helper>
+            <Helper style={[titleStyle, titleTextStyle]} numberOfLines={helperTextNumberOfLines}>{title}</Helper>
           </View>
 
           <Counter {...counterProps} />
