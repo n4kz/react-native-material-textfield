@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import {
-  View,
-  Text,
-  TextInput,
-  Animated,
-  StyleSheet,
-  Platform,
-  ViewPropTypes,
+    View,
+    Image,
+    Text,
+    TextInput,
+    Animated,
+    StyleSheet,
+    Platform,
+    ViewPropTypes,
 } from 'react-native';
 
 import RN from 'react-native/package.json';
@@ -145,15 +146,15 @@ export default class TextField extends PureComponent {
 
     if (props.error !== error || focused ^ state.focused) {
       Animated
-        .timing(focus, {
-          toValue: props.error? -1 : (state.focused? 1 : 0),
-          duration: animationDuration,
-        })
-        .start(() => {
-          if (this.mounted) {
-            this.setState((state, { error }) => ({ error }));
-          }
-        });
+          .timing(focus, {
+            toValue: props.error? -1 : (state.focused? 1 : 0),
+            duration: animationDuration,
+          })
+          .start(() => {
+            if (this.mounted) {
+              this.setState((state, { error }) => ({ error }));
+            }
+          });
     }
   }
 
@@ -182,8 +183,8 @@ export default class TextField extends PureComponent {
     let { value, defaultValue } = this.props;
 
     return (receivedFocus || null != value || null == defaultValue)?
-      text:
-      defaultValue;
+        text:
+        defaultValue;
   }
 
   isFocused() {
@@ -252,8 +253,8 @@ export default class TextField extends PureComponent {
 
     this.setState({
       height: Math.max(
-        fontSize * 1.5,
-        Math.ceil(height) + Platform.select({ ios: 5, android: 1 })
+          fontSize * 1.5,
+          Math.ceil(height) + Platform.select({ ios: 5, android: 1 })
       ),
     });
   }
@@ -266,19 +267,19 @@ export default class TextField extends PureComponent {
     }
 
     return (
-      <View style={styles.accessory}>
-        {renderAccessory()}
-      </View>
+        <View style={styles.accessory}>
+          {renderAccessory()}
+        </View>
     );
   }
 
   renderAffix(type, active, focused) {
     let {
-      [type]: affix,
-      fontSize,
-      baseColor,
-      animationDuration,
-      affixTextStyle,
+        [type]: affix,
+        fontSize,
+        baseColor,
+        animationDuration,
+        affixTextStyle,
     } = this.props;
 
     if (null == affix) {
@@ -295,38 +296,40 @@ export default class TextField extends PureComponent {
     };
 
     return (
-      <Affix style={affixTextStyle} {...props}>{affix}</Affix>
+        <Affix style={affixTextStyle} {...props}>{affix}</Affix>
     );
   }
 
   render() {
     let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
     let {
-      style: inputStyleOverrides,
-      label,
-      title,
-      value,
-      defaultValue,
-      characterRestriction: limit,
-      editable,
-      disabled,
-      disabledLineType,
-      animationDuration,
-      fontSize,
-      titleFontSize,
-      labelFontSize,
-      labelHeight,
-      labelPadding,
-      inputContainerPadding,
-      labelTextStyle,
-      titleTextStyle,
-      tintColor,
-      baseColor,
-      textColor,
-      errorColor,
-      containerStyle,
-      inputContainerStyle: inputContainerStyleOverrides,
-      ...props
+        style: inputStyleOverrides,
+        label,
+        title,
+        value,
+        defaultValue,
+        characterRestriction: limit,
+        editable,
+        disabled,
+        disabledLineType,
+        animationDuration,
+        fontSize,
+        titleFontSize,
+        labelFontSize,
+        labelHeight,
+        labelPadding,
+        inputContainerPadding,
+        labelTextStyle,
+        titleTextStyle,
+        tintColor,
+        baseColor,
+        textColor,
+        errorColor,
+        containerStyle,
+        renderImage,
+        inputContainerStyle: inputContainerStyleOverrides,
+        selectedImageStyle,
+        ...props
     } = this.props;
 
     if (props.multiline && props.height) {
@@ -337,57 +340,57 @@ export default class TextField extends PureComponent {
     let defaultVisible = !(receivedFocus || null != value || null == defaultValue);
 
     value = defaultVisible?
-      defaultValue:
-      text;
+        defaultValue:
+        text;
 
     let active = !!(value || props.placeholder);
     let count = value.length;
     let restricted = limit < count;
 
     let borderBottomColor = restricted?
-      errorColor:
-      focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
-      });
+        errorColor:
+        focus.interpolate({
+          inputRange: [-1, 0, 1],
+          outputRange: [errorColor, baseColor, tintColor],
+        });
 
     let borderBottomWidth = restricted?
-      2:
-      focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [2, StyleSheet.hairlineWidth, 2],
-      });
+        2:
+        focus.interpolate({
+          inputRange: [-1, 0, 1],
+          outputRange: [2, StyleSheet.hairlineWidth, 2],
+        });
 
     let inputContainerStyle = {
       paddingTop: labelHeight,
       paddingBottom: inputContainerPadding,
 
       ...(disabled?
-        { overflow: 'hidden' }:
-        { borderBottomColor, borderBottomWidth }),
+      { overflow: 'hidden' }:
+      { borderBottomColor, borderBottomWidth }),
 
       ...(props.multiline?
-        { height: labelHeight + inputContainerPadding + height }:
-        { height: labelHeight + inputContainerPadding + fontSize * 1.5 }),
+      { height: labelHeight + inputContainerPadding + height }:
+      { height: labelHeight + inputContainerPadding + fontSize * 1.5 }),
     };
 
     let inputStyle = {
       fontSize,
 
       color: (disabled || defaultVisible)?
-        baseColor:
-        textColor,
+          baseColor:
+          textColor,
 
       ...(props.multiline?
-        {
-          height: fontSize * 1.5 + height,
+      {
+        height: fontSize * 1.5 + height,
 
-          ...Platform.select({
-            ios: { top: -1 },
-            android: { textAlignVertical: 'top' },
-          }),
-        }:
-        { height: fontSize * 1.5 }),
+        ...Platform.select({
+          ios: { top: -1 },
+          android: { textAlignVertical: 'top' },
+        }),
+      }:
+      { height: fontSize * 1.5 }),
     };
 
     let errorStyle = {
@@ -399,11 +402,11 @@ export default class TextField extends PureComponent {
       }),
 
       fontSize: title?
-        titleFontSize:
-        focus.interpolate({
-          inputRange:  [-1, 0, 1],
-          outputRange: [titleFontSize, 0, 0],
-        }),
+          titleFontSize:
+          focus.interpolate({
+            inputRange:  [-1, 0, 1],
+            outputRange: [titleFontSize, 0, 0],
+          }),
     };
 
     let titleStyle = {
@@ -420,11 +423,11 @@ export default class TextField extends PureComponent {
     let helperContainerStyle = {
       flexDirection: 'row',
       height: (title || limit)?
-        titleFontSize * 2:
-        focus.interpolate({
-          inputRange:  [-1, 0, 1],
-          outputRange: [titleFontSize * 2, 8, 8],
-        }),
+      titleFontSize * 2:
+          focus.interpolate({
+            inputRange:  [-1, 0, 1],
+            outputRange: [titleFontSize * 2, 8, 8],
+          }),
     };
 
     let containerProps = {
@@ -432,8 +435,8 @@ export default class TextField extends PureComponent {
       onStartShouldSetResponder: () => true,
       onResponderRelease: this.onPress,
       pointerEvents: !disabled && editable?
-        'auto':
-        'none',
+          'auto':
+          'none',
     };
 
     let inputContainerProps = {
@@ -468,47 +471,52 @@ export default class TextField extends PureComponent {
       fontSize: titleFontSize,
       style: titleTextStyle,
     };
-
     return (
-      <View {...containerProps}>
-        <Animated.View {...inputContainerProps}>
-          {disabled && <Line type={disabledLineType} color={baseColor} />}
+        <View {...containerProps}>
+          <Animated.View {...inputContainerProps}>
+            {disabled && <Line type={disabledLineType} color={baseColor} />}
 
-          <Label {...labelProps}>{label}</Label>
+            <Label {...labelProps}>{label}</Label>
 
-          <View style={styles.row}>
-            {this.renderAffix('prefix', active, focused)}
+            <View style={styles.row}>
+              {
+                typeof renderImage != 'undefined' && <View style={styles.accessory}>
+                  <Image source={renderImage} style={selectedImageStyle}/>
+                </View>
+              }
 
-            <TextInput
-              style={[styles.input, inputStyle, inputStyleOverrides]}
-              selectionColor={tintColor}
+              {this.renderAffix('prefix', active, focused)}
 
-              {...props}
+              <TextInput
+                  style={[styles.input, inputStyle, inputStyleOverrides]}
+                  selectionColor={tintColor}
 
-              editable={!disabled && editable}
-              onChange={this.onChange}
-              onChangeText={this.onChangeText}
-              onContentSizeChange={this.onContentSizeChange}
-              onFocus={this.onFocus}
-              onBlur={this.onBlur}
-              value={value}
-              ref={this.updateRef}
-            />
+                  {...props}
 
-            {this.renderAffix('suffix', active, focused)}
-            {this.renderAccessory()}
-          </View>
-        </Animated.View>
+                  editable={!disabled && editable}
+                  onChange={this.onChange}
+                  onChangeText={this.onChangeText}
+                  onContentSizeChange={this.onContentSizeChange}
+                  onFocus={this.onFocus}
+                  onBlur={this.onBlur}
+                  value={value}
+                  ref={this.updateRef}
+              />
 
-        <Animated.View style={helperContainerStyle}>
-          <View style={styles.flex}>
-            <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
-            <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
-          </View>
+              {this.renderAffix('suffix', active, focused)}
+              {this.renderAccessory()}
+            </View>
+          </Animated.View>
 
-          <Counter {...counterProps} />
-        </Animated.View>
-      </View>
+          <Animated.View style={helperContainerStyle}>
+            <View style={styles.flex}>
+              <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
+              <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
+            </View>
+
+            <Counter {...counterProps} />
+          </Animated.View>
+        </View>
     );
   }
 }
