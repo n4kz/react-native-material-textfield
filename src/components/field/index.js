@@ -35,7 +35,8 @@ export default class TextField extends PureComponent {
     labelHeight: 32,
     labelPadding: 4,
     inputContainerPadding: 8,
-
+    helperTextNumberOfLines: 1,
+    
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
     baseColor: 'rgba(0, 0, 0, .38)',
@@ -423,10 +424,10 @@ export default class TextField extends PureComponent {
     let helperContainerStyle = {
       flexDirection: 'row',
       height: (title || limit)?
-        titleFontSize * 2:
+        titleFontSize * 1.5 * helperTextNumberOfLines:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [titleFontSize * 2, 8, 8],
+          outputRange: [titleFontSize * 1.5 * helperTextNumberOfLines, 8, 8],
         }),
     };
 
