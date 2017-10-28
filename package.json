@@ -28,6 +28,7 @@
   },
 
   "dependencies": {
+    "color": "^2.0.0",
     "prop-types": "^15.5.9"
   },
 

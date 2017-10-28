@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 import RN from 'react-native/package.json';
+import Color from 'color';
 
 import Line from '../line';
 import Label from '../label';
@@ -40,6 +41,7 @@ export default class TextField extends PureComponent {
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
     baseColor: 'rgba(0, 0, 0, .38)',
+    placeholderTextColor: 'rgba(158, 158, 158, 1.0)',
 
     errorColor: 'rgb(213, 0, 0)',
 
@@ -111,6 +113,8 @@ export default class TextField extends PureComponent {
       focused: false,
       receivedFocus: false,
 
+      placeholderTextColorWithAlpha: 'transparent',
+
       error: error,
       errored: !!error,
 
@@ -143,7 +147,7 @@ export default class TextField extends PureComponent {
   }
 
   componentWillUpdate(props, state) {
-    let { error, animationDuration } = this.props;
+    let { error, animationDuration, placeholderTextColor } = this.props;
     let { focus, focused } = this.state;
 
     if (props.error !== error || focused ^ state.focused) {
@@ -158,6 +162,13 @@ export default class TextField extends PureComponent {
           }
         });
     }
+    focus.addListener(({value}) => {
+      let placeholderTextColorWithAlpha = Color(placeholderTextColor).alpha(value).string();
+        
+      this.setState({
+        placeholderTextColorWithAlpha: placeholderTextColorWithAlpha,
+      });
+    });
   }
 
   updateRef(name, ref) {
@@ -303,7 +314,7 @@ export default class TextField extends PureComponent {
   }
 
   render() {
-    let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
+    let { receivedFocus, focus, focused, error, errored, height, text = '', placeholderTextColorWithAlpha } = this.state;
     let {
       style: inputStyleOverrides,
       label,
@@ -344,7 +355,7 @@ export default class TextField extends PureComponent {
       defaultValue:
       text;
 
-    let active = !!(value || props.placeholder);
+    let active = !!value;
     let count = value.length;
     let restricted = limit < count;
 
@@ -488,7 +499,7 @@ export default class TextField extends PureComponent {
               selectionColor={tintColor}
 
               {...props}
-
+              placeholderTextColor={placeholderTextColorWithAlpha}
               editable={!disabled && editable}
               onChange={this.onChange}
               onChangeText={this.onChangeText}
