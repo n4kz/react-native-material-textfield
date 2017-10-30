@@ -151,7 +151,7 @@ export default class TextField extends PureComponent {
   }
 
   componentWillUpdate(props, state) {
-    let { error, animationDuration, placeholderTextColor } = this.props;
+    let { error, animationDuration, active, placeholderTextColor } = this.props;
     let { focus, focused } = this.state;
 
     if (props.error !== error || focused ^ state.focused) {
@@ -170,7 +170,7 @@ export default class TextField extends PureComponent {
       let placeholderTextColorWithAlpha = Color(placeholderTextColor).alpha(value).string();
         
       this.setState({
-        placeholderTextColorWithAlpha: placeholderTextColorWithAlpha,
+        placeholderTextColorWithAlpha: active ? placeholderTextColor : placeholderTextColorWithAlpha,
       });
     });
   }
