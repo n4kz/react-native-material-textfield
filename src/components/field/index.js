@@ -107,7 +107,7 @@ export default class TextField extends PureComponent {
 
     this.updateRef = this.updateRef.bind(this, 'input');
 
-    let { value, error, fontSize } = this.props;
+    let { value, error, fontSize, active, placeholderTextColor } = this.props;
 
     this.mounted = false;
     this.state = {
@@ -117,7 +117,7 @@ export default class TextField extends PureComponent {
       focused: false,
       receivedFocus: false,
 
-      placeholderTextColorWithAlpha: 'transparent',
+      placeholderTextColorWithAlpha: active ? placeholderTextColor : 'transparent',
 
       error: error,
       errored: !!error,
