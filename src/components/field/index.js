@@ -47,6 +47,8 @@ export default class TextField extends PureComponent {
 
     disabled: false,
     disabledLineType: 'dotted',
+
+    active: false,    
   };
 
   static propTypes = {
@@ -79,6 +81,8 @@ export default class TextField extends PureComponent {
 
     disabled: PropTypes.bool,
     disabledLineType: Line.propTypes.type,
+
+    active: PropTypes.bool,
 
     renderAccessory: PropTypes.func,
 
@@ -325,6 +329,7 @@ export default class TextField extends PureComponent {
       editable,
       disabled,
       disabledLineType,
+      active,
       animationDuration,
       fontSize,
       titleFontSize,
@@ -355,7 +360,7 @@ export default class TextField extends PureComponent {
       defaultValue:
       text;
 
-    let active = !!value;
+    active = (!!value) || active;
     let count = value.length;
     let restricted = limit < count;
 
