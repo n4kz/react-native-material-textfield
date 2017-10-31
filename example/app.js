@@ -6,15 +6,16 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 let styles = {
   scroll: {
-    paddingHorizontal: 4,
-    paddingVertical: 30,
     backgroundColor: '#E8EAF6',
   },
 
   container: {
-    marginHorizontal: 4,
-    marginVertical: 8,
-    paddingHorizontal: 8,
+    margin: 8,
+    marginTop: 24,
+  },
+
+  contentContainer: {
+    padding: 8,
   },
 };
 
@@ -147,7 +148,7 @@ export default function init() {
         .toLowerCase();
 
       return (
-        <ScrollView style={styles.scroll}>
+        <ScrollView style={styles.scroll} contentContainerStyle={styles.contentContainer}>
           <View style={styles.container}>
             <TextField
               ref={this.firstnameRef}
