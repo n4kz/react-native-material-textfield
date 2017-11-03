@@ -50,13 +50,11 @@ class Example extends Component {
   };
 
   render() {
-    let { phone } = this.state;
-
     return (
       <TextField
         label='Phone number'
-        value={phone}
-        onChangeText={ (phone) => this.setState({ phone }) }
+        value={this.state.phone}
+        onChangeText={phone => this.setState({ phone }) }
       />
     );
   }
