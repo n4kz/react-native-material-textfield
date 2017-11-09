@@ -193,6 +193,9 @@ export default class TextField extends PureComponent {
 
   clear() {
     this.input.clear();
+
+    /* onChangeText is not triggered by .clear() */
+    this.onChangeText('');
   }
 
   value() {

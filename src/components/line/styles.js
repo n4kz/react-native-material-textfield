@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export default StyleSheet.create({
   line: {
@@ -8,5 +8,9 @@ export default StyleSheet.create({
     right: -1.5,
     bottom: 0,
     borderWidth: 1,
+
+    ...Platform.select({
+      android: { borderRadius: Number.EPSILON },
+    }),
   },
 });
