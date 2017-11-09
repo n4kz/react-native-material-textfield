@@ -42,6 +42,7 @@ export default class TextField extends PureComponent {
     textColor: 'rgba(0, 0, 0, .87)',
     baseColor: 'rgba(0, 0, 0, .38)',
     placeholderTextColor: 'rgba(158, 158, 158, 1.0)',
+    selectionColor: null,    
 
     errorColor: 'rgb(213, 0, 0)',
 
@@ -70,6 +71,7 @@ export default class TextField extends PureComponent {
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
+    selectionColor: PropTypes.string,    
 
     label: PropTypes.string.isRequired,
     title: PropTypes.string,
@@ -346,6 +348,7 @@ export default class TextField extends PureComponent {
       baseColor,
       textColor,
       errorColor,
+      selectionColor,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       helperTextNumberOfLines,
@@ -364,6 +367,7 @@ export default class TextField extends PureComponent {
       text;
 
     active = (!!value) || active;
+    selectionColor = selectionColor || tintColor;
     let count = value.length;
     let restricted = limit < count;
 
@@ -504,7 +508,7 @@ export default class TextField extends PureComponent {
 
             <TextInput
               style={[styles.input, inputStyle, inputStyleOverrides]}
-              selectionColor={tintColor}
+              selectionColor={selectionColor}
 
               {...props}
               placeholderTextColor={placeholderTextColorWithAlpha}
