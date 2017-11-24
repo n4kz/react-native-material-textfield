@@ -17,7 +17,6 @@ exports[`renders helper 1`] = `
     accessible={true}
     allowFontScaling={true}
     collapsable={undefined}
-    disabled={false}
     ellipsizeMode="tail"
     numberOfLines={1}
     style={

@@ -18,7 +18,6 @@ exports[`renders prefix 1`] = `
     accessible={true}
     allowFontScaling={true}
     collapsable={undefined}
-    disabled={false}
     ellipsizeMode="tail"
     style={
       Object {
@@ -51,7 +50,6 @@ exports[`renders suffix 1`] = `
     accessible={true}
     allowFontScaling={true}
     collapsable={undefined}
-    disabled={false}
     ellipsizeMode="tail"
     style={
       Object {

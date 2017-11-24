@@ -33,7 +33,6 @@ exports[`renders 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -54,6 +53,7 @@ exports[`renders 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -116,7 +116,6 @@ exports[`renders 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -145,7 +144,6 @@ exports[`renders 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -196,7 +194,6 @@ exports[`renders accessory 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -217,6 +214,7 @@ exports[`renders accessory 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -291,7 +289,6 @@ exports[`renders accessory 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -320,7 +317,6 @@ exports[`renders accessory 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -371,7 +367,6 @@ exports[`renders counter 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -392,6 +387,7 @@ exports[`renders counter 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -454,7 +450,6 @@ exports[`renders counter 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -483,7 +478,6 @@ exports[`renders counter 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -508,7 +502,6 @@ exports[`renders counter 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
-        disabled={false}
         ellipsizeMode="tail"
         style={
           Array [
@@ -566,7 +559,6 @@ exports[`renders default value 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -587,6 +579,7 @@ exports[`renders default value 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -649,7 +642,6 @@ exports[`renders default value 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -678,7 +670,6 @@ exports[`renders default value 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -747,7 +738,6 @@ exports[`renders disabled value 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -768,6 +758,7 @@ exports[`renders disabled value 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={false}
@@ -830,7 +821,6 @@ exports[`renders disabled value 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -859,7 +849,6 @@ exports[`renders disabled value 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -910,7 +899,6 @@ exports[`renders error 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -931,6 +919,7 @@ exports[`renders error 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -994,7 +983,6 @@ exports[`renders error 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1025,7 +1013,6 @@ exports[`renders error 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1076,7 +1063,6 @@ exports[`renders multiline value 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -1097,6 +1083,7 @@ exports[`renders multiline value 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -1161,7 +1148,6 @@ exports[`renders multiline value 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1190,7 +1176,6 @@ exports[`renders multiline value 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1241,7 +1226,6 @@ exports[`renders prefix 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -1278,7 +1262,6 @@ exports[`renders prefix 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1292,6 +1275,7 @@ exports[`renders prefix 1`] = `
         </Text>
       </View>
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -1355,7 +1339,6 @@ exports[`renders prefix 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1384,7 +1367,6 @@ exports[`renders prefix 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1435,7 +1417,6 @@ exports[`renders restriction 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -1456,6 +1437,7 @@ exports[`renders restriction 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -1518,7 +1500,6 @@ exports[`renders restriction 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1547,7 +1528,6 @@ exports[`renders restriction 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1572,7 +1552,6 @@ exports[`renders restriction 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
-        disabled={false}
         ellipsizeMode="tail"
         style={
           Array [
@@ -1630,7 +1609,6 @@ exports[`renders suffix 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -1651,6 +1629,7 @@ exports[`renders suffix 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -1697,7 +1676,6 @@ exports[`renders suffix 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1744,7 +1722,6 @@ exports[`renders suffix 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1773,7 +1750,6 @@ exports[`renders suffix 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1824,7 +1800,6 @@ exports[`renders title 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -1845,6 +1820,7 @@ exports[`renders title 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -1907,7 +1883,6 @@ exports[`renders title 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1936,7 +1911,6 @@ exports[`renders title 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -1989,7 +1963,6 @@ exports[`renders value 1`] = `
         accessible={true}
         allowFontScaling={true}
         collapsable={undefined}
-        disabled={false}
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -2010,6 +1983,7 @@ exports[`renders value 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         autoCapitalize="sentences"
         disableFullscreenUI={true}
         editable={true}
@@ -2072,7 +2046,6 @@ exports[`renders value 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -2101,7 +2074,6 @@ exports[`renders value 1`] = `
           accessible={true}
           allowFontScaling={true}
           collapsable={undefined}
-          disabled={false}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
