@@ -7,8 +7,8 @@
     "android": "node node_modules/react-native/local-cli/cli.js run-android"
   },
   "dependencies": {
-    "react": "16.0.0-beta.5",
-    "react-native": "0.49.1",
+    "react": "16.0.0",
+    "react-native": "0.50.3",
     "react-native-material-buttons": "^0.5.0",
     "react-native-material-textfield": "file:../",
     "react-native-vector-icons": "^4.1.1"
