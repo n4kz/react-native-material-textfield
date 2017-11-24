@@ -12,14 +12,10 @@ exports[`renders active label 1`] = `
 >
   <Text
     accessible={true}
-    active={true}
     allowFontScaling={true}
-    animationDuration={225}
     collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
-    errored={false}
-    focused={false}
     numberOfLines={1}
     style={
       Object {
@@ -45,14 +41,10 @@ exports[`renders errored label 1`] = `
 >
   <Text
     accessible={true}
-    active={false}
     allowFontScaling={true}
-    animationDuration={225}
     collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
-    errored={true}
-    focused={false}
     numberOfLines={1}
     style={
       Object {
@@ -78,14 +70,10 @@ exports[`renders focused label 1`] = `
 >
   <Text
     accessible={true}
-    active={false}
     allowFontScaling={true}
-    animationDuration={225}
     collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
-    errored={false}
-    focused={true}
     numberOfLines={1}
     style={
       Object {
@@ -111,14 +99,10 @@ exports[`renders label 1`] = `
 >
   <Text
     accessible={true}
-    active={false}
     allowFontScaling={true}
-    animationDuration={225}
     collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
-    errored={false}
-    focused={false}
     numberOfLines={1}
     style={
       Object {
@@ -144,14 +128,10 @@ exports[`renders restricted label 1`] = `
 >
   <Text
     accessible={true}
-    active={false}
     allowFontScaling={true}
-    animationDuration={225}
     collapsable={undefined}
     disabled={false}
     ellipsizeMode="tail"
-    errored={false}
-    focused={false}
     numberOfLines={1}
     style={
       Object {

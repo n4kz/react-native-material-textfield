@@ -31,14 +31,10 @@ exports[`renders 1`] = `
     >
       <Text
         accessible={true}
-        active={false}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -198,14 +194,10 @@ exports[`renders accessory 1`] = `
     >
       <Text
         accessible={true}
-        active={false}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -377,14 +369,10 @@ exports[`renders counter 1`] = `
     >
       <Text
         accessible={true}
-        active={true}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -576,14 +564,10 @@ exports[`renders default value 1`] = `
     >
       <Text
         accessible={true}
-        active={true}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -761,14 +745,10 @@ exports[`renders disabled value 1`] = `
     >
       <Text
         accessible={true}
-        active={true}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -928,14 +908,10 @@ exports[`renders error 1`] = `
     >
       <Text
         accessible={true}
-        active={false}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={true}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -1098,14 +1074,10 @@ exports[`renders multiline value 1`] = `
     >
       <Text
         accessible={true}
-        active={true}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -1267,14 +1239,10 @@ exports[`renders prefix 1`] = `
     >
       <Text
         accessible={true}
-        active={true}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -1465,14 +1433,10 @@ exports[`renders restriction 1`] = `
     >
       <Text
         accessible={true}
-        active={true}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -1664,14 +1628,10 @@ exports[`renders suffix 1`] = `
     >
       <Text
         accessible={true}
-        active={true}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -1862,14 +1822,10 @@ exports[`renders title 1`] = `
     >
       <Text
         accessible={true}
-        active={false}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
@@ -2031,14 +1987,10 @@ exports[`renders value 1`] = `
     >
       <Text
         accessible={true}
-        active={true}
         allowFontScaling={true}
-        animationDuration={225}
         collapsable={undefined}
         disabled={false}
         ellipsizeMode="tail"
-        errored={false}
-        focused={false}
         numberOfLines={1}
         style={
           Object {
