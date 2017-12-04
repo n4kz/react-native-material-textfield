@@ -1,0 +1,12 @@
+version: "2"
+checks:
+  file-lines:
+    config:
+      threshold: 1000
+  method-lines:
+    config:
+      threshold: 250
+plugins:
+  eslint:
+    enabled: true
+    channel: "eslint-4"
