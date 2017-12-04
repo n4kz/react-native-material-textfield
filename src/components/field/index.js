@@ -201,10 +201,14 @@ export default class TextField extends PureComponent {
   }
 
   onFocus(event) {
-    let { onFocus } = this.props;
+    let { onFocus, clearTextOnFocus } = this.props;
 
     if ('function' === typeof onFocus) {
       onFocus(event);
+    }
+
+    if (clearTextOnFocus && 'android' === Platform.OS) {
+      this.clear();
     }
 
     this.setState({ focused: true, receivedFocus: true });
