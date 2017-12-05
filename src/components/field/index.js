@@ -42,8 +42,12 @@ export default class TextField extends PureComponent {
 
     errorColor: 'rgb(213, 0, 0)',
 
+    lineWidth: StyleSheet.hairlineWidth,
+    activeLineWidth: 2,
+
     disabled: false,
     disabledLineType: 'dotted',
+    disabledLineWidth: 1,
   };
 
   static propTypes = {
@@ -74,8 +78,12 @@ export default class TextField extends PureComponent {
     error: PropTypes.string,
     errorColor: PropTypes.string,
 
+    lineWidth: PropTypes.number,
+    activeLineWidth: PropTypes.number,
+
     disabled: PropTypes.bool,
     disabledLineType: Line.propTypes.type,
+    disabledLineWidth: PropTypes.number,
 
     renderAccessory: PropTypes.func,
 
@@ -324,6 +332,7 @@ export default class TextField extends PureComponent {
       editable,
       disabled,
       disabledLineType,
+      disabledLineWidth,
       animationDuration,
       fontSize,
       titleFontSize,
@@ -337,6 +346,8 @@ export default class TextField extends PureComponent {
       baseColor,
       textColor,
       errorColor,
+      lineWidth,
+      activeLineWidth,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
@@ -366,10 +377,10 @@ export default class TextField extends PureComponent {
       });
 
     let borderBottomWidth = restricted?
-      2:
+      activeLineWidth:
       focus.interpolate({
         inputRange: [-1, 0, 1],
-        outputRange: [2, StyleSheet.hairlineWidth, 2],
+        outputRange: [activeLineWidth, lineWidth, activeLineWidth],
       });
 
     let inputContainerStyle = {
@@ -458,6 +469,12 @@ export default class TextField extends PureComponent {
       ],
     };
 
+    let lineProps = {
+      type: disabledLineType,
+      width: disabledLineWidth,
+      color: baseColor,
+    };
+
     let labelProps = {
       baseSize: labelHeight,
       basePadding: labelPadding,
@@ -486,7 +503,7 @@ export default class TextField extends PureComponent {
     return (
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
-          {disabled && <Line type={disabledLineType} color={baseColor} />}
+          {disabled && <Line {...lineProps} />}
 
           <Label {...labelProps}>{label}</Label>
 

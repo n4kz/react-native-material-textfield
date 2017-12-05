@@ -711,16 +711,16 @@ exports[`renders disabled value 1`] = `
       style={
         Array [
           Object {
-            "borderWidth": 1,
-            "bottom": 0,
-            "left": -1.5,
             "position": "absolute",
-            "right": -1.5,
-            "top": -2,
           },
           Object {
             "borderColor": "rgba(0, 0, 0, .38)",
             "borderStyle": "dotted",
+            "borderWidth": 1,
+            "bottom": 0,
+            "left": -1.5,
+            "right": -1.5,
+            "top": -2,
           },
         ]
       }

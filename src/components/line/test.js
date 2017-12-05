@@ -6,15 +6,14 @@ import Line from '.';
 
 /* eslint-env jest */
 
-[{ type: 'solid', color: 'black' }, { type: 'dotted', color: 'grey' }]
-  .forEach(({ type, color }) => {
+[{ type: 'solid', color: 'black', width: 1 }, { type: 'dotted', color: 'grey', width: 1 }]
+  .forEach(({ type, color, width }) => {
     it(`renders ${type} ${color} line`, () => {
       let line = renderer
-        .create(<Line type={type} color={color} />)
+        .create(<Line type={type} color={color} width={width} />)
         .toJSON();
 
       expect(line)
         .toMatchSnapshot();
     });
   });
-
