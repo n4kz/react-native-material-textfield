@@ -3,6 +3,9 @@ checks:
   file-lines:
     config:
       threshold: 1000
+  method-count:
+    config:
+      threshold: 50
   method-lines:
     config:
       threshold: 250
