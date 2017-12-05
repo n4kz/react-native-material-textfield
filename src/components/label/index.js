@@ -46,14 +46,6 @@ export default class Label extends PureComponent {
     };
   }
 
-  inputState({ focused, active } = this.props) {
-    return active || focused? 1 : 0;
-  }
-
-  focusState({ focused, errored } = this.props) {
-    return errored? -1 : (focused? 1 : 0);
-  }
-
   componentWillReceiveProps(props) {
     let { focus, input } = this.state;
     let { active, focused, errored, animationDuration: duration } = this.props;
@@ -73,6 +65,14 @@ export default class Label extends PureComponent {
         .timing(focus, { toValue, duration })
         .start();
     }
+  }
+
+  inputState({ focused, active } = this.props) {
+    return active || focused? 1 : 0;
+  }
+
+  focusState({ focused, errored } = this.props) {
+    return errored? -1 : (focused? 1 : 0);
   }
 
   render() {

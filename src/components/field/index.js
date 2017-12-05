@@ -95,6 +95,7 @@ export default class TextField extends PureComponent {
     this.onChange = this.onChange.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
+    this.onFocusAnimationEnd = this.onFocusAnimationEnd.bind(this);
 
     this.updateRef = this.updateRef.bind(this, 'input');
 
@@ -104,7 +105,7 @@ export default class TextField extends PureComponent {
     this.state = {
       text: value,
 
-      focus: new Animated.Value(error? -1 : 0),
+      focus: new Animated.Value(this.focusState(error, false)),
       focused: false,
       receivedFocus: false,
 
@@ -140,25 +141,24 @@ export default class TextField extends PureComponent {
   }
 
   componentWillUpdate(props, state) {
-    let { error, animationDuration } = this.props;
+    let { error, animationDuration: duration } = this.props;
     let { focus, focused } = this.state;
 
     if (props.error !== error || focused ^ state.focused) {
+      let toValue = this.focusState(props.error, state.focused);
+
       Animated
-        .timing(focus, {
-          toValue: props.error? -1 : (state.focused? 1 : 0),
-          duration: animationDuration,
-        })
-        .start(() => {
-          if (this.mounted) {
-            this.setState((state, { error }) => ({ error }));
-          }
-        });
+        .timing(focus, { toValue, duration })
+        .start(this.onFocusAnimationEnd);
     }
   }
 
   updateRef(name, ref) {
     this[name] = ref;
+  }
+
+  focusState(error, focused) {
+    return error? -1 : (focused? 1 : 0);
   }
 
   focus() {
@@ -263,6 +263,12 @@ export default class TextField extends PureComponent {
         Math.ceil(height) + Platform.select({ ios: 5, android: 1 })
       ),
     });
+  }
+
+  onFocusAnimationEnd() {
+    if (this.mounted) {
+      this.setState((state, { error }) => ({ error }));
+    }
   }
 
   renderAccessory() {
