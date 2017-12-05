@@ -77,6 +77,9 @@ class Example extends Component {
  labelHeight           | Text field label base height                |   Number | 32
  labelPadding          | Text field label base padding               |   Number | 4
  inputContainerPadding | Text field input container base padding     |   Number | 8
+ lineWidth             | Text field underline width                  |   Number | 0.5
+ activeLineWidth       | Text field active underline width           |   Number | 2
+ disabledLineWidth     | Text field disabled underline width         |   Number | 1
  tintColor             | Text field accent color                     |   String | rgb(0, 145, 234)
  baseColor             | Text field base color                       |   String | rgba(0, 0, 0, .38)
  label                 | Text field label text                       |   String | -
