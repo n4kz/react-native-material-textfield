@@ -40,33 +40,37 @@ export default class Label extends PureComponent {
   constructor(props) {
     super(props);
 
-    let { active, focused, errored } = this.props;
-
     this.state = {
-      input: new Animated.Value((active || focused)? 1 : 0),
-      focus: new Animated.Value(errored? -1 : (focused? 1 : 0)),
+      input: new Animated.Value(this.inputState()),
+      focus: new Animated.Value(this.focusState()),
     };
+  }
+
+  inputState({ focused, active } = this.props) {
+    return active || focused? 1 : 0;
+  }
+
+  focusState({ focused, errored } = this.props) {
+    return errored? -1 : (focused? 1 : 0);
   }
 
   componentWillReceiveProps(props) {
     let { focus, input } = this.state;
-    let { active, focused, errored, animationDuration } = this.props;
+    let { active, focused, errored, animationDuration: duration } = this.props;
 
-    if ((focused ^ props.focused) || (active ^ props.active)) {
+    if (focused ^ props.focused || active ^ props.active) {
+      let toValue = this.inputState(props);
+
       Animated
-        .timing(input, {
-          toValue: (props.active || props.focused)? 1 : 0,
-          duration: animationDuration,
-        })
+        .timing(input, { toValue, duration })
         .start();
     }
 
-    if ((focused ^ props.focused) || (errored ^ props.errored)) {
+    if (focused ^ props.focused || errored ^ props.errored) {
+      let toValue = this.focusState(props);
+
       Animated
-        .timing(focus, {
-          toValue: props.errored? -1 : (props.focused? 1 : 0),
-          duration: animationDuration,
-        })
+        .timing(focus, { toValue, duration })
         .start();
     }
   }
