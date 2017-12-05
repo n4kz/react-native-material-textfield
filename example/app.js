@@ -212,6 +212,7 @@ export default function init() {
               autoCapitalize='none'
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
+              clearTextOnFocus={true}
               onFocus={this.onFocus}
               onChangeText={this.onChangeText}
               onSubmitEditing={this.onSubmitPassword}
