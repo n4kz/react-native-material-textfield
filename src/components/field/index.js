@@ -207,7 +207,7 @@ export default class TextField extends PureComponent {
       onFocus(event);
     }
 
-    if (clearTextOnFocus && 'android' === Platform.OS) {
+    if (clearTextOnFocus) {
       this.clear();
     }
 
@@ -333,6 +333,7 @@ export default class TextField extends PureComponent {
       errorColor,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
+      clearTextOnFocus,
       ...props
     } = this.props;
 
