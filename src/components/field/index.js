@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Platform,
   ViewPropTypes,
+  I18nManager,
 } from 'react-native';
 
 import RN from 'react-native/package.json';
@@ -369,6 +370,10 @@ export default class TextField extends PureComponent {
     let count = value.length;
     let restricted = limit < count;
 
+    let textAlign = I18nManager.isRTL?
+      'right':
+      'left';
+
     let borderBottomColor = restricted?
       errorColor:
       focus.interpolate({
@@ -398,6 +403,7 @@ export default class TextField extends PureComponent {
 
     let inputStyle = {
       fontSize,
+      textAlign,
 
       color: (disabled || defaultVisible)?
         baseColor:
