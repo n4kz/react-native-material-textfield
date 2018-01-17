@@ -148,7 +148,11 @@ export default function init() {
         .toLowerCase();
 
       return (
-        <ScrollView style={styles.scroll} contentContainerStyle={styles.contentContainer}>
+        <ScrollView
+          style={styles.scroll}
+          contentContainerStyle={styles.contentContainer}
+          keyboardShouldPersistTaps='handled'
+        >
           <View style={styles.container}>
             <TextField
               ref={this.firstnameRef}
