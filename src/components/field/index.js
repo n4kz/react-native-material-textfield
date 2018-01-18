@@ -42,6 +42,8 @@ export default class TextField extends PureComponent {
     baseColor: 'rgba(0, 0, 0, .38)',
 
     errorColor: 'rgb(213, 0, 0)',
+    
+    textAlign: 'left',
 
     lineWidth: StyleSheet.hairlineWidth,
     activeLineWidth: 2,
@@ -69,7 +71,8 @@ export default class TextField extends PureComponent {
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
-    baseColor: PropTypes.string,
+    baseColor: PropTypes.string, 
+    textAlign: PropTypes.string,
 
     label: PropTypes.string.isRequired,
     title: PropTypes.string,
@@ -346,6 +349,7 @@ export default class TextField extends PureComponent {
       tintColor,
       baseColor,
       textColor,
+      textAlign,
       errorColor,
       lineWidth,
       activeLineWidth,
@@ -403,6 +407,8 @@ export default class TextField extends PureComponent {
 
     let inputStyle = {
       fontSize,
+      textAlign,
+
       textAlign,
 
       color: (disabled || defaultVisible)?
