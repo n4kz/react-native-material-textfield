@@ -33,6 +33,7 @@ Material texfield with consistent behaviour on iOS and Android
 * Prefix and suffix
 * Accessory view
 * Helper text
+* RTL support
 * Pure javascript implementation
 
 ## Installation
