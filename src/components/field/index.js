@@ -91,6 +91,8 @@ export default class TextField extends PureComponent {
     prefix: PropTypes.string,
     suffix: PropTypes.string,
 
+    disableSelectionColor: PropTypes.bool,
+
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
   };
@@ -506,6 +508,12 @@ export default class TextField extends PureComponent {
       style: titleTextStyle,
     };
 
+    const defaultProps = {};
+
+    if (!props.disableSelectionColor) {
+        defaultProps.selectionColor = tintColor;
+    }
+
     return (
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
@@ -518,8 +526,8 @@ export default class TextField extends PureComponent {
 
             <TextInput
               style={[styles.input, inputStyle, inputStyleOverrides]}
-              selectionColor={tintColor}
 
+              {...defaultProps}
               {...props}
 
               editable={!disabled && editable}
