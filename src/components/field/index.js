@@ -49,6 +49,8 @@ export default class TextField extends PureComponent {
     disabled: false,
     disabledLineType: 'dotted',
     disabledLineWidth: 1,
+
+    TextInputComponent: TextInput,
   };
 
   static propTypes = {
@@ -93,6 +95,8 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+
+    TextInputComponent: PropTypes.func,
   };
 
   constructor(props) {
@@ -352,6 +356,7 @@ export default class TextField extends PureComponent {
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
+      TextInputComponent,
       ...props
     } = this.props;
 
@@ -516,7 +521,7 @@ export default class TextField extends PureComponent {
           <View style={styles.row}>
             {this.renderAffix('prefix', active, focused)}
 
-            <TextInput
+            <TextInputComponent
               style={[styles.input, inputStyle, inputStyleOverrides]}
               selectionColor={tintColor}
 
