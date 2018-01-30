@@ -133,7 +133,7 @@ export default class Label extends PureComponent {
     let transform = [
       {translateX: this.state.inputTX},
       {translateY: this.state.inputTY},
-      {scale: this.state.inputScale}
+      {scale: this.state.inputScale},
     ];
 
     let containerStyle = {
