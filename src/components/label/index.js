@@ -72,7 +72,7 @@ export default class Label extends PureComponent {
   }
 
   inputTYState({ focused, active, baseSize, fontSize, basePadding, activeFontSize } = this.props) {
-    return (active || focused) ? (baseSize - basePadding - activeFontSize - 2) : (baseSize + fontSize * 0.25);
+    return (active || focused) ? (baseSize - basePadding - activeFontSize * 1.2) : (baseSize + fontSize * 0.25);
   }
 
   inputScaleState({ focused, active, fontSize, activeFontSize } = this.props) {
@@ -133,7 +133,7 @@ export default class Label extends PureComponent {
     let transform = [
       {translateX: this.state.inputTX},
       {translateY: this.state.inputTY},
-      {scale: this.state.inputScale}
+      {scale: this.state.inputScale},
     ];
 
     let containerStyle = {
