@@ -453,7 +453,7 @@ export default class TextField extends PureComponent {
     let accessoryStyle = {
       opacity: focus.interpolate({
         inputRange: [-1, 0, 1],
-        outputRange: [0, 0, 1],
+        outputRange: [1, active ? 1 : 0, 1],
       }),
     };
 

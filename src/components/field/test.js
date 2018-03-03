@@ -119,3 +119,14 @@ it('renders accessory', () => {
   expect(field)
     .toMatchSnapshot();
 });
+
+it('renders left accessory', () => {
+  let render = () => <Image />
+
+  let field = renderer
+    .create(<TextField {...props} renderLeftAccessory={render} />)
+    .toJSON();
+
+  expect(field)
+    .toMatchSnapshot();
+});
