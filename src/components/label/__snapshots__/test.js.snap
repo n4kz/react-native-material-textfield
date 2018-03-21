@@ -6,7 +6,11 @@ exports[`renders active label 1`] = `
   style={
     Object {
       "position": "absolute",
-      "top": 16,
+      "transform": Array [
+        Object {
+          "translateY": 16,
+        },
+      ],
     }
   }
 >
@@ -34,7 +38,11 @@ exports[`renders errored label 1`] = `
   style={
     Object {
       "position": "absolute",
-      "top": 36,
+      "transform": Array [
+        Object {
+          "translateY": 36,
+        },
+      ],
     }
   }
 >
@@ -62,7 +70,11 @@ exports[`renders focused label 1`] = `
   style={
     Object {
       "position": "absolute",
-      "top": 16,
+      "transform": Array [
+        Object {
+          "translateY": 16,
+        },
+      ],
     }
   }
 >
@@ -90,7 +102,11 @@ exports[`renders label 1`] = `
   style={
     Object {
       "position": "absolute",
-      "top": 36,
+      "transform": Array [
+        Object {
+          "translateY": 36,
+        },
+      ],
     }
   }
 >
@@ -118,7 +134,11 @@ exports[`renders restricted label 1`] = `
   style={
     Object {
       "position": "absolute",
-      "top": 36,
+      "transform": Array [
+        Object {
+          "translateY": 36,
+        },
+      ],
     }
   }
 >
