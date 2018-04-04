@@ -74,6 +74,7 @@ export default class TextField extends PureComponent {
     label: PropTypes.string.isRequired,
     title: PropTypes.string,
 
+    helperNumberOfLines: PropTypes.number,
     characterRestriction: PropTypes.number,
 
     error: PropTypes.string,
@@ -347,6 +348,7 @@ export default class TextField extends PureComponent {
       baseColor,
       textColor,
       errorColor,
+      helperNumberOfLines,
       lineWidth,
       activeLineWidth,
       containerStyle,
@@ -451,10 +453,10 @@ export default class TextField extends PureComponent {
     let helperContainerStyle = {
       flexDirection: 'row',
       height: (title || limit)?
-        titleFontSize * 2:
+        (titleFontSize * 2) * helperNumberOfLines:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [titleFontSize * 2, 8, 8],
+          outputRange: [(titleFontSize * 2) * helperNumberOfLines, 8, 8],
         }),
     };
 
@@ -495,6 +497,10 @@ export default class TextField extends PureComponent {
       errored,
       restricted,
       style: labelTextStyle,
+    };
+
+    let helperProps = {
+      numberOfLines: helperNumberOfLines,
     };
 
     let counterProps = {
@@ -539,8 +545,8 @@ export default class TextField extends PureComponent {
 
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
-            <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
+            <Helper {...helperProps} style={[errorStyle, titleTextStyle]}>{error}</Helper>
+            <Helper {...helperProps} style={[titleStyle, titleTextStyle]}>{title}</Helper>
           </View>
 
           <Counter {...counterProps} />

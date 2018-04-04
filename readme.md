@@ -91,6 +91,7 @@ class Example extends Component {
  errorColor            | Text field color for errored state          |   String | rgb(213, 0, 0)
  disabledLineType      | Text field line type in disabled state      |   String | dotted
  animationDuration     | Text field animation duration in ms         |   Number | 225
+ helperNumberOfLines   | Text field helper number or lines           |   Number | -
  characterRestriction  | Text field soft limit for character counter |   Number | -
  disabled              | Text field availability                     |  Boolean | false
  editable              | Text field text can be edited               |  Boolean | true
