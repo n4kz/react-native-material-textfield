@@ -41,6 +41,8 @@ export default class TextField extends PureComponent {
     textColor: 'rgba(0, 0, 0, .87)',
     baseColor: 'rgba(0, 0, 0, .38)',
 
+    helperNumberOfLines: 1,
+
     errorColor: 'rgb(213, 0, 0)',
 
     lineWidth: StyleSheet.hairlineWidth,

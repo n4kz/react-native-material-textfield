@@ -73,6 +73,15 @@ it('renders error', () => {
     .toMatchSnapshot();
 });
 
+it('renders multiline helper', () => {
+  let field = renderer
+    .create(<TextField {...props} title="multiline \n field" helperNumberOfLines={2} />)
+    .toJSON();
+
+  expect(field)
+    .toMatchSnapshot();
+});
+
 it('renders counter', () => {
   let field = renderer
     .create(<TextField {...props} value='text' characterRestriction={10} />)
