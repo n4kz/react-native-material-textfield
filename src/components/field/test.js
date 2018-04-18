@@ -19,7 +19,7 @@ it('renders', () => {
     .toMatchSnapshot();
 });
 
-it('renders value', () => {
+it('renders null value', () => {
   let field = renderer
     .create(<TextField {...props} value={null} />)
     .toJSON();
