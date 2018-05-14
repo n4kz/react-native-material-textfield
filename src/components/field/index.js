@@ -91,6 +91,7 @@ export default class TextField extends PureComponent {
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
+    labelColor: PropTypes.string,
 
     label: PropTypes.string,
     title: PropTypes.string,
@@ -500,6 +501,8 @@ export default class TextField extends PureComponent {
       fontSize,
       labelFontSize,
       labelTextStyle,
+      baseColor,
+      labelColor,
     } = this.props;
 
     return (
@@ -510,6 +513,7 @@ export default class TextField extends PureComponent {
         offset={offset}
         label={label}
         style={labelTextStyle}
+        baseColor={labelColor || baseColor}
       />
     );
   }
