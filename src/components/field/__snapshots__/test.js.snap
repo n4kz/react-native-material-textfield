@@ -12,8 +12,8 @@ exports[`renders 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -41,6 +41,7 @@ exports[`renders 1`] = `
             "fontSize": 16,
           }
         }
+        text={undefined}
       >
         test
       </Text>
@@ -74,7 +75,7 @@ exports[`renders 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -176,8 +177,8 @@ exports[`renders accessory 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -205,6 +206,7 @@ exports[`renders accessory 1`] = `
             "fontSize": 16,
           }
         }
+        text={undefined}
       >
         test
       </Text>
@@ -239,7 +241,7 @@ exports[`renders accessory 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -352,8 +354,8 @@ exports[`renders counter 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -378,9 +380,10 @@ exports[`renders counter 1`] = `
         style={
           Object {
             "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "fontSize": 16,
           }
         }
+        text="text"
       >
         test
       </Text>
@@ -414,7 +417,7 @@ exports[`renders counter 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -547,8 +550,8 @@ exports[`renders default value 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -573,9 +576,10 @@ exports[`renders default value 1`] = `
         style={
           Object {
             "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "fontSize": 16,
           }
         }
+        text={undefined}
       >
         test
       </Text>
@@ -609,7 +613,7 @@ exports[`renders default value 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -755,9 +759,10 @@ exports[`renders disabled value 1`] = `
         style={
           Object {
             "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "fontSize": 16,
           }
         }
+        text="text"
       >
         test
       </Text>
@@ -791,7 +796,7 @@ exports[`renders disabled value 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -922,6 +927,7 @@ exports[`renders error 1`] = `
             "fontSize": 16,
           }
         }
+        text={undefined}
       >
         test
       </Text>
@@ -956,7 +962,7 @@ exports[`renders error 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -1060,8 +1066,8 @@ exports[`renders multiline value 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -1086,9 +1092,10 @@ exports[`renders multiline value 1`] = `
         style={
           Object {
             "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "fontSize": 16,
           }
         }
+        text="text"
       >
         test
       </Text>
@@ -1226,8 +1233,8 @@ exports[`renders prefix 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -1252,9 +1259,10 @@ exports[`renders prefix 1`] = `
         style={
           Object {
             "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "fontSize": 16,
           }
         }
+        text="text"
       >
         test
       </Text>
@@ -1318,7 +1326,7 @@ exports[`renders prefix 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -1446,9 +1454,10 @@ exports[`renders restriction 1`] = `
         style={
           Object {
             "color": "rgb(213, 0, 0)",
-            "fontSize": 12,
+            "fontSize": 16,
           }
         }
+        text="text"
       >
         test
       </Text>
@@ -1482,7 +1491,7 @@ exports[`renders restriction 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -1615,8 +1624,8 @@ exports[`renders suffix 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -1641,9 +1650,10 @@ exports[`renders suffix 1`] = `
         style={
           Object {
             "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "fontSize": 16,
           }
         }
+        text="text"
       >
         test
       </Text>
@@ -1677,7 +1687,7 @@ exports[`renders suffix 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -1809,8 +1819,8 @@ exports[`renders title 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -1838,6 +1848,7 @@ exports[`renders title 1`] = `
             "fontSize": 16,
           }
         }
+        text={undefined}
       >
         test
       </Text>
@@ -1871,7 +1882,7 @@ exports[`renders title 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
@@ -1975,8 +1986,8 @@ exports[`renders value 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(0, 0, 0, 0.38)",
-        "borderBottomWidth": 0.5,
+        "borderBottomColor": "rgba(0, 145, 234, 1)",
+        "borderBottomWidth": 2,
         "height": 64,
         "paddingBottom": 8,
         "paddingTop": 32,
@@ -2001,9 +2012,10 @@ exports[`renders value 1`] = `
         style={
           Object {
             "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "fontSize": 16,
           }
         }
+        text="text"
       >
         test
       </Text>
@@ -2037,7 +2049,7 @@ exports[`renders value 1`] = `
             Object {
               "color": "rgba(0, 0, 0, .87)",
               "fontSize": 16,
-              "height": 24,
+              "height": 20,
               "textAlign": "left",
             },
             undefined,
