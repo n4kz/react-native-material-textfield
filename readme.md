@@ -97,6 +97,7 @@ class Example extends Component {
  multiline             | Text filed multiline input                  |  Boolean | false
  inputContainerStyle   | Style for input container view              |   Object | -
  containerStyle        | Style for container view                    |   Object | -
+ labelProps            | Props same as React Native Text             |   Object | -
  labelTextStyle        | Style for label inner Text component        |   Object | -
  titleTextStyle        | Style for title inner Text component        |   Object | -
  affixTextStyle        | Style for affix inner Text component        |   Object | -
