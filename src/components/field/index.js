@@ -343,6 +343,7 @@ export default class TextField extends PureComponent {
       inputContainerPadding,
       labelTextStyle,
       titleTextStyle,
+      labelProps,
       tintColor,
       baseColor,
       textColor,
@@ -481,7 +482,7 @@ export default class TextField extends PureComponent {
       color: baseColor,
     };
 
-    let labelProps = {
+    let modifiedLabelProps = {
       baseSize: labelHeight,
       basePadding: labelPadding,
       fontSize,
@@ -494,6 +495,7 @@ export default class TextField extends PureComponent {
       focused,
       errored,
       restricted,
+      ...labelProps,
       style: labelTextStyle,
     };
 
@@ -511,7 +513,7 @@ export default class TextField extends PureComponent {
         <Animated.View {...inputContainerProps}>
           {disabled && <Line {...lineProps} />}
 
-          <Label {...labelProps}>{label}</Label>
+          <Label {...modifiedLabelProps}>{label}</Label>
 
           <View style={styles.row}>
             {this.renderAffix('prefix', active, focused)}
