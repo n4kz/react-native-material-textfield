@@ -321,6 +321,10 @@ export default class TextField extends PureComponent {
     );
   }
 
+  setNativeProps(details) {
+    this.input.setNativeProps(details);
+  }
+
   render() {
     let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
     let {
@@ -352,6 +356,7 @@ export default class TextField extends PureComponent {
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
+      children,
       ...props
     } = this.props;
 
@@ -364,12 +369,11 @@ export default class TextField extends PureComponent {
 
     value = defaultVisible?
       defaultValue:
-      text;
+      value;
 
     let active = !!(value || props.placeholder);
     let count = value.length;
     let restricted = limit < count;
-
     let textAlign = I18nManager.isRTL?
       'right':
       'left';
@@ -528,9 +532,11 @@ export default class TextField extends PureComponent {
               onContentSizeChange={this.onContentSizeChange}
               onFocus={this.onFocus}
               onBlur={this.onBlur}
-              value={value}
+              value={children ? undefined : value}
               ref={this.updateRef}
-            />
+            >
+              { children }
+            </TextInput>
 
             {this.renderAffix('suffix', active, focused)}
             {this.renderAccessory()}
