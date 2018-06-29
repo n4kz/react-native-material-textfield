@@ -24,7 +24,7 @@ export default class Label extends PureComponent {
     basePadding: PropTypes.number.isRequired,
 
     tintColor: PropTypes.string.isRequired,
-    baseColor: PropTypes.string.isRequired,
+    labelColor: PropTypes.string.isRequired,
     errorColor: PropTypes.string.isRequired,
 
     animationDuration: PropTypes.number.isRequired,
@@ -71,8 +71,8 @@ export default class Label extends PureComponent {
     return active || focused? 1 : 0;
   }
 
-  focusState({ focused, errored } = this.props) {
-    return errored? -1 : (focused? 1 : 0);
+  focusState({ focused, errored, active } = this.props) {
+    return errored ? -1 : focused ? 1 : active ? 2 : 0;
   }
 
   render() {
@@ -84,6 +84,7 @@ export default class Label extends PureComponent {
       activeFontSize,
       errorColor,
       baseColor,
+      labelColor,
       tintColor,
       baseSize,
       basePadding,
@@ -98,8 +99,8 @@ export default class Label extends PureComponent {
     let color = restricted?
       errorColor:
       focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
+        inputRange: [-1, 0, 1, 2],
+        outputRange: [errorColor, baseColor, tintColor, labelColor],
       });
 
     let top = input.interpolate({

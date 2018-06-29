@@ -70,7 +70,8 @@ export default class TextField extends PureComponent {
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
-
+    titleColor: PropTypes.string,
+    
     label: PropTypes.string.isRequired,
     title: PropTypes.string,
 
@@ -345,8 +346,10 @@ export default class TextField extends PureComponent {
       titleTextStyle,
       tintColor,
       baseColor,
+      labelColor,
       textColor,
       errorColor,
+      titleColor,
       lineWidth,
       activeLineWidth,
       containerStyle,
@@ -438,7 +441,7 @@ export default class TextField extends PureComponent {
     };
 
     let titleStyle = {
-      color: baseColor,
+      color: titleColor || baseColor,
 
       opacity: focus.interpolate({
         inputRange: [-1, 0, 1],
@@ -488,6 +491,7 @@ export default class TextField extends PureComponent {
       activeFontSize: labelFontSize,
       tintColor,
       baseColor,
+      labelColor: labelColor || baseColor,
       errorColor,
       animationDuration,
       active,
@@ -539,8 +543,8 @@ export default class TextField extends PureComponent {
 
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
-            <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
+            <Helper style={errorStyle}>{error}</Helper>
+            <Helper style={titleStyle}>{title}</Helper>
           </View>
 
           <Counter {...counterProps} />
