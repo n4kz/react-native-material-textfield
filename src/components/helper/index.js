@@ -1,20 +1,21 @@
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import { View, Animated } from 'react-native';
+import PropTypes from "prop-types";
+import React, { PureComponent } from "react";
+import { View, Animated } from "react-native";
 
-import styles from './styles';
+import styles from "./styles";
 
 export default class Helper extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
+    numberOfHelperLines: 1
   };
 
   static propTypes = {
     style: Animated.Text.propTypes.style,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
-    ]),
+      PropTypes.node
+    ])
   };
 
   render() {
@@ -22,7 +23,11 @@ export default class Helper extends PureComponent {
 
     return (
       <View style={styles.container}>
-        <Animated.Text style={[styles.text, style]} {...props}>
+        <Animated.Text
+          numberOfLines={this.props.numberOfHelperLines}
+          style={[styles.text, style]}
+          {...props}
+        >
           {children}
         </Animated.Text>
       </View>
