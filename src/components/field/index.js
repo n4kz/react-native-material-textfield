@@ -327,7 +327,7 @@ export default class TextField extends PureComponent {
       style: inputStyleOverrides,
       label,
       title,
-      value = '',
+      value,
       defaultValue,
       characterRestriction: limit,
       editable,
