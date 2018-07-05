@@ -322,12 +322,12 @@ export default class TextField extends PureComponent {
   }
 
   render() {
-    let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
+    let { receivedFocus, focus, focused, error, errored, height } = this.state;
     let {
       style: inputStyleOverrides,
       label,
       title,
-      value,
+      value = '',
       defaultValue,
       characterRestriction: limit,
       editable,
@@ -364,7 +364,7 @@ export default class TextField extends PureComponent {
 
     value = defaultVisible?
       defaultValue:
-      text;
+      value;
 
     let active = !!(value || props.placeholder);
     let count = value.length;
