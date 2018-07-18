@@ -36,6 +36,7 @@ export default class TextField extends PureComponent {
     labelHeight: 32,
     labelPadding: 4,
     inputContainerPadding: 8,
+    helpersNumberOfLines: 1,
 
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
@@ -93,6 +94,8 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+
+    helpersNumberOfLines: PropTypes.number,
   };
 
   constructor(props) {
@@ -109,7 +112,7 @@ export default class TextField extends PureComponent {
     this.updateRef = this.updateRef.bind(this, 'input');
 
     let { value, error, fontSize } = this.props;
-
+    console.log("constructor",this.props)
     this.mounted = false;
     this.state = {
       text: value,
@@ -322,6 +325,7 @@ export default class TextField extends PureComponent {
   }
 
   render() {
+    
     let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
     let {
       style: inputStyleOverrides,
@@ -352,9 +356,11 @@ export default class TextField extends PureComponent {
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
+      helpersNumberOfLines,
       ...props
     } = this.props;
-
+    
+    console.log("render",this.props)
     if (props.multiline && props.height) {
       /* Disable autogrow if height is passed as prop */
       height = props.height;
@@ -448,13 +454,15 @@ export default class TextField extends PureComponent {
       fontSize: titleFontSize,
     };
 
+    let titleFontSizeMultiplier = this.props.helpersNumberOfLines;
+
     let helperContainerStyle = {
       flexDirection: 'row',
       height: (title || limit)?
-        titleFontSize * 2:
+        titleFontSize * 2 * titleFontSizeMultiplier :
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [titleFontSize * 2, 8, 8],
+          outputRange: [titleFontSize * titleFontSizeMultiplier * 2, 8, 8],
         }),
     };
 

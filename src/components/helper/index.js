@@ -15,14 +15,15 @@ export default class Helper extends PureComponent {
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
     ]),
+    numberOfLines:PropTypes.number,
   };
 
   render() {
-    let { children, style, ...props } = this.props;
+    let { children, style, numberOfLines, ...props } = this.props;
 
     return (
       <View style={styles.container}>
-        <Animated.Text style={[styles.text, style]} {...props}>
+        <Animated.Text numberOfLines={numberOfLines} style={[styles.text, style]} {...props}>
           {children}
         </Animated.Text>
       </View>
