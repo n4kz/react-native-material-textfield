@@ -112,7 +112,6 @@ export default class TextField extends PureComponent {
     this.updateRef = this.updateRef.bind(this, 'input');
 
     let { value, error, fontSize } = this.props;
-    console.log("constructor",this.props)
     this.mounted = false;
     this.state = {
       text: value,
@@ -323,7 +322,6 @@ export default class TextField extends PureComponent {
       <Affix style={affixTextStyle} {...props}>{affix}</Affix>
     );
   }
-
   render() {
     
     let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
@@ -359,8 +357,7 @@ export default class TextField extends PureComponent {
       helpersNumberOfLines,
       ...props
     } = this.props;
-    
-    console.log("render",this.props)
+
     if (props.multiline && props.height) {
       /* Disable autogrow if height is passed as prop */
       height = props.height;

@@ -11,7 +11,7 @@ export default class Helper extends PureComponent {
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
-    ])
+    ]),
   };
 
   render() {
