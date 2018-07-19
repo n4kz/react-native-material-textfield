@@ -104,6 +104,7 @@ class Example extends Component {
  onChangeText          | Change text callback                        | Function | -
  onFocus               | Focus callback                              | Function | -
  onBlur                | Blur callback                               | Function | -
+ helpersNumberOfLines  | Error and Title number of lines             | Function | 1
 
 Other [TextInput][rn-textinput] properties will also work
 

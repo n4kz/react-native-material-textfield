@@ -9,5 +9,6 @@ export default StyleSheet.create({
 
   text: {
     backgroundColor: 'transparent',
+    width:'100%',
   },
 });
