@@ -19,10 +19,10 @@ exports[`renders helper 1`] = `
     allowFontScaling={true}
     collapsable={undefined}
     ellipsizeMode="tail"
-    numberOfLines={1}
     style={
       Object {
         "backgroundColor": "transparent",
+        "width": "100%",
       }
     }
   >

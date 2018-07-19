@@ -42,7 +42,7 @@ export default class Affix extends PureComponent {
     };
   }
 
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     let { opacity } = this.state;
     let { active, focused, animationDuration } = this.props;
 

@@ -119,13 +119,13 @@ exports[`renders 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -148,13 +148,13 @@ exports[`renders 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -295,13 +295,13 @@ exports[`renders accessory 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -324,13 +324,13 @@ exports[`renders accessory 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -459,13 +459,13 @@ exports[`renders counter 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -488,13 +488,13 @@ exports[`renders counter 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -654,13 +654,13 @@ exports[`renders default value 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -683,13 +683,13 @@ exports[`renders default value 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -836,13 +836,13 @@ exports[`renders disabled value 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -865,13 +865,13 @@ exports[`renders disabled value 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -1001,13 +1001,13 @@ exports[`renders error 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         >
@@ -1032,13 +1032,13 @@ exports[`renders error 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -1169,13 +1169,13 @@ exports[`renders multiline value 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -1198,13 +1198,13 @@ exports[`renders multiline value 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -1363,13 +1363,13 @@ exports[`renders prefix 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -1392,13 +1392,13 @@ exports[`renders prefix 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -1527,13 +1527,13 @@ exports[`renders restriction 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -1556,13 +1556,13 @@ exports[`renders restriction 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -1752,13 +1752,13 @@ exports[`renders suffix 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -1781,13 +1781,13 @@ exports[`renders suffix 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
@@ -1916,13 +1916,13 @@ exports[`renders title 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 12,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -1945,13 +1945,13 @@ exports[`renders title 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         >
@@ -2082,13 +2082,13 @@ exports[`renders value 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgb(213, 0, 0)",
               "fontSize": 0,
               "opacity": 0,
+              "width": "100%",
             }
           }
         />
@@ -2111,13 +2111,13 @@ exports[`renders value 1`] = `
           allowFontScaling={true}
           collapsable={undefined}
           ellipsizeMode="tail"
-          numberOfLines={1}
           style={
             Object {
               "backgroundColor": "transparent",
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "opacity": 1,
+              "width": "100%",
             }
           }
         />
