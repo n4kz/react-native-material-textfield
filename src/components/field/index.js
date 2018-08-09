@@ -166,6 +166,10 @@ export default class TextField extends PureComponent {
     this[name] = ref;
   }
 
+  setNativeProps(props) {
+    this.input.setNativeProps(props);
+  }
+
   focusState(error, focused) {
     return error? -1 : (focused? 1 : 0);
   }
