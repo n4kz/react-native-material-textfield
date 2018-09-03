@@ -25,7 +25,11 @@ exports[`renders 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 36,
+          "transform": Array [
+            Object {
+              "translateY": 36,
+            },
+          ],
         }
       }
     >
@@ -189,7 +193,11 @@ exports[`renders accessory 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 36,
+          "transform": Array [
+            Object {
+              "translateY": 36,
+            },
+          ],
         }
       }
     >
@@ -365,7 +373,11 @@ exports[`renders counter 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 16,
+          "transform": Array [
+            Object {
+              "translateY": 16,
+            },
+          ],
         }
       }
     >
@@ -560,7 +572,11 @@ exports[`renders default value 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 16,
+          "transform": Array [
+            Object {
+              "translateY": 16,
+            },
+          ],
         }
       }
     >
@@ -742,7 +758,11 @@ exports[`renders disabled value 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 16,
+          "transform": Array [
+            Object {
+              "translateY": 16,
+            },
+          ],
         }
       }
     >
@@ -906,7 +926,11 @@ exports[`renders error 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 36,
+          "transform": Array [
+            Object {
+              "translateY": 36,
+            },
+          ],
         }
       }
     >
@@ -1073,7 +1097,11 @@ exports[`renders multiline value 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 16,
+          "transform": Array [
+            Object {
+              "translateY": 16,
+            },
+          ],
         }
       }
     >
@@ -1239,7 +1267,11 @@ exports[`renders prefix 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 16,
+          "transform": Array [
+            Object {
+              "translateY": 16,
+            },
+          ],
         }
       }
     >
@@ -1433,7 +1465,11 @@ exports[`renders restriction 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 16,
+          "transform": Array [
+            Object {
+              "translateY": 16,
+            },
+          ],
         }
       }
     >
@@ -1628,7 +1664,11 @@ exports[`renders suffix 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 16,
+          "transform": Array [
+            Object {
+              "translateY": 16,
+            },
+          ],
         }
       }
     >
@@ -1822,7 +1862,11 @@ exports[`renders title 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 36,
+          "transform": Array [
+            Object {
+              "translateY": 36,
+            },
+          ],
         }
       }
     >
@@ -1988,7 +2032,11 @@ exports[`renders value 1`] = `
       style={
         Object {
           "position": "absolute",
-          "top": 16,
+          "transform": Array [
+            Object {
+              "translateY": 16,
+            },
+          ],
         }
       }
     >

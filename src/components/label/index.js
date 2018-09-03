@@ -28,6 +28,7 @@ export default class Label extends PureComponent {
     errorColor: PropTypes.string.isRequired,
 
     animationDuration: PropTypes.number.isRequired,
+    useNativeDriver: PropTypes.bool,
 
     style: Animated.Text.propTypes.style,
 
@@ -48,13 +49,13 @@ export default class Label extends PureComponent {
 
   componentWillReceiveProps(props) {
     let { focus, input } = this.state;
-    let { active, focused, errored, animationDuration: duration } = this.props;
+    let { active, focused, errored, animationDuration: duration, useNativeDriver } = this.props;
 
     if (focused ^ props.focused || active ^ props.active) {
       let toValue = this.inputState(props);
 
       Animated
-        .timing(input, { toValue, duration })
+        .timing(input, { toValue, duration, useNativeDriver })
         .start();
     }
 
@@ -62,7 +63,7 @@ export default class Label extends PureComponent {
       let toValue = this.focusState(props);
 
       Animated
-        .timing(focus, { toValue, duration })
+        .timing(focus, { toValue, duration, useNativeDriver })
         .start();
     }
   }
@@ -92,6 +93,7 @@ export default class Label extends PureComponent {
       active, 
       focused,
       animationDuration,
+      useNativeDriver,
       ...props
     } = this.props;
 
@@ -102,7 +104,7 @@ export default class Label extends PureComponent {
         outputRange: [errorColor, baseColor, tintColor],
       });
 
-    let top = input.interpolate({
+    let translateY = input.interpolate({
       inputRange: [0, 1],
       outputRange: [
         baseSize + fontSize * 0.25,
@@ -121,7 +123,9 @@ export default class Label extends PureComponent {
 
     let containerStyle = {
       position: 'absolute',
-      top,
+      transform: [
+        { translateY },
+      ],
     };
 
     return (
