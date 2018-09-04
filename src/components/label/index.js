@@ -77,7 +77,7 @@ export default class Label extends PureComponent {
   }
 
   render() {
-    let { focus, input } = this.state;
+    let { input } = this.state;
     let {
       children,
       restricted,
@@ -112,8 +112,8 @@ export default class Label extends PureComponent {
     let translateX = input.interpolate({
       inputRange: [0, 1],
       outputRange: [
-        0,
-        basePadding - activeFontSize,
+        basePadding,
+        basePadding - activeFontSize + activeFontSize * 0.15,
       ],
     });
 
@@ -136,16 +136,19 @@ export default class Label extends PureComponent {
       position: 'absolute',
       transform: [
         { translateY },
-        {scaleY},
-        {scaleX},
-        {translateX}
+        { scaleY },
+        { scaleX },
+        { translateX },
       ],
     };
 
+    const childrenElement = (typeof children === 'string') ?
+      children :
+      React.cloneElement(children, {style: {color}})
     return (
       <Animated.View style={containerStyle}>
         <Animated.Text style={[style, textStyle]} {...props}>
-          {React.cloneElement(children, {style: {color}})}
+          {childrenElement}
         </Animated.Text>
       </Animated.View>
     );
