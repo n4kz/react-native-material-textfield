@@ -90,19 +90,16 @@ export default class Label extends PureComponent {
       basePadding,
       style,
       errored,
-      active, 
+      active,
       focused,
       animationDuration,
       useNativeDriver,
       ...props
     } = this.props;
 
-    let color = restricted?
+    let color = restricted ?
       errorColor:
-      focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
-      });
+      (focused ? (errored ? errorColor : tintColor): baseColor )
 
     let translateY = input.interpolate({
       inputRange: [0, 1],
@@ -112,12 +109,26 @@ export default class Label extends PureComponent {
       ],
     });
 
-    let textStyle = {
-      fontSize: input.interpolate({
-        inputRange: [0, 1],
-        outputRange: [fontSize, activeFontSize],
-      }),
+    let translateX = input.interpolate({
+      inputRange: [0, 1],
+      outputRange: [
+        0,
+        basePadding - activeFontSize,
+      ],
+    });
 
+    let scaleY = input.interpolate({
+      inputRange: [0, 1],
+      outputRange: [1, activeFontSize/fontSize],
+    });
+
+    let scaleX = input.interpolate({
+      inputRange: [0, 1],
+      outputRange: [1, activeFontSize/fontSize],
+    });
+
+    let textStyle = {
+      fontSize,
       color,
     };
 
@@ -125,13 +136,16 @@ export default class Label extends PureComponent {
       position: 'absolute',
       transform: [
         { translateY },
+        {scaleY},
+        {scaleX},
+        {translateX}
       ],
     };
 
     return (
       <Animated.View style={containerStyle}>
         <Animated.Text style={[style, textStyle]} {...props}>
-          {children}
+          {React.cloneElement(children, {style: {color}})}
         </Animated.Text>
       </Animated.View>
     );
