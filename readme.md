@@ -1,11 +1,11 @@
-[npm-badge]: https://img.shields.io/npm/v/react-native-material-textfinput.svg?colorB=ff6d00
-[npm-url]: https://npmjs.com/package/react-native-material-textfinput
+[npm-badge]: https://img.shields.io/npm/v/react-native-materialui-textfield.svg?colorB=ff6d00
+[npm-url]: https://npmjs.com/package/react-native-materialui-textfield
 [license-badge]: https://img.shields.io/npm/l/react-native-material-textfinput.svg?colorB=448aff
 [license-url]: https://raw.githubusercontent.com/petrogad/react-native-materialui-textfield/master/license.txt
-[travis-badge]: https://api.travis-ci.org/petrogad/react-native-material-textinput.svg?branch=master
-[travis-url]: https://travis-ci.org/petrogad/react-native-material-textinput?branch=master
-[codeclimate-badge]: https://img.shields.io/codeclimate/maintainability/petrogad/react-native-material-textinput.svg
-[codeclimate-url]: https://codeclimate.com/github/petrogad/react-native-material-textinput
+[travis-badge]: https://travis-ci.com/petrogad/react-native-materialui-textfield.svg?branch=master
+[travis-url]: https://travis-ci.com/petrogad/react-native-materialui-textfield?branch=master
+[codeclimate-badge]: https://img.shields.io/codeclimate/maintainability/petrogad/react-native-materialui-textfield.svg
+[codeclimate-url]: https://codeclimate.com/github/petrogad/react-native-materialui-textfield
 [example-url]: https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif
 [rn-textinput]: https://facebook.github.io/react-native/docs/textinput.html#props
 [md-textfield]: https://material.io/guidelines/components/text-fields.html
