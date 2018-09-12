@@ -1,21 +1,21 @@
-[npm-badge]: https://img.shields.io/npm/v/react-native-material-textfield.svg?colorB=ff6d00
-[npm-url]: https://npmjs.com/package/react-native-material-textfield
-[license-badge]: https://img.shields.io/npm/l/react-native-material-textfield.svg?colorB=448aff
-[license-url]: https://raw.githubusercontent.com/n4kz/react-native-material-textfield/master/license.txt
-[travis-badge]: https://api.travis-ci.org/n4kz/react-native-material-textfield.svg?branch=master
-[travis-url]: https://travis-ci.org/n4kz/react-native-material-textfield?branch=master
-[codeclimate-badge]: https://img.shields.io/codeclimate/maintainability/n4kz/react-native-material-textfield.svg
-[codeclimate-url]: https://codeclimate.com/github/n4kz/react-native-material-textfield
+[npm-badge]: https://img.shields.io/npm/v/react-native-material-textfinput.svg?colorB=ff6d00
+[npm-url]: https://npmjs.com/package/react-native-material-textfinput
+[license-badge]: https://img.shields.io/npm/l/react-native-material-textfinput.svg?colorB=448aff
+[license-url]: https://raw.githubusercontent.com/petrogad/react-native-material-textfield/master/license.txt
+[travis-badge]: https://api.travis-ci.org/petrogad/react-native-material-textinput.svg?branch=master
+[travis-url]: https://travis-ci.org/petrogad/react-native-material-textinput?branch=master
 [example-url]: https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif
 [rn-textinput]: https://facebook.github.io/react-native/docs/textinput.html#props
 [md-textfield]: https://material.io/guidelines/components/text-fields.html
+[n4kz-attribution]: https://github.com/n4kz/react-native-material-textfield
 
 # react-native-material-textfield
+
+This work is heavily based on the fantastic work ![n4kz][n4kz-attribution] has done. That project seems to have been unmaintained, so this one has spawned.
 
 [![npm][npm-badge]][npm-url]
 [![license][license-badge]][license-url]
 [![travis][travis-badge]][travis-url]
-[![codeclimate][codeclimate-badge]][codeclimate-url]
 
 Material texfield with consistent behaviour on iOS and Android
 
