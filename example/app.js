@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, ScrollView, View } from 'react-native';
 import { RaisedTextButton } from 'react-native-material-buttons';
-import { TextField } from 'react-native-material-textfield';
+import { TextField } from 'react-native-materialui-textfield';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 let styles = {

@@ -450,16 +450,17 @@ export default class TextField extends PureComponent {
 
       fontSize: titleFontSize,
     };
+    let titleFontSizeMultiplier = this.props.helpersNumberOfLines;
 
     let titleFontSizeMultiplier = this.props.helpersNumberOfLines;
 
     let helperContainerStyle = {
       flexDirection: 'row',
       height: (title || limit)?
-        titleFontSize * 2 * titleFontSizeMultiplier :
+        titleFontSize * 2 * titleFontSizeMultiplier:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [titleFontSize * titleFontSizeMultiplier * 2, 8, 8],
+          outputRange: [titleFontSize * 2 * titleFontSizeMultiplier, 8, 8],
         }),
     };
 
