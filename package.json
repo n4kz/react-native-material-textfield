@@ -1,5 +1,5 @@
 {
-  "name": "react-native-material-textfield",
+  "name": "react-native-material-textinput",
   "version": "0.13.0",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
@@ -33,7 +33,7 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/n4kz/react-native-material-textfield.git"
+    "url": "git://github.com/petrogad/react-native-material-textinput.git"
   },
 
   "dependencies": {
@@ -50,7 +50,7 @@
     "babel-jest": "^22.0.0",
     "babel-preset-react-native": "4.0.0",
     "eslint": "^4.6.0",
-    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react": "^7.10.0",
     "jest": "^22.0.0",
     "react": "16.2.0",
     "react-native": "0.52.0",

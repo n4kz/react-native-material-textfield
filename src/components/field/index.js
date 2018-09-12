@@ -115,7 +115,7 @@ export default class TextField extends PureComponent {
 
     this.mounted = false;
     this.state = {
-      text: value ? value : '',
+      text: value,
 
       focus: new Animated.Value(this.focusState(error, false)),
       focused: false,
