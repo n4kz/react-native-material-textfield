@@ -36,6 +36,7 @@ export default class TextField extends PureComponent {
     labelHeight: 32,
     labelPadding: 4,
     inputContainerPadding: 8,
+    helpersNumberOfLines: 1,
 
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
@@ -93,6 +94,8 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+
+    helpersNumberOfLines: PropTypes.number,
   };
 
   constructor(props) {
@@ -125,7 +128,7 @@ export default class TextField extends PureComponent {
     };
   }
 
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     let { error } = this.state;
 
     if (null != props.value) {
@@ -149,7 +152,7 @@ export default class TextField extends PureComponent {
     this.mounted = false;
   }
 
-  componentWillUpdate(props, state) {
+  UNSAFE_componentWillUpdate(props, state) {
     let { error, animationDuration: duration } = this.props;
     let { focus, focused } = this.state;
 
@@ -352,6 +355,7 @@ export default class TextField extends PureComponent {
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
+      helpersNumberOfLines,
       ...props
     } = this.props;
 
@@ -447,14 +451,15 @@ export default class TextField extends PureComponent {
 
       fontSize: titleFontSize,
     };
+    let titleFontSizeMultiplier = this.props.helpersNumberOfLines;
 
     let helperContainerStyle = {
       flexDirection: 'row',
       height: (title || limit)?
-        titleFontSize * 2:
+        titleFontSize * 2 * titleFontSizeMultiplier:
         focus.interpolate({
           inputRange:  [-1, 0, 1],
-          outputRange: [titleFontSize * 2, 8, 8],
+          outputRange: [titleFontSize * 2 * titleFontSizeMultiplier, 8, 8],
         }),
     };
 
