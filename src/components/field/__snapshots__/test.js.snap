@@ -527,7 +527,7 @@ exports[`renders counter 1`] = `
         }
       >
         4
-         /
+         / 
         10
       </Text>
     </View>
@@ -1595,7 +1595,7 @@ exports[`renders restriction 1`] = `
         }
       >
         4
-         /
+         / 
         2
       </Text>
     </View>
