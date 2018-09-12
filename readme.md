@@ -1,7 +1,7 @@
 [npm-badge]: https://img.shields.io/npm/v/react-native-material-textfinput.svg?colorB=ff6d00
 [npm-url]: https://npmjs.com/package/react-native-material-textfinput
 [license-badge]: https://img.shields.io/npm/l/react-native-material-textfinput.svg?colorB=448aff
-[license-url]: https://raw.githubusercontent.com/petrogad/react-native-material-textfield/master/license.txt
+[license-url]: https://raw.githubusercontent.com/petrogad/react-native-materialui-textfield/master/license.txt
 [travis-badge]: https://api.travis-ci.org/petrogad/react-native-material-textinput.svg?branch=master
 [travis-url]: https://travis-ci.org/petrogad/react-native-material-textinput?branch=master
 [codeclimate-badge]: https://img.shields.io/codeclimate/maintainability/petrogad/react-native-material-textinput.svg
@@ -11,7 +11,7 @@
 [md-textfield]: https://material.io/guidelines/components/text-fields.html
 [n4kz-attribution]: https://github.com/n4kz/react-native-material-textfield
 
-# react-native-material-textfield
+# react-native-materialui-textfield
 
 This work is heavily based on the fantastic work [n4kz][n4kz-attribution] has done. That project seems to have been unmaintained, so this one has spawned.
 
@@ -42,14 +42,14 @@ Material texfield with consistent behaviour on iOS and Android
 ## Installation
 
 ```bash
-npm install --save react-native-material-textfield
+npm install --save react-native-materialui-textfield
 ```
 
 ## Usage
 
 ```javascript
 import React, { Component } from 'react';
-import { TextField } from 'react-native-material-textfield';
+import { TextField } from 'react-native-materialui-textfield';
 
 class Example extends Component {
   state = {
@@ -125,8 +125,8 @@ Other [TextInput][rn-textinput] properties will also work
 ## Example
 
 ```bash
-git clone https://github.com/n4kz/react-native-material-textfield
-cd react-native-material-textfield/example
+git clone https://github.com/petrogad/react-native-materialui-textfield
+cd react-native-materialui-textfield/example
 npm install
 npm run ios # or npm run android
 ```
