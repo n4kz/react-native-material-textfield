@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [2.13.0] - [2018-09-12](https://github.com/react-navigation/react-navigation/releases/tag/0.13.0)
+## [0.13.0] - [2018-09-12](https://github.com/petrogad/react-native-material-textinput/releases/tag/0.13.0)
 
 ### Added
 

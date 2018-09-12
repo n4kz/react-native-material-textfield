@@ -135,4 +135,4 @@ npm run ios # or npm run android
 
 BSD License
 
-Copyright 2017 Alexander Nazarov. All rights reserved.
+Copyright 2018 Alexander Nazarov. All rights reserved.
