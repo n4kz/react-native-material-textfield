@@ -1,6 +1,6 @@
 BSD License
 
-Copyright 2017 Alexander Nazarov
+Copyright 2018 Alexander Nazarov
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:

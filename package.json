@@ -3,6 +3,15 @@
   "version": "0.12.0",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
+  "contributors": [{
+    "name" : "Alexander Nazarov",
+    "email" : "n4kz@n4kz.com",
+    "url" : "https://github.com/n4kz"
+  }, {
+    "name" : "Pete Carr",
+    "email" : "pete@delca.io",
+    "url" : "https://github.com/petrogad"
+  }],
 
   "description": "Material textfield",
   "keywords": [
