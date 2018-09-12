@@ -1,18 +1,20 @@
 {
   "name": "react-native-materialui-textfield",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
-  "contributors": [{
-    "name" : "Alexander Nazarov",
-    "email" : "n4kz@n4kz.com",
-    "url" : "https://github.com/n4kz"
-  }, {
-    "name" : "Pete Carr",
-    "email" : "pete@delca.io",
-    "url" : "https://github.com/petrogad"
-  }],
-
+  "contributors": [
+    {
+      "name": "Alexander Nazarov",
+      "email": "n4kz@n4kz.com",
+      "url": "https://github.com/n4kz"
+    },
+    {
+      "name": "Pete Carr",
+      "email": "pete@delca.io",
+      "url": "https://github.com/petrogad"
+    }
+  ],
   "description": "Material textfield",
   "keywords": [
     "react",
@@ -28,23 +30,18 @@
     "floating",
     "label"
   ],
-
   "main": "index.js",
-
   "repository": {
     "type": "git",
     "url": "git://github.com/petrogad/react-native-materialui-textfield.git"
   },
-
   "dependencies": {
     "prop-types": "^15.5.9"
   },
-
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
-
   "devDependencies": {
     "babel-eslint": "^8.0.0",
     "babel-jest": "^22.0.0",
@@ -56,15 +53,15 @@
     "react-native": "0.52.0",
     "react-test-renderer": "16.2.0"
   },
-
   "scripts": {
     "test": "npm run lint && npm run jest -- --silent",
     "lint": "eslint src example/app.js",
     "jest": "jest"
   },
-
   "jest": {
     "preset": "react-native",
-    "modulePathIgnorePatterns": ["<rootDir>/example"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example"
+    ]
   }
 }
