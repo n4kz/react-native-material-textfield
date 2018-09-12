@@ -4,6 +4,8 @@
 [license-url]: https://raw.githubusercontent.com/petrogad/react-native-material-textfield/master/license.txt
 [travis-badge]: https://api.travis-ci.org/petrogad/react-native-material-textinput.svg?branch=master
 [travis-url]: https://travis-ci.org/petrogad/react-native-material-textinput?branch=master
+[codeclimate-badge]: https://img.shields.io/codeclimate/maintainability/petrogad/react-native-material-textinput.svg
+[codeclimate-url]: https://codeclimate.com/github/petrogad/react-native-material-textinput
 [example-url]: https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif
 [rn-textinput]: https://facebook.github.io/react-native/docs/textinput.html#props
 [md-textfield]: https://material.io/guidelines/components/text-fields.html
@@ -11,11 +13,12 @@
 
 # react-native-material-textfield
 
-This work is heavily based on the fantastic work ![n4kz][n4kz-attribution] has done. That project seems to have been unmaintained, so this one has spawned.
+This work is heavily based on the fantastic work [n4kz][n4kz-attribution] has done. That project seems to have been unmaintained, so this one has spawned.
 
 [![npm][npm-badge]][npm-url]
 [![license][license-badge]][license-url]
 [![travis][travis-badge]][travis-url]
+[![codeclimate][codeclimate-badge]][codeclimate-url]
 
 Material texfield with consistent behaviour on iOS and Android
 
