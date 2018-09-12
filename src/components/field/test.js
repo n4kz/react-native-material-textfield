@@ -19,6 +19,14 @@ it('renders', () => {
     .toMatchSnapshot();
 });
 
+it('renders null value', () => {
+  let field = renderer
+    .create(<TextField {...props} value={null}/>)
+    .toJSON();
+  expect(field)
+    .toMatchSnapshot();
+});
+
 it('renders value', () => {
   let field = renderer
     .create(<TextField {...props} value='text' />)
