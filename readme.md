@@ -104,6 +104,7 @@ class Example extends Component {
  onChangeText          | Change text callback                        | Function | -
  onFocus               | Focus callback                              | Function | -
  onBlur                | Blur callback                               | Function | -
+ secureTextEntry       | Hide text meanwhile type (password)         |  Boolean | false
 
 Other [TextInput][rn-textinput] properties will also work
 

@@ -93,6 +93,8 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+
+    secureTextEntry: PropTypes.bool,
   };
 
   constructor(props) {
@@ -349,6 +351,7 @@ export default class TextField extends PureComponent {
       errorColor,
       lineWidth,
       activeLineWidth,
+      secureTextEntry,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
@@ -523,6 +526,7 @@ export default class TextField extends PureComponent {
               {...props}
 
               editable={!disabled && editable}
+              secureTextEntry={!!secureTextEntry}
               onChange={this.onChange}
               onChangeText={this.onChangeText}
               onContentSizeChange={this.onContentSizeChange}
