@@ -92,6 +92,7 @@ export default class TextField extends PureComponent {
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
     labelColor: PropTypes.string,
+    activeLineColor: PropTypes.string,
 
     label: PropTypes.string,
     title: PropTypes.string,
