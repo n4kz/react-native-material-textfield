@@ -122,7 +122,7 @@ export default class Label extends PureComponent {
       inputRange: [0, 1],
       outputRange: [
         baseSize + fontSize * 0.25,
-        baseSize - basePadding - activeFontSize,
+        baseSize - basePadding - activeFontSize - fontSize * 0.25,
       ],
     });
 
