@@ -42,7 +42,6 @@ export default class TextField extends PureComponent {
     baseColor: 'rgba(0, 0, 0, .38)',
 
     errorColor: 'rgb(213, 0, 0)',
-    errorAccessibilityLabelText: '',
 
     lineWidth: StyleSheet.hairlineWidth,
     activeLineWidth: 2,
