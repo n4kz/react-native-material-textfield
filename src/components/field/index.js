@@ -42,6 +42,7 @@ export default class TextField extends PureComponent {
     baseColor: 'rgba(0, 0, 0, .38)',
 
     errorColor: 'rgb(213, 0, 0)',
+    errorAccessibilityLabelText: '',
 
     lineWidth: StyleSheet.hairlineWidth,
     activeLineWidth: 2,
@@ -78,6 +79,7 @@ export default class TextField extends PureComponent {
 
     error: PropTypes.string,
     errorColor: PropTypes.string,
+    errorAccessibilityLabel: PropTypes.string,
 
     lineWidth: PropTypes.number,
     activeLineWidth: PropTypes.number,
@@ -352,6 +354,7 @@ export default class TextField extends PureComponent {
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
+      errorAccessibilityLabel,
       ...props
     } = this.props;
 
@@ -506,6 +509,8 @@ export default class TextField extends PureComponent {
       style: titleTextStyle,
     };
 
+    const errorAccessibilityLabelText = errorAccessibilityLabel ? errorAccessibilityLabel : error;
+
     return (
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
@@ -539,7 +544,11 @@ export default class TextField extends PureComponent {
 
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
+            <Helper style={[errorStyle, titleTextStyle]}
+                    accessible={true}
+                    accessibilityLabel={errorAccessibilityLabelText}>
+              {error}
+            </Helper>
             <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
           </View>
 
