@@ -39,7 +39,7 @@ Material texfield with consistent behaviour on iOS and Android
 ## Installation
 
 ```bash
-npm install --save react-native-material-textfield
+npm install --save https://github.com/numez/react-native-material-textfield
 ```
 
 ## Usage
