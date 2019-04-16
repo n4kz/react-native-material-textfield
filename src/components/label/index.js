@@ -89,7 +89,7 @@ export default class Label extends PureComponent {
       basePadding,
       style,
       errored,
-      active, 
+      active,
       focused,
       animationDuration,
       ...props
@@ -116,7 +116,10 @@ export default class Label extends PureComponent {
         outputRange: [fontSize, activeFontSize],
       }),
 
-      color,
+      color: input.interpolate({
+        inputRange: [0, 1],
+        outputRange: [baseColor, tintColor],
+      }),
     };
 
     let containerStyle = {
