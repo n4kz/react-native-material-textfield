@@ -31,7 +31,7 @@ Material texfield with consistent behaviour on iOS and Android
 * Multiline text input
 * Character counter
 * Prefix and suffix
-* Accessory view
+* Accessory views
 * Helper text
 * RTL support
 * Pure javascript implementation
@@ -118,6 +118,7 @@ Other [TextInput][rn-textinput] properties will also work
  value()        | Get current value             |  String
  isFocused()    | Get current focus state       | Boolean
  isRestricted() | Get current restriction state | Boolean
+ setValue()     | Set current value             |       -
 
 ## Example
 
