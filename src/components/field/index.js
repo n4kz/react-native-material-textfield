@@ -96,6 +96,15 @@ export default class TextField extends PureComponent {
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
   };
 
+  static getDerivedStateFromProps({ error }, state) {
+    /* Keep last received error in state */
+    if (error && error !== state.error) {
+      return { error };
+    }
+
+    return null;
+  }
+
   constructor(props) {
     super(props);
 
@@ -114,31 +123,19 @@ export default class TextField extends PureComponent {
     this.mounted = false;
     this.state = {
       text: value,
+      error: error,
 
       focus: new Animated.Value(this.focusState(error, false)),
       focused: false,
       receivedFocus: false,
-
-      error: error,
-      errored: !!error,
 
       height: fontSize * 1.5,
     };
   }
 
   componentWillReceiveProps(props) {
-    let { error } = this.state;
-
     if (null != props.value) {
       this.setState({ text: props.value });
-    }
-
-    if (props.error && props.error !== error) {
-      this.setState({ error: props.error });
-    }
-
-    if (props.error !== this.props.error) {
-      this.setState({ errored: !!props.error });
     }
   }
 
@@ -150,12 +147,12 @@ export default class TextField extends PureComponent {
     this.mounted = false;
   }
 
-  componentWillUpdate(props, state) {
+  componentDidUpdate(prevProps, prevState) {
     let { error, animationDuration: duration } = this.props;
     let { focus, focused } = this.state;
 
-    if (props.error !== error || focused ^ state.focused) {
-      let toValue = this.focusState(props.error, state.focused);
+    if (error !== prevProps.error || focused ^ prevState.focused) {
+      let toValue = this.focusState(error, focused);
 
       Animated
         .timing(focus, { toValue, duration })
@@ -323,7 +320,7 @@ export default class TextField extends PureComponent {
   }
 
   render() {
-    let { receivedFocus, focus, focused, error, errored, height, text = '' } = this.state;
+    let { receivedFocus, focus, focused, error, height, text = '' } = this.state;
     let {
       style: inputStyleOverrides,
       label,
@@ -361,6 +358,7 @@ export default class TextField extends PureComponent {
       height = props.height;
     }
 
+    let errored = !!props.error;
     let defaultVisible = !(receivedFocus || null != value || null == defaultValue);
 
     value = defaultVisible?
