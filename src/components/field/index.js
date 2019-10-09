@@ -87,7 +87,7 @@ export default class TextField extends PureComponent {
     disabledLineWidth: PropTypes.number,
 
     renderLeftAccessory: PropTypes.func,
-    renderAccessory: PropTypes.func,
+    renderRightAccessory: PropTypes.func,
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,
@@ -281,18 +281,17 @@ export default class TextField extends PureComponent {
     }
   }
 
-  renderAccessory(type, style = {}) {
-    let { renderLeftAccessory, renderAccessory } = this.props;
-    const renderAccessoryComponent = type === 'right' ? renderAccessory : renderLeftAccessory;
+  renderAccessory(prop, active, focused) {
+    let { [prop]: renderAccessory } = this.props;
 
-    if ('function' !== typeof renderAccessoryComponent) {
+    if ('function' !== typeof renderAccessory) {
       return null;
     }
 
     return (
-      <Animated.View style={[styles.accessory, style]}>
-        {renderAccessoryComponent()}
-      </Animated.View>
+      <View style={styles.accessory}>
+        {renderAccessory({ active, focused })}
+      </View>
     );
   }
 
@@ -450,13 +449,6 @@ export default class TextField extends PureComponent {
       fontSize: titleFontSize,
     };
 
-    let accessoryStyle = {
-      opacity: focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [1, active ? 1 : 0, 1],
-      }),
-    };
-
     let helperContainerStyle = {
       flexDirection: 'row',
       height: (title || limit)?
@@ -523,7 +515,7 @@ export default class TextField extends PureComponent {
           <Label {...labelProps}>{label}</Label>
 
           <View style={styles.row}>
-            {this.renderAccessory('left', accessoryStyle)}
+            {this.renderAccessory('renderLeftAccessory', active, focused)}
             {this.renderAffix('prefix', active, focused)}
 
             <TextInput
@@ -543,7 +535,7 @@ export default class TextField extends PureComponent {
             />
 
             {this.renderAffix('suffix', active, focused)}
-            {this.renderAccessory('right')}
+            {this.renderAccessory('renderRightAccessory', active, focused)}
           </View>
         </Animated.View>
 
