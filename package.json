@@ -50,8 +50,8 @@
   },
 
   "scripts": {
-    "test": "npm run lint && npm run jest -- --silent",
-    "lint": "eslint src example/app.js",
+    "test": "eslint index.js src && jest --silent",
+    "lint": "eslint index.js src example/app.js",
     "jest": "jest"
   },
 
