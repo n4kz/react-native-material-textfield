@@ -38,11 +38,12 @@
   },
 
   "devDependencies": {
-    "babel-eslint": "^8.0.0",
+    "babel-eslint": "^10.0.0",
     "babel-jest": "^22.0.0",
     "babel-preset-react-native": "4.0.0",
-    "eslint": "^4.6.0",
-    "eslint-plugin-react": "^7.0.0",
+    "eslint": "^6.5.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-native": "^3.7.0",
     "jest": "^22.0.0",
     "react": "16.2.0",
     "react-native": "0.52.0",
