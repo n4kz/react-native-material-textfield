@@ -133,12 +133,6 @@ export default class TextField extends PureComponent {
     };
   }
 
-  componentWillReceiveProps(props) {
-    if (null != props.value) {
-      this.setState({ text: props.value });
-    }
-  }
-
   componentDidMount() {
     this.mounted = true;
   }
@@ -194,6 +188,10 @@ export default class TextField extends PureComponent {
     return (receivedFocus || null != value || null == defaultValue)?
       text:
       defaultValue;
+  }
+
+  setValue(text) {
+    this.setState({ text });
   }
 
   isFocused() {
