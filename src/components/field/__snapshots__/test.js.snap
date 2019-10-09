@@ -5,10 +5,8 @@ exports[`renders 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -21,7 +19,6 @@ exports[`renders 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -30,10 +27,6 @@ exports[`renders 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -62,6 +55,7 @@ exports[`renders 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -86,7 +80,6 @@ exports[`renders 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -115,10 +108,6 @@ exports[`renders 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -144,10 +133,6 @@ exports[`renders 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -169,10 +154,8 @@ exports[`renders counter 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -185,7 +168,6 @@ exports[`renders counter 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -194,10 +176,6 @@ exports[`renders counter 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -226,6 +204,7 @@ exports[`renders counter 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -250,7 +229,6 @@ exports[`renders counter 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -279,10 +257,6 @@ exports[`renders counter 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -308,10 +282,6 @@ exports[`renders counter 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -333,9 +303,6 @@ exports[`renders counter 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -364,10 +331,8 @@ exports[`renders default value 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -380,7 +345,6 @@ exports[`renders default value 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -389,10 +353,6 @@ exports[`renders default value 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -421,6 +381,7 @@ exports[`renders default value 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -445,7 +406,6 @@ exports[`renders default value 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -474,10 +434,6 @@ exports[`renders default value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -503,10 +459,6 @@ exports[`renders default value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -528,10 +480,8 @@ exports[`renders disabled value 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="none"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -562,7 +512,6 @@ exports[`renders disabled value 1`] = `
       }
     />
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -571,10 +520,6 @@ exports[`renders disabled value 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -603,6 +548,7 @@ exports[`renders disabled value 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -627,7 +573,6 @@ exports[`renders disabled value 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -656,10 +601,6 @@ exports[`renders disabled value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -685,10 +626,6 @@ exports[`renders disabled value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -710,10 +647,8 @@ exports[`renders error 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -726,7 +661,6 @@ exports[`renders error 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -735,10 +669,6 @@ exports[`renders error 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -768,6 +698,7 @@ exports[`renders error 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -792,7 +723,6 @@ exports[`renders error 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -821,10 +751,6 @@ exports[`renders error 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -852,10 +778,6 @@ exports[`renders error 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -877,10 +799,8 @@ exports[`renders left accessory 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -893,7 +813,6 @@ exports[`renders left accessory 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -902,10 +821,6 @@ exports[`renders left accessory 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -945,6 +860,7 @@ exports[`renders left accessory 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         renderLeftAccessory={[Function]}
         selectionColor="rgb(0, 145, 234)"
         style={
@@ -970,7 +886,6 @@ exports[`renders left accessory 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -999,10 +914,6 @@ exports[`renders left accessory 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1028,10 +939,6 @@ exports[`renders left accessory 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1053,10 +960,8 @@ exports[`renders multiline value 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -1069,7 +974,6 @@ exports[`renders multiline value 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -1078,10 +982,6 @@ exports[`renders multiline value 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -1111,6 +1011,7 @@ exports[`renders multiline value 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -1136,7 +1037,6 @@ exports[`renders multiline value 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -1165,10 +1065,6 @@ exports[`renders multiline value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1194,10 +1090,6 @@ exports[`renders multiline value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1219,10 +1111,8 @@ exports[`renders prefix 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -1235,7 +1125,6 @@ exports[`renders prefix 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -1244,10 +1133,6 @@ exports[`renders prefix 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -1267,7 +1152,6 @@ exports[`renders prefix 1`] = `
       }
     >
       <View
-        collapsable={undefined}
         style={
           Object {
             "alignSelf": "flex-start",
@@ -1280,10 +1164,6 @@ exports[`renders prefix 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(0, 0, 0, .38)",
@@ -1306,6 +1186,7 @@ exports[`renders prefix 1`] = `
         onContentSizeChange={[Function]}
         onFocus={[Function]}
         prefix="$"
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -1330,7 +1211,6 @@ exports[`renders prefix 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -1359,10 +1239,6 @@ exports[`renders prefix 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1388,10 +1264,6 @@ exports[`renders prefix 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1413,10 +1285,8 @@ exports[`renders restriction 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -1429,7 +1299,6 @@ exports[`renders restriction 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -1438,10 +1307,6 @@ exports[`renders restriction 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -1470,6 +1335,7 @@ exports[`renders restriction 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -1494,7 +1360,6 @@ exports[`renders restriction 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -1523,10 +1388,6 @@ exports[`renders restriction 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1552,10 +1413,6 @@ exports[`renders restriction 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1577,9 +1434,6 @@ exports[`renders restriction 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -1608,10 +1462,8 @@ exports[`renders right accessory 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -1624,7 +1476,6 @@ exports[`renders right accessory 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -1633,10 +1484,6 @@ exports[`renders right accessory 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -1665,6 +1512,7 @@ exports[`renders right accessory 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         renderRightAccessory={[Function]}
         selectionColor="rgb(0, 145, 234)"
         style={
@@ -1701,7 +1549,6 @@ exports[`renders right accessory 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -1730,10 +1577,6 @@ exports[`renders right accessory 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1759,10 +1602,6 @@ exports[`renders right accessory 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1784,10 +1623,8 @@ exports[`renders suffix 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -1800,7 +1637,6 @@ exports[`renders suffix 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -1809,10 +1645,6 @@ exports[`renders suffix 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -1841,6 +1673,7 @@ exports[`renders suffix 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -1864,7 +1697,6 @@ exports[`renders suffix 1`] = `
         value="text"
       />
       <View
-        collapsable={undefined}
         style={
           Object {
             "alignSelf": "flex-start",
@@ -1877,10 +1709,6 @@ exports[`renders suffix 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(0, 0, 0, .38)",
@@ -1895,7 +1723,6 @@ exports[`renders suffix 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -1924,10 +1751,6 @@ exports[`renders suffix 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1953,10 +1776,6 @@ exports[`renders suffix 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -1978,10 +1797,8 @@ exports[`renders title 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -1994,7 +1811,6 @@ exports[`renders title 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -2003,10 +1819,6 @@ exports[`renders title 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -2035,6 +1847,7 @@ exports[`renders title 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -2059,7 +1872,6 @@ exports[`renders title 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -2088,10 +1900,6 @@ exports[`renders title 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -2117,10 +1925,6 @@ exports[`renders title 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -2144,10 +1948,8 @@ exports[`renders value 1`] = `
   onResponderRelease={[Function]}
   onStartShouldSetResponder={[Function]}
   pointerEvents="auto"
-  style={undefined}
 >
   <View
-    collapsable={undefined}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -2160,7 +1962,6 @@ exports[`renders value 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       style={
         Object {
           "position": "absolute",
@@ -2169,10 +1970,6 @@ exports[`renders value 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        collapsable={undefined}
-        ellipsizeMode="tail"
         numberOfLines={1}
         style={
           Object {
@@ -2201,6 +1998,7 @@ exports[`renders value 1`] = `
         onChangeText={[Function]}
         onContentSizeChange={[Function]}
         onFocus={[Function]}
+        rejectResponderTermination={true}
         selectionColor="rgb(0, 145, 234)"
         style={
           Array [
@@ -2225,7 +2023,6 @@ exports[`renders value 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
     style={
       Object {
         "flexDirection": "row",
@@ -2254,10 +2051,6 @@ exports[`renders value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
@@ -2283,10 +2076,6 @@ exports[`renders value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          collapsable={undefined}
-          ellipsizeMode="tail"
           numberOfLines={1}
           style={
             Object {
