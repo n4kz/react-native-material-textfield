@@ -226,7 +226,7 @@ export default function init() {
               title='Choose wisely'
               maxLength={30}
               characterRestriction={20}
-              renderAccessory={this.renderPasswordAccessory}
+              renderRightAccessory={this.renderPasswordAccessory}
             />
 
             <TextField
