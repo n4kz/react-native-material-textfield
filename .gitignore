@@ -1,6 +1,6 @@
 coverage
 node_modules
-example/node_modules
+*.lock
 
 .DS_Store
 *.sw[po]
