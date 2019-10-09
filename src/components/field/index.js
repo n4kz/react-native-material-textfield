@@ -185,9 +185,11 @@ export default class TextField extends PureComponent {
     let { text, receivedFocus } = this.state;
     let { value, defaultValue } = this.props;
 
-    return (receivedFocus || null != value || null == defaultValue)?
-      text:
-      defaultValue;
+    let defaultVisible = !receivedFocus && null == value && null != defaultValue;
+
+    return defaultVisible?
+      defaultValue:
+      text;
   }
 
   setValue(text) {
@@ -357,7 +359,7 @@ export default class TextField extends PureComponent {
     }
 
     let errored = !!props.error;
-    let defaultVisible = !(receivedFocus || null != value || null == defaultValue);
+    let defaultVisible = !receivedFocus && null == value && null != defaultValue;
 
     value = defaultVisible?
       defaultValue:
@@ -394,7 +396,7 @@ export default class TextField extends PureComponent {
         { borderBottomColor, borderBottomWidth }),
 
       ...(props.multiline?
-        { height: 'web' === Platform.OS ? 'auto' : labelHeight + inputContainerPadding + height }:
+        { height: 'web' === Platform.OS? 'auto' : labelHeight + inputContainerPadding + height }:
         { height: labelHeight + inputContainerPadding + fontSize * 1.5 }),
     };
 
@@ -429,7 +431,7 @@ export default class TextField extends PureComponent {
       fontSize: title?
         titleFontSize:
         focus.interpolate({
-          inputRange:  [-1, 0, 1],
+          inputRange: [-1, 0, 1],
           outputRange: [titleFontSize, 0, 0],
         }),
     };
@@ -450,7 +452,7 @@ export default class TextField extends PureComponent {
       height: (title || limit)?
         titleFontSize * 2:
         focus.interpolate({
-          inputRange:  [-1, 0, 1],
+          inputRange: [-1, 0, 1],
           outputRange: [titleFontSize * 2, 8, 8],
         }),
     };
