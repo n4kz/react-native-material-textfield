@@ -21,6 +21,7 @@
   ],
 
   "main": "index.js",
+  "files": ["index.js", "src/*", "license.txt", "readme.md"],
 
   "repository": {
     "type": "git",
