@@ -199,10 +199,10 @@ export default class TextField extends PureComponent {
   }
 
   isRestricted() {
-    let { characterRestriction } = this.props;
-    let { text = '' } = this.state;
+    let { characterRestriction: limit } = this.props;
+    let { length: count } = this.value();
 
-    return characterRestriction < text.length;
+    return limit < count;
   }
 
   onFocus(event) {
