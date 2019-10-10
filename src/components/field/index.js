@@ -38,8 +38,11 @@ export default class TextField extends PureComponent {
     inputContainerPadding: 8,
 
     tintColor: 'rgb(0, 145, 234)',
+    tintBorderColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
     baseColor: 'rgba(0, 0, 0, .38)',
+    baseBorderColor: 'rgba(0, 0, 0, .38)',
+
 
     errorColor: 'rgb(213, 0, 0)',
 
@@ -67,8 +70,10 @@ export default class TextField extends PureComponent {
     affixTextStyle: Text.propTypes.style,
 
     tintColor: PropTypes.string,
+    tintBorderColor: PropTypes.string,
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
+    baseBorderColor: PropTypes.string,
 
     label: PropTypes.string.isRequired,
     title: PropTypes.string,
@@ -367,7 +372,9 @@ export default class TextField extends PureComponent {
       labelTextStyle,
       titleTextStyle,
       tintColor,
+      tintBorderColor,
       baseColor,
+      baseBorderColor,
       textColor,
       errorColor,
       lineWidth,
@@ -398,7 +405,7 @@ export default class TextField extends PureComponent {
       errorColor:
       focus.interpolate({
         inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
+        outputRange: [errorColor, baseBorderColor, tintBorderColor],
       });
 
     let borderWidth = restricted?
