@@ -180,12 +180,10 @@ export default class TextField extends PureComponent {
   }
 
   value() {
-    let { text, receivedFocus } = this.state;
-    let { value, defaultValue } = this.props;
+    let { text = '' } = this.state;
+    let { defaultValue } = this.props;
 
-    let defaultVisible = !receivedFocus && null == value && null != defaultValue;
-
-    return defaultVisible?
+    return this.isDefaultVisible()?
       defaultValue:
       text;
   }
@@ -203,6 +201,25 @@ export default class TextField extends PureComponent {
     let { length: count } = this.value();
 
     return limit < count;
+  }
+
+  isErrored() {
+    let { error } = this.props;
+
+    return !!error;
+  }
+
+  isDefaultVisible() {
+    let { receivedFocus } = this.state;
+    let { value, defaultValue } = this.props;
+
+    return !receivedFocus && null == value && null != defaultValue;
+  }
+
+  isLabelActive() {
+    let { placeholder } = this.props;
+
+    return !!(placeholder || this.value());
   }
 
   onFocus(event) {
@@ -321,12 +338,11 @@ export default class TextField extends PureComponent {
   }
 
   render() {
-    let { receivedFocus, focus, focused, error, height, text = '' } = this.state;
+    let { focus, focused, error, height } = this.state;
     let {
       style: inputStyleOverrides,
       label,
       title,
-      value,
       defaultValue,
       characterRestriction: limit,
       editable,
@@ -358,16 +374,12 @@ export default class TextField extends PureComponent {
       height = props.height;
     }
 
-    let errored = !!props.error;
-    let defaultVisible = !receivedFocus && null == value && null != defaultValue;
+    let errored = this.isErrored();
+    let restricted = this.isRestricted();
+    let defaultVisible = this.isDefaultVisible();
 
-    value = defaultVisible?
-      defaultValue:
-      text;
-
-    let active = !!(value || props.placeholder);
-    let count = value.length;
-    let restricted = limit < count;
+    let value = this.value();
+    let active = this.isLabelActive();
 
     let textAlign = I18nManager.isRTL?
       'right':
@@ -497,10 +509,10 @@ export default class TextField extends PureComponent {
     let counterProps = {
       baseColor,
       errorColor,
-      count,
       limit,
       fontSize: titleFontSize,
       style: titleTextStyle,
+      count: value.length,
     };
 
     return (
