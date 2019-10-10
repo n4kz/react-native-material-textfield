@@ -70,12 +70,18 @@ export default class TextField extends PureComponent {
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
 
-    label: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+    ]).isRequired,
     title: PropTypes.string,
 
     characterRestriction: PropTypes.number,
 
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+    ]),
     errorColor: PropTypes.string,
 
     lineWidth: PropTypes.number,
