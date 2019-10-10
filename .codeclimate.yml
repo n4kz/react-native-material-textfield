@@ -12,7 +12,7 @@ checks:
 plugins:
   eslint:
     enabled: true
-    channel: "eslint-4"
+    channel: "eslint-5"
 exclude_patterns:
   - "example/"
   - "**/test.js"
