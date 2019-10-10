@@ -371,6 +371,7 @@ export default class TextField extends PureComponent {
       textColor,
       errorColor,
       lineWidth,
+      helperProps,
       activeLineWidth,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
@@ -557,8 +558,8 @@ export default class TextField extends PureComponent {
 
         <Animated.View style={helperContainerStyle}>
           <View style={styles.flex}>
-            <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
-            <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
+            <Helper style={[errorStyle, titleTextStyle]} {...helperProps}>{error}</Helper>
+            <Helper style={[titleStyle, titleTextStyle]} {...helperProps}>{title}</Helper>
           </View>
 
           <Counter {...counterProps} />
