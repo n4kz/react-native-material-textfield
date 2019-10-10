@@ -375,7 +375,7 @@ export default class TextField extends PureComponent {
     }
 
     let errored = this.isErrored();
-    let restricted = this.isRestricted();
+    let restricted = !disabled && this.isRestricted();
     let defaultVisible = this.isDefaultVisible();
 
     let value = this.value();
@@ -385,14 +385,14 @@ export default class TextField extends PureComponent {
       'right':
       'left';
 
-    let borderColor = !disabled && restricted?
+    let borderColor = restricted?
       errorColor:
       focus.interpolate({
         inputRange: [-1, 0, 1],
         outputRange: [errorColor, baseColor, tintColor],
       });
 
-    let borderWidth = !disabled && restricted?
+    let borderWidth = restricted?
       activeLineWidth:
       focus.interpolate({
         inputRange: [-1, 0, 1],
