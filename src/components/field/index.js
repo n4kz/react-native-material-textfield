@@ -114,7 +114,7 @@ export default class TextField extends PureComponent {
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
     this.onFocusAnimationEnd = this.onFocusAnimationEnd.bind(this);
 
-    this.updateRef = this.updateRef.bind(this, 'input');
+    this.inputRef = React.createRef();
 
     let { value, error, fontSize } = this.props;
 
@@ -152,12 +152,10 @@ export default class TextField extends PureComponent {
     }
   }
 
-  updateRef(name, ref) {
-    this[name] = ref;
-  }
-
   setNativeProps(props) {
-    this.input.setNativeProps(props);
+    let { current: input } = this.inputRef;
+
+    input.setNativeProps(props);
   }
 
   focusState(error, focused) {
@@ -166,18 +164,23 @@ export default class TextField extends PureComponent {
 
   focus() {
     let { disabled, editable } = this.props;
+    let { current: input } = this.inputRef;
 
     if (!disabled && editable) {
-      this.input.focus();
+      input.focus();
     }
   }
 
   blur() {
-    this.input.blur();
+    let { current: input } = this.inputRef;
+
+    input.blur();
   }
 
   clear() {
-    this.input.clear();
+    let { current: input } = this.inputRef;
+
+    input.clear();
 
     /* onChangeText is not triggered by .clear() */
     this.onChangeText('');
@@ -197,7 +200,9 @@ export default class TextField extends PureComponent {
   }
 
   isFocused() {
-    return this.input.isFocused();
+    let { current: input } = this.inputRef;
+
+    return input.isFocused();
   }
 
   isRestricted() {
@@ -542,7 +547,7 @@ export default class TextField extends PureComponent {
               onFocus={this.onFocus}
               onBlur={this.onBlur}
               value={value}
-              ref={this.updateRef}
+              ref={this.inputRef}
             />
 
             {this.renderAffix('suffix', active, focused)}
