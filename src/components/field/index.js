@@ -48,6 +48,7 @@ export default class TextField extends PureComponent {
 
     disabled: false,
     disabledLineType: 'dotted',
+    disabledLineWidth: 1,
   };
 
   static propTypes = {
@@ -83,6 +84,7 @@ export default class TextField extends PureComponent {
 
     disabled: PropTypes.bool,
     disabledLineType: Line.propTypes.borderStyle,
+    disabledLineWidth: PropTypes.number,
 
     renderLeftAccessory: PropTypes.func,
     renderRightAccessory: PropTypes.func,
@@ -357,6 +359,7 @@ export default class TextField extends PureComponent {
       editable,
       disabled,
       disabledLineType,
+      disabledLineWidth,
       animationDuration,
       fontSize,
       titleFontSize,
@@ -492,8 +495,12 @@ export default class TextField extends PureComponent {
     };
 
     let lineProps = {
-      borderWidth,
       borderColor,
+
+      borderWidth: disabled?
+        disabledLineWidth:
+        borderWidth,
+
       borderStyle: disabled?
         disabledLineType:
         'solid',
