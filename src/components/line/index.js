@@ -1,42 +1,37 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { View } from 'react-native';
+import { Animated } from 'react-native';
 
 import styles from './styles';
 
 export default class Line extends PureComponent {
   static propTypes = {
-    type: PropTypes.oneOf(['solid', 'dotted', 'dashed', 'none']).isRequired,
-    width: PropTypes.number.isRequired,
-    color: PropTypes.string.isRequired,
+    borderStyle: PropTypes.oneOf(['solid', 'dotted', 'dashed', 'none']),
+    borderWidth: PropTypes.any,
+    borderColor: PropTypes.any,
   };
 
   render() {
-    let {
-      width: borderWidth,
-      color: borderColor,
-      type: borderStyle,
-    } = this.props;
+    let { borderWidth, borderColor, borderStyle } = this.props;
 
     if ('none' === borderStyle) {
       return null;
     }
 
-    let [top, right, bottom, left] = [-2, -1.5, 0, -1.5]
-      .map((value) => value * borderWidth);
+    let [top, right, left] = [-2, -1.5, -1.5]
+      .map((value) => Animated.multiply(value, borderWidth));
 
     let lineStyle = {
-      borderColor,
       borderStyle,
+      borderColor,
+      borderWidth,
       top,
       right,
-      bottom,
       left,
-      borderWidth,
     };
 
     return (
-      <View style={[styles.line, lineStyle]} pointerEvents='none' />
+      <Animated.View style={[styles.line, lineStyle]} pointerEvents='none' />
     );
   }
 }

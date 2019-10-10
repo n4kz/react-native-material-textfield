@@ -10,7 +10,7 @@ import Line from '.';
   .forEach(({ type, color, width }) => {
     it(`renders ${type} ${color} line`, () => {
       let line = renderer
-        .create(<Line type={type} color={color} width={width} />)
+        .create(<Line borderStyle={type} borderColor={color} borderWidth={width} />)
         .toJSON();
 
       expect(line)

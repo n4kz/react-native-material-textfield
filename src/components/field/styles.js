@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   inputContainer: {
     backgroundColor: 'transparent',
+    overflow: 'hidden',
   },
 
   input: {
