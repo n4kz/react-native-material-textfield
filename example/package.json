@@ -3,17 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
-    "android": "node node_modules/react-native/local-cli/cli.js run-android"
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start"
   },
   "dependencies": {
-    "react": "16.0.0",
-    "react-native": "0.51.0",
-    "react-native-material-buttons": "^0.5.0",
-    "react-native-material-textfield": "file:../",
-    "react-native-vector-icons": "^4.1.1"
+    "react": "16.8.1",
+    "react-native": "0.61.2",
+    "react-native-material-buttons": "^0.6.0",
+    "react-native-material-textfield": "^0.12.0",
+    "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
-    "babel-preset-react-native": "4.0.0"
+    "@babel/core": "^7.5.0",
+    "@babel/runtime": "^7.5.0",
+    "metro-react-native-babel-preset": "^0.51.1"
   }
 }
