@@ -273,8 +273,11 @@ export default class TextField extends PureComponent {
   }
 
   onFocusAnimationEnd() {
-    if (this.mounted) {
-      this.setState((state, { error }) => ({ error }));
+    let { error } = this.props;
+    let { error: retainedError } = this.state;
+
+    if (this.mounted && !error && retainedError) {
+      this.setState({ error: null });
     }
   }
 
