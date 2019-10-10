@@ -4,6 +4,7 @@ import {
   ScrollView,
   View,
   SafeAreaView,
+  Platform,
 } from 'react-native';
 import { RaisedTextButton } from 'react-native-material-buttons';
 import { TextField } from 'react-native-material-textfield';
@@ -16,7 +17,7 @@ let styles = {
 
   container: {
     margin: 8,
-    marginTop: Platform.select({ ios: 8, anddroid: 32 }),
+    marginTop: Platform.select({ ios: 8, android: 32 }),
   },
 
   contentContainer: {
