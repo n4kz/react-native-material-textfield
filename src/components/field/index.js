@@ -126,7 +126,7 @@ export default class TextField extends PureComponent {
     this.mounted = false;
     this.focused = false;
 
-    let { value: text, placeholder, defaultValue, error, fontSize } = this.props;
+    let { value: text, defaultValue, placeholder, error, fontSize } = this.props;
     let labelState = placeholder || text || defaultValue? 1 : 0;
 
     this.state = {
@@ -276,10 +276,10 @@ export default class TextField extends PureComponent {
   }
 
   isDefaultVisible() {
-    let { receivedFocus } = this.state;
-    let { value, defaultValue } = this.props;
+    let { text, receivedFocus } = this.state;
+    let { defaultValue } = this.props;
 
-    return !receivedFocus && null == value && null != defaultValue;
+    return !receivedFocus && null == text && null != defaultValue;
   }
 
   isLabelActive() {
@@ -306,7 +306,7 @@ export default class TextField extends PureComponent {
     this.startLabelAnimation();
 
     if (!receivedFocus) {
-      this.setState({ receivedFocus: true });
+      this.setState({ receivedFocus: true, text: this.value() });
     }
   }
 
