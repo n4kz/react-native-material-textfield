@@ -4,7 +4,6 @@ exports[`renders prefix 1`] = `
 <View
   style={
     Object {
-      "alignSelf": "flex-start",
       "height": 24,
       "justifyContent": "center",
       "opacity": 0,
@@ -18,7 +17,9 @@ exports[`renders prefix 1`] = `
       Object {
         "color": "blue",
         "fontSize": 16,
+        "includeFontPadding": false,
         "textAlign": "left",
+        "textAlignVertical": "top",
       }
     }
   >
@@ -31,7 +32,6 @@ exports[`renders suffix 1`] = `
 <View
   style={
     Object {
-      "alignSelf": "flex-start",
       "height": 24,
       "justifyContent": "center",
       "opacity": 0,
@@ -45,7 +45,9 @@ exports[`renders suffix 1`] = `
       Object {
         "color": "blue",
         "fontSize": 16,
+        "includeFontPadding": false,
         "textAlign": "right",
+        "textAlignVertical": "top",
       }
     }
   >

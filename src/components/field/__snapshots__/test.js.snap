@@ -9,11 +9,13 @@ exports[`renders 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -35,62 +37,77 @@ exports[`renders 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 36,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 16,
+            "position": "absolute",
+            "top": 36,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
-        style={
-          Array [
+        <Text
+          numberOfLines={1}
+          style={
             Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
+              "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value=""
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+      </View>
     </View>
   </View>
   <View
@@ -172,11 +189,13 @@ exports[`renders counter 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -198,62 +217,77 @@ exports[`renders counter 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 16,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "position": "absolute",
+            "top": 16,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.38)",
+              "fontSize": 12,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
         style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
-              "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value="text"
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value="text"
+        />
+      </View>
     </View>
   </View>
   <View
@@ -363,11 +397,13 @@ exports[`renders default value 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -389,62 +425,77 @@ exports[`renders default value 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 16,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "position": "absolute",
+            "top": 16,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.38)",
+              "fontSize": 12,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
         style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value="text"
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .38)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value="text"
+        />
+      </View>
     </View>
   </View>
   <View
@@ -526,11 +577,13 @@ exports[`renders disabled value 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -552,62 +605,77 @@ exports[`renders disabled value 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 16,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "position": "absolute",
+            "top": 16,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.38)",
+              "fontSize": 12,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
         style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value="text"
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .38)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value="text"
+        />
+      </View>
     </View>
   </View>
   <View
@@ -689,11 +757,13 @@ exports[`renders error 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -715,63 +785,78 @@ exports[`renders error 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 36,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(213, 0, 0, 1)",
-            "fontSize": 16,
+            "position": "absolute",
+            "top": 36,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        error="message"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
-        style={
-          Array [
+        <Text
+          numberOfLines={1}
+          style={
             Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
+              "color": "rgba(213, 0, 0, 1)",
               "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value=""
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          error="message"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+      </View>
     </View>
   </View>
   <View
@@ -855,11 +940,13 @@ exports[`renders left accessory 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -881,74 +968,87 @@ exports[`renders left accessory 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 36,
+          "top": 2,
         }
       }
     >
-      <Text
-        numberOfLines={1}
-        style={
-          Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 16,
-          }
-        }
-      >
-        test
-      </Text>
+      <Image />
     </View>
     <View
       style={
         Object {
-          "flexDirection": "row",
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
       <View
         style={
           Object {
-            "alignSelf": "flex-start",
-            "justifyContent": "center",
-            "top": 2,
+            "position": "absolute",
+            "top": 36,
           }
         }
       >
-        <Image />
-      </View>
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        renderLeftAccessory={[Function]}
-        selectionColor="rgb(0, 145, 234)"
-        style={
-          Array [
+        <Text
+          numberOfLines={1}
+          style={
             Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
+              "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value=""
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          renderLeftAccessory={[Function]}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+      </View>
     </View>
   </View>
   <View
@@ -1030,11 +1130,13 @@ exports[`renders multiline value 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -1056,64 +1158,83 @@ exports[`renders multiline value 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 16,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "position": "absolute",
+            "top": 16,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        multiline={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.38)",
+              "fontSize": 12,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
         style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
-              "fontSize": 16,
-              "height": 48,
-              "textAlign": "left",
-              "top": -1,
-            },
-            undefined,
-          ]
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value="text"
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          multiline={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 48,
+                "textAlign": "left",
+                "transform": Array [
+                  Object {
+                    "translateY": 21,
+                  },
+                ],
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value="text"
+        />
+      </View>
     </View>
   </View>
   <View
@@ -1195,11 +1316,13 @@ exports[`renders prefix 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -1221,87 +1344,103 @@ exports[`renders prefix 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 16,
-        }
-      }
-    >
-      <Text
-        numberOfLines={1}
-        style={
-          Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
-          }
-        }
-      >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
       <View
         style={
           Object {
-            "alignSelf": "flex-start",
-            "height": 24,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingRight": 8,
-            "top": 2,
+            "position": "absolute",
+            "top": 16,
           }
         }
       >
         <Text
+          numberOfLines={1}
           style={
             Object {
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 16,
-              "textAlign": "left",
+              "color": "rgba(0, 0, 0, 0.38)",
+              "fontSize": 12,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
             }
           }
         >
-          $
+          test
         </Text>
       </View>
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        prefix="$"
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
+      <View
         style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
-              "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value="text"
-      />
+      >
+        <View
+          style={
+            Object {
+              "height": 24,
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingRight": 8,
+              "top": 2,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgba(0, 0, 0, .38)",
+                "fontSize": 16,
+                "includeFontPadding": false,
+                "textAlign": "left",
+                "textAlignVertical": "top",
+              }
+            }
+          >
+            $
+          </Text>
+        </View>
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          prefix="$"
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value="text"
+        />
+      </View>
     </View>
   </View>
   <View
@@ -1383,11 +1522,13 @@ exports[`renders restriction 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -1409,62 +1550,77 @@ exports[`renders restriction 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 16,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgb(213, 0, 0)",
-            "fontSize": 12,
+            "position": "absolute",
+            "top": 16,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "rgb(213, 0, 0)",
+              "fontSize": 12,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
         style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
-              "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value="text"
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value="text"
+        />
+      </View>
     </View>
   </View>
   <View
@@ -1574,11 +1730,13 @@ exports[`renders right accessory 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -1600,74 +1758,87 @@ exports[`renders right accessory 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 36,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 16,
+            "position": "absolute",
+            "top": 36,
           }
         }
       >
-        test
-      </Text>
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.38)",
+              "fontSize": 16,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          renderRightAccessory={[Function]}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+      </View>
     </View>
     <View
       style={
         Object {
-          "flexDirection": "row",
+          "top": 2,
         }
       }
     >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        renderRightAccessory={[Function]}
-        selectionColor="rgb(0, 145, 234)"
-        style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
-              "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
-        }
-        underlineColorAndroid="transparent"
-        value=""
-      />
-      <View
-        style={
-          Object {
-            "alignSelf": "flex-start",
-            "justifyContent": "center",
-            "top": 2,
-          }
-        }
-      >
-        <Image />
-      </View>
+      <Image />
     </View>
   </View>
   <View
@@ -1749,11 +1920,13 @@ exports[`renders suffix 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -1775,86 +1948,102 @@ exports[`renders suffix 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 16,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
-        style={
-          Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
-          }
-        }
-      >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
-        style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
-              "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
-        }
-        suffix=".com"
-        underlineColorAndroid="transparent"
-        value="text"
-      />
       <View
         style={
           Object {
-            "alignSelf": "flex-start",
-            "height": 24,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingLeft": 8,
-            "top": 2,
+            "position": "absolute",
+            "top": 16,
           }
         }
       >
         <Text
+          numberOfLines={1}
           style={
             Object {
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 16,
-              "textAlign": "right",
+              "color": "rgba(0, 0, 0, 0.38)",
+              "fontSize": 12,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
             }
           }
         >
-          .com
+          test
         </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          suffix=".com"
+          underlineColorAndroid="transparent"
+          value="text"
+        />
+        <View
+          style={
+            Object {
+              "height": 24,
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingLeft": 8,
+              "top": 2,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgba(0, 0, 0, .38)",
+                "fontSize": 16,
+                "includeFontPadding": false,
+                "textAlign": "right",
+                "textAlignVertical": "top",
+              }
+            }
+          >
+            .com
+          </Text>
+        </View>
       </View>
     </View>
   </View>
@@ -1937,11 +2126,13 @@ exports[`renders title 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -1963,62 +2154,77 @@ exports[`renders title 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 36,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 16,
+            "position": "absolute",
+            "top": 36,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
-        style={
-          Array [
+        <Text
+          numberOfLines={1}
+          style={
             Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
+              "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value=""
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+      </View>
     </View>
   </View>
   <View
@@ -2102,11 +2308,13 @@ exports[`renders value 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-end",
         "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
-        "paddingTop": 32,
       }
     }
   >
@@ -2128,62 +2336,77 @@ exports[`renders value 1`] = `
     <View
       style={
         Object {
-          "position": "absolute",
-          "top": 16,
+          "alignSelf": "stretch",
+          "flex": 1,
         }
       }
     >
-      <Text
-        numberOfLines={1}
+      <View
         style={
           Object {
-            "color": "rgba(0, 0, 0, 0.38)",
-            "fontSize": 12,
+            "position": "absolute",
+            "top": 16,
           }
         }
       >
-        test
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        autoCapitalize="sentences"
-        disableFullscreenUI={true}
-        editable={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onContentSizeChange={[Function]}
-        onFocus={[Function]}
-        rejectResponderTermination={true}
-        selectionColor="rgb(0, 145, 234)"
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.38)",
+              "fontSize": 12,
+              "includeFontPadding": false,
+              "textAlignVertical": "top",
+            }
+          }
+        >
+          test
+        </Text>
+      </View>
+      <View
         style={
-          Array [
-            Object {
-              "flex": 1,
-              "margin": 0,
-              "padding": 0,
-              "top": 2,
-            },
-            Object {
-              "color": "rgba(0, 0, 0, .87)",
-              "fontSize": 16,
-              "height": 24,
-              "textAlign": "left",
-            },
-            undefined,
-          ]
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+          }
         }
-        underlineColorAndroid="transparent"
-        value="text"
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoCapitalize="sentences"
+          disableFullscreenUI={true}
+          editable={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          rejectResponderTermination={true}
+          selectionColor="rgb(0, 145, 234)"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "includeFontPadding": false,
+                "margin": 0,
+                "padding": 0,
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, .87)",
+                "fontSize": 16,
+                "height": 24,
+                "textAlign": "left",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value="text"
+        />
+      </View>
     </View>
   </View>
   <View
