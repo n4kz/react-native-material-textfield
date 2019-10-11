@@ -207,7 +207,6 @@ export default function init() {
 
               <TextField
                 ref={this.emailRef}
-                value={data.email}
                 defaultValue={defaultEmail}
                 keyboardType='email-address'
                 autoCapitalize='none'
@@ -223,7 +222,6 @@ export default function init() {
 
               <TextField
                 ref={this.passwordRef}
-                value={data.password}
                 secureTextEntry={secureTextEntry}
                 autoCapitalize='none'
                 autoCorrect={false}
