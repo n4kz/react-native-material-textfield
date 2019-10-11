@@ -420,7 +420,6 @@ export default class TextField extends PureComponent {
       });
 
     let inputContainerStyle = {
-      paddingTop: labelHeight,
       paddingBottom: inputContainerPadding,
 
       ...(props.multiline?
@@ -439,11 +438,10 @@ export default class TextField extends PureComponent {
       ...(props.multiline?
         {
           height: fontSize * 1.5 + height,
-
-          ...Platform.select({
-            ios: { top: -1 },
-            android: { textAlignVertical: 'top' },
-          }),
+          transform: [{
+            translateY: fontSize * 1.5
+              + ('ios' === Platform.OS? -3 : 0),
+          }],
         }:
         { height: fontSize * 1.5 }),
     };
@@ -543,31 +541,36 @@ export default class TextField extends PureComponent {
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
           <Line {...lineProps} />
-          <Label {...labelProps}>{label}</Label>
 
-          <View style={styles.row}>
-            {this.renderAccessory('renderLeftAccessory', active, focused)}
-            {this.renderAffix('prefix', active, focused)}
+          {this.renderAccessory('renderLeftAccessory', active, focused)}
 
-            <TextInput
-              style={[styles.input, inputStyle, inputStyleOverrides]}
-              selectionColor={tintColor}
+          <View style={styles.stack}>
+            <Label {...labelProps}>{label}</Label>
 
-              {...props}
+            <View style={styles.row}>
+              {this.renderAffix('prefix', active, focused)}
 
-              editable={!disabled && editable}
-              onChange={this.onChange}
-              onChangeText={this.onChangeText}
-              onContentSizeChange={this.onContentSizeChange}
-              onFocus={this.onFocus}
-              onBlur={this.onBlur}
-              value={value}
-              ref={this.inputRef}
-            />
+              <TextInput
+                style={[styles.input, inputStyle, inputStyleOverrides]}
+                selectionColor={tintColor}
 
-            {this.renderAffix('suffix', active, focused)}
-            {this.renderAccessory('renderRightAccessory', active, focused)}
+                {...props}
+
+                editable={!disabled && editable}
+                onChange={this.onChange}
+                onChangeText={this.onChangeText}
+                onContentSizeChange={this.onContentSizeChange}
+                onFocus={this.onFocus}
+                onBlur={this.onBlur}
+                value={value}
+                ref={this.inputRef}
+              />
+
+              {this.renderAffix('suffix', active, focused)}
+            </View>
           </View>
+
+          {this.renderAccessory('renderRightAccessory', active, focused)}
         </Animated.View>
 
         <Animated.View style={helperContainerStyle}>

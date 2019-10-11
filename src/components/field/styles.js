@@ -1,7 +1,10 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export default StyleSheet.create({
   inputContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-end',
     backgroundColor: 'transparent',
     overflow: 'hidden',
   },
@@ -14,7 +17,14 @@ export default StyleSheet.create({
   },
 
   row: {
+    flex: 1,
     flexDirection: 'row',
+    alignItems: 'flex-end',
+  },
+
+  stack: {
+    flex: 1,
+    alignSelf: 'stretch',
   },
 
   flex: {
@@ -23,7 +33,5 @@ export default StyleSheet.create({
 
   accessory: {
     top: 2,
-    justifyContent: 'center',
-    alignSelf: 'flex-start',
   },
 });
