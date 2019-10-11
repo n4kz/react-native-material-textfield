@@ -117,13 +117,13 @@ export default class TextField extends PureComponent {
     this.onFocusAnimationEnd = this.onFocusAnimationEnd.bind(this);
 
     this.inputRef = React.createRef();
-
-    let { value, error, fontSize } = this.props;
-
     this.mounted = false;
+
+    let { value: text, error, fontSize } = this.props;
+
     this.state = {
-      text: value,
-      error: error,
+      text,
+      error,
 
       focus: new Animated.Value(this.focusState(error, false)),
       focused: false,
@@ -189,12 +189,20 @@ export default class TextField extends PureComponent {
   }
 
   value() {
-    let { text = '' } = this.state;
+    let { text } = this.state;
     let { defaultValue } = this.props;
 
-    return this.isDefaultVisible()?
+    let value = this.isDefaultVisible()?
       defaultValue:
       text;
+
+    if (null == value) {
+      return '';
+    }
+
+    return 'string' === typeof value?
+      value:
+      String(value);
   }
 
   setValue(text) {
