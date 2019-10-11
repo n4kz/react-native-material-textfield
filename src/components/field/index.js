@@ -21,6 +21,12 @@ import Counter from '../counter';
 
 import styles from './styles.js';
 
+function startAnimation(animation, options, callback) {
+  Animated
+    .timing(animation, options)
+    .start(callback);
+}
+
 export default class TextField extends PureComponent {
   static defaultProps = {
     underlineColorAndroid: 'transparent',
@@ -118,18 +124,18 @@ export default class TextField extends PureComponent {
 
     this.inputRef = React.createRef();
     this.mounted = false;
+    this.focused = false;
 
     let { value: text, placeholder, defaultValue, error, fontSize } = this.props;
-    let active = text || placeholder || defaultValue;
+    let labelState = placeholder || text || defaultValue? 1 : 0;
 
     this.state = {
       text,
       error,
 
-      focusAnimation: new Animated.Value(this.focusState(error, false)),
-      labelAnimation: new Animated.Value(this.inputState(active, false)),
+      focusAnimation: new Animated.Value(this.focusState()),
+      labelAnimation: new Animated.Value(labelState),
 
-      focused: false,
       receivedFocus: false,
 
       height: fontSize * 1.5,
@@ -145,24 +151,40 @@ export default class TextField extends PureComponent {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    let { error, animationDuration: duration } = this.props;
-    let { focusAnimation, labelAnimation, focused, text } = this.state;
+    let { error, placeholder } = this.props;
+    let { text } = this.state;
 
-    if (error !== prevProps.error || focused ^ prevState.focused) {
-      let toValue = this.focusState(error, focused);
-
-      Animated
-        .timing(focusAnimation, { toValue, duration })
-        .start(this.onFocusAnimationEnd);
+    if (error !== prevProps.error) {
+      this.startFocusAnimation();
     }
 
-    if (focused ^ prevState.focused || text !== prevState.text) {
-      let toValue = this.inputState(this.isLabelActive(), focused);
-
-      Animated
-        .timing(labelAnimation, { toValue, duration })
-        .start();
+    if (text !== prevState.text || placeholder !== prevProps.placeholder) {
+      this.startLabelAnimation();
     }
+  }
+
+  startFocusAnimation() {
+    let { focusAnimation } = this.state;
+    let { animationDuration: duration } = this.props;
+
+    let options = {
+      toValue: this.focusState(),
+      duration,
+    };
+
+    startAnimation(focusAnimation, options, this.onFocusAnimationEnd);
+  }
+
+  startLabelAnimation() {
+    let { labelAnimation } = this.state;
+    let { animationDuration: duration } = this.props;
+
+    let options = {
+      toValue: this.labelState(),
+      duration,
+    };
+
+    startAnimation(labelAnimation, options);
   }
 
   setNativeProps(props) {
@@ -171,12 +193,22 @@ export default class TextField extends PureComponent {
     input.setNativeProps(props);
   }
 
-  inputState(active, focused) {
-    return active || focused? 1 : 0;
+  focusState() {
+    let { error } = this.props;
+
+    if (error) {
+      return -1;
+    }
+
+    return this.focused? 1 : 0;
   }
 
-  focusState(error, focused) {
-    return error? -1 : (focused? 1 : 0);
+  labelState() {
+    if (this.isLabelActive()) {
+      return 1;
+    }
+
+    return this.focused? 1 : 0;
   }
 
   focus() {
@@ -258,6 +290,7 @@ export default class TextField extends PureComponent {
 
   onFocus(event) {
     let { onFocus, clearTextOnFocus } = this.props;
+    let { receivedFocus } = this.state;
 
     if ('function' === typeof onFocus) {
       onFocus(event);
@@ -267,7 +300,14 @@ export default class TextField extends PureComponent {
       this.clear();
     }
 
-    this.setState({ focused: true, receivedFocus: true });
+    this.focused = true;
+
+    this.startFocusAnimation();
+    this.startLabelAnimation();
+
+    if (!receivedFocus) {
+      this.setState({ receivedFocus: true });
+    }
   }
 
   onBlur(event) {
@@ -277,7 +317,10 @@ export default class TextField extends PureComponent {
       onBlur(event);
     }
 
-    this.setState({ focused: false });
+    this.focused = false;
+
+    this.startFocusAnimation();
+    this.startLabelAnimation();
   }
 
   onChange(event) {
