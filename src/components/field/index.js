@@ -83,7 +83,7 @@ export default class TextField extends PureComponent {
     activeLineWidth: PropTypes.number,
 
     disabled: PropTypes.bool,
-    disabledLineType: Line.propTypes.borderStyle,
+    disabledLineType: Line.propTypes.lineType,
     disabledLineWidth: PropTypes.number,
 
     renderLeftAccessory: PropTypes.func,
@@ -119,13 +119,16 @@ export default class TextField extends PureComponent {
     this.inputRef = React.createRef();
     this.mounted = false;
 
-    let { value: text, error, fontSize } = this.props;
+    let { value: text, placeholder, defaultValue, error, fontSize } = this.props;
+    let active = text || placeholder || defaultValue;
 
     this.state = {
       text,
       error,
 
-      focus: new Animated.Value(this.focusState(error, false)),
+      focusAnimation: new Animated.Value(this.focusState(error, false)),
+      labelAnimation: new Animated.Value(this.inputState(active, false)),
+
       focused: false,
       receivedFocus: false,
 
@@ -143,14 +146,22 @@ export default class TextField extends PureComponent {
 
   componentDidUpdate(prevProps, prevState) {
     let { error, animationDuration: duration } = this.props;
-    let { focus, focused } = this.state;
+    let { focusAnimation, labelAnimation, focused, text } = this.state;
 
     if (error !== prevProps.error || focused ^ prevState.focused) {
       let toValue = this.focusState(error, focused);
 
       Animated
-        .timing(focus, { toValue, duration })
+        .timing(focusAnimation, { toValue, duration })
         .start(this.onFocusAnimationEnd);
+    }
+
+    if (focused ^ prevState.focused || text !== prevState.text) {
+      let toValue = this.inputState(this.isLabelActive(), focused);
+
+      Animated
+        .timing(labelAnimation, { toValue, duration })
+        .start();
     }
   }
 
@@ -158,6 +169,10 @@ export default class TextField extends PureComponent {
     let { current: input } = this.inputRef;
 
     input.setNativeProps(props);
+  }
+
+  inputState(active, focused) {
+    return active || focused? 1 : 0;
   }
 
   focusState(error, focused) {
@@ -315,7 +330,7 @@ export default class TextField extends PureComponent {
     }
   }
 
-  renderAccessory(prop, active, focused) {
+  renderAccessory(prop) {
     let { [prop]: renderAccessory } = this.props;
 
     if ('function' !== typeof renderAccessory) {
@@ -324,18 +339,18 @@ export default class TextField extends PureComponent {
 
     return (
       <View style={styles.accessory}>
-        {renderAccessory({ active, focused })}
+        {renderAccessory()}
       </View>
     );
   }
 
-  renderAffix(type, active, focused) {
+  renderAffix(type) {
+    let { labelAnimation } = this.state;
     let {
       [type]: affix,
       fontSize,
-      baseColor,
-      animationDuration,
-      affixTextStyle,
+      baseColor: color,
+      affixTextStyle: style,
     } = this.props;
 
     if (null == affix) {
@@ -344,20 +359,19 @@ export default class TextField extends PureComponent {
 
     let props = {
       type,
-      active,
-      focused,
+      style,
+      color,
       fontSize,
-      baseColor,
-      animationDuration,
+      labelAnimation,
     };
 
     return (
-      <Affix style={affixTextStyle} {...props}>{affix}</Affix>
+      <Affix {...props}>{affix}</Affix>
     );
   }
 
   render() {
-    let { focus, focused, error, height } = this.state;
+    let { labelAnimation, focusAnimation, error, height } = this.state;
     let {
       style: inputStyleOverrides,
       label,
@@ -394,30 +408,14 @@ export default class TextField extends PureComponent {
       height = props.height;
     }
 
-    let errored = this.isErrored();
     let restricted = !disabled && this.isRestricted();
     let defaultVisible = this.isDefaultVisible();
 
     let value = this.value();
-    let active = this.isLabelActive();
 
     let textAlign = I18nManager.isRTL?
       'right':
       'left';
-
-    let borderColor = restricted?
-      errorColor:
-      focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
-      });
-
-    let borderWidth = restricted?
-      activeLineWidth:
-      focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [activeLineWidth, lineWidth, activeLineWidth],
-      });
 
     let inputContainerStyle = {
       paddingBottom: inputContainerPadding,
@@ -449,14 +447,14 @@ export default class TextField extends PureComponent {
     let errorStyle = {
       color: errorColor,
 
-      opacity: focus.interpolate({
+      opacity: focusAnimation.interpolate({
         inputRange: [-1, 0, 1],
         outputRange: [1, 0, 0],
       }),
 
       fontSize: title?
         titleFontSize:
-        focus.interpolate({
+        focusAnimation.interpolate({
           inputRange: [-1, 0, 1],
           outputRange: [titleFontSize, 0, 0],
         }),
@@ -465,7 +463,7 @@ export default class TextField extends PureComponent {
     let titleStyle = {
       color: baseColor,
 
-      opacity: focus.interpolate({
+      opacity: focusAnimation.interpolate({
         inputRange: [-1, 0, 1],
         outputRange: [0, 1, 1],
       }),
@@ -477,7 +475,7 @@ export default class TextField extends PureComponent {
       flexDirection: 'row',
       height: (title || limit)?
         titleFontSize * 2:
-        focus.interpolate({
+        focusAnimation.interpolate({
           inputRange: [-1, 0, 1],
           outputRange: [titleFontSize * 2, 8, 8],
         }),
@@ -501,18 +499,23 @@ export default class TextField extends PureComponent {
     };
 
     let lineProps = {
-      borderColor,
+      baseColor,
+      tintColor,
+      errorColor,
 
-      borderWidth: disabled?
-        disabledLineWidth:
-        borderWidth,
+      lineWidth,
+      activeLineWidth,
+      disabledLineWidth,
+      disabledLineType,
 
-      borderStyle: disabled?
-        disabledLineType:
-        'solid',
+      disabled,
+      restricted,
+
+      focusAnimation,
     };
 
     let labelProps = {
+      restricted,
       baseSize: labelHeight,
       basePadding: labelPadding,
       fontSize,
@@ -520,12 +523,9 @@ export default class TextField extends PureComponent {
       tintColor,
       baseColor,
       errorColor,
-      animationDuration,
-      active,
-      focused,
-      errored,
-      restricted,
       style: labelTextStyle,
+      focusAnimation,
+      labelAnimation,
     };
 
     let counterProps = {
@@ -542,13 +542,13 @@ export default class TextField extends PureComponent {
         <Animated.View {...inputContainerProps}>
           <Line {...lineProps} />
 
-          {this.renderAccessory('renderLeftAccessory', active, focused)}
+          {this.renderAccessory('renderLeftAccessory')}
 
           <View style={styles.stack}>
             <Label {...labelProps}>{label}</Label>
 
             <View style={styles.row}>
-              {this.renderAffix('prefix', active, focused)}
+              {this.renderAffix('prefix')}
 
               <TextInput
                 style={[styles.input, inputStyle, inputStyleOverrides]}
@@ -566,11 +566,11 @@ export default class TextField extends PureComponent {
                 ref={this.inputRef}
               />
 
-              {this.renderAffix('suffix', active, focused)}
+              {this.renderAffix('suffix')}
             </View>
           </View>
 
-          {this.renderAccessory('renderRightAccessory', active, focused)}
+          {this.renderAccessory('renderRightAccessory')}
         </Animated.View>
 
         <Animated.View style={helperContainerStyle}>

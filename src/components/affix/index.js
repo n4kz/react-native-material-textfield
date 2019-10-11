@@ -7,24 +7,22 @@ import styles from './styles';
 export default class Affix extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
-
-    active: false,
-    focused: false,
   };
 
   static propTypes = {
     numberOfLines: PropTypes.number,
-
-    active: PropTypes.bool,
-    focused: PropTypes.bool,
-
-    type: PropTypes.oneOf(['prefix', 'suffix']).isRequired,
-
-    fontSize: PropTypes.number.isRequired,
-    baseColor: PropTypes.string.isRequired,
-    animationDuration: PropTypes.number.isRequired,
-
     style: Animated.Text.propTypes.style,
+
+    color: PropTypes.string.isRequired,
+    fontSize: PropTypes.number.isRequired,
+
+    type: PropTypes
+      .oneOf(['prefix', 'suffix'])
+      .isRequired,
+
+    labelAnimation: PropTypes
+      .instanceOf(Animated.Value)
+      .isRequired,
 
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -32,37 +30,12 @@ export default class Affix extends PureComponent {
     ]),
   };
 
-  constructor(props) {
-    super(props);
-
-    let { active, focused } = this.props;
-
-    this.state = {
-      opacity: new Animated.Value((active || focused)? 1 : 0),
-    };
-  }
-
-  componentDidUpdate(prevProps) {
-    let { opacity } = this.state;
-    let { active, focused, animationDuration } = this.props;
-
-    if (focused ^ prevProps.focused || active ^ prevProps.active) {
-      Animated
-        .timing(opacity, {
-          toValue: (active || focused)? 1 : 0,
-          duration: animationDuration,
-        })
-        .start();
-    }
-  }
-
   render() {
-    let { opacity } = this.state;
-    let { style, children, type, fontSize, baseColor: color } = this.props;
+    let { labelAnimation, style, children, type, fontSize, color } = this.props;
 
     let containerStyle = {
       height: fontSize * 1.5,
-      opacity,
+      opacity: labelAnimation,
     };
 
     let textStyle = {
