@@ -66,8 +66,11 @@ export default class Affix extends PureComponent {
     };
 
     let textStyle = {
-      color,
+      includeFontPadding: false,
+      textAlignVertical: 'top',
+
       fontSize,
+      color,
     };
 
     switch (type) {

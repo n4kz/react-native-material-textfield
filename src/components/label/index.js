@@ -111,6 +111,9 @@ export default class Label extends PureComponent {
     });
 
     let textStyle = {
+      includeFontPadding: false,
+      textAlignVertical: 'top',
+
       fontSize: input.interpolate({
         inputRange: [0, 1],
         outputRange: [fontSize, activeFontSize],
