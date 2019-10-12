@@ -49,18 +49,20 @@ import React, { Component } from 'react';
 import { TextField } from 'react-native-material-textfield';
 
 class Example extends Component {
-  state = {
-    phone: '',
+  fieldRef = React.createRef();
+
+  onSubmit = () => {
+    let { current: field } = this.fieldRef;
+
+    console.log(field.value());
   };
 
   render() {
-    let { phone } = this.state;
-
     return (
       <TextField
         label='Phone number'
-        value={phone}
-        onChangeText={ (phone) => this.setState({ phone }) }
+        onSubmitEditing={this.onSubmit}
+        ref={this.fieldRef}
       />
     );
   }
@@ -89,6 +91,7 @@ class Example extends Component {
  suffix                | Text field suffix text                      |   String | -
  error                 | Text field error text                       |   String | -
  errorColor            | Text field color for errored state          |   String | rgb(213, 0, 0)
+ lineType              | Text field line type                        |   String | solid
  disabledLineType      | Text field line type in disabled state      |   String | dotted
  animationDuration     | Text field animation duration in ms         |   Number | 225
  characterRestriction  | Text field soft limit for character counter |   Number | -
@@ -110,16 +113,17 @@ Other [TextInput][rn-textinput] properties will also work
 
 ## Methods
 
- name           | description                   | returns
-:-------------- |:----------------------------- | -------:
- focus()        | Acquire focus                 |       -
- blur()         | Release focus                 |       -
- clear()        | Clear text field              |       -
- value()        | Get current value             |  String
- isFocused()    | Get current focus state       | Boolean
- isErrored()    | Get current error state       | Boolean
- isRestricted() | Get current restriction state | Boolean
- setValue()     | Set current value             |       -
+ name               | description                   | returns
+:------------------ |:----------------------------- | -------:
+ focus()            | Acquire focus                 |       -
+ blur()             | Release focus                 |       -
+ clear()            | Clear text field              |       -
+ value()            | Get current value             |  String
+ isFocused()        | Get current focus state       | Boolean
+ isErrored()        | Get current error state       | Boolean
+ isRestricted()     | Get current restriction state | Boolean
+ isDefaultVisible() | Get default value visibility  | Boolean
+ setValue()         | Set current value             |       -
 
 ## Example
 
