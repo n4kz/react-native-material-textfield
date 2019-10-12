@@ -30,6 +30,12 @@ let styles = {
   },
 };
 
+let defaults = {
+  firstname: 'Eddard',
+  lastname: 'Stark',
+  about: 'Stoic, dutiful, and honorable man, considered to embody the values of the North',
+};
+
 export default function init() {
   class Example extends Component {
     constructor(props) {
@@ -50,14 +56,13 @@ export default function init() {
       this.aboutRef = this.updateRef.bind(this, 'about');
       this.emailRef = this.updateRef.bind(this, 'email');
       this.passwordRef = this.updateRef.bind(this, 'password');
+      this.houseRef = this.updateRef.bind(this, 'house');
 
       this.renderPasswordAccessory = this.renderPasswordAccessory.bind(this);
 
       this.state = {
-        firstname: 'Eddard',
-        lastname: 'Stark',
-        about: 'Stoic, dutiful, and honorable man, considered to embody the values of the North',
         secureTextEntry: true,
+        ...defaults,
       };
     }
 
@@ -152,9 +157,9 @@ export default function init() {
 
     render() {
       let { errors = {}, secureTextEntry, ...data } = this.state;
-      let { firstname = 'name', lastname = 'house' } = data;
+      let { firstname, lastname } = data;
 
-      let defaultEmail = `${firstname}@${lastname}.com`
+      let defaultEmail = `${firstname || 'name'}@${lastname || 'house'}.com`
         .replace(/\s+/g, '_')
         .toLowerCase();
 
@@ -168,7 +173,7 @@ export default function init() {
             <View style={styles.container}>
               <TextField
                 ref={this.firstnameRef}
-                value={data.firstname}
+                value={defaults.firstname}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 onFocus={this.onFocus}
@@ -181,7 +186,7 @@ export default function init() {
 
               <TextField
                 ref={this.lastnameRef}
-                value={data.lastname}
+                value={defaults.lastname}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 onFocus={this.onFocus}
@@ -194,7 +199,7 @@ export default function init() {
 
               <TextField
                 ref={this.aboutRef}
-                value={data.about}
+                value={defaults.about}
                 onFocus={this.onFocus}
                 onChangeText={this.onChangeText}
                 onSubmitEditing={this.onSubmitAbout}
@@ -240,7 +245,8 @@ export default function init() {
               />
 
               <TextField
-                value={data.lastname}
+                ref={this.houseRef}
+                defaultValue={data.lastname}
                 label='House'
                 title='Derived from last name'
                 disabled={true}
