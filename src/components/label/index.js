@@ -5,12 +5,14 @@ import { Animated } from 'react-native';
 export default class Label extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
+    disabled: false,
     restricted: false,
   };
 
   static propTypes = {
     numberOfLines: PropTypes.number,
 
+    disabled: PropTypes.bool,
     restricted: PropTypes.bool,
 
     baseSize: PropTypes.number.isRequired,
@@ -41,6 +43,7 @@ export default class Label extends PureComponent {
 
   render() {
     let {
+      disabled,
       restricted,
       fontSize,
       activeFontSize,
@@ -56,7 +59,7 @@ export default class Label extends PureComponent {
       ...props
     } = this.props;
 
-    let color = restricted?
+    let color = !disabled && restricted?
       errorColor:
       focusAnimation.interpolate({
         inputRange: [-1, 0, 1],

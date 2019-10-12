@@ -456,7 +456,7 @@ export default class TextField extends PureComponent {
       height = props.height;
     }
 
-    let restricted = !disabled && this.isRestricted();
+    let restricted = this.isRestricted();
     let defaultVisible = this.isDefaultVisible();
 
     let value = this.value();
