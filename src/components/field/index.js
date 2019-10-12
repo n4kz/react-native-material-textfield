@@ -587,10 +587,19 @@ export default class TextField extends PureComponent {
       ],
     };
 
-    let lineProps = {
+    let styleProps = {
+      disabled,
+      restricted,
       baseColor,
       tintColor,
       errorColor,
+
+      focusAnimation,
+      labelAnimation,
+    };
+
+    let lineProps = {
+      ...styleProps,
 
       lineWidth,
       activeLineWidth,
@@ -598,25 +607,18 @@ export default class TextField extends PureComponent {
 
       lineType,
       disabledLineType,
-
-      disabled,
-      restricted,
-
-      focusAnimation,
     };
 
     let labelProps = {
-      restricted,
-      baseSize: labelHeight,
-      basePadding: labelPadding,
+      ...styleProps,
+
       fontSize,
       activeFontSize: labelFontSize,
-      tintColor,
-      baseColor,
-      errorColor,
+
+      baseSize: labelHeight,
+      basePadding: labelPadding,
+
       style: labelTextStyle,
-      focusAnimation,
-      labelAnimation,
     };
 
     return (
