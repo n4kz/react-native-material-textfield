@@ -27,6 +27,19 @@ function startAnimation(animation, options, callback) {
     .start(callback);
 }
 
+function labelStateFromProps(props, state) {
+  let { placeholder, defaultValue } = props;
+  let { text, receivedFocus } = state;
+
+  return !!(placeholder || text || (!receivedFocus && defaultValue));
+}
+
+function errorStateFromProps(props, state) {
+  let { error } = props;
+
+  return !!error;
+}
+
 export default class TextField extends PureComponent {
   static defaultProps = {
     underlineColorAndroid: 'transparent',
@@ -130,14 +143,16 @@ export default class TextField extends PureComponent {
     this.mounted = false;
     this.focused = false;
 
-    let { value: text, defaultValue, placeholder, error, fontSize } = this.props;
-    let labelState = placeholder || text || defaultValue? 1 : 0;
+    let { value: text, error, fontSize } = this.props;
+
+    let labelState = labelStateFromProps(this.props, { text })? 1 : 0;
+    let focusState = errorStateFromProps(this.props)? -1 : 0;
 
     this.state = {
       text,
       error,
 
-      focusAnimation: new Animated.Value(this.focusState()),
+      focusAnimation: new Animated.Value(focusState),
       labelAnimation: new Animated.Value(labelState),
 
       receivedFocus: false,
@@ -155,14 +170,17 @@ export default class TextField extends PureComponent {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    let { error, placeholder } = this.props;
-    let { text } = this.state;
+    let errorState = errorStateFromProps(this.props);
+    let prevErrorState = errorStateFromProps(prevProps);
 
-    if (error !== prevProps.error) {
+    if (errorState ^ prevErrorState) {
       this.startFocusAnimation();
     }
 
-    if (text !== prevState.text || placeholder !== prevProps.placeholder) {
+    let labelState = labelStateFromProps(this.props, this.state);
+    let prevLabelState = labelStateFromProps(prevProps, prevState);
+
+    if (labelState ^ prevLabelState) {
       this.startLabelAnimation();
     }
   }
@@ -198,9 +216,7 @@ export default class TextField extends PureComponent {
   }
 
   focusState() {
-    let { error } = this.props;
-
-    if (error) {
+    if (errorStateFromProps(this.props)) {
       return -1;
     }
 
@@ -208,7 +224,7 @@ export default class TextField extends PureComponent {
   }
 
   labelState() {
-    if (this.isLabelActive()) {
+    if (labelStateFromProps(this.props, this.state)) {
       return 1;
     }
 
@@ -274,9 +290,7 @@ export default class TextField extends PureComponent {
   }
 
   isErrored() {
-    let { error } = this.props;
-
-    return !!error;
+    return errorStateFromProps(this.props);
   }
 
   isDefaultVisible() {
@@ -287,9 +301,7 @@ export default class TextField extends PureComponent {
   }
 
   isLabelActive() {
-    let { placeholder } = this.props;
-
-    return !!(placeholder || this.value());
+    return 1 === this.labelState();
   }
 
   onFocus(event) {
