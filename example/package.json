@@ -11,7 +11,7 @@
     "react": "16.8.1",
     "react-native": "0.61.2",
     "react-native-material-buttons": "^0.6.0",
-    "react-native-material-textfield": "^0.12.0",
+    "react-native-material-textfield": "*",
     "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
