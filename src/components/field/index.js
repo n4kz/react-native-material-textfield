@@ -8,7 +8,6 @@ import {
   StyleSheet,
   Platform,
   ViewPropTypes,
-  I18nManager,
 } from 'react-native';
 
 import RN from 'react-native/package.json';
@@ -545,10 +544,6 @@ export default class TextField extends PureComponent {
 
     let value = this.value();
 
-    let textAlign = I18nManager.isRTL?
-      'right':
-      'left';
-
     let inputContainerStyle = {
       paddingBottom: inputContainerPadding,
 
@@ -559,7 +554,6 @@ export default class TextField extends PureComponent {
 
     let inputStyle = {
       fontSize,
-      textAlign,
 
       color: (disabled || defaultVisible)?
         baseColor:

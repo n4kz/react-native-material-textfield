@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, I18nManager } from 'react-native';
 
 export default StyleSheet.create({
   inputContainer: {
@@ -14,6 +14,10 @@ export default StyleSheet.create({
     padding: 0,
     margin: 0,
     flex: 1,
+
+    textAlign: I18nManager.isRTL?
+      'right':
+      'left',
 
     includeFontPadding: false,
     textAlignVertical: 'top',
