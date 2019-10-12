@@ -429,8 +429,80 @@ export default class TextField extends PureComponent {
     );
   }
 
+  renderHelper() {
+    let { focusAnimation, error } = this.state;
+
+    let {
+      title,
+      errorColor,
+      baseColor,
+      titleFontSize,
+      characterRestriction: limit,
+      titleTextStyle,
+    } = this.props;
+
+    let { length: count } = this.value();
+
+    let helperContainerStyle = {
+      flexDirection: 'row',
+      height: (title || limit)?
+        titleFontSize * 2:
+        focusAnimation.interpolate({
+          inputRange: [-1, 0, 1],
+          outputRange: [titleFontSize * 2, 8, 8],
+        }),
+    };
+
+    let errorStyle = {
+      color: errorColor,
+
+      opacity: focusAnimation.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [1, 0, 0],
+      }),
+
+      fontSize: title?
+        titleFontSize:
+        focusAnimation.interpolate({
+          inputRange: [-1, 0, 1],
+          outputRange: [titleFontSize, 0, 0],
+        }),
+    };
+
+    let titleStyle = {
+      color: baseColor,
+
+      opacity: focusAnimation.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [0, 1, 1],
+      }),
+
+      fontSize: titleFontSize,
+    };
+
+    let counterProps = {
+      baseColor,
+      errorColor,
+      fontSize: titleFontSize,
+      style: titleTextStyle,
+      limit,
+      count,
+    };
+
+    return (
+      <Animated.View style={helperContainerStyle}>
+        <View style={styles.flex}>
+          <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
+          <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
+        </View>
+
+        <Counter {...counterProps} />
+      </Animated.View>
+    );
+  }
+
   render() {
-    let { labelAnimation, focusAnimation, error, height } = this.state;
+    let { labelAnimation, focusAnimation, height } = this.state;
     let {
       style: inputStyleOverrides,
       label,
@@ -447,17 +519,17 @@ export default class TextField extends PureComponent {
       animationDuration,
       fontSize,
       titleFontSize,
+      titleTextStyle,
       labelFontSize,
       labelHeight,
       labelPadding,
-      inputContainerPadding,
       labelTextStyle,
-      titleTextStyle,
       tintColor,
       baseColor,
       textColor,
       errorColor,
       containerStyle,
+      inputContainerPadding,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
       ...props
@@ -502,43 +574,6 @@ export default class TextField extends PureComponent {
           }],
         }:
         { height: fontSize * 1.5 }),
-    };
-
-    let errorStyle = {
-      color: errorColor,
-
-      opacity: focusAnimation.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [1, 0, 0],
-      }),
-
-      fontSize: title?
-        titleFontSize:
-        focusAnimation.interpolate({
-          inputRange: [-1, 0, 1],
-          outputRange: [titleFontSize, 0, 0],
-        }),
-    };
-
-    let titleStyle = {
-      color: baseColor,
-
-      opacity: focusAnimation.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [0, 1, 1],
-      }),
-
-      fontSize: titleFontSize,
-    };
-
-    let helperContainerStyle = {
-      flexDirection: 'row',
-      height: (title || limit)?
-        titleFontSize * 2:
-        focusAnimation.interpolate({
-          inputRange: [-1, 0, 1],
-          outputRange: [titleFontSize * 2, 8, 8],
-        }),
     };
 
     let containerProps = {
@@ -590,15 +625,6 @@ export default class TextField extends PureComponent {
       labelAnimation,
     };
 
-    let counterProps = {
-      baseColor,
-      errorColor,
-      limit,
-      fontSize: titleFontSize,
-      style: titleTextStyle,
-      count: value.length,
-    };
-
     return (
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
@@ -635,14 +661,7 @@ export default class TextField extends PureComponent {
           {this.renderAccessory('renderRightAccessory')}
         </Animated.View>
 
-        <Animated.View style={helperContainerStyle}>
-          <View style={styles.flex}>
-            <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
-            <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
-          </View>
-
-          <Counter {...counterProps} />
-        </Animated.View>
+        {this.renderHelper()}
       </View>
     );
   }
