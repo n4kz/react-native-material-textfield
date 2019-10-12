@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `lineType` prop
+
 ## [0.13.0] - 2019-10-11
 
 ### Added

@@ -51,10 +51,12 @@ export default class TextField extends PureComponent {
 
     lineWidth: StyleSheet.hairlineWidth,
     activeLineWidth: 2,
+    disabledLineWidth: 1,
+
+    lineType: 'solid',
+    disabledLineType: 'dotted',
 
     disabled: false,
-    disabledLineType: 'dotted',
-    disabledLineWidth: 1,
   };
 
   static propTypes = {
@@ -87,10 +89,12 @@ export default class TextField extends PureComponent {
 
     lineWidth: PropTypes.number,
     activeLineWidth: PropTypes.number,
+    disabledLineWidth: PropTypes.number,
+
+    lineType: Line.propTypes.lineType,
+    disabledLineType: Line.propTypes.lineType,
 
     disabled: PropTypes.bool,
-    disabledLineType: Line.propTypes.lineType,
-    disabledLineWidth: PropTypes.number,
 
     renderLeftAccessory: PropTypes.func,
     renderRightAccessory: PropTypes.func,
@@ -423,7 +427,10 @@ export default class TextField extends PureComponent {
       characterRestriction: limit,
       editable,
       disabled,
+      lineType,
       disabledLineType,
+      lineWidth,
+      activeLineWidth,
       disabledLineWidth,
       animationDuration,
       fontSize,
@@ -438,8 +445,6 @@ export default class TextField extends PureComponent {
       baseColor,
       textColor,
       errorColor,
-      lineWidth,
-      activeLineWidth,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
@@ -549,6 +554,8 @@ export default class TextField extends PureComponent {
       lineWidth,
       activeLineWidth,
       disabledLineWidth,
+
+      lineType,
       disabledLineType,
 
       disabled,
