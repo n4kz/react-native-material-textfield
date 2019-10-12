@@ -34,71 +34,50 @@ export default class Line extends PureComponent {
     focusAnimation: PropTypes.instanceOf(Animated.Value),
   };
 
-  borderColor() {
+  render() {
     let {
       disabled,
       restricted,
+      lineType,
+      disabledLineType,
+      lineWidth,
+      activeLineWidth,
+      disabledLineWidth,
       baseColor,
       tintColor,
       errorColor,
       focusAnimation,
     } = this.props;
 
-    if (disabled) {
-      return baseColor;
-    }
-
-    if (restricted) {
-      return errorColor;
-    }
-
-    return focusAnimation.interpolate({
-      inputRange: [-1, 0, 1],
-      outputRange: [errorColor, baseColor, tintColor],
-    });
-  }
-
-  borderWidth() {
-    let {
-      disabled,
-      restricted,
-      lineWidth,
-      activeLineWidth,
-      disabledLineWidth,
-      focusAnimation,
-    } = this.props;
-
-    if (disabled) {
-      return disabledLineWidth;
-    }
-
-    if (restricted) {
-      return activeLineWidth;
-    }
-
-    return focusAnimation.interpolate({
-      inputRange: [-1, 0, 1],
-      outputRange: [activeLineWidth, lineWidth, activeLineWidth],
-    });
-  }
-
-  borderStyle() {
-    let { disabled, lineType, disabledLineType } = this.props;
-
-    return disabled?
+    let borderStyle = disabled?
       disabledLineType:
       lineType;
-  }
-
-  render() {
-    let borderStyle = this.borderStyle();
 
     if ('none' === borderStyle) {
       return null;
     }
 
-    let borderColor = this.borderColor();
-    let borderWidth = this.borderWidth();
+    let borderColor, borderWidth;
+
+    if (disabled) {
+      borderColor = baseColor;
+      borderWidth = disabledLineWidth;
+    } else {
+      if (restricted) {
+        borderColor = errorColor;
+        borderWidth = activeLineWidth;
+      } else {
+        borderColor = focusAnimation.interpolate({
+          inputRange: [-1, 0, 1],
+          outputRange: [errorColor, baseColor, tintColor],
+        });
+
+        borderWidth = focusAnimation.interpolate({
+          inputRange: [-1, 0, 1],
+          outputRange: [activeLineWidth, lineWidth, activeLineWidth],
+        });
+      }
+    }
 
     let [top, right, left] = [-2, -1.5, -1.5]
       .map((value) => Animated.multiply(value, borderWidth));
