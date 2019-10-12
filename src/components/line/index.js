@@ -34,12 +34,10 @@ export default class Line extends PureComponent {
     focusAnimation: PropTypes.instanceOf(Animated.Value),
   };
 
-  render() {
+  borderProps() {
     let {
       disabled,
       restricted,
-      lineType,
-      disabledLineType,
       lineWidth,
       activeLineWidth,
       disabledLineWidth,
@@ -49,6 +47,36 @@ export default class Line extends PureComponent {
       focusAnimation,
     } = this.props;
 
+    if (disabled) {
+      return {
+        borderColor: baseColor,
+        borderWidth: disabledLineWidth,
+      };
+    }
+
+    if (restricted) {
+      return {
+        borderColor: errorColor,
+        borderWidth: activeLineWidth,
+      };
+    }
+
+    return {
+      borderColor: focusAnimation.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [errorColor, baseColor, tintColor],
+      }),
+
+      borderWidth: focusAnimation.interpolate({
+        inputRange: [-1, 0, 1],
+        outputRange: [activeLineWidth, lineWidth, activeLineWidth],
+      }),
+    };
+  }
+
+  render() {
+    let { disabled, lineType, disabledLineType } = this.props;
+
     let borderStyle = disabled?
       disabledLineType:
       lineType;
@@ -57,27 +85,7 @@ export default class Line extends PureComponent {
       return null;
     }
 
-    let borderColor, borderWidth;
-
-    if (disabled) {
-      borderColor = baseColor;
-      borderWidth = disabledLineWidth;
-    } else {
-      if (restricted) {
-        borderColor = errorColor;
-        borderWidth = activeLineWidth;
-      } else {
-        borderColor = focusAnimation.interpolate({
-          inputRange: [-1, 0, 1],
-          outputRange: [errorColor, baseColor, tintColor],
-        });
-
-        borderWidth = focusAnimation.interpolate({
-          inputRange: [-1, 0, 1],
-          outputRange: [activeLineWidth, lineWidth, activeLineWidth],
-        });
-      }
-    }
+    let { borderColor, borderWidth } = this.borderProps();
 
     let [top, right, left] = [-2, -1.5, -1.5]
       .map((value) => Animated.multiply(value, borderWidth));
