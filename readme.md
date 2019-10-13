@@ -57,10 +57,16 @@ class Example extends Component {
     console.log(field.value());
   };
 
+  formatText = (text) => {
+    return text.replace(/[^+\d]/g, '');
+  };
+
   render() {
     return (
       <TextField
         label='Phone number'
+        keyboardType='phone-pad'
+        formatText={this.formatText}
         onSubmitEditing={this.onSubmit}
         ref={this.fieldRef}
       />
@@ -103,6 +109,7 @@ class Example extends Component {
  labelTextStyle        | Style for label inner Text component        |   Object | -
  titleTextStyle        | Style for title inner Text component        |   Object | -
  affixTextStyle        | Style for affix inner Text component        |   Object | -
+ formatText            | Input mask callback                         | Function | -
  renderLeftAccessory   | Render left input accessory view            | Function | -
  renderRightAccessory  | Render right input accessory view           | Function | -
  onChangeText          | Change text callback                        | Function | -
