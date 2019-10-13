@@ -113,17 +113,18 @@ Other [TextInput][rn-textinput] properties will also work
 
 ## Methods
 
- name               | description                   | returns
-:------------------ |:----------------------------- | -------:
- focus()            | Acquire focus                 |       -
- blur()             | Release focus                 |       -
- clear()            | Clear text field              |       -
- value()            | Get current value             |  String
- isFocused()        | Get current focus state       | Boolean
- isErrored()        | Get current error state       | Boolean
- isRestricted()     | Get current restriction state | Boolean
- isDefaultVisible() | Get default value visibility  | Boolean
- setValue()         | Set current value             |       -
+ name                   | description                   | returns
+:---------------------- |:----------------------------- | -------:
+ focus()                | Acquire focus                 |       -
+ blur()                 | Release focus                 |       -
+ clear()                | Clear text field              |       -
+ value()                | Get current value             |  String
+ isFocused()            | Get current focus state       | Boolean
+ isErrored()            | Get current error state       | Boolean
+ isRestricted()         | Get current restriction state | Boolean
+ isDefaultVisible()     | Get default value visibility  | Boolean
+ isPlaceholderVisible() | Get placeholder visibility    | Boolean
+ setValue()             | Set current value             |       -
 
 ## Example
 
