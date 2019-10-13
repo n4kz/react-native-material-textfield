@@ -108,6 +108,8 @@ export default class TextField extends PureComponent {
 
     disabled: PropTypes.bool,
 
+    formatText: PropTypes.func,
+
     renderLeftAccessory: PropTypes.func,
     renderRightAccessory: PropTypes.func,
 
@@ -360,7 +362,11 @@ export default class TextField extends PureComponent {
   }
 
   onChangeText(text) {
-    let { onChangeText } = this.props;
+    let { onChangeText, formatText } = this.props;
+
+    if ('function' === typeof formatText) {
+      text = formatText(text);
+    }
 
     this.setState({ text });
 
