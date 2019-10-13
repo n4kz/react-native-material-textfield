@@ -299,6 +299,12 @@ export default class TextField extends PureComponent {
     return !receivedFocus && null == text && null != defaultValue;
   }
 
+  isPlaceholderVisible() {
+    let { placeholder } = this.props;
+
+    return placeholder && !this.focused && !this.value();
+  }
+
   isLabelActive() {
     return 1 === this.labelState();
   }
