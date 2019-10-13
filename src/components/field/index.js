@@ -10,8 +10,6 @@ import {
   ViewPropTypes,
 } from 'react-native';
 
-import RN from 'react-native/package.json';
-
 import Line from '../line';
 import Label from '../label';
 import Affix from '../affix';
@@ -347,17 +345,10 @@ export default class TextField extends PureComponent {
   }
 
   onChange(event) {
-    let { onChange, multiline } = this.props;
+    let { onChange } = this.props;
 
     if ('function' === typeof onChange) {
       onChange(event);
-    }
-
-    /* XXX: onContentSizeChange is not called on RN 0.44 and 0.45 */
-    if (multiline && 'android' === Platform.OS) {
-      if (/^0\.4[45]\./.test(RN.version)) {
-        this.onContentSizeChange(event);
-      }
     }
   }
 
