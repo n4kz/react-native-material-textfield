@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.14.0] - 2019-10-14
+
 ### Added
 
 - `lineType` prop
@@ -19,8 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Multiline title and error messages
 - Label and Helper text color in disabled state
+- Multiline title and error messages
+- Multiline layout on iOS
 
 ## [0.13.0] - 2019-10-11
 
@@ -83,6 +86,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `disabledLineType` prop
 
 [Unreleased]: https://github.com/n4kz/react-native-material-textfield/compare/0.13.0...HEAD
+[0.14.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.13.0...0.14.0
 [0.13.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.12.0...0.13.0
 [0.12.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.11.0...0.12.0
 [0.11.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.10.0...0.11.0
