@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 
 import styles from './styles';
 
@@ -20,21 +20,21 @@ export default class Counter extends PureComponent {
   render() {
     let { count, limit, baseColor, errorColor, fontSize, style } = this.props;
 
-    let textStyle = {
-      color: count > limit? errorColor : baseColor,
-      fontSize,
-    };
-
     if (!limit) {
       return null;
     }
 
+    let textStyle = {
+      fontSize,
+      color: count > limit?
+        errorColor:
+        baseColor,
+    };
+
     return (
-      <View style={styles.container}>
-        <Text style={[styles.text, style, textStyle]}>
-          {count} / {limit}
-        </Text>
-      </View>
+      <Text style={[styles.text, style, textStyle]}>
+        {count} / {limit}
+      </Text>
     );
   }
 }

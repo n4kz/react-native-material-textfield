@@ -23,6 +23,12 @@ export default StyleSheet.create({
     textAlignVertical: 'top',
   },
 
+  helperContainer: {
+    paddingVertical: 4,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+  },
+
   row: {
     flex: 1,
     flexDirection: 'row',

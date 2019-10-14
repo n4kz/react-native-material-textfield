@@ -436,70 +436,40 @@ export default class TextField extends PureComponent {
 
     let {
       title,
-      errorColor,
       baseColor,
-      titleFontSize,
+      errorColor,
+      titleFontSize: fontSize,
+      titleTextStyle: style,
       characterRestriction: limit,
-      titleTextStyle,
     } = this.props;
 
     let { length: count } = this.value();
 
-    let helperContainerStyle = {
-      flexDirection: 'row',
-      height: (title || limit)?
-        titleFontSize * 2:
-        focusAnimation.interpolate({
-          inputRange: [-1, 0, 1],
-          outputRange: [titleFontSize * 2, 8, 8],
-        }),
-    };
-
-    let errorStyle = {
-      color: errorColor,
-
-      opacity: focusAnimation.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [1, 0, 0],
-      }),
-
-      fontSize: title?
-        titleFontSize:
-        focusAnimation.interpolate({
-          inputRange: [-1, 0, 1],
-          outputRange: [titleFontSize, 0, 0],
-        }),
-    };
-
-    let titleStyle = {
-      color: baseColor,
-
-      opacity: focusAnimation.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [0, 1, 1],
-      }),
-
-      fontSize: titleFontSize,
+    let styleProps = {
+      style,
+      fontSize,
+      baseColor,
+      errorColor,
     };
 
     let counterProps = {
-      baseColor,
-      errorColor,
-      fontSize: titleFontSize,
-      style: titleTextStyle,
+      ...styleProps,
       limit,
       count,
     };
 
-    return (
-      <Animated.View style={helperContainerStyle}>
-        <View style={styles.flex}>
-          <Helper style={[errorStyle, titleTextStyle]}>{error}</Helper>
-          <Helper style={[titleStyle, titleTextStyle]}>{title}</Helper>
-        </View>
+    let helperProps = {
+      ...styleProps,
+      title,
+      error,
+      focusAnimation,
+    };
 
+    return (
+      <View style={styles.helperContainer}>
+        <Helper {...helperProps} />
         <Counter {...counterProps} />
-      </Animated.View>
+      </View>
     );
   }
 
