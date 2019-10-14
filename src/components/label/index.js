@@ -59,12 +59,14 @@ export default class Label extends PureComponent {
       ...props
     } = this.props;
 
-    let color = !disabled && restricted?
-      errorColor:
-      focusAnimation.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
-      });
+    let color = disabled?
+      baseColor:
+      restricted?
+        errorColor:
+        focusAnimation.interpolate({
+          inputRange: [-1, 0, 1],
+          outputRange: [errorColor, baseColor, tintColor],
+        });
 
     let top = labelAnimation.interpolate({
       inputRange: [0, 1],
