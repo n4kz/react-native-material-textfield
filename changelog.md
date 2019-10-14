@@ -13,6 +13,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `formatText` prop for masked input support
 - `isPlaceholderVisible()` method
 
+### Changed
+
+- Refactored componentDidUpdate and improved animation
+
+### Fixed
+
+- Multiline title and error messages
+- Label and Helper text color in disabled state
+
 ## [0.13.0] - 2019-10-11
 
 ### Added
