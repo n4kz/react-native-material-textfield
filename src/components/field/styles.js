@@ -12,6 +12,7 @@ export default StyleSheet.create({
   input: {
     top: 2,
     padding: 0,
+    paddingTop: 0, /* XXX: iOS has paddingTop set for multiline input */
     margin: 0,
     flex: 1,
 

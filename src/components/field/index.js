@@ -377,7 +377,7 @@ export default class TextField extends PureComponent {
     this.setState({
       height: Math.max(
         fontSize * 1.5,
-        Math.ceil(height) + Platform.select({ ios: 5, android: 1 })
+        Math.ceil(height) + Platform.select({ ios: 4, android: 1 })
       ),
     });
   }
@@ -541,7 +541,7 @@ export default class TextField extends PureComponent {
 
       inputStyle.height += lineHeight;
       inputStyle.transform = [{
-        translateY: lineHeight - ('ios' === Platform.OS? 3 : 0),
+        translateY: lineHeight + ('ios' === Platform.OS? 2 : 0),
       }];
     }
 
