@@ -392,13 +392,39 @@ export default class TextField extends PureComponent {
   }
 
   inputHeight() {
-    let { multiline, height } = this.props;
     let { height: computedHeight } = this.state;
+    let { multiline, fontSize, height = computedHeight } = this.props;
 
-    /* Disable autogrow if height is passed as prop */
-    return multiline && height?
+    return multiline?
       height:
-      computedHeight;
+      fontSize * 1.5;
+  }
+
+  inputContainerHeight() {
+    let { labelHeight, inputContainerPadding, multiline } = this.props;
+
+    if ('web' === Platform.OS && multiline) {
+      return 'auto';
+    }
+
+    return labelHeight + inputContainerPadding + this.inputHeight();
+  }
+
+  inputProps() {
+    return Object.keys(TextInput.propTypes)
+      .reduce((store, key) => {
+        switch (key) {
+          case 'defaultValue':
+            break;
+
+          default:
+            if (key in this.props) {
+              store[key] = this.props[key];
+            }
+        }
+
+        return store;
+      }, {});
   }
 
   renderAccessory(prop) {
@@ -497,21 +523,7 @@ export default class TextField extends PureComponent {
       style: inputStyleOverrides,
     } = this.props;
 
-    let props = Object.keys(TextInput.propTypes)
-      .reduce((store, key) => {
-        switch (key) {
-          case 'defaultValue':
-            break;
-
-          default:
-            if (key in this.props) {
-              store[key] = this.props[key];
-            }
-        }
-
-        return store;
-      }, {});
-
+    let props = this.inputProps();
     let defaultVisible = this.isDefaultVisible();
 
     let inputStyle = {
@@ -521,18 +533,17 @@ export default class TextField extends PureComponent {
         baseColor:
         textColor,
 
-      ...(multiline?
-        {
-          height: fontSize * 1.5 + this.inputHeight(),
-          transform: [{
-            translateY: fontSize * 1.5
-              + ('ios' === Platform.OS? -3 : 0),
-          }],
-        }:
-        {
-          height: fontSize * 1.5,
-        }),
+      height: this.inputHeight(),
     };
+
+    if (multiline) {
+      let lineHeight = fontSize * 1.5;
+
+      inputStyle.height += lineHeight;
+      inputStyle.transform = [{
+        translateY: lineHeight - ('ios' === Platform.OS? 3 : 0),
+      }];
+    }
 
     return (
       <TextInput
@@ -572,7 +583,6 @@ export default class TextField extends PureComponent {
       tintColor,
       baseColor,
       errorColor,
-      multiline,
       containerStyle,
       inputContainerPadding,
       inputContainerStyle: inputContainerStyleOverrides,
@@ -582,16 +592,7 @@ export default class TextField extends PureComponent {
 
     let inputContainerStyle = {
       paddingBottom: inputContainerPadding,
-
-      ...(multiline?
-        {
-          height: 'web' !== Platform.OS?
-            labelHeight + inputContainerPadding + this.inputHeight():
-            'auto',
-        }:
-        {
-          height: labelHeight + inputContainerPadding + fontSize * 1.5,
-        }),
+      height: this.inputContainerHeight(),
     };
 
     let containerProps = {
