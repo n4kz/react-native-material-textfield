@@ -28,6 +28,7 @@ Material texfield with consistent behaviour on iOS and Android
 * Animated state transitions (normal, focused and errored)
 * Customizable font size, colors and animation duration
 * Disabled state (with dotted underline)
+* Masked input support
 * Multiline text input
 * Character counter
 * Prefix and suffix
