@@ -391,6 +391,16 @@ export default class TextField extends PureComponent {
     }
   }
 
+  inputHeight() {
+    let { multiline, height } = this.props;
+    let { height: computedHeight } = this.state;
+
+    /* Disable autogrow if height is passed as prop */
+    return multiline && height?
+      height:
+      computedHeight;
+  }
+
   renderAccessory(prop) {
     let { [prop]: renderAccessory } = this.props;
 
@@ -475,57 +485,34 @@ export default class TextField extends PureComponent {
     );
   }
 
-  render() {
-    let { labelAnimation, focusAnimation, height } = this.state;
+  renderInput() {
     let {
-      style: inputStyleOverrides,
-      label,
-      title,
-      defaultValue,
-      characterRestriction: limit,
-      editable,
       disabled,
-      lineType,
-      disabledLineType,
-      lineWidth,
-      activeLineWidth,
-      disabledLineWidth,
-      animationDuration,
+      editable,
+      multiline,
       fontSize,
-      titleFontSize,
-      titleTextStyle,
-      labelFontSize,
-      labelHeight,
-      labelPadding,
-      labelTextStyle,
-      tintColor,
       baseColor,
+      tintColor,
       textColor,
-      errorColor,
-      containerStyle,
-      inputContainerPadding,
-      inputContainerStyle: inputContainerStyleOverrides,
-      clearTextOnFocus,
-      ...props
+      style: inputStyleOverrides,
     } = this.props;
 
-    if (props.multiline && props.height) {
-      /* Disable autogrow if height is passed as prop */
-      height = props.height;
-    }
+    let props = Object.keys(TextInput.propTypes)
+      .reduce((store, key) => {
+        switch (key) {
+          case 'defaultValue':
+            break;
 
-    let restricted = this.isRestricted();
+          default:
+            if (key in this.props) {
+              store[key] = this.props[key];
+            }
+        }
+
+        return store;
+      }, {});
+
     let defaultVisible = this.isDefaultVisible();
-
-    let value = this.value();
-
-    let inputContainerStyle = {
-      paddingBottom: inputContainerPadding,
-
-      ...(props.multiline?
-        { height: 'web' === Platform.OS? 'auto' : labelHeight + inputContainerPadding + height }:
-        { height: labelHeight + inputContainerPadding + fontSize * 1.5 }),
-    };
 
     let inputStyle = {
       fontSize,
@@ -534,15 +521,77 @@ export default class TextField extends PureComponent {
         baseColor:
         textColor,
 
-      ...(props.multiline?
+      ...(multiline?
         {
-          height: fontSize * 1.5 + height,
+          height: fontSize * 1.5 + this.inputHeight(),
           transform: [{
             translateY: fontSize * 1.5
               + ('ios' === Platform.OS? -3 : 0),
           }],
         }:
-        { height: fontSize * 1.5 }),
+        {
+          height: fontSize * 1.5,
+        }),
+    };
+
+    return (
+      <TextInput
+        selectionColor={tintColor}
+
+        {...props}
+
+        style={[styles.input, inputStyle, inputStyleOverrides]}
+        editable={!disabled && editable}
+        onChange={this.onChange}
+        onChangeText={this.onChangeText}
+        onContentSizeChange={this.onContentSizeChange}
+        onFocus={this.onFocus}
+        onBlur={this.onBlur}
+        value={this.value()}
+        ref={this.inputRef}
+      />
+    );
+  }
+
+  render() {
+    let { labelAnimation, focusAnimation } = this.state;
+    let {
+      label,
+      editable,
+      disabled,
+      lineType,
+      disabledLineType,
+      lineWidth,
+      activeLineWidth,
+      disabledLineWidth,
+      fontSize,
+      labelFontSize,
+      labelHeight,
+      labelPadding,
+      labelTextStyle,
+      tintColor,
+      baseColor,
+      errorColor,
+      multiline,
+      containerStyle,
+      inputContainerPadding,
+      inputContainerStyle: inputContainerStyleOverrides,
+    } = this.props;
+
+    let restricted = this.isRestricted();
+
+    let inputContainerStyle = {
+      paddingBottom: inputContainerPadding,
+
+      ...(multiline?
+        {
+          height: 'web' !== Platform.OS?
+            labelHeight + inputContainerPadding + this.inputHeight():
+            'auto',
+        }:
+        {
+          height: labelHeight + inputContainerPadding + fontSize * 1.5,
+        }),
     };
 
     let containerProps = {
@@ -608,23 +657,7 @@ export default class TextField extends PureComponent {
 
             <View style={styles.row}>
               {this.renderAffix('prefix')}
-
-              <TextInput
-                style={[styles.input, inputStyle, inputStyleOverrides]}
-                selectionColor={tintColor}
-
-                {...props}
-
-                editable={!disabled && editable}
-                onChange={this.onChange}
-                onChangeText={this.onChangeText}
-                onContentSizeChange={this.onContentSizeChange}
-                onFocus={this.onFocus}
-                onBlur={this.onBlur}
-                value={value}
-                ref={this.inputRef}
-              />
-
+              {this.renderInput()}
               {this.renderAffix('suffix')}
             </View>
           </View>

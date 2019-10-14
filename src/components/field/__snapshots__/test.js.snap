@@ -587,7 +587,6 @@ exports[`renders error 1`] = `
           autoCapitalize="sentences"
           disableFullscreenUI={true}
           editable={true}
-          error="message"
           onBlur={[Function]}
           onChange={[Function]}
           onChangeText={[Function]}
@@ -739,7 +738,6 @@ exports[`renders left accessory 1`] = `
           onContentSizeChange={[Function]}
           onFocus={[Function]}
           rejectResponderTermination={true}
-          renderLeftAccessory={[Function]}
           selectionColor="rgb(0, 145, 234)"
           style={
             Array [
@@ -1014,7 +1012,6 @@ exports[`renders prefix 1`] = `
           onChangeText={[Function]}
           onContentSizeChange={[Function]}
           onFocus={[Function]}
-          prefix="$"
           rejectResponderTermination={true}
           selectionColor="rgb(0, 145, 234)"
           style={
@@ -1281,7 +1278,6 @@ exports[`renders right accessory 1`] = `
           onContentSizeChange={[Function]}
           onFocus={[Function]}
           rejectResponderTermination={true}
-          renderRightAccessory={[Function]}
           selectionColor="rgb(0, 145, 234)"
           style={
             Array [
@@ -1433,7 +1429,6 @@ exports[`renders suffix 1`] = `
               undefined,
             ]
           }
-          suffix=".com"
           underlineColorAndroid="transparent"
           value="text"
         />
