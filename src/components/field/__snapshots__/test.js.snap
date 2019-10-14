@@ -114,69 +114,11 @@ exports[`renders 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;
 
@@ -294,96 +236,31 @@ exports[`renders counter 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 24,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
   >
-    <View
+    <Text
       style={
-        Object {
-          "flex": 1,
-        }
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "marginLeft": 8,
+            "textAlign": "right",
+          },
+          undefined,
+          Object {
+            "color": "rgba(0, 0, 0, .38)",
+            "fontSize": 12,
+          },
+        ]
       }
     >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "paddingLeft": 4,
-          "paddingVertical": 4,
-        }
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "textAlign": "right",
-            },
-            undefined,
-            Object {
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-            },
-          ]
-        }
-      >
-        4
-         / 
-        10
-      </Text>
-    </View>
+      4
+       / 
+      10
+    </Text>
   </View>
 </View>
 `;
@@ -502,69 +379,11 @@ exports[`renders default value 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;
 
@@ -622,7 +441,7 @@ exports[`renders disabled value 1`] = `
           numberOfLines={1}
           style={
             Object {
-              "color": "rgba(0, 0, 0, 0.38)",
+              "color": "rgba(0, 0, 0, .38)",
               "fontSize": 12,
               "includeFontPadding": false,
               "textAlignVertical": "top",
@@ -682,69 +501,11 @@ exports[`renders disabled value 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;
 
@@ -863,70 +624,24 @@ exports[`renders error 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 24,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
   >
-    <View
+    <Text
       style={
         Object {
+          "backgroundColor": "transparent",
+          "color": "rgb(213, 0, 0)",
           "flex": 1,
+          "fontSize": 12,
+          "opacity": 1,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        >
-          message
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-    </View>
+      message
+    </Text>
   </View>
 </View>
 `;
@@ -1055,69 +770,11 @@ exports[`renders left accessory 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;
 
@@ -1241,69 +898,11 @@ exports[`renders multiline value 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;
 
@@ -1447,69 +1046,11 @@ exports[`renders prefix 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;
 
@@ -1627,96 +1168,31 @@ exports[`renders restriction 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 24,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
   >
-    <View
+    <Text
       style={
-        Object {
-          "flex": 1,
-        }
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "marginLeft": 8,
+            "textAlign": "right",
+          },
+          undefined,
+          Object {
+            "color": "rgb(213, 0, 0)",
+            "fontSize": 12,
+          },
+        ]
       }
     >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "paddingLeft": 4,
-          "paddingVertical": 4,
-        }
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "textAlign": "right",
-            },
-            undefined,
-            Object {
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 12,
-            },
-          ]
-        }
-      >
-        4
-         / 
-        2
-      </Text>
-    </View>
+      4
+       / 
+      2
+    </Text>
   </View>
 </View>
 `;
@@ -1845,69 +1321,11 @@ exports[`renders right accessory 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;
 
@@ -2051,69 +1469,11 @@ exports[`renders suffix 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;
 
@@ -2231,70 +1591,24 @@ exports[`renders title 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 24,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
   >
-    <View
+    <Text
       style={
         Object {
+          "backgroundColor": "transparent",
+          "color": "rgba(0, 0, 0, .38)",
           "flex": 1,
+          "fontSize": 12,
+          "opacity": 1,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 12,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        >
-          field
-        </Text>
-      </View>
-    </View>
+      field
+    </Text>
   </View>
 </View>
 `;
@@ -2413,68 +1727,10 @@ exports[`renders value 1`] = `
     style={
       Object {
         "flexDirection": "row",
-        "height": 8,
+        "justifyContent": "flex-end",
+        "paddingVertical": 4,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgb(213, 0, 0)",
-              "fontSize": 0,
-              "opacity": 0,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "left": 0,
-            "paddingVertical": 4,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "backgroundColor": "transparent",
-              "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
-              "opacity": 1,
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>
+  />
 </View>
 `;

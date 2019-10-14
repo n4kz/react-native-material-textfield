@@ -1,63 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders when limit is exceeded 1`] = `
-<View
+<Text
   style={
-    Object {
-      "paddingLeft": 4,
-      "paddingVertical": 4,
-    }
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "marginLeft": 8,
+        "textAlign": "right",
+      },
+      undefined,
+      Object {
+        "color": "red",
+        "fontSize": 12,
+      },
+    ]
   }
 >
-  <Text
-    style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "textAlign": "right",
-        },
-        undefined,
-        Object {
-          "color": "red",
-          "fontSize": 12,
-        },
-      ]
-    }
-  >
-    2
-     / 
-    1
-  </Text>
-</View>
+  2
+   / 
+  1
+</Text>
 `;
 
 exports[`renders when limit is set 1`] = `
-<View
+<Text
   style={
-    Object {
-      "paddingLeft": 4,
-      "paddingVertical": 4,
-    }
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "marginLeft": 8,
+        "textAlign": "right",
+      },
+      undefined,
+      Object {
+        "color": "blue",
+        "fontSize": 12,
+      },
+    ]
   }
 >
-  <Text
-    style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "textAlign": "right",
-        },
-        undefined,
-        Object {
-          "color": "blue",
-          "fontSize": 12,
-        },
-      ]
-    }
-  >
-    1
-     / 
-    1
-  </Text>
-</View>
+  1
+   / 
+  1
+</Text>
 `;
