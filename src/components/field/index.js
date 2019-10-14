@@ -436,6 +436,7 @@ export default class TextField extends PureComponent {
 
     let {
       title,
+      disabled,
       baseColor,
       errorColor,
       titleFontSize: fontSize,
@@ -462,6 +463,7 @@ export default class TextField extends PureComponent {
       ...styleProps,
       title,
       error,
+      disabled,
       focusAnimation,
     };
 

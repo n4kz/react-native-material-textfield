@@ -5,13 +5,11 @@ import { Animated } from 'react-native';
 import styles from './styles';
 
 export default class Helper extends PureComponent {
-  static defaultProps = {
-    numberOfLines: 1,
-  };
-
   static propTypes = {
     title: PropTypes.string,
     error: PropTypes.string,
+
+    disabled: PropTypes.bool,
 
     style: Animated.Text.propTypes.style,
 
@@ -65,7 +63,15 @@ export default class Helper extends PureComponent {
 
   render() {
     let { errored, opacity } = this.state;
-    let { style, title, error, baseColor, errorColor, fontSize } = this.props;
+    let {
+      style,
+      title,
+      error,
+      disabled,
+      baseColor,
+      errorColor,
+      fontSize,
+    } = this.props;
 
     let text = errored?
       error:
@@ -79,7 +85,7 @@ export default class Helper extends PureComponent {
       fontSize,
       opacity,
 
-      color: errored?
+      color: !disabled && errored?
         errorColor:
         baseColor,
     };
