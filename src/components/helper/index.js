@@ -41,24 +41,26 @@ export default class Helper extends PureComponent {
   componentDidMount() {
     let { focusAnimation } = this.props;
 
-    let prevValue;
-    this.listener = focusAnimation.addListener(({ value }) => {
-      if (prevValue > -0.5 && value <= -0.5) {
-        this.setState({ errored: true });
-      }
-
-      if (prevValue < -0.5 && value >= -0.5) {
-        this.setState({ errored: false });
-      }
-
-      prevValue = value;
-    });
+    this.listener = focusAnimation
+      .addListener(this.onAnimation.bind(this));
   }
 
   componentWillUnmount() {
     let { focusAnimation } = this.props;
 
     focusAnimation.removeListener(this.listener);
+  }
+
+  onAnimation({ value }) {
+    if (this.animationValue > -0.5 && value <= -0.5) {
+      this.setState({ errored: true });
+    }
+
+    if (this.animationValue < -0.5 && value >= -0.5) {
+      this.setState({ errored: false });
+    }
+
+    this.animationValue = value;
   }
 
   render() {
