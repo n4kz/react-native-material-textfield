@@ -11,7 +11,6 @@ exports[`renders 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -134,7 +133,6 @@ exports[`renders counter 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -278,7 +276,6 @@ exports[`renders default value 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -401,7 +398,6 @@ exports[`renders disabled value 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -524,7 +520,6 @@ exports[`renders error 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -661,7 +656,6 @@ exports[`renders left accessory 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -793,7 +787,6 @@ exports[`renders multiline value 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -922,7 +915,6 @@ exports[`renders prefix 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -1070,7 +1062,6 @@ exports[`renders restriction 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -1214,7 +1205,6 @@ exports[`renders right accessory 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -1346,7 +1336,6 @@ exports[`renders suffix 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -1494,7 +1483,6 @@ exports[`renders title 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",
@@ -1631,7 +1619,6 @@ exports[`renders value 1`] = `
       Object {
         "alignItems": "flex-end",
         "backgroundColor": "transparent",
-        "flex": 1,
         "flexDirection": "row",
         "height": 64,
         "overflow": "hidden",

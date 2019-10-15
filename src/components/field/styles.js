@@ -2,7 +2,6 @@ import { StyleSheet, I18nManager } from 'react-native';
 
 export default StyleSheet.create({
   inputContainer: {
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'flex-end',
     backgroundColor: 'transparent',
