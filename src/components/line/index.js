@@ -34,6 +34,25 @@ export default class Line extends PureComponent {
     focusAnimation: PropTypes.instanceOf(Animated.Value),
   };
 
+  static getDerivedStateFromProps(props, state) {
+    let { lineWidth, activeLineWidth, disabledLineWidth } = props;
+
+    let maxLineWidth = Math.max(
+      lineWidth,
+      activeLineWidth,
+      disabledLineWidth,
+      1,
+    );
+
+    if (maxLineWidth !== state.maxLineWidth) {
+      return { maxLineWidth };
+    }
+
+    return null;
+  }
+
+  state = { maxLineWidth: 1 };
+
   borderProps() {
     let {
       disabled,
@@ -75,6 +94,7 @@ export default class Line extends PureComponent {
   }
 
   render() {
+    let { maxLineWidth } = this.state;
     let { disabled, lineType, disabledLineType } = this.props;
 
     let borderStyle = disabled?
@@ -85,15 +105,13 @@ export default class Line extends PureComponent {
       return null;
     }
 
-    let { borderColor, borderWidth } = this.borderProps();
-
-    let [top, right, left] = [-2, -1.5, -1.5]
-      .map((value) => Animated.multiply(value, borderWidth));
+    let [top, right, left] = Array
+      .from(new Array(3), () => -1.5 * maxLineWidth);
 
     let lineStyle = {
+      ...this.borderProps(),
+
       borderStyle,
-      borderColor,
-      borderWidth,
       top,
       right,
       left,

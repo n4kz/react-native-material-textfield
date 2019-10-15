@@ -26,10 +26,10 @@ exports[`renders 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -148,10 +148,10 @@ exports[`renders counter 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -291,10 +291,10 @@ exports[`renders default value 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -413,10 +413,10 @@ exports[`renders disabled value 1`] = `
           "borderStyle": "dotted",
           "borderWidth": 1,
           "bottom": 0,
-          "left": -1.5,
+          "left": -3,
           "position": "absolute",
-          "right": -1.5,
-          "top": -2,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -538,7 +538,7 @@ exports[`renders error 1`] = `
           "left": -3,
           "position": "absolute",
           "right": -3,
-          "top": -4,
+          "top": -3,
         }
       }
     />
@@ -671,10 +671,10 @@ exports[`renders left accessory 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -802,10 +802,10 @@ exports[`renders multiline value 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -930,10 +930,10 @@ exports[`renders prefix 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -1080,7 +1080,7 @@ exports[`renders restriction 1`] = `
           "left": -3,
           "position": "absolute",
           "right": -3,
-          "top": -4,
+          "top": -3,
         }
       }
     />
@@ -1220,10 +1220,10 @@ exports[`renders right accessory 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -1351,10 +1351,10 @@ exports[`renders suffix 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -1498,10 +1498,10 @@ exports[`renders title 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />
@@ -1634,10 +1634,10 @@ exports[`renders value 1`] = `
           "borderStyle": "solid",
           "borderWidth": 0.5,
           "bottom": 0,
-          "left": -0.75,
+          "left": -3,
           "position": "absolute",
-          "right": -0.75,
-          "top": -1,
+          "right": -3,
+          "top": -3,
         }
       }
     />

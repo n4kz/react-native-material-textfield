@@ -12,7 +12,7 @@ exports[`renders active line 1`] = `
       "left": -3,
       "position": "absolute",
       "right": -3,
-      "top": -4,
+      "top": -3,
     }
   }
 />
@@ -27,10 +27,10 @@ exports[`renders disabled line 1`] = `
       "borderStyle": "dotted",
       "borderWidth": 1,
       "bottom": 0,
-      "left": -1.5,
+      "left": -3,
       "position": "absolute",
-      "right": -1.5,
-      "top": -2,
+      "right": -3,
+      "top": -3,
     }
   }
 />
@@ -45,10 +45,10 @@ exports[`renders line 1`] = `
       "borderStyle": "solid",
       "borderWidth": 0.5,
       "bottom": 0,
-      "left": -0.75,
+      "left": -3,
       "position": "absolute",
-      "right": -0.75,
-      "top": -1,
+      "right": -3,
+      "top": -3,
     }
   }
 />
@@ -66,7 +66,7 @@ exports[`renders restricted line 1`] = `
       "left": -3,
       "position": "absolute",
       "right": -3,
-      "top": -4,
+      "top": -3,
     }
   }
 />
