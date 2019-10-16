@@ -113,6 +113,7 @@ exports[`renders 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -235,6 +236,7 @@ exports[`renders counter 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -380,6 +382,7 @@ exports[`renders default value 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -502,6 +505,7 @@ exports[`renders disabled value 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -624,6 +628,7 @@ exports[`renders error 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -771,6 +776,7 @@ exports[`renders left accessory 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -899,6 +905,7 @@ exports[`renders multiline value 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -1046,6 +1053,7 @@ exports[`renders prefix 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -1168,6 +1176,7 @@ exports[`renders restriction 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -1322,6 +1331,7 @@ exports[`renders right accessory 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -1469,6 +1479,7 @@ exports[`renders suffix 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -1591,6 +1602,7 @@ exports[`renders title 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,
@@ -1729,6 +1741,7 @@ exports[`renders value 1`] = `
   <View
     style={
       Object {
+        "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-end",
         "minHeight": 8,

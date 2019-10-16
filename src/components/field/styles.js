@@ -27,6 +27,7 @@ export default StyleSheet.create({
     minHeight: 8,
     flexDirection: 'row',
     justifyContent: 'flex-end',
+    alignItems: 'flex-start',
   },
 
   row: {
