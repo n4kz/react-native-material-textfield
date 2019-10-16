@@ -47,7 +47,6 @@ export default class TextField extends PureComponent {
     animationDuration: 225,
 
     fontSize: 16,
-    titleFontSize: 12,
     labelFontSize: 12,
     labelHeight: 32,
     labelPadding: 4,
@@ -75,7 +74,6 @@ export default class TextField extends PureComponent {
     animationDuration: PropTypes.number,
 
     fontSize: PropTypes.number,
-    titleFontSize: PropTypes.number,
     labelFontSize: PropTypes.number,
     labelHeight: PropTypes.number,
     labelPadding: PropTypes.number,
@@ -475,7 +473,6 @@ export default class TextField extends PureComponent {
       disabled,
       baseColor,
       errorColor,
-      titleFontSize: fontSize,
       titleTextStyle: style,
       characterRestriction: limit,
     } = this.props;
@@ -484,7 +481,6 @@ export default class TextField extends PureComponent {
 
     let styleProps = {
       style,
-      fontSize,
       baseColor,
       errorColor,
     };

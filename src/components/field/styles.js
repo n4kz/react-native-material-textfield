@@ -24,7 +24,7 @@ export default StyleSheet.create({
   },
 
   helperContainer: {
-    paddingVertical: 4,
+    minHeight: 8,
     flexDirection: 'row',
     justifyContent: 'flex-end',
   },

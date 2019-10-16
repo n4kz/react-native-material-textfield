@@ -6,13 +6,15 @@ exports[`renders when limit is exceeded 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "fontSize": 12,
+        "lineHeight": 16,
         "marginLeft": 8,
+        "paddingVertical": 2,
         "textAlign": "right",
       },
       undefined,
       Object {
         "color": "red",
-        "fontSize": 12,
       },
     ]
   }
@@ -29,13 +31,15 @@ exports[`renders when limit is set 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "fontSize": 12,
+        "lineHeight": 16,
         "marginLeft": 8,
+        "paddingVertical": 2,
         "textAlign": "right",
       },
       undefined,
       Object {
         "color": "blue",
-        "fontSize": 12,
       },
     ]
   }

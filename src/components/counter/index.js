@@ -9,8 +9,6 @@ export default class Counter extends PureComponent {
     count: PropTypes.number.isRequired,
     limit: PropTypes.number,
 
-    fontSize: PropTypes.number,
-
     baseColor: PropTypes.string.isRequired,
     errorColor: PropTypes.string.isRequired,
 
@@ -18,14 +16,13 @@ export default class Counter extends PureComponent {
   };
 
   render() {
-    let { count, limit, baseColor, errorColor, fontSize, style } = this.props;
+    let { count, limit, baseColor, errorColor, style } = this.props;
 
     if (!limit) {
       return null;
     }
 
     let textStyle = {
-      fontSize,
       color: count > limit?
         errorColor:
         baseColor,

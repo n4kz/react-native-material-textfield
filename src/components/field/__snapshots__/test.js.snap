@@ -115,7 +115,7 @@ exports[`renders 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />
@@ -237,7 +237,7 @@ exports[`renders counter 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   >
@@ -246,13 +246,15 @@ exports[`renders counter 1`] = `
         Array [
           Object {
             "backgroundColor": "transparent",
+            "fontSize": 12,
+            "lineHeight": 16,
             "marginLeft": 8,
+            "paddingVertical": 2,
             "textAlign": "right",
           },
           undefined,
           Object {
             "color": "rgba(0, 0, 0, .38)",
-            "fontSize": 12,
           },
         ]
       }
@@ -380,7 +382,7 @@ exports[`renders default value 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />
@@ -502,7 +504,7 @@ exports[`renders disabled value 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />
@@ -624,7 +626,7 @@ exports[`renders error 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   >
@@ -635,7 +637,9 @@ exports[`renders error 1`] = `
           "color": "rgb(213, 0, 0)",
           "flex": 1,
           "fontSize": 12,
+          "lineHeight": 16,
           "opacity": 1,
+          "paddingVertical": 2,
         }
       }
     >
@@ -769,7 +773,7 @@ exports[`renders left accessory 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />
@@ -897,7 +901,7 @@ exports[`renders multiline value 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />
@@ -1044,7 +1048,7 @@ exports[`renders prefix 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />
@@ -1166,7 +1170,7 @@ exports[`renders restriction 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   >
@@ -1175,13 +1179,15 @@ exports[`renders restriction 1`] = `
         Array [
           Object {
             "backgroundColor": "transparent",
+            "fontSize": 12,
+            "lineHeight": 16,
             "marginLeft": 8,
+            "paddingVertical": 2,
             "textAlign": "right",
           },
           undefined,
           Object {
             "color": "rgb(213, 0, 0)",
-            "fontSize": 12,
           },
         ]
       }
@@ -1318,7 +1324,7 @@ exports[`renders right accessory 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />
@@ -1465,7 +1471,7 @@ exports[`renders suffix 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />
@@ -1587,7 +1593,7 @@ exports[`renders title 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   >
@@ -1598,7 +1604,9 @@ exports[`renders title 1`] = `
           "color": "rgba(0, 0, 0, .38)",
           "flex": 1,
           "fontSize": 12,
+          "lineHeight": 16,
           "opacity": 1,
+          "paddingVertical": 2,
         }
       }
     >
@@ -1723,7 +1731,7 @@ exports[`renders value 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
-        "paddingVertical": 4,
+        "minHeight": 8,
       }
     }
   />

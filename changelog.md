@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Refactored helper layout for consistent line height
+
+### Removed
+
+- `titleFontSize` prop
+
 ## [0.14.1] - 2019-10-15
 
 ### Fixed

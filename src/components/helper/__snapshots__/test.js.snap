@@ -7,8 +7,10 @@ exports[`renders disabled helper 1`] = `
       "backgroundColor": "transparent",
       "color": "black",
       "flex": 1,
-      "fontSize": 16,
+      "fontSize": 12,
+      "lineHeight": 16,
       "opacity": 1,
+      "paddingVertical": 2,
     }
   }
 >
@@ -23,8 +25,10 @@ exports[`renders helper 1`] = `
       "backgroundColor": "transparent",
       "color": "black",
       "flex": 1,
-      "fontSize": 16,
+      "fontSize": 12,
+      "lineHeight": 16,
       "opacity": 1,
+      "paddingVertical": 2,
     }
   }
 >
@@ -39,8 +43,10 @@ exports[`renders helper with error 1`] = `
       "backgroundColor": "transparent",
       "color": "red",
       "flex": 1,
-      "fontSize": 16,
+      "fontSize": 12,
+      "lineHeight": 16,
       "opacity": 1,
+      "paddingVertical": 2,
     }
   }
 >

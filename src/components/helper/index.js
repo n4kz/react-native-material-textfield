@@ -16,8 +16,6 @@ export default class Helper extends PureComponent {
     baseColor: PropTypes.string,
     errorColor: PropTypes.string,
 
-    fontSize: PropTypes.number,
-
     focusAnimation: PropTypes.instanceOf(Animated.Value),
   };
 
@@ -72,7 +70,6 @@ export default class Helper extends PureComponent {
       disabled,
       baseColor,
       errorColor,
-      fontSize,
     } = this.props;
 
     let text = errored?
@@ -84,7 +81,6 @@ export default class Helper extends PureComponent {
     }
 
     let textStyle = {
-      fontSize,
       opacity,
 
       color: !disabled && errored?
