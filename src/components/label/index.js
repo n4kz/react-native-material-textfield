@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Children, PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import { Animated } from 'react-native';
 
 import styles from './styles';
@@ -51,7 +51,6 @@ export default class Label extends PureComponent {
       style,
       focusAnimation,
       labelAnimation,
-      children,
       ...props
     } = this.props;
 
