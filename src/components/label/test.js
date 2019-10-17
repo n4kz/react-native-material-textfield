@@ -7,7 +7,6 @@ import Label from '.';
 
 /* eslint-env jest */
 
-const text = 'test';
 const props = {
   fontSize: 16,
   activeFontSize: 12,
@@ -19,11 +18,20 @@ const props = {
 
   focusAnimation: new Animated.Value(0),
   labelAnimation: new Animated.Value(0),
+  label: 'test',
 };
 
 it('renders label', () => {
   let label = renderer
-    .create(<Label {...props}>{text}</Label>);
+    .create(<Label {...props} />);
+
+  expect(label.toJSON())
+    .toMatchSnapshot();
+});
+
+it('renders empty label', () => {
+  let label = renderer
+    .create(<Label {...props} label={null} />);
 
   expect(label.toJSON())
     .toMatchSnapshot();
@@ -32,9 +40,7 @@ it('renders label', () => {
 it('renders active label', () => {
   let label = renderer
     .create(
-      <Label {...props} labelAnimation={new Animated.Value(1)}>
-        {text}
-      </Label>
+      <Label {...props} labelAnimation={new Animated.Value(1)} />
     );
 
   expect(label.toJSON())
@@ -48,9 +54,7 @@ it('renders active focused label', () => {
         {...props}
         labelAnimation={new Animated.Value(1)}
         focusAnimation={new Animated.Value(1)}
-      >
-        {text}
-      </Label>
+      />
     );
 
   expect(label.toJSON())
@@ -64,9 +68,7 @@ it('renders errored label', () => {
         {...props}
         labelAnimation={new Animated.Value(0)}
         focusAnimation={new Animated.Value(-1)}
-      >
-        {text}
-      </Label>
+      />
     );
 
   expect(label.toJSON())
@@ -80,9 +82,7 @@ it('renders active errored label', () => {
         {...props}
         labelAnimation={new Animated.Value(1)}
         focusAnimation={new Animated.Value(-1)}
-      >
-        {text}
-      </Label>
+      />
     );
 
   expect(label.toJSON())
@@ -92,7 +92,7 @@ it('renders active errored label', () => {
 it('renders restricted label', () => {
   let label = renderer
     .create(
-      <Label restricted={true} {...props}>{text}</Label>
+      <Label restricted={true} {...props} />
     );
 
   expect(label.toJSON())
@@ -103,7 +103,7 @@ it('renders styled label', () => {
   let style = { textTransform: 'uppercase' };
   let label = renderer
     .create(
-      <Label style={style} {...props}>{text}</Label>
+      <Label style={style} {...props} />
     );
 
   expect(label.toJSON())

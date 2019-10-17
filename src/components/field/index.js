@@ -87,7 +87,7 @@ export default class TextField extends PureComponent {
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
 
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     title: PropTypes.string,
 
     characterRestriction: PropTypes.number,
@@ -655,6 +655,7 @@ export default class TextField extends PureComponent {
       activeInset: contentInset.label,
 
       style: labelTextStyle,
+      label,
     };
 
     return (
@@ -665,7 +666,7 @@ export default class TextField extends PureComponent {
           {this.renderAccessory('renderLeftAccessory')}
 
           <View style={styles.stack}>
-            <Label {...labelProps}>{label}</Label>
+            <Label {...labelProps} />
 
             <View style={styles.row}>
               {this.renderAffix('prefix')}

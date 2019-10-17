@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import React, { Children, PureComponent } from 'react';
 import { Animated } from 'react-native';
 
 import styles from './styles';
@@ -34,15 +34,12 @@ export default class Label extends PureComponent {
       .isRequired,
 
     style: Animated.Text.propTypes.style,
-
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
-    ]),
+    label: PropTypes.string,
   };
 
   render() {
     let {
+      label,
       disabled,
       restricted,
       fontSize,
@@ -57,6 +54,10 @@ export default class Label extends PureComponent {
       children,
       ...props
     } = this.props;
+
+    if (null == label) {
+      return null;
+    }
 
     let color = disabled?
       baseColor:
@@ -93,7 +94,7 @@ export default class Label extends PureComponent {
     return (
       <Animated.View style={[styles.container, containerStyle]}>
         <Animated.Text style={[styles.text, style, textStyle]} {...props}>
-          {children}
+          {label}
         </Animated.Text>
       </Animated.View>
     );

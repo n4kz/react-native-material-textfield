@@ -111,6 +111,8 @@ exports[`renders active label 1`] = `
 </View>
 `;
 
+exports[`renders empty label 1`] = `null`;
+
 exports[`renders errored label 1`] = `
 <View
   style={
