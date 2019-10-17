@@ -7,13 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `contentInset` prop
+
 ### Changed
 
 - Refactored helper layout for consistent line height
+- Improved RTL support for helper
+- Improved label animation
 
 ### Removed
 
 - `titleFontSize` prop
+- `labelHeight` prop
+- `labelPadding` prop
+- `inputContainerPadding` prop
 
 ## [0.14.1] - 2019-10-15
 
