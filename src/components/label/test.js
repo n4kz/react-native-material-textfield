@@ -9,11 +9,9 @@ import Label from '.';
 
 const text = 'test';
 const props = {
-  baseSize: 32,
-  basePadding: 4,
-
   fontSize: 16,
   activeFontSize: 12,
+  activeInset: 4,
 
   baseColor: 'black',
   tintColor: 'blue',

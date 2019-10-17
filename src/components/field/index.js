@@ -48,9 +48,6 @@ export default class TextField extends PureComponent {
 
     fontSize: 16,
     labelFontSize: 12,
-    labelHeight: 32,
-    labelPadding: 4,
-    inputContainerPadding: 8,
 
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
@@ -75,9 +72,12 @@ export default class TextField extends PureComponent {
 
     fontSize: PropTypes.number,
     labelFontSize: PropTypes.number,
-    labelHeight: PropTypes.number,
-    labelPadding: PropTypes.number,
-    inputContainerPadding: PropTypes.number,
+
+    contentInset: PropTypes.exact({
+      top: PropTypes.number,
+      label: PropTypes.number,
+      input: PropTypes.number,
+    }),
 
     labelTextStyle: Text.propTypes.style,
     titleTextStyle: Text.propTypes.style,
@@ -114,6 +114,12 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+  };
+
+  static contentInset = {
+    top: 16,
+    label: 4,
+    input: 8,
   };
 
   static getDerivedStateFromProps({ error }, state) {
@@ -389,6 +395,12 @@ export default class TextField extends PureComponent {
     }
   }
 
+  contentInset() {
+    let { contentInset } = this.props;
+
+    return { ...TextField.contentInset, ...contentInset };
+  }
+
   inputHeight() {
     let { height: computedHeight } = this.state;
     let { multiline, fontSize, height = computedHeight } = this.props;
@@ -399,13 +411,18 @@ export default class TextField extends PureComponent {
   }
 
   inputContainerHeight() {
-    let { labelHeight, inputContainerPadding, multiline } = this.props;
+    let { labelFontSize, multiline } = this.props;
+    let contentInset = this.contentInset();
 
     if ('web' === Platform.OS && multiline) {
       return 'auto';
     }
 
-    return labelHeight + inputContainerPadding + this.inputHeight();
+    return contentInset.top
+      + labelFontSize
+      + contentInset.label
+      + this.inputHeight()
+      + contentInset.input;
   }
 
   inputProps() {
@@ -573,21 +590,20 @@ export default class TextField extends PureComponent {
       disabledLineWidth,
       fontSize,
       labelFontSize,
-      labelHeight,
-      labelPadding,
       labelTextStyle,
       tintColor,
       baseColor,
       errorColor,
       containerStyle,
-      inputContainerPadding,
       inputContainerStyle: inputContainerStyleOverrides,
     } = this.props;
 
     let restricted = this.isRestricted();
+    let contentInset = this.contentInset();
 
     let inputContainerStyle = {
-      paddingBottom: inputContainerPadding,
+      paddingTop: contentInset.top,
+      paddingBottom: contentInset.input,
       height: this.inputContainerHeight(),
     };
 
@@ -635,9 +651,7 @@ export default class TextField extends PureComponent {
 
       fontSize,
       activeFontSize: labelFontSize,
-
-      baseSize: labelHeight,
-      basePadding: labelPadding,
+      activeInset: contentInset.label,
 
       style: labelTextStyle,
     };

@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { Animated } from 'react-native';
 
+import styles from './styles';
+
 export default class Label extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
@@ -15,11 +17,9 @@ export default class Label extends PureComponent {
     disabled: PropTypes.bool,
     restricted: PropTypes.bool,
 
-    baseSize: PropTypes.number.isRequired,
-    basePadding: PropTypes.number.isRequired,
-
     fontSize: PropTypes.number.isRequired,
     activeFontSize: PropTypes.number.isRequired,
+    activeInset: PropTypes.number.isRequired,
 
     baseColor: PropTypes.string.isRequired,
     tintColor: PropTypes.string.isRequired,
@@ -47,11 +47,10 @@ export default class Label extends PureComponent {
       restricted,
       fontSize,
       activeFontSize,
+      activeInset,
       errorColor,
       baseColor,
       tintColor,
-      baseSize,
-      basePadding,
       style,
       focusAnimation,
       labelAnimation,
@@ -68,34 +67,32 @@ export default class Label extends PureComponent {
           outputRange: [errorColor, baseColor, tintColor],
         });
 
-    let top = labelAnimation.interpolate({
-      inputRange: [0, 1],
-      outputRange: [
-        baseSize + fontSize * 0.25,
-        baseSize - basePadding - activeFontSize,
-      ],
-    });
-
     let textStyle = {
-      includeFontPadding: false,
-      textAlignVertical: 'top',
-
-      fontSize: labelAnimation.interpolate({
-        inputRange: [0, 1],
-        outputRange: [fontSize, activeFontSize],
-      }),
-
+      fontSize,
       color,
     };
 
+    let offset = activeFontSize
+      + activeInset
+      + fontSize * 0.25;
+
     let containerStyle = {
-      position: 'absolute',
-      top,
+      transform: [{
+        scale: labelAnimation.interpolate({
+          inputRange: [0, 1],
+          outputRange: [1, activeFontSize / fontSize],
+        }),
+      }, {
+        translateY: labelAnimation.interpolate({
+          inputRange: [0, 1],
+          outputRange: [offset, 0],
+        }),
+      }],
     };
 
     return (
-      <Animated.View style={containerStyle}>
-        <Animated.Text style={[style, textStyle]} {...props}>
+      <Animated.View style={[styles.container, containerStyle]}>
+        <Animated.Text style={[styles.text, style, textStyle]} {...props}>
           {children}
         </Animated.Text>
       </Animated.View>

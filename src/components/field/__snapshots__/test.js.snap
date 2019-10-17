@@ -15,6 +15,7 @@ exports[`renders 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -44,8 +45,19 @@ exports[`renders 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 36,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+              Object {
+                "translateY": 20,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -56,6 +68,7 @@ exports[`renders 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -138,6 +151,7 @@ exports[`renders counter 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -167,8 +181,19 @@ exports[`renders counter 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 16,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 0.75,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -177,8 +202,9 @@ exports[`renders counter 1`] = `
           style={
             Object {
               "color": "rgba(0, 0, 0, 0.38)",
-              "fontSize": 12,
+              "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -284,6 +310,7 @@ exports[`renders default value 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -313,8 +340,19 @@ exports[`renders default value 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 16,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 0.75,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -323,8 +361,9 @@ exports[`renders default value 1`] = `
           style={
             Object {
               "color": "rgba(0, 0, 0, 0.38)",
-              "fontSize": 12,
+              "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -407,6 +446,7 @@ exports[`renders disabled value 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -436,8 +476,19 @@ exports[`renders disabled value 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 16,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 0.75,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -446,8 +497,9 @@ exports[`renders disabled value 1`] = `
           style={
             Object {
               "color": "rgba(0, 0, 0, .38)",
-              "fontSize": 12,
+              "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -530,6 +582,7 @@ exports[`renders error 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -559,8 +612,19 @@ exports[`renders error 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 36,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+              Object {
+                "translateY": 20,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -571,6 +635,7 @@ exports[`renders error 1`] = `
               "color": "rgba(213, 0, 0, 1)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -645,6 +710,7 @@ exports[`renders error 1`] = `
           "lineHeight": 16,
           "opacity": 1,
           "paddingVertical": 2,
+          "textAlign": "left",
         }
       }
     >
@@ -669,6 +735,7 @@ exports[`renders left accessory 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -707,8 +774,19 @@ exports[`renders left accessory 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 36,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+              Object {
+                "translateY": 20,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -719,6 +797,7 @@ exports[`renders left accessory 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -801,6 +880,7 @@ exports[`renders multiline value 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -830,8 +910,19 @@ exports[`renders multiline value 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 16,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 0.75,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -840,8 +931,9 @@ exports[`renders multiline value 1`] = `
           style={
             Object {
               "color": "rgba(0, 0, 0, 0.38)",
-              "fontSize": 12,
+              "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -930,6 +1022,7 @@ exports[`renders prefix 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -959,8 +1052,19 @@ exports[`renders prefix 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 16,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 0.75,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -969,8 +1073,9 @@ exports[`renders prefix 1`] = `
           style={
             Object {
               "color": "rgba(0, 0, 0, 0.38)",
-              "fontSize": 12,
+              "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -1078,6 +1183,7 @@ exports[`renders restriction 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -1107,8 +1213,19 @@ exports[`renders restriction 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 16,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 0.75,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -1117,8 +1234,9 @@ exports[`renders restriction 1`] = `
           style={
             Object {
               "color": "rgb(213, 0, 0)",
-              "fontSize": 12,
+              "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -1224,6 +1342,7 @@ exports[`renders right accessory 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -1253,8 +1372,19 @@ exports[`renders right accessory 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 36,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+              Object {
+                "translateY": 20,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -1265,6 +1395,7 @@ exports[`renders right accessory 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -1356,6 +1487,7 @@ exports[`renders suffix 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -1385,8 +1517,19 @@ exports[`renders suffix 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 16,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 0.75,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -1395,8 +1538,9 @@ exports[`renders suffix 1`] = `
           style={
             Object {
               "color": "rgba(0, 0, 0, 0.38)",
-              "fontSize": 12,
+              "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -1504,6 +1648,7 @@ exports[`renders title 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -1533,8 +1678,19 @@ exports[`renders title 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 36,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+              Object {
+                "translateY": 20,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -1545,6 +1701,7 @@ exports[`renders title 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
@@ -1619,6 +1776,7 @@ exports[`renders title 1`] = `
           "lineHeight": 16,
           "opacity": 1,
           "paddingVertical": 2,
+          "textAlign": "left",
         }
       }
     >
@@ -1643,6 +1801,7 @@ exports[`renders value 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingTop": 16,
       }
     }
   >
@@ -1672,8 +1831,19 @@ exports[`renders value 1`] = `
       <View
         style={
           Object {
+            "left": "-100%",
+            "paddingLeft": "50%",
             "position": "absolute",
-            "top": 16,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "scale": 0.75,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": "200%",
           }
         }
       >
@@ -1682,8 +1852,9 @@ exports[`renders value 1`] = `
           style={
             Object {
               "color": "rgba(0, 0, 0, 0.38)",
-              "fontSize": 12,
+              "fontSize": 16,
               "includeFontPadding": false,
+              "textAlign": "left",
               "textAlignVertical": "top",
             }
           }
