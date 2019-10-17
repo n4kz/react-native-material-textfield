@@ -82,11 +82,7 @@ class Example extends Component {
 :--------------------- |:------------------------------------------- | --------:|:------------------
  textColor             | Text input color                            |   String | rgba(0, 0, 0, .87)
  fontSize              | Text input font size                        |   Number | 16
- titleFontSize         | Text field title and error fontSize         |   Number | 12
  labelFontSize         | Text field label font size                  |   Number | 12
- labelHeight           | Text field label base height                |   Number | 32
- labelPadding          | Text field label base padding               |   Number | 4
- inputContainerPadding | Text field input container base padding     |   Number | 8
  lineWidth             | Text field underline width                  |   Number | 0.5
  activeLineWidth       | Text field active underline width           |   Number | 2
  disabledLineWidth     | Text field disabled underline width         |   Number | 1
@@ -105,6 +101,7 @@ class Example extends Component {
  disabled              | Text field availability                     |  Boolean | false
  editable              | Text field text can be edited               |  Boolean | true
  multiline             | Text filed multiline input                  |  Boolean | false
+ contentInset          | Layout configuration object                 |   Object | -
  inputContainerStyle   | Style for input container view              |   Object | -
  containerStyle        | Style for container view                    |   Object | -
  labelTextStyle        | Style for label inner Text component        |   Object | -
@@ -117,7 +114,8 @@ class Example extends Component {
  onFocus               | Focus callback                              | Function | -
  onBlur                | Blur callback                               | Function | -
 
-Other [TextInput][rn-textinput] properties will also work
+Other [TextInput][rn-textinput] properties will also work. Possible keys for
+`contentInset` object are `top`, `label` and `input`.
 
 ## Methods
 
