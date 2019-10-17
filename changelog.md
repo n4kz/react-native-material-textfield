@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.15.0] - 2019-10-17
+
 ### Added
 
 - `contentInset` prop
@@ -16,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactored helper layout for consistent line height
 - Improved RTL support for helper
 - Improved label animation
+- `label` prop was made optional
 
 ### Removed
 
@@ -109,7 +112,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `inputContainerStyle` prop
 - `disabledLineType` prop
 
-[Unreleased]: https://github.com/n4kz/react-native-material-textfield/compare/0.14.1...HEAD
+[Unreleased]: https://github.com/n4kz/react-native-material-textfield/compare/0.15.0...HEAD
+[0.15.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.14.1...0.15.0
 [0.14.1]: https://github.com/n4kz/react-native-material-textfield/compare/0.14.0...0.14.1
 [0.14.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.13.0...0.14.0
 [0.13.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.12.0...0.13.0
