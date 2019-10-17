@@ -7,5 +7,6 @@ export default StyleSheet.create({
     lineHeight: 16,
     backgroundColor: 'transparent',
     paddingVertical: 2,
+    textAlign: 'left',
   },
 });
