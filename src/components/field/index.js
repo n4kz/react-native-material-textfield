@@ -73,10 +73,12 @@ export default class TextField extends PureComponent {
     fontSize: PropTypes.number,
     labelFontSize: PropTypes.number,
 
-    contentInset: PropTypes.exact({
+    contentInset: PropTypes.shape({
       top: PropTypes.number,
       label: PropTypes.number,
       input: PropTypes.number,
+      left: PropTypes.number,
+      right: PropTypes.number,
     }),
 
     labelTextStyle: Text.propTypes.style,
@@ -120,6 +122,8 @@ export default class TextField extends PureComponent {
     top: 16,
     label: 4,
     input: 8,
+    left: 0,
+    right: 0,
   };
 
   static getDerivedStateFromProps({ error }, state) {
@@ -496,6 +500,12 @@ export default class TextField extends PureComponent {
     } = this.props;
 
     let { length: count } = this.value();
+    let contentInset = this.contentInset();
+
+    let containerStyle =  {
+      paddingLeft: contentInset.left,
+      paddingRight: contentInset.right,
+    };
 
     let styleProps = {
       style,
@@ -518,7 +528,7 @@ export default class TextField extends PureComponent {
     };
 
     return (
-      <View style={styles.helperContainer}>
+      <View style={[styles.helperContainer, containerStyle]}>
         <Helper {...helperProps} />
         <Counter {...counterProps} />
       </View>
@@ -604,7 +614,9 @@ export default class TextField extends PureComponent {
 
     let inputContainerStyle = {
       paddingTop: contentInset.top,
+      paddingRight: contentInset.right,
       paddingBottom: contentInset.input,
+      paddingLeft: contentInset.left,
       height: this.inputContainerHeight(),
     };
 

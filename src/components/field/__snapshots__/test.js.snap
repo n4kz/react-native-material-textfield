@@ -15,6 +15,8 @@ exports[`renders 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -125,12 +127,18 @@ exports[`renders 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
@@ -151,6 +159,8 @@ exports[`renders counter 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -261,12 +271,18 @@ exports[`renders counter 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   >
     <Text
@@ -310,6 +326,8 @@ exports[`renders default value 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -420,12 +438,18 @@ exports[`renders default value 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
@@ -446,6 +470,8 @@ exports[`renders disabled value 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -556,12 +582,18 @@ exports[`renders disabled value 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
@@ -582,6 +614,8 @@ exports[`renders error 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -692,12 +726,18 @@ exports[`renders error 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   >
     <Text
@@ -735,6 +775,8 @@ exports[`renders left accessory 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -854,12 +896,18 @@ exports[`renders left accessory 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
@@ -880,6 +928,8 @@ exports[`renders multiline value 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -996,12 +1046,18 @@ exports[`renders multiline value 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
@@ -1022,6 +1078,8 @@ exports[`renders prefix 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -1157,12 +1215,18 @@ exports[`renders prefix 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
@@ -1183,6 +1247,8 @@ exports[`renders restriction 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -1293,12 +1359,18 @@ exports[`renders restriction 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   >
     <Text
@@ -1342,6 +1414,8 @@ exports[`renders right accessory 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -1461,12 +1535,18 @@ exports[`renders right accessory 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
@@ -1487,6 +1567,8 @@ exports[`renders suffix 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -1622,12 +1704,18 @@ exports[`renders suffix 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
@@ -1648,6 +1736,8 @@ exports[`renders title 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -1758,12 +1848,18 @@ exports[`renders title 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   >
     <Text
@@ -1801,6 +1897,8 @@ exports[`renders value 1`] = `
         "height": 64,
         "overflow": "hidden",
         "paddingBottom": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
         "paddingTop": 16,
       }
     }
@@ -1911,12 +2009,18 @@ exports[`renders value 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-        "minHeight": 8,
-      }
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "minHeight": 8,
+        },
+        Object {
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        },
+      ]
     }
   />
 </View>
