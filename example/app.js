@@ -12,16 +12,22 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 let styles = {
   scroll: {
-    backgroundColor: '#E8EAF6',
+    backgroundColor: 'transparent',
   },
 
   container: {
     margin: 8,
     marginTop: Platform.select({ ios: 8, android: 32 }),
+    flex: 1,
   },
 
   contentContainer: {
     padding: 8,
+  },
+
+  buttonContainer: {
+    paddingTop: 8,
+    margin: 8,
   },
 
   safeContainer: {
@@ -253,7 +259,7 @@ export default function init() {
               />
             </View>
 
-            <View style={styles.container}>
+            <View style={styles.buttonContainer}>
               <RaisedTextButton
                 onPress={this.onSubmit}
                 title='submit'
