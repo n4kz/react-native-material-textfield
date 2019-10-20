@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import { View, Animated } from 'react-native';
 
 import styles from './styles';
 
@@ -118,7 +118,9 @@ export default class Line extends PureComponent {
     };
 
     return (
-      <Animated.View style={[styles.line, lineStyle]} pointerEvents='none' />
+      <View style={styles.container} pointerEvents='none'>
+        <Animated.View style={[styles.line, lineStyle]} />
+      </View>
     );
   }
 }

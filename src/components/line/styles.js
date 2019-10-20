@@ -9,4 +9,10 @@ export default StyleSheet.create({
       android: { borderRadius: Number.EPSILON },
     }),
   },
+
+  container: {
+    ...StyleSheet.absoluteFillObject,
+
+    overflow: 'hidden',
+  },
 });

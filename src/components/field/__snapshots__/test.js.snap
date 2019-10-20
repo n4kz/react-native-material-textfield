@@ -10,10 +10,8 @@ exports[`renders 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -25,17 +23,30 @@ exports[`renders 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -154,10 +165,8 @@ exports[`renders counter 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -169,17 +178,30 @@ exports[`renders counter 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -321,10 +343,8 @@ exports[`renders default value 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -336,17 +356,30 @@ exports[`renders default value 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -465,10 +498,8 @@ exports[`renders disabled value 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -480,17 +511,30 @@ exports[`renders disabled value 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, .38)",
-          "borderStyle": "dotted",
-          "borderWidth": 1,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, .38)",
+            "borderStyle": "dotted",
+            "borderWidth": 1,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -609,10 +653,8 @@ exports[`renders error 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -624,17 +666,30 @@ exports[`renders error 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(213, 0, 0, 1)",
-          "borderStyle": "solid",
-          "borderWidth": 2,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(213, 0, 0, 1)",
+            "borderStyle": "solid",
+            "borderWidth": 2,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -770,10 +825,8 @@ exports[`renders left accessory 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -785,17 +838,30 @@ exports[`renders left accessory 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -923,10 +989,8 @@ exports[`renders multiline value 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -938,17 +1002,30 @@ exports[`renders multiline value 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -1073,10 +1150,8 @@ exports[`renders prefix 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -1088,17 +1163,30 @@ exports[`renders prefix 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -1242,10 +1330,8 @@ exports[`renders restriction 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -1257,17 +1343,30 @@ exports[`renders restriction 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgb(213, 0, 0)",
-          "borderStyle": "solid",
-          "borderWidth": 2,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgb(213, 0, 0)",
+            "borderStyle": "solid",
+            "borderWidth": 2,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -1409,10 +1508,8 @@ exports[`renders right accessory 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -1424,17 +1521,30 @@ exports[`renders right accessory 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -1562,10 +1672,8 @@ exports[`renders suffix 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -1577,17 +1685,30 @@ exports[`renders suffix 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -1731,10 +1852,8 @@ exports[`renders title 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -1746,17 +1865,30 @@ exports[`renders title 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -1892,10 +2024,8 @@ exports[`renders value 1`] = `
     style={
       Object {
         "alignItems": "flex-end",
-        "backgroundColor": "transparent",
         "flexDirection": "row",
         "height": 64,
-        "overflow": "hidden",
         "paddingBottom": 8,
         "paddingLeft": 0,
         "paddingRight": 0,
@@ -1907,17 +2037,30 @@ exports[`renders value 1`] = `
       pointerEvents="none"
       style={
         Object {
-          "borderColor": "rgba(0, 0, 0, 0.38)",
-          "borderStyle": "solid",
-          "borderWidth": 0.5,
           "bottom": 0,
-          "left": -3,
+          "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
-          "right": -3,
-          "top": -3,
+          "right": 0,
+          "top": 0,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.38)",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "bottom": 0,
+            "left": -3,
+            "position": "absolute",
+            "right": -3,
+            "top": -3,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {

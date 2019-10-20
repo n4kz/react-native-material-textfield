@@ -4,8 +4,6 @@ export default StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'flex-end',
-    backgroundColor: 'transparent',
-    overflow: 'hidden',
   },
 
   input: {
