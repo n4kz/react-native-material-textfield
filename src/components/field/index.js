@@ -118,6 +118,8 @@ export default class TextField extends PureComponent {
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
   };
 
+  static inputContainerStyle = styles.inputContainer;
+
   static contentInset = {
     top: 16,
     label: 4,
@@ -632,7 +634,7 @@ export default class TextField extends PureComponent {
 
     let inputContainerProps = {
       style: [
-        styles.inputContainer,
+        this.constructor.inputContainerStyle,
         inputContainerStyle,
         inputContainerStyleOverrides,
       ],
