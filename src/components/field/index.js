@@ -402,8 +402,9 @@ export default class TextField extends PureComponent {
 
   contentInset() {
     let { contentInset } = this.props;
+    let { contentInset: defaultInset } = this.constructor;
 
-    return { ...TextField.contentInset, ...contentInset };
+    return { ...defaultInset, ...contentInset };
   }
 
   inputHeight() {
