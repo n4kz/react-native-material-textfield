@@ -81,6 +81,8 @@ export default class TextField extends PureComponent {
       right: PropTypes.number,
     }),
 
+    labelOffset: Label.propTypes.offset,
+
     labelTextStyle: Text.propTypes.style,
     titleTextStyle: Text.propTypes.style,
     affixTextStyle: Text.propTypes.style,
@@ -128,6 +130,13 @@ export default class TextField extends PureComponent {
     right: 0,
   };
 
+  static labelOffset = {
+    x0: 0,
+    y0: 0,
+    x1: 0,
+    y1: 0,
+  };
+
   static getDerivedStateFromProps({ error }, state) {
     /* Keep last received error in state */
     if (error && error !== state.error) {
@@ -148,6 +157,9 @@ export default class TextField extends PureComponent {
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
     this.onFocusAnimationEnd = this.onFocusAnimationEnd.bind(this);
 
+    this.createGetter('contentInset');
+    this.createGetter('labelOffset');
+
     this.inputRef = React.createRef();
     this.mounted = false;
     this.focused = false;
@@ -167,6 +179,15 @@ export default class TextField extends PureComponent {
       receivedFocus: false,
 
       height: fontSize * 1.5,
+    };
+  }
+
+  createGetter(name) {
+    this[name] = () => {
+      let { [name]: value } = this.props;
+      let { [name]: defaultValue } = this.constructor;
+
+      return { ...defaultValue, ...value };
     };
   }
 
@@ -400,13 +421,6 @@ export default class TextField extends PureComponent {
     if (this.mounted && !error && retainedError) {
       this.setState({ error: null });
     }
-  }
-
-  contentInset() {
-    let { contentInset } = this.props;
-    let { contentInset: defaultInset } = this.constructor;
-
-    return { ...defaultInset, ...contentInset };
   }
 
   inputHeight() {
@@ -668,6 +682,8 @@ export default class TextField extends PureComponent {
       fontSize,
       activeFontSize: labelFontSize,
       activeInset: contentInset.label,
+
+      offset: this.labelOffset(),
 
       style: labelTextStyle,
       label,

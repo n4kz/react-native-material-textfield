@@ -15,6 +15,9 @@ exports[`renders active errored label 1`] = `
         Object {
           "translateY": 0,
         },
+        Object {
+          "translateX": 0,
+        },
       ],
       "width": "200%",
     }
@@ -52,6 +55,9 @@ exports[`renders active focused label 1`] = `
         Object {
           "translateY": 0,
         },
+        Object {
+          "translateX": 0,
+        },
       ],
       "width": "200%",
     }
@@ -88,6 +94,9 @@ exports[`renders active label 1`] = `
         },
         Object {
           "translateY": 0,
+        },
+        Object {
+          "translateX": 0,
         },
       ],
       "width": "200%",
@@ -128,6 +137,9 @@ exports[`renders errored label 1`] = `
         Object {
           "translateY": 20,
         },
+        Object {
+          "translateX": 0,
+        },
       ],
       "width": "200%",
     }
@@ -164,6 +176,9 @@ exports[`renders label 1`] = `
         },
         Object {
           "translateY": 20,
+        },
+        Object {
+          "translateX": 0,
         },
       ],
       "width": "200%",
@@ -202,6 +217,9 @@ exports[`renders restricted label 1`] = `
         Object {
           "translateY": 20,
         },
+        Object {
+          "translateX": 0,
+        },
       ],
       "width": "200%",
     }
@@ -238,6 +256,9 @@ exports[`renders styled label 1`] = `
         },
         Object {
           "translateY": 20,
+        },
+        Object {
+          "translateX": 0,
         },
       ],
       "width": "200%",

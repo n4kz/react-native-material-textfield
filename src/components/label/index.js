@@ -33,6 +33,13 @@ export default class Label extends PureComponent {
       .instanceOf(Animated.Value)
       .isRequired,
 
+    offset: PropTypes.shape({
+      x0: PropTypes.number,
+      y0: PropTypes.number,
+      x1: PropTypes.number,
+      y1: PropTypes.number,
+    }),
+
     style: Animated.Text.propTypes.style,
     label: PropTypes.string,
   };
@@ -40,6 +47,7 @@ export default class Label extends PureComponent {
   render() {
     let {
       label,
+      offset,
       disabled,
       restricted,
       fontSize,
@@ -72,9 +80,11 @@ export default class Label extends PureComponent {
       color,
     };
 
-    let offset = activeFontSize
-      + activeInset
-      + fontSize * 0.25;
+    let { x0, y0, x1, y1 } = offset;
+
+    y0 += activeFontSize;
+    y0 += activeInset;
+    y0 += fontSize * 0.25;
 
     let containerStyle = {
       transform: [{
@@ -85,7 +95,12 @@ export default class Label extends PureComponent {
       }, {
         translateY: labelAnimation.interpolate({
           inputRange: [0, 1],
-          outputRange: [offset, 0],
+          outputRange: [y0, y1],
+        }),
+      }, {
+        translateX: labelAnimation.interpolate({
+          inputRange: [0, 1],
+          outputRange: [x0, x1],
         }),
       }],
     };

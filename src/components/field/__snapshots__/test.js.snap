@@ -69,6 +69,9 @@ exports[`renders 1`] = `
               Object {
                 "translateY": 20,
               },
+              Object {
+                "translateX": 0,
+              },
             ],
             "width": "200%",
           }
@@ -223,6 +226,9 @@ exports[`renders counter 1`] = `
               },
               Object {
                 "translateY": 0,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -402,6 +408,9 @@ exports[`renders default value 1`] = `
               Object {
                 "translateY": 0,
               },
+              Object {
+                "translateX": 0,
+              },
             ],
             "width": "200%",
           }
@@ -557,6 +566,9 @@ exports[`renders disabled value 1`] = `
               Object {
                 "translateY": 0,
               },
+              Object {
+                "translateX": 0,
+              },
             ],
             "width": "200%",
           }
@@ -711,6 +723,9 @@ exports[`renders error 1`] = `
               },
               Object {
                 "translateY": 20,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -893,6 +908,9 @@ exports[`renders left accessory 1`] = `
               Object {
                 "translateY": 20,
               },
+              Object {
+                "translateX": 0,
+              },
             ],
             "width": "200%",
           }
@@ -1047,6 +1065,9 @@ exports[`renders multiline value 1`] = `
               },
               Object {
                 "translateY": 0,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -1208,6 +1229,9 @@ exports[`renders prefix 1`] = `
               },
               Object {
                 "translateY": 0,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -1389,6 +1413,9 @@ exports[`renders restriction 1`] = `
               Object {
                 "translateY": 0,
               },
+              Object {
+                "translateX": 0,
+              },
             ],
             "width": "200%",
           }
@@ -1567,6 +1594,9 @@ exports[`renders right accessory 1`] = `
               Object {
                 "translateY": 20,
               },
+              Object {
+                "translateX": 0,
+              },
             ],
             "width": "200%",
           }
@@ -1730,6 +1760,9 @@ exports[`renders suffix 1`] = `
               },
               Object {
                 "translateY": 0,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -1911,6 +1944,9 @@ exports[`renders title 1`] = `
               Object {
                 "translateY": 20,
               },
+              Object {
+                "translateX": 0,
+              },
             ],
             "width": "200%",
           }
@@ -2082,6 +2118,9 @@ exports[`renders value 1`] = `
               },
               Object {
                 "translateY": 0,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",

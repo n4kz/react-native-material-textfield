@@ -10,6 +10,13 @@ export default class FilledTextField extends TextField {
     right: 12,
   };
 
+  static labelOffset = {
+    ...TextField.labelOffset,
+
+    y0: -10,
+    y1: -4,
+  };
+
   static inputContainerStyle = [
     TextField.inputContainerStyle,
     styles.inputContainer,

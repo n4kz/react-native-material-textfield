@@ -16,6 +16,8 @@ const props = {
   tintColor: 'blue',
   errorColor: 'red',
 
+  offset: { x0: 0, y0: 0, x1: 0, y1: 0 },
+
   focusAnimation: new Animated.Value(0),
   labelAnimation: new Animated.Value(0),
   label: 'test',

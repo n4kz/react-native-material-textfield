@@ -70,7 +70,10 @@ exports[`renders 1`] = `
                 "scale": 1,
               },
               Object {
-                "translateY": 20,
+                "translateY": 10,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -237,7 +240,10 @@ exports[`renders accessory 1`] = `
                 "scale": 1,
               },
               Object {
-                "translateY": 20,
+                "translateY": 10,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -395,7 +401,10 @@ exports[`renders counter 1`] = `
                 "scale": 0.75,
               },
               Object {
-                "translateY": 0,
+                "translateY": -4,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -576,7 +585,10 @@ exports[`renders disabled value 1`] = `
                 "scale": 0.75,
               },
               Object {
-                "translateY": 0,
+                "translateY": -4,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -734,7 +746,10 @@ exports[`renders title 1`] = `
                 "scale": 1,
               },
               Object {
-                "translateY": 20,
+                "translateY": 10,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
@@ -909,7 +924,10 @@ exports[`renders value 1`] = `
                 "scale": 0.75,
               },
               Object {
-                "translateY": 0,
+                "translateY": -4,
+              },
+              Object {
+                "translateX": 0,
               },
             ],
             "width": "200%",
