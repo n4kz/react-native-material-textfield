@@ -14,7 +14,7 @@ export default class FilledTextField extends TextField {
     ...TextField.labelOffset,
 
     y0: -10,
-    y1: -4,
+    y1: -2,
   };
 
   static inputContainerStyle = [

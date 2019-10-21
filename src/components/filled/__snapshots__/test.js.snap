@@ -401,7 +401,7 @@ exports[`renders counter 1`] = `
                 "scale": 0.75,
               },
               Object {
-                "translateY": -4,
+                "translateY": -2,
               },
               Object {
                 "translateX": 0,
@@ -585,7 +585,7 @@ exports[`renders disabled value 1`] = `
                 "scale": 0.75,
               },
               Object {
-                "translateY": -4,
+                "translateY": -2,
               },
               Object {
                 "translateX": 0,
@@ -924,7 +924,7 @@ exports[`renders value 1`] = `
                 "scale": 0.75,
               },
               Object {
-                "translateY": -4,
+                "translateY": -2,
               },
               Object {
                 "translateX": 0,
