@@ -16,7 +16,7 @@ import Affix from '../affix';
 import Helper from '../helper';
 import Counter from '../counter';
 
-import styles from './styles.js';
+import styles from './styles';
 
 function startAnimation(animation, options, callback) {
   Animated

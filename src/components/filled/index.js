@@ -1,5 +1,5 @@
 import TextField from '../field';
-import styles from './styles.js';
+import styles from './styles';
 
 export default class FilledTextField extends TextField {
   static contentInset = {
