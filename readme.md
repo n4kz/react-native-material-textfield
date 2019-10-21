@@ -102,6 +102,7 @@ class Example extends Component {
  editable              | Text field text can be edited               |  Boolean | true
  multiline             | Text filed multiline input                  |  Boolean | false
  contentInset          | Layout configuration object                 |   Object | [{...}](#content-inset)
+ labelOffset           | Label position adjustment                   |   Object | [{...}](#label-offset)
  inputContainerStyle   | Style for input container view              |   Object | -
  containerStyle        | Style for container view                    |   Object | -
  labelTextStyle        | Style for label inner Text component        |   Object | -
@@ -125,6 +126,15 @@ Other [TextInput][rn-textinput] properties will also work.
  right | Inset on the right side           |      0 |     12
  label | Space between label and TextInput |      4 |      4
  input | Space between line and TextInput  |      8 |      8
+
+### Label Offset
+
+ name | description                          | Normal | Filled
+:---- |:------------------------------------ | ------:| ------:
+ x0   | Horizontal offset for inactive state |      0 |      0
+ y0   | Vertical offset for inactive state   |      0 |    -10
+ x1   | Horizontal offset for active state   |      0 |      0
+ y1   | Vertical offset for active state     |      0 |     -2
 
 ## Methods
 
