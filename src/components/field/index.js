@@ -63,6 +63,8 @@ export default class TextField extends PureComponent {
     disabledLineType: 'dotted',
 
     disabled: false,
+
+    lineComponent: Line,
   };
 
   static propTypes = {
@@ -115,6 +117,8 @@ export default class TextField extends PureComponent {
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,
+
+    lineComponent: PropTypes.func,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
@@ -623,6 +627,7 @@ export default class TextField extends PureComponent {
       baseColor,
       errorColor,
       containerStyle,
+      lineComponent: Line,
       inputContainerStyle: inputContainerStyleOverrides,
     } = this.props;
 
