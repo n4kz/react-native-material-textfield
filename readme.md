@@ -101,7 +101,7 @@ class Example extends Component {
  disabled              | Text field availability                     |  Boolean | false
  editable              | Text field text can be edited               |  Boolean | true
  multiline             | Text filed multiline input                  |  Boolean | false
- contentInset          | Layout configuration object                 |   Object | -
+ contentInset          | Layout configuration object                 |   Object | [{...}](#content-inset)
  inputContainerStyle   | Style for input container view              |   Object | -
  containerStyle        | Style for container view                    |   Object | -
  labelTextStyle        | Style for label inner Text component        |   Object | -
@@ -114,8 +114,17 @@ class Example extends Component {
  onFocus               | Focus callback                              | Function | -
  onBlur                | Blur callback                               | Function | -
 
-Other [TextInput][rn-textinput] properties will also work. Possible keys for
-`contentInset` object are `top`, `label` and `input`.
+Other [TextInput][rn-textinput] properties will also work.
+
+### Content Inset
+
+ name  | description                       | Normal | Filled
+:----- |:--------------------------------- | ------:| ------:
+ top   | Inset on the top side             |     16 |      8
+ left  | Inset on the left side            |      0 |     12
+ right | Inset on the right side           |      0 |     12
+ label | Space between label and TextInput |      4 |      4
+ input | Space between line and TextInput  |      8 |      8
 
 ## Methods
 
