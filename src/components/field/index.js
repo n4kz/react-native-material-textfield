@@ -452,20 +452,19 @@ export default class TextField extends PureComponent {
   }
 
   inputProps() {
-    return Object.keys(TextInput.propTypes)
-      .reduce((store, key) => {
-        switch (key) {
-          case 'defaultValue':
-            break;
+    let store = {};
 
-          default:
-            if (key in this.props) {
-              store[key] = this.props[key];
-            }
-        }
+    for (let key in TextInput.propTypes) {
+      if ('defaultValue' === key) {
+        continue;
+      }
 
-        return store;
-      }, {});
+      if (key in this.props) {
+        store[key] = this.props[key];
+      }
+    }
+
+    return store;
   }
 
   renderAccessory(prop) {
