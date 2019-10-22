@@ -84,6 +84,7 @@ exports[`renders 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -242,6 +243,7 @@ exports[`renders counter 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -423,6 +425,7 @@ exports[`renders default value 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -581,6 +584,7 @@ exports[`renders disabled value 1`] = `
               "color": "rgba(0, 0, 0, .38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -739,6 +743,7 @@ exports[`renders error 1`] = `
               "color": "rgba(213, 0, 0, 1)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -923,6 +928,7 @@ exports[`renders left accessory 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -1081,6 +1087,7 @@ exports[`renders multiline value 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -1245,6 +1252,7 @@ exports[`renders prefix 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -1428,6 +1436,7 @@ exports[`renders restriction 1`] = `
               "color": "rgb(213, 0, 0)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -1609,6 +1618,7 @@ exports[`renders right accessory 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -1776,6 +1786,7 @@ exports[`renders suffix 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -1959,6 +1970,7 @@ exports[`renders title 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
@@ -2134,6 +2146,7 @@ exports[`renders value 1`] = `
               "color": "rgba(0, 0, 0, 0.38)",
               "fontSize": 16,
               "includeFontPadding": false,
+              "lineHeight": 16,
               "textAlign": "left",
               "textAlignVertical": "top",
             }
