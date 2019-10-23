@@ -58,6 +58,8 @@ export default class TextField extends PureComponent {
     lineWidth: StyleSheet.hairlineWidth,
     activeLineWidth: 2,
     disabledLineWidth: 1,
+    
+    Component: TextInput,
 
     lineType: 'solid',
     disabledLineType: 'dotted',
@@ -564,6 +566,7 @@ export default class TextField extends PureComponent {
       baseColor,
       tintColor,
       textColor,
+      Component,
       style: inputStyleOverrides,
     } = this.props;
 
@@ -590,7 +593,7 @@ export default class TextField extends PureComponent {
     }
 
     return (
-      <TextInput
+      <Component
         selectionColor={tintColor}
 
         {...props}
