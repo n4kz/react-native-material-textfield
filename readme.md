@@ -28,6 +28,7 @@ Material texfield with consistent behaviour on iOS and Android
 * Animated state transitions (normal, focused and errored)
 * Customizable font size, colors and animation duration
 * Disabled state (with dotted underline)
+* Outlined and filled fields
 * Masked input support
 * Multiline text input
 * Character counter
@@ -47,7 +48,11 @@ npm install --save react-native-material-textfield
 
 ```javascript
 import React, { Component } from 'react';
-import { TextField } from 'react-native-material-textfield';
+import {
+  TextField,
+  FilledTextField,
+  OutlinedTextField,
+} from 'react-native-material-textfield';
 
 class Example extends Component {
   fieldRef = React.createRef();
@@ -64,7 +69,7 @@ class Example extends Component {
 
   render() {
     return (
-      <TextField
+      <OutlinedTextField
         label='Phone number'
         keyboardType='phone-pad'
         formatText={this.formatText}
