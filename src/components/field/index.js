@@ -463,6 +463,33 @@ export default class TextField extends PureComponent {
     return store;
   }
 
+  inputStyle() {
+    let { fontSize, baseColor, textColor, disabled, multiline } = this.props;
+
+    let color = disabled || this.isDefaultVisible()?
+      baseColor:
+      textColor;
+
+    let style = {
+      fontSize,
+      color,
+
+      height: this.inputHeight(),
+    };
+
+    if (multiline) {
+      let lineHeight = fontSize * 1.5;
+      let offset = 'ios' === Platform.OS? 2 : 0;
+
+      style.height += lineHeight;
+      style.transform = [{
+        translateY: lineHeight + offset,
+      }];
+    }
+
+    return style;
+  }
+
   renderLabel(props) {
     let offset = this.labelOffset();
 
@@ -577,35 +604,12 @@ export default class TextField extends PureComponent {
     let {
       disabled,
       editable,
-      multiline,
-      fontSize,
-      baseColor,
       tintColor,
-      textColor,
       style: inputStyleOverrides,
     } = this.props;
 
     let props = this.inputProps();
-    let defaultVisible = this.isDefaultVisible();
-
-    let inputStyle = {
-      fontSize,
-
-      color: (disabled || defaultVisible)?
-        baseColor:
-        textColor,
-
-      height: this.inputHeight(),
-    };
-
-    if (multiline) {
-      let lineHeight = fontSize * 1.5;
-
-      inputStyle.height += lineHeight;
-      inputStyle.transform = [{
-        translateY: lineHeight + ('ios' === Platform.OS? 2 : 0),
-      }];
-    }
+    let inputStyle = this.inputStyle();
 
     return (
       <TextInput
