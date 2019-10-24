@@ -42,8 +42,4 @@ export default StyleSheet.create({
   flex: {
     flex: 1,
   },
-
-  accessory: {
-    top: 2,
-  },
 });

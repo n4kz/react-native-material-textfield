@@ -212,15 +212,7 @@ exports[`renders accessory 1`] = `
         }
       />
     </View>
-    <View
-      style={
-        Object {
-          "top": 2,
-        }
-      }
-    >
-      <Image />
-    </View>
+    <Image />
     <View
       style={
         Object {
