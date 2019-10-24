@@ -124,22 +124,22 @@ Other [TextInput][rn-textinput] properties will also work.
 
 ### Content Inset
 
- name  | description                       | Normal | Filled
-:----- |:--------------------------------- | ------:| ------:
- top   | Inset on the top side             |     16 |      8
- left  | Inset on the left side            |      0 |     12
- right | Inset on the right side           |      0 |     12
- label | Space between label and TextInput |      4 |      4
- input | Space between line and TextInput  |      8 |      8
+ name  | description                       | Normal | Filled | Outlined
+:----- |:--------------------------------- | ------:| ------:| --------:
+ top   | Inset on the top side             |     16 |      8 |        0
+ left  | Inset on the left side            |      0 |     12 |       12
+ right | Inset on the right side           |      0 |     12 |       12
+ label | Space between label and TextInput |      4 |      4 |        4
+ input | Space between line and TextInput  |      8 |      8 |       16
 
 ### Label Offset
 
- name | description                          | Normal | Filled
-:---- |:------------------------------------ | ------:| ------:
- x0   | Horizontal offset for inactive state |      0 |      0
- y0   | Vertical offset for inactive state   |      0 |    -10
- x1   | Horizontal offset for active state   |      0 |      0
- y1   | Vertical offset for active state     |      0 |     -2
+ name | description                          | Normal | Filled | Outlined
+:---- |:------------------------------------ | ------:| ------:| --------:
+ x0   | Horizontal offset for inactive state |      0 |      0 |        0
+ y0   | Vertical offset for inactive state   |      0 |    -10 |        0 
+ x1   | Horizontal offset for active state   |      0 |      0 |        0
+ y1   | Vertical offset for active state     |      0 |     -2 |      -10
 
 ## Methods
 
