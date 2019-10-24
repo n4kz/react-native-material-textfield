@@ -463,7 +463,7 @@ export default class TextField extends PureComponent {
     return store;
   }
 
-  renderLabel({ contentInset, ...props }) {
+  renderLabel(props) {
     let offset = this.labelOffset();
 
     let {
@@ -478,7 +478,6 @@ export default class TextField extends PureComponent {
         {...props}
         fontSize={fontSize}
         activeFontSize={labelFontSize}
-        activeInset={contentInset.label}
         offset={offset}
         label={label}
         style={labelTextStyle}

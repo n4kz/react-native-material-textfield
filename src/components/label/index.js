@@ -19,7 +19,6 @@ export default class Label extends PureComponent {
 
     fontSize: PropTypes.number.isRequired,
     activeFontSize: PropTypes.number.isRequired,
-    activeInset: PropTypes.number.isRequired,
 
     baseColor: PropTypes.string.isRequired,
     tintColor: PropTypes.string.isRequired,
@@ -32,6 +31,10 @@ export default class Label extends PureComponent {
     labelAnimation: PropTypes
       .instanceOf(Animated.Value)
       .isRequired,
+
+    contentInset: PropTypes.shape({
+      label: PropTypes.number,
+    }),
 
     offset: PropTypes.shape({
       x0: PropTypes.number,
@@ -52,7 +55,7 @@ export default class Label extends PureComponent {
       restricted,
       fontSize,
       activeFontSize,
-      activeInset,
+      contentInset,
       errorColor,
       baseColor,
       tintColor,
@@ -84,7 +87,7 @@ export default class Label extends PureComponent {
     let { x0, y0, x1, y1 } = offset;
 
     y0 += activeFontSize;
-    y0 += activeInset;
+    y0 += contentInset.label;
     y0 += fontSize * 0.25;
 
     let containerStyle = {

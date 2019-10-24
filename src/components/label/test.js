@@ -10,7 +10,8 @@ import Label from '.';
 const props = {
   fontSize: 16,
   activeFontSize: 12,
-  activeInset: 4,
+
+  contentInset: { label: 4 },
 
   baseColor: 'black',
   tintColor: 'blue',
