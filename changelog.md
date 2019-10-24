@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `left` and `right` keys for `contentInset` prop
 - `labelOffset` prop
 - `FilledTextField` component
+- `OutlinedTextField` component
+
+### Changed
+
+- Accessory view positioning
 
 ## [0.15.0] - 2019-10-17
 
