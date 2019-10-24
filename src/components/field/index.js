@@ -63,8 +63,6 @@ export default class TextField extends PureComponent {
     disabledLineType: 'dotted',
 
     disabled: false,
-
-    lineComponent: Line,
   };
 
   static propTypes = {
@@ -117,8 +115,6 @@ export default class TextField extends PureComponent {
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,
-
-    lineComponent: PropTypes.func,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
@@ -467,6 +463,35 @@ export default class TextField extends PureComponent {
     return store;
   }
 
+  renderLabel({ contentInset, ...props }) {
+    let offset = this.labelOffset();
+
+    let {
+      label,
+      fontSize,
+      labelFontSize,
+      labelTextStyle,
+    } = this.props;
+
+    return (
+      <Label
+        {...props}
+        fontSize={fontSize}
+        activeFontSize={labelFontSize}
+        activeInset={contentInset.label}
+        offset={offset}
+        label={label}
+        style={labelTextStyle}
+      />
+    );
+  }
+
+  renderLine(props) {
+    return (
+      <Line {...props} />
+    );
+  }
+
   renderAccessory(prop) {
     let { [prop]: renderAccessory } = this.props;
 
@@ -611,7 +636,6 @@ export default class TextField extends PureComponent {
   render() {
     let { labelAnimation, focusAnimation } = this.state;
     let {
-      label,
       editable,
       disabled,
       lineType,
@@ -619,14 +643,10 @@ export default class TextField extends PureComponent {
       lineWidth,
       activeLineWidth,
       disabledLineWidth,
-      fontSize,
-      labelFontSize,
-      labelTextStyle,
       tintColor,
       baseColor,
       errorColor,
       containerStyle,
-      lineComponent: Line,
       inputContainerStyle: inputContainerStyleOverrides,
     } = this.props;
 
@@ -665,6 +685,8 @@ export default class TextField extends PureComponent {
       tintColor,
       errorColor,
 
+      contentInset,
+
       focusAnimation,
       labelAnimation,
     };
@@ -680,28 +702,14 @@ export default class TextField extends PureComponent {
       disabledLineType,
     };
 
-    let labelProps = {
-      ...styleProps,
-
-      fontSize,
-      activeFontSize: labelFontSize,
-      activeInset: contentInset.label,
-
-      offset: this.labelOffset(),
-
-      style: labelTextStyle,
-      label,
-    };
-
     return (
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
-          <Line {...lineProps} />
-
+          {this.renderLine(lineProps)}
           {this.renderAccessory('renderLeftAccessory')}
 
           <View style={styles.stack}>
-            <Label {...labelProps} />
+            {this.renderLabel(styleProps)}
 
             <View style={styles.row}>
               {this.renderAffix('prefix')}
