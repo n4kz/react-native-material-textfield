@@ -79,6 +79,7 @@ export default class TextField extends PureComponent {
       input: PropTypes.number,
       left: PropTypes.number,
       right: PropTypes.number,
+      bottom: PropTypes.number,
     }),
 
     labelOffset: Label.propTypes.offset,
@@ -128,6 +129,7 @@ export default class TextField extends PureComponent {
     input: 8,
     left: 0,
     right: 0,
+    bottom: 8,
   };
 
   static labelOffset = {
@@ -570,6 +572,7 @@ export default class TextField extends PureComponent {
     let containerStyle =  {
       paddingLeft: contentInset.left,
       paddingRight: contentInset.right,
+      minHeight: contentInset.bottom,
     };
 
     let styleProps = {
