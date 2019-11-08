@@ -468,7 +468,7 @@ export default class TextField extends PureComponent {
   inputStyle() {
     let { fontSize, baseColor, textColor, disabled, multiline } = this.props;
 
-    let color = disabled || this.isDefaultVisible()?
+    let color = disabled ?
       baseColor:
       textColor;
 
