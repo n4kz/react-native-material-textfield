@@ -52,6 +52,7 @@ export default class TextField extends PureComponent {
     tintColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
     baseColor: 'rgba(0, 0, 0, .38)',
+    defaultTextColor: 'rgba(0, 0, 0, .38)',
 
     errorColor: 'rgb(213, 0, 0)',
 
@@ -91,6 +92,7 @@ export default class TextField extends PureComponent {
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
+    defaultTextColor: PropTypes.string,
 
     label: PropTypes.string,
     title: PropTypes.string,
@@ -466,11 +468,14 @@ export default class TextField extends PureComponent {
   }
 
   inputStyle() {
-    let { fontSize, baseColor, textColor, disabled, multiline } = this.props;
+    let { fontSize, textColor, baseColor, disabled, multiline, defaultTextColor } = this.props;
 
-    let color = disabled || this.isDefaultVisible()?
-      baseColor:
-      textColor;
+    let color = textColor
+    if (disabled) {
+      color = baseColor
+    } else if (this.isDefaultVisible()) {
+      color = defaultTextColor
+    }
 
     let style = {
       fontSize,
