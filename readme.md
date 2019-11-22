@@ -114,7 +114,6 @@ class Example extends Component {
  titleTextStyle        | Style for title inner Text component        |   Object | -
  affixTextStyle        | Style for affix inner Text component        |   Object | -
  formatText            | Input mask callback                         | Function | -
- renderLeftAccessory   | Render left input accessory view            | Function | -
  renderRightAccessory  | Render right input accessory view           | Function | -
  onChangeText          | Change text callback                        | Function | -
  onFocus               | Focus callback                              | Function | -
