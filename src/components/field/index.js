@@ -539,8 +539,7 @@ export default class TextField extends PureComponent {
 
     if (null == affix) {
       return null;
-    }
-    else if (React.isValidElement(affix)) {
+    } else if (React.isValidElement(affix)) {
       return affix;
     }
 
