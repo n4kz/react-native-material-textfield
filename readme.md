@@ -95,6 +95,7 @@ class Example extends Component {
  baseColor             | Text field base color                       |   String | rgba(0, 0, 0, .38)
  label                 | Text field label text                       |   String | -
  title                 | Text field helper text                      |   String | -
+ placeholder           | Text field placeholder text                 |   String | -
  prefix                | Text field prefix text                      |   String | -
  suffix                | Text field suffix text                      |   String | -
  error                 | Text field error text                       |   String | -
