@@ -114,8 +114,8 @@ export default class TextField extends PureComponent {
     renderLeftAccessory: PropTypes.func,
     renderRightAccessory: PropTypes.func,
 
-    prefix: PropTypes.string,
-    suffix: PropTypes.string,
+    prefix: PropTypes.node,
+    suffix: PropTypes.node,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
@@ -539,6 +539,8 @@ export default class TextField extends PureComponent {
 
     if (null == affix) {
       return null;
+    } else if (React.isValidElement(affix)) {
+      return affix;
     }
 
     let props = {
