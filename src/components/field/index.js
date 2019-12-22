@@ -219,13 +219,6 @@ export default class TextField extends PureComponent {
       this.startLabelAnimation();
     }
     
-    let labelState = labelStateFromProps(this.props, this.state);
-    let prevLabelState = labelStateFromProps(prevProps, prevState);
-
-    if (labelState !== prevLabelState) {
-      this.startLabelAnimation();
-    }
-    
     if (nextValue !== prevValue) {
       this.setState({ text: nextValue });
     }
