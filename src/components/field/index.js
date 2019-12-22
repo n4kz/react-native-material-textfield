@@ -220,7 +220,7 @@ export default class TextField extends PureComponent {
     }
 
     if (nextValue !== prevValue) {
-      this.setState({ text:nextValue });
+      this.setState({ text: nextValue });
     }
   }
 
