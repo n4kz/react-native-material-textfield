@@ -202,8 +202,8 @@ export default class TextField extends PureComponent {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { value:nextValue }=this.props; 
-    const { value:prevValue }=prevProps;
+    let { value: nextValue } = this.props; 
+    let { value: prevValue } = prevProps;
     
     let errorState = errorStateFromProps(this.props);
     let prevErrorState = errorStateFromProps(prevProps);
