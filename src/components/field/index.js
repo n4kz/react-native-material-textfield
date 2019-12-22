@@ -218,7 +218,7 @@ export default class TextField extends PureComponent {
     if (labelState ^ prevLabelState) {
       this.startLabelAnimation();
     }
-    
+
     if (nextValue !== prevValue) {
       this.setState({ text:nextValue });
     }
