@@ -202,8 +202,8 @@ export default class TextField extends PureComponent {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const {value:nextValue}=this.props; 
-    const {value: prevValue}=prevProps;
+    const { value:nextValue }=this.props; 
+    const { value:prevValue }=prevProps;
     
     let errorState = errorStateFromProps(this.props);
     let prevErrorState = errorStateFromProps(prevProps);
@@ -219,7 +219,7 @@ export default class TextField extends PureComponent {
       this.startLabelAnimation();
     }
     if (nextValue !== prevValue) {
-      this.setState({text:nextValue});
+      this.setState({ text:nextValue });
     }
   }
 
