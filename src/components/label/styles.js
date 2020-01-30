@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export default StyleSheet.create({
   container: {
@@ -11,7 +11,11 @@ export default StyleSheet.create({
 
   text: {
     textAlign: 'left',
-    includeFontPadding: false,
+    ...Platform.select({
+      android: {
+        includeFontPadding: false,
+      },
+    }),
     textAlignVertical: 'top',
   },
 });
