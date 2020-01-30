@@ -14,7 +14,7 @@ export default StyleSheet.create({
     ...Platform.select({
       android: {
         includeFontPadding: false,
-      }
+      },
     }),
     textAlignVertical: 'top',
   },
