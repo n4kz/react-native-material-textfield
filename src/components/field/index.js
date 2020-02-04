@@ -620,7 +620,7 @@ export default class TextField extends PureComponent {
 
         {...props}
 
-        style={[styles.input, inputStyle, inputStyleOverrides]}
+        style={[styles.input, inputStyle, style]}
         editable={!disabled && editable}
         onChange={this.onChange}
         onChangeText={this.onChangeText}
