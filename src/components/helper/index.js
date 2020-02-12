@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import { Animated, Text } from 'react-native';
 
 import styles from './styles';
 
@@ -11,7 +11,7 @@ export default class Helper extends PureComponent {
 
     disabled: PropTypes.bool,
 
-    style: Animated.Text.propTypes.style,
+    style: Text.propTypes.style,
 
     baseColor: PropTypes.string,
     errorColor: PropTypes.string,
@@ -72,8 +72,8 @@ export default class Helper extends PureComponent {
       errorColor,
     } = this.props;
 
-    let text = errored?
-      error:
+    let text = errored ?
+      error :
       title;
 
     if (null == text) {
@@ -83,8 +83,8 @@ export default class Helper extends PureComponent {
     let textStyle = {
       opacity,
 
-      color: !disabled && errored?
-        errorColor:
+      color: !disabled && errored ?
+        errorColor :
         baseColor,
     };
 
