@@ -36,13 +36,13 @@ interface TextFieldProps {
   animationDuration?: number
   characterRestriction?: number
   disabled?: boolean
-  contentInset?: ContentInset // TODO
-  labelOffset?: LabelOffset // TODO
-  inputContainerStyle?: any
-  containerStyle?: any
-  labelTextStyle?: any
-  titleTextStyle?: any
-  affixTextStyle?: any
+  contentInset?: ContentInset
+  labelOffset?: LabelOffset
+  inputContainerStyle?: React.CSSProperties
+  containerStyle?: React.CSSProperties
+  labelTextStyle?: React.CSSProperties
+  titleTextStyle?: React.CSSProperties
+  affixTextStyle?: React.CSSProperties
   formatText?: Function
   renderLeftAccessory?: Function
   renderRightAccessory?: Function
