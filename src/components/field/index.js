@@ -407,13 +407,14 @@ export default class TextField extends PureComponent {
     if ('function' === typeof onContentSizeChange) {
       onContentSizeChange(event);
     }
-
-    this.setState({
-      height: Math.max(
-        fontSize * 1.5,
-        Math.ceil(height) + Platform.select({ ios: 4, android: 1 })
-      ),
-    });
+    if (Math.abs(height - this.state.height) < fontSize* 1.5 ) {
+      this.setState({
+        height: Math.max(
+            fontSize * 1.5,
+            Math.ceil(height) + Platform.select({ios: 4, android: 1})
+        ),
+      });
+    }
   }
 
   onFocusAnimationEnd() {
