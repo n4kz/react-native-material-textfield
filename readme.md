@@ -102,6 +102,7 @@ class Example extends Component {
  lineType              | Text field line type                        |   String | solid
  disabledLineType      | Text field line type in disabled state      |   String | dotted
  animationDuration     | Text field animation duration in ms         |   Number | 225
+ disableLabelAnimation | Keep label in floating state                |  Boolean | false
  characterRestriction  | Text field soft limit for character counter |   Number | -
  disabled              | Text field availability                     |  Boolean | false
  editable              | Text field text can be edited               |  Boolean | true
