@@ -28,6 +28,9 @@ function labelStateFromProps(props, state) {
   let { placeholder, defaultValue } = props;
   let { text, receivedFocus } = state;
 
+  if (props.disableLabelAnimation) {
+    return true;
+  }
   return !!(placeholder || text || (!receivedFocus && defaultValue));
 }
 
