@@ -61,5 +61,9 @@
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": ["<rootDir>/example"]
+  },
+  
+   "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
   }
 }
