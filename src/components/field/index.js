@@ -25,10 +25,10 @@ function startAnimation(animation, options, callback) {
 }
 
 function labelStateFromProps(props, state) {
-  let { placeholder, defaultValue } = props;
+  let { placeholder, defaultValue, disableLabelAnimation } = props;
   let { text, receivedFocus } = state;
 
-  if (props.disableLabelAnimation) {
+  if (disableLabelAnimation) {
     return true;
   }
   return !!(placeholder || text || (!receivedFocus && defaultValue));
@@ -66,6 +66,7 @@ export default class TextField extends PureComponent {
     disabledLineType: 'dotted',
 
     disabled: false,
+    disableLabelAnimation: false,
   };
 
   static propTypes = {
@@ -111,6 +112,7 @@ export default class TextField extends PureComponent {
     disabledLineType: Line.propTypes.lineType,
 
     disabled: PropTypes.bool,
+    disableLabelAnimation: PropTypes.bool,
 
     formatText: PropTypes.func,
 
