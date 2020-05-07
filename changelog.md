@@ -7,10 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-
-- `bottom` key for `contentInset` prop
-
 ## [0.16.0] - 2019-10-24
 
 ### Added
