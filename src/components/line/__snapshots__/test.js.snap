@@ -1,125 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders active line 1`] = `
+exports[`renders dotted grey line 1`] = `
 <View
   pointerEvents="none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "overflow": "hidden",
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    style={
+    Array [
       Object {
-        "borderColor": "rgba(0, 0, 255, 1)",
-        "borderStyle": "solid",
-        "borderWidth": 2,
-        "bottom": 0,
-        "left": -3,
         "position": "absolute",
-        "right": -3,
-        "top": -3,
-      }
-    }
-  />
-</View>
-`;
-
-exports[`renders disabled line 1`] = `
-<View
-  pointerEvents="none"
-  style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "overflow": "hidden",
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    style={
+      },
       Object {
-        "borderColor": "black",
+        "borderColor": "grey",
         "borderStyle": "dotted",
         "borderWidth": 1,
         "bottom": 0,
-        "left": -3,
-        "position": "absolute",
-        "right": -3,
-        "top": -3,
-      }
-    }
-  />
-</View>
+        "left": -1.5,
+        "right": -1.5,
+        "top": -2,
+      },
+    ]
+  }
+/>
 `;
 
-exports[`renders line 1`] = `
+exports[`renders solid black line 1`] = `
 <View
   pointerEvents="none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "overflow": "hidden",
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    style={
+    Array [
       Object {
-        "borderColor": "rgba(0, 0, 0, 1)",
-        "borderStyle": "solid",
-        "borderWidth": 0.5,
-        "bottom": 0,
-        "left": -3,
         "position": "absolute",
-        "right": -3,
-        "top": -3,
-      }
-    }
-  />
-</View>
-`;
-
-exports[`renders restricted line 1`] = `
-<View
-  pointerEvents="none"
-  style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "overflow": "hidden",
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    style={
+      },
       Object {
-        "borderColor": "red",
+        "borderColor": "black",
         "borderStyle": "solid",
-        "borderWidth": 2,
+        "borderWidth": 1,
         "bottom": 0,
-        "left": -3,
-        "position": "absolute",
-        "right": -3,
-        "top": -3,
-      }
-    }
-  />
-</View>
+        "left": -1.5,
+        "right": -1.5,
+        "top": -2,
+      },
+    ]
+  }
+/>
 `;

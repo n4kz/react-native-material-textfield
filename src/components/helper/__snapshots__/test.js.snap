@@ -1,58 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders disabled helper 1`] = `
-<Text
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "color": "black",
-      "flex": 1,
-      "fontSize": 12,
-      "lineHeight": 16,
-      "opacity": 1,
-      "paddingVertical": 2,
-      "textAlign": "left",
-    }
-  }
->
-  helper
-</Text>
-`;
-
 exports[`renders helper 1`] = `
-<Text
+<View
   style={
     Object {
-      "backgroundColor": "transparent",
-      "color": "black",
-      "flex": 1,
-      "fontSize": 12,
-      "lineHeight": 16,
-      "opacity": 1,
-      "paddingVertical": 2,
-      "textAlign": "left",
+      "alignItems": "flex-start",
+      "bottom": 0,
+      "left": 0,
+      "paddingVertical": 4,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
     }
   }
 >
-  helper
-</Text>
-`;
-
-exports[`renders helper with error 1`] = `
-<Text
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "color": "red",
-      "flex": 1,
-      "fontSize": 12,
-      "lineHeight": 16,
-      "opacity": 1,
-      "paddingVertical": 2,
-      "textAlign": "left",
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    collapsable={undefined}
+    ellipsizeMode="tail"
+    numberOfLines={1}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
     }
-  }
->
-  helper
-</Text>
+  >
+    helper
+  </Text>
+</View>
 `;

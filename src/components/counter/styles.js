@@ -1,12 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+  container: {
+    paddingVertical: 4,
+    paddingLeft: 4,
+  },
+
   text: {
-    fontSize: 12,
-    lineHeight: 16,
     textAlign: 'right',
     backgroundColor: 'transparent',
-    paddingVertical: 2,
-    marginLeft: 8,
   },
 });
