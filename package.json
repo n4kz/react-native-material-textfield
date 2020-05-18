@@ -3,7 +3,6 @@
   "version": "0.16.1",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
-
   "description": "Material textfield",
   "keywords": [
     "react",
@@ -19,24 +18,25 @@
     "floating",
     "label"
   ],
-
   "main": "index.js",
-  "files": ["index.js", "src/*", "license.txt", "readme.md", "changelog.md"],
-
+  "files": [
+    "index.js",
+    "src/*",
+    "license.txt",
+    "readme.md",
+    "changelog.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/n4kz/react-native-material-textfield.git"
   },
-
   "dependencies": {
     "prop-types": "^15.5.9"
   },
-
   "peerDependencies": {
     "react": ">=16.3.0",
     "react-native": ">=0.55.0"
   },
-
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/runtime": "^7.5.5",
@@ -51,15 +51,15 @@
     "react-native": "0.61.2",
     "react-test-renderer": "16.10.2"
   },
-
   "scripts": {
     "test": "eslint index.js src && jest --silent",
     "lint": "eslint index.js src example/app.js",
     "jest": "jest"
   },
-
   "jest": {
     "preset": "react-native",
-    "modulePathIgnorePatterns": ["<rootDir>/example"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example"
+    ]
   }
 }
