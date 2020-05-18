@@ -1,69 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders when limit is exceeded 1`] = `
-<View
+<Text
   style={
-    Object {
-      "paddingLeft": 4,
-      "paddingVertical": 4,
-    }
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "fontSize": 12,
+        "lineHeight": 16,
+        "marginLeft": 8,
+        "paddingVertical": 2,
+        "textAlign": "right",
+      },
+      undefined,
+      Object {
+        "color": "red",
+      },
+    ]
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "textAlign": "right",
-        },
-        undefined,
-        Object {
-          "color": "red",
-          "fontSize": 12,
-        },
-      ]
-    }
-  >
-    2
-     / 
-    1
-  </Text>
-</View>
+  2
+   / 
+  1
+</Text>
 `;
 
 exports[`renders when limit is set 1`] = `
-<View
+<Text
   style={
-    Object {
-      "paddingLeft": 4,
-      "paddingVertical": 4,
-    }
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "fontSize": 12,
+        "lineHeight": 16,
+        "marginLeft": 8,
+        "paddingVertical": 2,
+        "textAlign": "right",
+      },
+      undefined,
+      Object {
+        "color": "blue",
+      },
+    ]
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "textAlign": "right",
-        },
-        undefined,
-        Object {
-          "color": "blue",
-          "fontSize": 12,
-        },
-      ]
-    }
-  >
-    1
-     / 
-    1
-  </Text>
-</View>
+  1
+   / 
+  1
+</Text>
 `;

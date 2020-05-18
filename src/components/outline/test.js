@@ -3,7 +3,7 @@ import React from 'react';
 import { Animated } from 'react-native';
 import renderer from 'react-test-renderer';
 
-import Line from '.';
+import Outline from '.';
 
 /* eslint-env jest */
 
@@ -20,38 +20,42 @@ const props = {
   disabledLineWidth: 1,
 
   focusAnimation: new Animated.Value(0),
+  labelAnimation: new Animated.Value(0),
+  labelWidth: new Animated.Value(72),
+
+  contentInset: { left: 12, right: 12 },
 };
 
-it('renders line', () => {
+it('renders outline', () => {
   let line = renderer
-    .create(<Line {...props} />)
+    .create(<Outline {...props} />)
     .toJSON();
 
   expect(line)
     .toMatchSnapshot();
 });
 
-it('renders disabled line', () => {
+it('renders disabled outline', () => {
   let line = renderer
-    .create(<Line {...props} disabled={true} />)
+    .create(<Outline {...props} disabled={true} />)
     .toJSON();
 
   expect(line)
     .toMatchSnapshot();
 });
 
-it('renders restricted line', () => {
+it('renders restricted outline', () => {
   let line = renderer
-    .create(<Line {...props} restricted={true} />)
+    .create(<Outline {...props} restricted={true} />)
     .toJSON();
 
   expect(line)
     .toMatchSnapshot();
 });
 
-it('renders active line', () => {
+it('renders active outline', () => {
   let line = renderer
-    .create(<Line {...props} focusAnimation={new Animated.Value(1)} />)
+    .create(<Outline {...props} labelAnimation={new Animated.Value(1)} />)
     .toJSON();
 
   expect(line)

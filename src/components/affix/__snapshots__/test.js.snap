@@ -1,11 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders prefix 1`] = `
+exports[`renders inactive prefix 1`] = `
 <View
-  collapsable={undefined}
   style={
     Object {
-      "alignSelf": "flex-start",
       "height": 24,
       "justifyContent": "center",
       "opacity": 0,
@@ -15,15 +13,69 @@ exports[`renders prefix 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    collapsable={undefined}
-    ellipsizeMode="tail"
     style={
       Object {
-        "color": "blue",
+        "color": "black",
         "fontSize": 16,
+        "includeFontPadding": false,
         "textAlign": "left",
+        "textAlignVertical": "top",
+      }
+    }
+  >
+    a
+  </Text>
+</View>
+`;
+
+exports[`renders inactive suffix 1`] = `
+<View
+  style={
+    Object {
+      "height": 24,
+      "justifyContent": "center",
+      "opacity": 0,
+      "paddingLeft": 8,
+      "top": 2,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 16,
+        "includeFontPadding": false,
+        "textAlign": "right",
+        "textAlignVertical": "top",
+      }
+    }
+  >
+    z
+  </Text>
+</View>
+`;
+
+exports[`renders prefix 1`] = `
+<View
+  style={
+    Object {
+      "height": 24,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingRight": 8,
+      "top": 2,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 16,
+        "includeFontPadding": false,
+        "textAlign": "left",
+        "textAlignVertical": "top",
       }
     }
   >
@@ -34,28 +86,24 @@ exports[`renders prefix 1`] = `
 
 exports[`renders suffix 1`] = `
 <View
-  collapsable={undefined}
   style={
     Object {
-      "alignSelf": "flex-start",
       "height": 24,
       "justifyContent": "center",
-      "opacity": 0,
+      "opacity": 1,
       "paddingLeft": 8,
       "top": 2,
     }
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    collapsable={undefined}
-    ellipsizeMode="tail"
     style={
       Object {
-        "color": "blue",
+        "color": "black",
         "fontSize": 16,
+        "includeFontPadding": false,
         "textAlign": "right",
+        "textAlignVertical": "top",
       }
     }
   >
