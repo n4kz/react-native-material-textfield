@@ -13,7 +13,6 @@ import {
   TextInputProps,
   TextStyle,
   ViewStyle,
-  View,
 } from 'react-native';
 
 export interface ContentInset {
