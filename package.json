@@ -1,6 +1,6 @@
 {
   "name": "@softmedialab/react-native-material-textfield",
-  "version": "0.16.6",
+  "version": "0.16.8",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
   "description": "Material textfield",
@@ -21,6 +21,7 @@
   "main": "index.js",
   "files": [
     "index.js",
+    "index.d.ts",
     "src/*",
     "license.txt",
     "readme.md",
