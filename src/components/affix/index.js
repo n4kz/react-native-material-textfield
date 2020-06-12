@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import { Animated, Platform } from 'react-native';
 
 import styles from './styles';
 
@@ -39,7 +39,11 @@ export default class Affix extends PureComponent {
     };
 
     let textStyle = {
-      includeFontPadding: false,
+      ...Platform.select({
+        android: {
+          includeFontPadding: false,
+        },
+      }),
       textAlignVertical: 'top',
 
       fontSize,
