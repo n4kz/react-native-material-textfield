@@ -11,7 +11,7 @@ export default class Helper extends PureComponent {
 
     disabled: PropTypes.bool,
 
-    style: Text.prototype,
+    style: Text.propType,
 
     baseColor: PropTypes.string,
     errorColor: PropTypes.string,
