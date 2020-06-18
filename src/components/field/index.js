@@ -139,12 +139,22 @@ export default class TextField extends PureComponent {
     y1: 0,
   };
 
-  static getDerivedStateFromProps({ error }, state) {
+  static getDerivedStateFromProps({ error, value }, state) {
+    const newState = {};
+
     /* Keep last received error in state */
     if (error && error !== state.error) {
-      return { error };
+      newState.error = error;
     }
 
+    if (value && value !== state.error) {
+      newState.text = value;
+    }
+
+    const hasNewStateUpdates = Object.keys(newState).length > 0;
+
+    if (hasNewStateUpdates) return newState;
+    
     return null;
   }
 
