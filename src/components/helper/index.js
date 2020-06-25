@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { View, Animated, Text } from 'react-native';
+import { Animated, Text } from 'react-native';
 
 import styles from './styles';
 
