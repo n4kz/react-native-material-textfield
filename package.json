@@ -34,7 +34,7 @@
 
   "peerDependencies": {
     "react": ">=16.3.0",
-    "react-native": ">=0.55.0"
+    "react-native": ">=0.62.0"
   },
 
   "devDependencies": {
@@ -48,7 +48,7 @@
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "react": "16.10.2",
-    "react-native": "0.61.2",
+    "react-native": "0.62.2",
     "react-test-renderer": "16.10.2"
   },
 
