@@ -1,6 +1,6 @@
 {
   "name": "@softmedialab/react-native-material-textfield",
-  "version": "0.16.11",
+  "version": "0.16.12",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
   "description": "Material textfield",
