@@ -4,8 +4,8 @@ export default StyleSheet.create({
   container: {
     position: 'absolute',
     top: 0,
-    left: '-150%',
-    width: '300%',
+    left: '-143%',
+    width: '286%',
     paddingLeft: '50%',
   },
 
