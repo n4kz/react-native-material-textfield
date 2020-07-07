@@ -497,14 +497,16 @@ export default class TextField extends PureComponent {
   }
 
   renderLabel(props) {
-    let offset = this.labelOffset();
 
     let {
       label,
       fontSize,
       labelFontSize,
       labelTextStyle,
+      halfWidth,
     } = this.props;
+
+    let offset = { x0: 0, x1: halfWidth ? -10 : -25, y0: 0, y1: 0 };
 
     return (
       <Label

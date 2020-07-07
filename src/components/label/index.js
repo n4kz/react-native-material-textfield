@@ -84,7 +84,7 @@ export default class Label extends PureComponent {
       color,
     };
 
-    let { x0, y0, x1, y1 } = offset;
+    let { x0, x1, y0, y1 } = offset;
 
     y0 += activeFontSize;
     y0 += contentInset.label;
@@ -110,7 +110,7 @@ export default class Label extends PureComponent {
     };
 
     return (
-      <Animated.View style={[styles.container, containerStyle]}>
+      <Animated.View style={containerStyle}>
         <Animated.Text style={[styles.text, style, textStyle]} {...props}>
           {label}
         </Animated.Text>
