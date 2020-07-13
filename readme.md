@@ -2,8 +2,6 @@
 
 Material texfield with consistent behaviour on iOS and Android
 
-![example][example-url]
-
 ## Features
 
 * Material design [guidelines][md-textfield] compliance
