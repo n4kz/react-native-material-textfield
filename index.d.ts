@@ -63,8 +63,8 @@ export interface TextFieldProps extends TextInputProps {
   onPress?(event: Event): void;
   onChangeText?(text: string): void;
 
-  renderLeftAccessory?(): JSX.Element;
-  renderRightAccessory?(): JSX.Element;
+  renderLeftAccessory?(): JSX.Element | boolean;
+  renderRightAccessory?(): JSX.Element | boolean;
 
   lineType?: 'solid' | 'dotted' | 'dashed' | 'none';
   disabledLineType?: 'solid' | 'dotted' | 'dashed' | 'none';
@@ -108,6 +108,8 @@ export class TextField extends React.Component<TextFieldProps, any> {
    * Set current value
    */
   setValue(value?: string): void;
+  focused: boolean;
+  mounted: boolean;
 }
 
 export class OutlinedTextField extends TextField {}
