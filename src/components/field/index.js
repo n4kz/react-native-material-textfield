@@ -45,7 +45,6 @@ export default class TextField extends PureComponent {
     editable: true,
 
     animationDuration: 225,
-    animationOffset: null,
 
     fontSize: 16,
     labelFontSize: 12,

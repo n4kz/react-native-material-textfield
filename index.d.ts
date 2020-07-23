@@ -23,6 +23,7 @@ export interface ContentInset {
 
 export interface TextFieldProps extends TextInputProps {
   animationDuration?: number;
+  animationOffset?: number;
 
   fontSize?: number;
   labelFontSize?: number;
