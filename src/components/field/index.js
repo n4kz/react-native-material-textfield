@@ -45,6 +45,7 @@ export default class TextField extends PureComponent {
     editable: true,
 
     animationDuration: 225,
+    animationOffset: null,
 
     fontSize: 16,
     labelFontSize: 12,
@@ -69,6 +70,7 @@ export default class TextField extends PureComponent {
     ...TextInput.propTypes,
 
     animationDuration: PropTypes.number,
+    animationOffset: PropTypes.number,
 
     fontSize: PropTypes.number,
     labelFontSize: PropTypes.number,
@@ -503,10 +505,11 @@ export default class TextField extends PureComponent {
       fontSize,
       labelFontSize,
       labelTextStyle,
+      animationOffset,
       halfWidth,
     } = this.props;
 
-    let offset = { x0: 0, x1: halfWidth ? -10 : -25, y0: 0, y1: 0 };
+    let offset = { x0: 0, x1: animationOffset ?? (halfWidth ? -10 : -25), y0: 0, y1: 0 };
 
     return (
       <Label
