@@ -7,7 +7,7 @@ import {
   Text,
   TextInput,
   View,
-  ViewPropTypes
+  ViewPropTypes,
 } from 'react-native';
 import Affix from '../affix';
 import Counter from '../counter';
@@ -17,10 +17,8 @@ import Line from '../line';
 import styles from './styles';
 
 function startAnimation(animation, options, callback) {
-  Animated
-    .timing(animation, options)
-    .start(callback);
-
+  Animated.timing(animation, options).start(callback);
+}
 
 function labelStateFromProps(props, state) {
   let { placeholder, defaultValue } = props;
