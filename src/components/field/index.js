@@ -92,7 +92,7 @@ export default class TextField extends PureComponent {
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
 
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     title: PropTypes.string,
 
     characterRestriction: PropTypes.number,
@@ -111,8 +111,8 @@ export default class TextField extends PureComponent {
 
     formatText: PropTypes.func,
 
-    renderLeftAccessory: PropTypes.func || PropTypes.boolean,
-    renderRightAccessory: PropTypes.func || PropTypes.boolean,
+    renderLeftAccessory: PropTypes.oneOfType([PropTypes.func, PropTypes.boolean]),
+    renderRightAccessory: PropTypes.oneOfType([PropTypes.func, PropTypes.boolean]),
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,

@@ -44,7 +44,7 @@ export default class Label extends PureComponent {
     }),
 
     style: Text.propTypes.style,
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   };
 
   render() {
