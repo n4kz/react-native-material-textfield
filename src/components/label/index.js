@@ -91,11 +91,16 @@ export default class Label extends PureComponent {
     y0 += fontSize * 0.25;
 
     let xScaleCompensation = this.state?.layout?.width
-        ? this.state.layout.width * (1 - activeFontSize / fontSize) / 3 * 2
+        ? ((this.state.layout.width - this.state.layout.width * activeFontSize / fontSize) / 2)
         : 0;
 
     let containerStyle = {
       transform: [{
+        translateX: labelAnimation.interpolate({
+          inputRange: [0, 1],
+          outputRange: [x0, -xScaleCompensation],
+        }),
+      },{
         scale: labelAnimation.interpolate({
           inputRange: [0, 1],
           outputRange: [1, activeFontSize / fontSize],
@@ -104,11 +109,6 @@ export default class Label extends PureComponent {
         translateY: labelAnimation.interpolate({
           inputRange: [0, 1],
           outputRange: [y0, y1],
-        }),
-      }, {
-        translateX: labelAnimation.interpolate({
-          inputRange: [0, 1],
-          outputRange: [x0, x1 || -xScaleCompensation],
         }),
       }],
     };
