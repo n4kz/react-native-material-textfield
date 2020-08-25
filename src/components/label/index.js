@@ -90,6 +90,10 @@ export default class Label extends PureComponent {
     y0 += contentInset.label;
     y0 += fontSize * 0.25;
 
+    let xScaleCompensation = this.state?.layout?.width
+        ? this.state.layout.width * (1 - activeFontSize / fontSize) / 3 * 2
+        : 0;
+
     let containerStyle = {
       transform: [{
         scale: labelAnimation.interpolate({
@@ -104,13 +108,13 @@ export default class Label extends PureComponent {
       }, {
         translateX: labelAnimation.interpolate({
           inputRange: [0, 1],
-          outputRange: [x0, x1],
+          outputRange: [x0, x1 || -xScaleCompensation],
         }),
       }],
     };
 
     return (
-      <Animated.View style={containerStyle}>
+      <Animated.View onLayout={(e) => { this.setState({ layout: e.nativeEvent.layout }) }} style={containerStyle}>
         <Animated.Text style={[styles.text, style, textStyle]} {...props}>
           {label}
         </Animated.Text>
