@@ -508,14 +508,11 @@ export default class TextField extends PureComponent {
       halfWidth,
     } = this.props;
 
-    let offset = { x0: 0, x1: animationOffset ?? (halfWidth ? -10 : -25), y0: 0, y1: 0 };
-
     return (
       <Label
         {...props}
         fontSize={fontSize}
         activeFontSize={labelFontSize}
-        offset={offset}
         label={label}
         style={labelTextStyle}
       />
