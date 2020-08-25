@@ -50,7 +50,7 @@ export default class Label extends PureComponent {
   render() {
     let {
       label,
-      offset,
+      offset = {},
       disabled,
       restricted,
       fontSize,
@@ -84,7 +84,7 @@ export default class Label extends PureComponent {
       color,
     };
 
-    let { x0, x1, y0, y1 } = offset;
+    let { x0 = 0, x1 = 0, y0 = 0, y1 = 0 } = offset;
 
     y0 += activeFontSize;
     y0 += contentInset.label;
