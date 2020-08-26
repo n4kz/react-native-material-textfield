@@ -44,7 +44,7 @@ export default class Line extends PureComponent {
       1,
     );
 
-    if (maxLineWidth !== state.maxLineWidth) {
+    if (maxLineWidth && maxLineWidth !== state.maxLineWidth) {
       return { maxLineWidth };
     }
 
