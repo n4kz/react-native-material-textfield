@@ -1,120 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders active errored label 1`] = `
-<View
-  style={
-    Object {
-      "left": "-100%",
-      "paddingLeft": "50%",
-      "position": "absolute",
-      "top": 0,
-      "transform": Array [
-        Object {
-          "scale": 0.75,
-        },
-        Object {
-          "translateY": 0,
-        },
-        Object {
-          "translateX": 0,
-        },
-      ],
-      "width": "200%",
-    }
-  }
->
-  <Text
-    numberOfLines={1}
-    style={
-      Object {
-        "color": "rgba(255, 0, 0, 1)",
-        "fontSize": 16,
-        "includeFontPadding": false,
-        "lineHeight": 16,
-        "textAlign": "left",
-        "textAlignVertical": "top",
-      }
-    }
-  >
-    test
-  </Text>
-</View>
-`;
-
-exports[`renders active focused label 1`] = `
-<View
-  style={
-    Object {
-      "left": "-100%",
-      "paddingLeft": "50%",
-      "position": "absolute",
-      "top": 0,
-      "transform": Array [
-        Object {
-          "scale": 0.75,
-        },
-        Object {
-          "translateY": 0,
-        },
-        Object {
-          "translateX": 0,
-        },
-      ],
-      "width": "200%",
-    }
-  }
->
-  <Text
-    numberOfLines={1}
-    style={
-      Object {
-        "color": "rgba(0, 0, 255, 1)",
-        "fontSize": 16,
-        "includeFontPadding": false,
-        "lineHeight": 16,
-        "textAlign": "left",
-        "textAlignVertical": "top",
-      }
-    }
-  >
-    test
-  </Text>
-</View>
-`;
-
 exports[`renders active label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
-      "left": "-100%",
-      "paddingLeft": "50%",
       "position": "absolute",
-      "top": 0,
-      "transform": Array [
-        Object {
-          "scale": 0.75,
-        },
-        Object {
-          "translateY": 0,
-        },
-        Object {
-          "translateX": 0,
-        },
-      ],
-      "width": "200%",
+      "top": 16,
     }
   }
 >
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    collapsable={undefined}
+    ellipsizeMode="tail"
     numberOfLines={1}
     style={
       Object {
         "color": "rgba(0, 0, 0, 1)",
-        "fontSize": 16,
-        "includeFontPadding": false,
-        "lineHeight": 16,
-        "textAlign": "left",
-        "textAlignVertical": "top",
+        "fontSize": 12,
       }
     }
   >
@@ -123,41 +28,54 @@ exports[`renders active label 1`] = `
 </View>
 `;
 
-exports[`renders empty label 1`] = `null`;
-
 exports[`renders errored label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
-      "left": "-100%",
-      "paddingLeft": "50%",
       "position": "absolute",
-      "top": 0,
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-        Object {
-          "translateY": 20,
-        },
-        Object {
-          "translateX": 0,
-        },
-      ],
-      "width": "200%",
+      "top": 36,
     }
   }
 >
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    collapsable={undefined}
+    ellipsizeMode="tail"
     numberOfLines={1}
     style={
       Object {
         "color": "rgba(255, 0, 0, 1)",
         "fontSize": 16,
-        "includeFontPadding": false,
-        "lineHeight": 16,
-        "textAlign": "left",
-        "textAlignVertical": "top",
+      }
+    }
+  >
+    test
+  </Text>
+</View>
+`;
+
+exports[`renders focused label 1`] = `
+<View
+  collapsable={undefined}
+  style={
+    Object {
+      "position": "absolute",
+      "top": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    collapsable={undefined}
+    ellipsizeMode="tail"
+    numberOfLines={1}
+    style={
+      Object {
+        "color": "rgba(0, 0, 255, 1)",
+        "fontSize": 12,
       }
     }
   >
@@ -168,37 +86,24 @@ exports[`renders errored label 1`] = `
 
 exports[`renders label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
-      "left": "-100%",
-      "paddingLeft": "50%",
       "position": "absolute",
-      "top": 0,
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-        Object {
-          "translateY": 20,
-        },
-        Object {
-          "translateX": 0,
-        },
-      ],
-      "width": "200%",
+      "top": 36,
     }
   }
 >
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    collapsable={undefined}
+    ellipsizeMode="tail"
     numberOfLines={1}
     style={
       Object {
         "color": "rgba(0, 0, 0, 1)",
         "fontSize": 16,
-        "includeFontPadding": false,
-        "lineHeight": 16,
-        "textAlign": "left",
-        "textAlignVertical": "top",
       }
     }
   >
@@ -209,79 +114,24 @@ exports[`renders label 1`] = `
 
 exports[`renders restricted label 1`] = `
 <View
+  collapsable={undefined}
   style={
     Object {
-      "left": "-100%",
-      "paddingLeft": "50%",
       "position": "absolute",
-      "top": 0,
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-        Object {
-          "translateY": 20,
-        },
-        Object {
-          "translateX": 0,
-        },
-      ],
-      "width": "200%",
+      "top": 36,
     }
   }
 >
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    collapsable={undefined}
+    ellipsizeMode="tail"
     numberOfLines={1}
     style={
       Object {
         "color": "red",
         "fontSize": 16,
-        "includeFontPadding": false,
-        "lineHeight": 16,
-        "textAlign": "left",
-        "textAlignVertical": "top",
-      }
-    }
-  >
-    test
-  </Text>
-</View>
-`;
-
-exports[`renders styled label 1`] = `
-<View
-  style={
-    Object {
-      "left": "-100%",
-      "paddingLeft": "50%",
-      "position": "absolute",
-      "top": 0,
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-        Object {
-          "translateY": 20,
-        },
-        Object {
-          "translateX": 0,
-        },
-      ],
-      "width": "200%",
-    }
-  }
->
-  <Text
-    numberOfLines={1}
-    style={
-      Object {
-        "color": "rgba(0, 0, 0, 1)",
-        "fontSize": 16,
-        "includeFontPadding": false,
-        "lineHeight": 16,
-        "textAlign": "left",
-        "textAlignVertical": "top",
-        "textTransform": "uppercase",
       }
     }
   >
