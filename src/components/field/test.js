@@ -109,26 +109,11 @@ it('renders suffix', () => {
     .toMatchSnapshot();
 });
 
-it('renders left accessory', () => {
-  let render = () => (
-    <Image />
-  );
+it('renders accessory', () => {
+  let render = () => <Image />
 
   let field = renderer
-    .create(<TextField {...props} renderLeftAccessory={render} />)
-    .toJSON();
-
-  expect(field)
-    .toMatchSnapshot();
-});
-
-it('renders right accessory', () => {
-  let render = () => (
-    <Image />
-  );
-
-  let field = renderer
-    .create(<TextField {...props} renderRightAccessory={render} />)
+    .create(<TextField {...props} renderAccessory={render} />)
     .toJSON();
 
   expect(field)
