@@ -1,97 +1,77 @@
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
+import { Animated, Text } from 'react-native'
 
-import styles from './styles';
+import styles from './styles'
 
 export default class Helper extends PureComponent {
   static propTypes = {
     title: PropTypes.string,
     error: PropTypes.string,
-
     disabled: PropTypes.bool,
-
-    style: Animated.Text.propTypes.style,
-
+    style: Text.propTypes.style,
     baseColor: PropTypes.string,
     errorColor: PropTypes.string,
-
     focusAnimation: PropTypes.instanceOf(Animated.Value),
-  };
+  }
 
   constructor(props) {
-    super(props);
+    super(props)
 
-    let { error, focusAnimation } = this.props;
+    let { error, focusAnimation } = this.props
 
     let opacity = focusAnimation.interpolate({
       inputRange: [-1, -0.5, 0],
       outputRange: [1, 0, 1],
       extrapolate: 'clamp',
-    });
+    })
 
     this.state = {
       errored: !!error,
       opacity,
-    };
+    }
   }
 
   componentDidMount() {
-    let { focusAnimation } = this.props;
+    let { focusAnimation } = this.props
 
-    this.listener = focusAnimation
-      .addListener(this.onAnimation.bind(this));
+    this.listener = focusAnimation.addListener(this.onAnimation.bind(this))
   }
 
   componentWillUnmount() {
-    let { focusAnimation } = this.props;
+    let { focusAnimation } = this.props
 
-    focusAnimation.removeListener(this.listener);
+    focusAnimation.removeListener(this.listener)
   }
 
   onAnimation({ value }) {
     if (this.animationValue > -0.5 && value <= -0.5) {
-      this.setState({ errored: true });
+      this.setState({ errored: true })
     }
 
     if (this.animationValue < -0.5 && value >= -0.5) {
-      this.setState({ errored: false });
+      this.setState({ errored: false })
     }
 
-    this.animationValue = value;
+    this.animationValue = value
   }
 
   render() {
-    let { errored, opacity } = this.state;
-    let {
-      style,
-      title,
-      error,
-      disabled,
-      baseColor,
-      errorColor,
-    } = this.props;
+    let { errored, opacity } = this.state
+    let { style, title, error, disabled, baseColor, errorColor } = this.props
 
-    let text = errored?
-      error:
-      title;
+    let text = errored ? error : title
 
     if (null == text) {
-      return null;
+      return null
     }
 
     let textStyle = {
       opacity,
 
-      color: !disabled && errored?
-        errorColor:
-        baseColor,
-    };
+      color: !disabled && errored ? errorColor : baseColor,
+    }
 
-    return (
-      <Animated.Text style={[styles.text, style, textStyle]}>
-        {text}
-      </Animated.Text>
-    );
+    return <Animated.Text style={[styles.text, style, textStyle]}>{text}</Animated.Text>
   }
 }

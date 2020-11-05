@@ -1,8 +1,8 @@
 {
-  "name": "react-native-material-textfield",
-  "version": "0.16.1",
+  "name": "rn-material-ui-textfield",
+  "version": "1.0.0",
   "license": "BSD-3-Clause",
-  "author": "Alexander Nazarov <n4kz@n4kz.com>",
+  "contributors": ["Gabriel Donadel Dall'Agnol <gabrieldallagnol@outlook.com>","Alexander Nazarov <n4kz@n4kz.com>"],
 
   "description": "Material textfield",
   "keywords": [
@@ -25,7 +25,7 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/n4kz/react-native-material-textfield.git"
+    "url": "git://github.com/gabrieldonadel/rn-material-ui-textfield.git"
   },
 
   "dependencies": {

@@ -1,42 +1,35 @@
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
+import { Animated, Text } from 'react-native'
 
-import styles from './styles';
+import styles from './styles'
 
 export default class Affix extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
-  };
+  }
 
   static propTypes = {
     numberOfLines: PropTypes.number,
-    style: Animated.Text.propTypes.style,
+    style: Text.propTypes.style,
 
     color: PropTypes.string.isRequired,
     fontSize: PropTypes.number.isRequired,
 
-    type: PropTypes
-      .oneOf(['prefix', 'suffix'])
-      .isRequired,
+    type: PropTypes.oneOf(['prefix', 'suffix']).isRequired,
 
-    labelAnimation: PropTypes
-      .instanceOf(Animated.Value)
-      .isRequired,
+    labelAnimation: PropTypes.instanceOf(Animated.Value).isRequired,
 
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
-    ]),
-  };
+    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  }
 
   render() {
-    let { labelAnimation, style, children, type, fontSize, color } = this.props;
+    let { labelAnimation, style, children, type, fontSize, color } = this.props
 
     let containerStyle = {
       height: fontSize * 1.5,
       opacity: labelAnimation,
-    };
+    }
 
     let textStyle = {
       includeFontPadding: false,
@@ -44,24 +37,24 @@ export default class Affix extends PureComponent {
 
       fontSize,
       color,
-    };
+    }
 
     switch (type) {
       case 'prefix':
-        containerStyle.paddingRight = 8;
-        textStyle.textAlign = 'left';
-        break;
+        containerStyle.paddingRight = 8
+        textStyle.textAlign = 'left'
+        break
 
       case 'suffix':
-        containerStyle.paddingLeft = 8;
-        textStyle.textAlign = 'right';
-        break;
+        containerStyle.paddingLeft = 8
+        textStyle.textAlign = 'right'
+        break
     }
 
     return (
       <Animated.View style={[styles.container, containerStyle]}>
         <Animated.Text style={[style, textStyle]}>{children}</Animated.Text>
       </Animated.View>
-    );
+    )
   }
 }
