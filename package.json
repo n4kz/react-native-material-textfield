@@ -2,9 +2,16 @@
   "name": "rn-material-ui-textfield",
   "version": "1.0.0",
   "license": "BSD-3-Clause",
-  "contributors": ["Gabriel Donadel Dall'Agnol <gabrieldallagnol@outlook.com>","Alexander Nazarov <n4kz@n4kz.com>"],
-
+  "contributors": [
+    "Gabriel Donadel Dall'Agnol <gabrieldallagnol@outlook.com>",
+    "Alexander Nazarov <n4kz@n4kz.com>"
+  ],
   "description": "Material textfield",
+  "scripts": {
+    "test": "eslint index.js src && jest --silent",
+    "lint": "eslint index.js src example/app.js",
+    "jest": "jest"
+  },
   "keywords": [
     "react",
     "react-component",
@@ -19,47 +26,46 @@
     "floating",
     "label"
   ],
-
   "main": "index.js",
-  "files": ["index.js", "src/*", "license.txt", "readme.md", "changelog.md"],
-
+  "files": [
+    "index.js",
+    "src/*",
+    "license.txt",
+    "readme.md",
+    "changelog.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/gabrieldonadel/rn-material-ui-textfield.git"
   },
-
   "dependencies": {
     "prop-types": "^15.5.9"
   },
-
   "peerDependencies": {
     "react": ">=16.3.0",
     "react-native": ">=0.55.0"
   },
-
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/runtime": "^7.5.5",
+    "@react-native-community/eslint-config": "^2.0.0",
     "babel-eslint": "^10.0.0",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.0",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-native": "^3.7.0",
+    "eslint-plugin-react-perf": "^3.3.0",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "react": "16.10.2",
     "react-native": "0.61.2",
     "react-test-renderer": "16.10.2"
   },
-
-  "scripts": {
-    "test": "eslint index.js src && jest --silent",
-    "lint": "eslint index.js src example/app.js",
-    "jest": "jest"
-  },
-
   "jest": {
     "preset": "react-native",
-    "modulePathIgnorePatterns": ["<rootDir>/example"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example"
+    ]
   }
+
 }

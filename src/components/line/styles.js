@@ -1,4 +1,4 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform } from 'react-native'
 
 export default StyleSheet.create({
   line: {
@@ -15,4 +15,4 @@ export default StyleSheet.create({
 
     overflow: 'hidden',
   },
-});
+})

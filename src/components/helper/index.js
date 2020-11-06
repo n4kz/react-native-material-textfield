@@ -62,7 +62,7 @@ export default class Helper extends PureComponent {
 
     let text = errored ? error : title
 
-    if (null == text) {
+    if (text == null) {
       return null
     }
 
