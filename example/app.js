@@ -1,14 +1,8 @@
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  ScrollView,
-  View,
-  SafeAreaView,
-  Platform,
-} from 'react-native';
-import { RaisedTextButton } from 'react-native-material-buttons';
-import { TextField } from 'react-native-material-textfield';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import React, { Component } from 'react'
+import { AppRegistry, ScrollView, View, SafeAreaView, Platform } from 'react-native'
+import { RaisedTextButton } from 'react-native-material-buttons'
+import { TextField } from 'react-native-material-textfield'
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
 
 let styles = {
   scroll: {
@@ -34,56 +28,56 @@ let styles = {
     flex: 1,
     backgroundColor: '#E8EAF6',
   },
-};
+}
 
 let defaults = {
   firstname: 'Eddard',
   lastname: 'Stark',
   about: 'Stoic, dutiful, and honorable man, considered to embody the values of the North',
-};
+}
 
 export default function init() {
   class Example extends Component {
     constructor(props) {
-      super(props);
+      super(props)
 
-      this.onFocus = this.onFocus.bind(this);
-      this.onSubmit = this.onSubmit.bind(this);
-      this.onChangeText = this.onChangeText.bind(this);
-      this.onSubmitFirstName = this.onSubmitFirstName.bind(this);
-      this.onSubmitLastName = this.onSubmitLastName.bind(this);
-      this.onSubmitAbout = this.onSubmitAbout.bind(this);
-      this.onSubmitEmail = this.onSubmitEmail.bind(this);
-      this.onSubmitPassword = this.onSubmitPassword.bind(this);
-      this.onAccessoryPress = this.onAccessoryPress.bind(this);
+      this.onFocus = this.onFocus.bind(this)
+      this.onSubmit = this.onSubmit.bind(this)
+      this.onChangeText = this.onChangeText.bind(this)
+      this.onSubmitFirstName = this.onSubmitFirstName.bind(this)
+      this.onSubmitLastName = this.onSubmitLastName.bind(this)
+      this.onSubmitAbout = this.onSubmitAbout.bind(this)
+      this.onSubmitEmail = this.onSubmitEmail.bind(this)
+      this.onSubmitPassword = this.onSubmitPassword.bind(this)
+      this.onAccessoryPress = this.onAccessoryPress.bind(this)
 
-      this.firstnameRef = this.updateRef.bind(this, 'firstname');
-      this.lastnameRef = this.updateRef.bind(this, 'lastname');
-      this.aboutRef = this.updateRef.bind(this, 'about');
-      this.emailRef = this.updateRef.bind(this, 'email');
-      this.passwordRef = this.updateRef.bind(this, 'password');
-      this.houseRef = this.updateRef.bind(this, 'house');
+      this.firstnameRef = this.updateRef.bind(this, 'firstname')
+      this.lastnameRef = this.updateRef.bind(this, 'lastname')
+      this.aboutRef = this.updateRef.bind(this, 'about')
+      this.emailRef = this.updateRef.bind(this, 'email')
+      this.passwordRef = this.updateRef.bind(this, 'password')
+      this.houseRef = this.updateRef.bind(this, 'house')
 
-      this.renderPasswordAccessory = this.renderPasswordAccessory.bind(this);
+      this.renderPasswordAccessory = this.renderPasswordAccessory.bind(this)
 
       this.state = {
         secureTextEntry: true,
         ...defaults,
-      };
+      }
     }
 
     onFocus() {
-      let { errors = {} } = this.state;
+      let { errors = {} } = this.state
 
       for (let name in errors) {
-        let ref = this[name];
+        let ref = this[name]
 
         if (ref && ref.isFocused()) {
-          delete errors[name];
+          delete errors[name]
         }
       }
 
-      this.setState({ errors });
+      this.setState({ errors })
     }
 
     onChangeText(text) {
@@ -91,64 +85,63 @@ export default function init() {
         .map((name) => ({ name, ref: this[name] }))
         .forEach(({ name, ref }) => {
           if (ref.isFocused()) {
-            this.setState({ [name]: text });
+            this.setState({ [name]: text })
           }
-        });
+        })
     }
 
     onAccessoryPress() {
-      this.setState(({ secureTextEntry }) => ({ secureTextEntry: !secureTextEntry }));
+      this.setState(({ secureTextEntry }) => ({
+        secureTextEntry: !secureTextEntry,
+      }))
     }
 
     onSubmitFirstName() {
-      this.lastname.focus();
+      this.lastname.focus()
     }
 
     onSubmitLastName() {
-      this.about.focus();
+      this.about.focus()
     }
 
     onSubmitAbout() {
-      this.email.focus();
+      this.email.focus()
     }
 
     onSubmitEmail() {
-      this.password.focus();
+      this.password.focus()
     }
 
     onSubmitPassword() {
-      this.password.blur();
+      this.password.blur()
     }
 
     onSubmit() {
-      let errors = {};
+      let errors = {}
 
-      ['firstname', 'lastname', 'email', 'password']
-        .forEach((name) => {
-          let value = this[name].value();
+      ;['firstname', 'lastname', 'email', 'password'].forEach((name) => {
+        let value = this[name].value()
 
-          if (!value) {
-            errors[name] = 'Should not be empty';
-          } else {
-            if ('password' === name && value.length < 6) {
-              errors[name] = 'Too short';
-            }
+        if (!value) {
+          errors[name] = 'Should not be empty'
+        } else {
+          if (name === 'password' && value.length < 6) {
+            errors[name] = 'Too short'
           }
-        });
+        }
+      })
 
-      this.setState({ errors });
+      this.setState({ errors })
     }
 
     updateRef(name, ref) {
-      this[name] = ref;
+      this[name] = ref
     }
 
     renderPasswordAccessory() {
-      let { secureTextEntry } = this.state;
+      let { secureTextEntry } = this.state
 
-      let name = secureTextEntry?
-        'visibility':
-        'visibility-off';
+      let name = secureTextEntry ? 'visibility' : 'visibility-off'
 
       return (
         <MaterialIcon
@@ -158,23 +151,23 @@ export default function init() {
           onPress={this.onAccessoryPress}
           suppressHighlighting={true}
         />
-      );
+      )
     }
 
     render() {
-      let { errors = {}, secureTextEntry, ...data } = this.state;
-      let { firstname, lastname } = data;
+      let { errors = {}, secureTextEntry, ...data } = this.state
+      let { firstname, lastname } = data
 
       let defaultEmail = `${firstname || 'name'}@${lastname || 'house'}.com`
         .replace(/\s+/g, '_')
-        .toLowerCase();
+        .toLowerCase()
 
       return (
         <SafeAreaView style={styles.safeContainer}>
           <ScrollView
             style={styles.scroll}
             contentContainerStyle={styles.contentContainer}
-            keyboardShouldPersistTaps='handled'
+            keyboardShouldPersistTaps="handled"
           >
             <View style={styles.container}>
               <TextField
@@ -185,8 +178,8 @@ export default function init() {
                 onFocus={this.onFocus}
                 onChangeText={this.onChangeText}
                 onSubmitEditing={this.onSubmitFirstName}
-                returnKeyType='next'
-                label='First Name'
+                returnKeyType="next"
+                label="First Name"
                 error={errors.firstname}
               />
 
@@ -198,8 +191,8 @@ export default function init() {
                 onFocus={this.onFocus}
                 onChangeText={this.onChangeText}
                 onSubmitEditing={this.onSubmitLastName}
-                returnKeyType='next'
-                label='Last Name'
+                returnKeyType="next"
+                label="Last Name"
                 error={errors.lastname}
               />
 
@@ -209,42 +202,42 @@ export default function init() {
                 onFocus={this.onFocus}
                 onChangeText={this.onChangeText}
                 onSubmitEditing={this.onSubmitAbout}
-                returnKeyType='next'
+                returnKeyType="next"
                 multiline={true}
                 blurOnSubmit={true}
-                label='About (optional)'
+                label="About (optional)"
                 characterRestriction={140}
               />
 
               <TextField
                 ref={this.emailRef}
                 defaultValue={defaultEmail}
-                keyboardType='email-address'
-                autoCapitalize='none'
+                keyboardType="email-address"
+                autoCapitalize="none"
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 onFocus={this.onFocus}
                 onChangeText={this.onChangeText}
                 onSubmitEditing={this.onSubmitEmail}
-                returnKeyType='next'
-                label='Email Address'
+                returnKeyType="next"
+                label="Email Address"
                 error={errors.email}
               />
 
               <TextField
                 ref={this.passwordRef}
                 secureTextEntry={secureTextEntry}
-                autoCapitalize='none'
+                autoCapitalize="none"
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 clearTextOnFocus={true}
                 onFocus={this.onFocus}
                 onChangeText={this.onChangeText}
                 onSubmitEditing={this.onSubmitPassword}
-                returnKeyType='done'
-                label='Password'
+                returnKeyType="done"
+                label="Password"
                 error={errors.password}
-                title='Choose wisely'
+                title="Choose wisely"
                 maxLength={30}
                 characterRestriction={20}
                 renderRightAccessory={this.renderPasswordAccessory}
@@ -253,8 +246,8 @@ export default function init() {
               <TextField
                 ref={this.houseRef}
                 defaultValue={data.lastname}
-                label='House'
-                title='Derived from last name'
+                label="House"
+                title="Derived from last name"
                 disabled={true}
               />
             </View>
@@ -262,16 +255,16 @@ export default function init() {
             <View style={styles.buttonContainer}>
               <RaisedTextButton
                 onPress={this.onSubmit}
-                title='submit'
+                title="submit"
                 color={TextField.defaultProps.tintColor}
-                titleColor='white'
+                titleColor="white"
               />
             </View>
           </ScrollView>
         </SafeAreaView>
-      );
+      )
     }
   }
 
-  AppRegistry.registerComponent('example', () => Example);
+  AppRegistry.registerComponent('example', () => Example)
 }

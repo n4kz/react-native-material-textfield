@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React, { Fragment, PureComponent } from 'react';
-import { View, Animated, I18nManager } from 'react-native';
+import PropTypes from 'prop-types'
+import React, { Fragment, PureComponent } from 'react'
+import { View, Animated, I18nManager } from 'react-native'
 
-import styles, { borderRadius } from './styles';
+import styles, { borderRadius } from './styles'
 
 export default class Line extends PureComponent {
   static defaultProps = {
     lineType: 'solid',
     disabled: false,
     restricted: false,
-  };
+  }
 
   static propTypes = {
     lineType: PropTypes.oneOf(['solid', 'none']),
@@ -33,7 +33,7 @@ export default class Line extends PureComponent {
       left: PropTypes.number,
       right: PropTypes.number,
     }),
-  };
+  }
 
   borderProps() {
     let {
@@ -47,20 +47,20 @@ export default class Line extends PureComponent {
       tintColor,
       errorColor,
       focusAnimation,
-    } = this.props;
+    } = this.props
 
     if (disabled) {
       return {
         borderColor: baseColor,
         borderWidth: disabledLineWidth,
-      };
+      }
     }
 
     if (restricted) {
       return {
         borderColor: errorColor,
         borderWidth: activeLineWidth,
-      };
+      }
     }
 
     return {
@@ -75,62 +75,65 @@ export default class Line extends PureComponent {
       }),
 
       borderStyle: lineType,
-    };
+    }
   }
 
   render() {
-    let { lineType, labelWidth, labelAnimation, contentInset } = this.props;
+    let { lineType, labelWidth, labelAnimation, contentInset } = this.props
 
-    if ('none' === lineType) {
-      return null;
+    if (lineType === 'none') {
+      return null
     }
 
-    let labelOffset = 2 * (contentInset.left - 2 * borderRadius);
-    let lineOffset = Animated.add(labelWidth, labelOffset);
+    let labelOffset = 2 * (contentInset.left - 2 * borderRadius)
+    let lineOffset = Animated.add(labelWidth, labelOffset)
 
     let topLineContainerStyle = {
-      transform: [{
-        scaleX: I18nManager.isRTL? -1 : 1,
-      }, {
-        translateX: Animated.multiply(labelAnimation, lineOffset),
-      }],
-    };
+      transform: [
+        {
+          scaleX: I18nManager.isRTL ? -1 : 1,
+        },
+        {
+          translateX: Animated.multiply(labelAnimation, lineOffset),
+        },
+      ],
+    }
 
     let leftContainerStyle = {
       width: contentInset.left - borderRadius,
-    };
+    }
 
     let rightContainerStyle = {
       width: contentInset.right - borderRadius,
-    };
+    }
 
     let topContainerStyle = {
       left: leftContainerStyle.width,
       right: rightContainerStyle.width,
-    };
+    }
 
-    let lineStyle = this.borderProps();
+    let lineStyle = this.borderProps()
 
     return (
       <Fragment>
-        <View style={[styles.topContainer, topContainerStyle]} pointerEvents='none'>
+        <View style={[styles.topContainer, topContainerStyle]} pointerEvents="none">
           <Animated.View style={[styles.topLineContainer, topLineContainerStyle]}>
             <Animated.View style={[styles.borderTop, lineStyle]} />
           </Animated.View>
         </View>
 
-        <View style={[styles.rightContainer, rightContainerStyle]} pointerEvents='none'>
+        <View style={[styles.rightContainer, rightContainerStyle]} pointerEvents="none">
           <Animated.View style={[styles.borderRight, lineStyle]} />
         </View>
 
-        <View style={styles.bottomContainer} pointerEvents='none'>
+        <View style={styles.bottomContainer} pointerEvents="none">
           <Animated.View style={[styles.borderBottom, lineStyle]} />
         </View>
 
-        <View style={[styles.leftContainer, leftContainerStyle]} pointerEvents='none'>
+        <View style={[styles.leftContainer, leftContainerStyle]} pointerEvents="none">
           <Animated.View style={[styles.borderLeft, lineStyle]} />
         </View>
       </Fragment>
-    );
+    )
   }
 }

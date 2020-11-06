@@ -61,7 +61,7 @@ export default class Label extends PureComponent {
       ...props
     } = this.props
 
-    if (null == label) {
+    if (label == null) {
       return null
     }
 

@@ -1,13 +1,13 @@
-import 'react-native';
-import React from 'react';
-import { Animated } from 'react-native';
-import renderer from 'react-test-renderer';
+import 'react-native'
+import React from 'react'
+import { Animated } from 'react-native'
+import renderer from 'react-test-renderer'
 
-import Helper from '.';
+import Helper from '.'
 
 /* eslint-env jest */
 
-const text = 'helper';
+const text = 'helper'
 const props = {
   title: text,
   fontSize: 16,
@@ -16,35 +16,24 @@ const props = {
   errorColor: 'red',
 
   focusAnimation: new Animated.Value(0),
-};
+}
 
 it('renders helper', () => {
-  let helper = renderer
-    .create(<Helper {...props} />)
-    .toJSON();
+  let helper = renderer.create(<Helper {...props} />).toJSON()
 
-  expect(helper)
-    .toMatchSnapshot();
-});
+  expect(helper).toMatchSnapshot()
+})
 
 it('renders disabled helper', () => {
-  let helper = renderer
-    .create(
-      <Helper {...props} disabled={true} />
-    )
-    .toJSON();
+  let helper = renderer.create(<Helper {...props} disabled={true} />).toJSON()
 
-  expect(helper)
-    .toMatchSnapshot();
-});
+  expect(helper).toMatchSnapshot()
+})
 
 it('renders helper with error', () => {
   let helper = renderer
-    .create(
-      <Helper {...props} error={text} focusAnimation={new Animated.Value(-1)} />
-    )
-    .toJSON();
+    .create(<Helper {...props} error={text} focusAnimation={new Animated.Value(-1)} />)
+    .toJSON()
 
-  expect(helper)
-    .toMatchSnapshot();
-});
+  expect(helper).toMatchSnapshot()
+})

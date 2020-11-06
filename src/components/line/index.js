@@ -1,11 +1,10 @@
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import { View, Animated } from 'react-native';
+import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
+import { View, Animated } from 'react-native'
 
-import styles from './styles';
+import styles from './styles'
 
-const lineTypes = PropTypes
-  .oneOf(['solid', 'dotted', 'dashed', 'none']);
+const lineTypes = PropTypes.oneOf(['solid', 'dotted', 'dashed', 'none'])
 
 export default class Line extends PureComponent {
   static defaultProps = {
@@ -14,7 +13,7 @@ export default class Line extends PureComponent {
 
     disabled: false,
     restricted: false,
-  };
+  }
 
   static propTypes = {
     lineType: lineTypes,
@@ -32,26 +31,21 @@ export default class Line extends PureComponent {
     disabledLineWidth: PropTypes.number,
 
     focusAnimation: PropTypes.instanceOf(Animated.Value),
-  };
-
-  static getDerivedStateFromProps(props, state) {
-    let { lineWidth, activeLineWidth, disabledLineWidth } = props;
-
-    let maxLineWidth = Math.max(
-      lineWidth,
-      activeLineWidth,
-      disabledLineWidth,
-      1,
-    );
-
-    if (maxLineWidth !== state.maxLineWidth) {
-      return { maxLineWidth };
-    }
-
-    return null;
   }
 
-  state = { maxLineWidth: 1 };
+  static getDerivedStateFromProps(props, state) {
+    let { lineWidth, activeLineWidth, disabledLineWidth } = props
+
+    let maxLineWidth = Math.max(lineWidth, activeLineWidth, disabledLineWidth, 1)
+
+    if (maxLineWidth !== state.maxLineWidth) {
+      return { maxLineWidth }
+    }
+
+    return null
+  }
+
+  state = { maxLineWidth: 1 }
 
   borderProps() {
     let {
@@ -64,20 +58,20 @@ export default class Line extends PureComponent {
       tintColor,
       errorColor,
       focusAnimation,
-    } = this.props;
+    } = this.props
 
     if (disabled) {
       return {
         borderColor: baseColor,
         borderWidth: disabledLineWidth,
-      };
+      }
     }
 
     if (restricted) {
       return {
         borderColor: errorColor,
         borderWidth: activeLineWidth,
-      };
+      }
     }
 
     return {
@@ -90,23 +84,20 @@ export default class Line extends PureComponent {
         inputRange: [-1, 0, 1],
         outputRange: [activeLineWidth, lineWidth, activeLineWidth],
       }),
-    };
+    }
   }
 
   render() {
-    let { maxLineWidth } = this.state;
-    let { disabled, lineType, disabledLineType } = this.props;
+    let { maxLineWidth } = this.state
+    let { disabled, lineType, disabledLineType } = this.props
 
-    let borderStyle = disabled?
-      disabledLineType:
-      lineType;
+    let borderStyle = disabled ? disabledLineType : lineType
 
-    if ('none' === borderStyle) {
-      return null;
+    if (borderStyle === 'none') {
+      return null
     }
 
-    let [top, right, left] = Array
-      .from(new Array(3), () => -1.5 * maxLineWidth);
+    let [top, right, left] = Array.from(new Array(3), () => -1.5 * maxLineWidth)
 
     let lineStyle = {
       ...this.borderProps(),
@@ -115,12 +106,12 @@ export default class Line extends PureComponent {
       top,
       right,
       left,
-    };
+    }
 
     return (
-      <View style={styles.container} pointerEvents='none'>
+      <View style={styles.container} pointerEvents="none">
         <Animated.View style={[styles.line, lineStyle]} />
       </View>
-    );
+    )
   }
 }
