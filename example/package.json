@@ -5,18 +5,27 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start"
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "react": "16.8.1",
-    "react-native": "0.61.2",
-    "react-native-material-buttons": "^0.6.0",
-    "react-native-material-textfield": "*",
-    "react-native-vector-icons": "^6.6.0"
+    "react": "16.13.1",
+    "react-native": "0.63.3",
+    "react-native-vector-icons": "^7.1.0",
+    "rn-material-ui-textfield": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/runtime": "^7.5.0",
-    "metro-react-native-babel-preset": "^0.51.1"
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }
