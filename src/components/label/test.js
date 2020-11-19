@@ -1,9 +1,9 @@
-import 'react-native';
-import React from 'react';
-import { Animated } from 'react-native';
-import renderer from 'react-test-renderer';
+import 'react-native'
+import React from 'react'
+import { Animated } from 'react-native'
+import renderer from 'react-test-renderer'
 
-import Label from '.';
+import Label from '.'
 
 /* eslint-env jest */
 
@@ -22,93 +22,71 @@ const props = {
   focusAnimation: new Animated.Value(0),
   labelAnimation: new Animated.Value(0),
   label: 'test',
-};
+}
 
 it('renders label', () => {
-  let label = renderer
-    .create(<Label {...props} />);
+  let label = renderer.create(<Label {...props} />)
 
-  expect(label.toJSON())
-    .toMatchSnapshot();
-});
+  expect(label.toJSON()).toMatchSnapshot()
+})
 
 it('renders empty label', () => {
-  let label = renderer
-    .create(<Label {...props} label={null} />);
+  let label = renderer.create(<Label {...props} label={null} />)
 
-  expect(label.toJSON())
-    .toMatchSnapshot();
-});
+  expect(label.toJSON()).toMatchSnapshot()
+})
 
 it('renders active label', () => {
-  let label = renderer
-    .create(
-      <Label {...props} labelAnimation={new Animated.Value(1)} />
-    );
+  let label = renderer.create(<Label {...props} labelAnimation={new Animated.Value(1)} />)
 
-  expect(label.toJSON())
-    .toMatchSnapshot();
-});
+  expect(label.toJSON()).toMatchSnapshot()
+})
 
 it('renders active focused label', () => {
-  let label = renderer
-    .create(
-      <Label
-        {...props}
-        labelAnimation={new Animated.Value(1)}
-        focusAnimation={new Animated.Value(1)}
-      />
-    );
+  let label = renderer.create(
+    <Label
+      {...props}
+      labelAnimation={new Animated.Value(1)}
+      focusAnimation={new Animated.Value(1)}
+    />
+  )
 
-  expect(label.toJSON())
-    .toMatchSnapshot();
-});
+  expect(label.toJSON()).toMatchSnapshot()
+})
 
 it('renders errored label', () => {
-  let label = renderer
-    .create(
-      <Label
-        {...props}
-        labelAnimation={new Animated.Value(0)}
-        focusAnimation={new Animated.Value(-1)}
-      />
-    );
+  let label = renderer.create(
+    <Label
+      {...props}
+      labelAnimation={new Animated.Value(0)}
+      focusAnimation={new Animated.Value(-1)}
+    />
+  )
 
-  expect(label.toJSON())
-    .toMatchSnapshot();
-});
+  expect(label.toJSON()).toMatchSnapshot()
+})
 
 it('renders active errored label', () => {
-  let label = renderer
-    .create(
-      <Label
-        {...props}
-        labelAnimation={new Animated.Value(1)}
-        focusAnimation={new Animated.Value(-1)}
-      />
-    );
+  let label = renderer.create(
+    <Label
+      {...props}
+      labelAnimation={new Animated.Value(1)}
+      focusAnimation={new Animated.Value(-1)}
+    />
+  )
 
-  expect(label.toJSON())
-    .toMatchSnapshot();
-});
+  expect(label.toJSON()).toMatchSnapshot()
+})
 
 it('renders restricted label', () => {
-  let label = renderer
-    .create(
-      <Label restricted={true} {...props} />
-    );
+  let label = renderer.create(<Label restricted={true} {...props} />)
 
-  expect(label.toJSON())
-    .toMatchSnapshot();
-});
+  expect(label.toJSON()).toMatchSnapshot()
+})
 
 it('renders styled label', () => {
-  let style = { textTransform: 'uppercase' };
-  let label = renderer
-    .create(
-      <Label style={style} {...props} />
-    );
+  let style = { textTransform: 'uppercase' }
+  let label = renderer.create(<Label style={style} {...props} />)
 
-  expect(label.toJSON())
-    .toMatchSnapshot();
-});
+  expect(label.toJSON()).toMatchSnapshot()
+})
