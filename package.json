@@ -1,12 +1,12 @@
 {
   "name": "rn-material-ui-textfield",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "BSD-3-Clause",
   "contributors": [
     "Gabriel Donadel Dall'Agnol <gabrieldallagnol@outlook.com>",
     "Alexander Nazarov <n4kz@n4kz.com>"
   ],
-  "description": "Material textfield",
+  "description": "Material UI textfield",
   "scripts": {
     "test": "eslint index.js src && jest --silent",
     "lint": "eslint index.js src example/app.js",
@@ -19,6 +19,7 @@
     "ios",
     "android",
     "material",
+    "material-ui",
     "input",
     "textinput",
     "field",
@@ -31,7 +32,7 @@
     "index.js",
     "src/*",
     "license.txt",
-    "readme.md",
+    "README.md",
     "changelog.md"
   ],
   "repository": {
