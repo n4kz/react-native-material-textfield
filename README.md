@@ -36,7 +36,7 @@ Material UI texfield with consistent behaviour on iOS and Android
 
 ```bash
 yarn add rn-material-ui-textfield
-npm install react-native-ticker
+npm install rn-material-ui-textfield
 ```
 
 ## Usage
