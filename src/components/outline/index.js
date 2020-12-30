@@ -86,7 +86,7 @@ export default class Line extends PureComponent {
     }
 
     let labelOffset = 2 * (contentInset.left - 2 * borderRadius);
-    let lineOffset = Animated.add(labelWidth, labelOffset);
+    let lineOffset = Animated.add(labelWidth, labelWidth._value ? labelOffset : 0);
 
     let topLineContainerStyle = {
       transform: [{
