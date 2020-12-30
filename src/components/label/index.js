@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import { Animated, Text } from 'react-native';
 
 import styles from './styles';
 
@@ -43,14 +43,14 @@ export default class Label extends PureComponent {
       y1: PropTypes.number,
     }),
 
-    style: Animated.Text.propTypes.style,
-    label: PropTypes.string,
+    style: Text.propTypes.style,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   };
 
   render() {
     let {
       label,
-      offset,
+      offset = {},
       disabled,
       restricted,
       fontSize,
@@ -84,14 +84,23 @@ export default class Label extends PureComponent {
       color,
     };
 
-    let { x0, y0, x1, y1 } = offset;
+    let { x0 = 0, x1 = 0, y0 = 0, y1 = 0 } = offset;
 
     y0 += activeFontSize;
     y0 += contentInset.label;
     y0 += fontSize * 0.25;
 
+    let xScaleCompensation = this.state?.layout?.width
+        ? ((this.state.layout.width - this.state.layout.width * activeFontSize / fontSize) / 2)
+        : 0;
+
     let containerStyle = {
       transform: [{
+        translateX: labelAnimation.interpolate({
+          inputRange: [0, 1],
+          outputRange: [x0, -xScaleCompensation],
+        }),
+      },{
         scale: labelAnimation.interpolate({
           inputRange: [0, 1],
           outputRange: [1, activeFontSize / fontSize],
@@ -101,16 +110,11 @@ export default class Label extends PureComponent {
           inputRange: [0, 1],
           outputRange: [y0, y1],
         }),
-      }, {
-        translateX: labelAnimation.interpolate({
-          inputRange: [0, 1],
-          outputRange: [x0, x1],
-        }),
       }],
     };
 
     return (
-      <Animated.View style={[styles.container, containerStyle]}>
+      <Animated.View onLayout={(e) => { this.setState({ layout: e.nativeEvent.layout }) }} style={containerStyle}>
         <Animated.Text style={[styles.text, style, textStyle]} {...props}>
           {label}
         </Animated.Text>

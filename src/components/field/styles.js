@@ -22,6 +22,7 @@ export default StyleSheet.create({
   },
 
   helperContainer: {
+    minHeight: 8,
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'flex-start',

@@ -69,6 +69,7 @@ export default class TextField extends PureComponent {
     ...TextInput.propTypes,
 
     animationDuration: PropTypes.number,
+    animationOffset: PropTypes.number,
 
     fontSize: PropTypes.number,
     labelFontSize: PropTypes.number,
@@ -79,7 +80,6 @@ export default class TextField extends PureComponent {
       input: PropTypes.number,
       left: PropTypes.number,
       right: PropTypes.number,
-      bottom: PropTypes.number,
     }),
 
     labelOffset: Label.propTypes.offset,
@@ -92,7 +92,7 @@ export default class TextField extends PureComponent {
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
 
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     title: PropTypes.string,
 
     characterRestriction: PropTypes.number,
@@ -111,8 +111,8 @@ export default class TextField extends PureComponent {
 
     formatText: PropTypes.func,
 
-    renderLeftAccessory: PropTypes.func,
-    renderRightAccessory: PropTypes.func,
+    renderLeftAccessory: PropTypes.oneOfType([PropTypes.func, PropTypes.boolean]),
+    renderRightAccessory: PropTypes.oneOfType([PropTypes.func, PropTypes.boolean]),
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,
@@ -129,7 +129,6 @@ export default class TextField extends PureComponent {
     input: 8,
     left: 0,
     right: 0,
-    bottom: 8,
   };
 
   static labelOffset = {
@@ -139,13 +138,18 @@ export default class TextField extends PureComponent {
     y1: 0,
   };
 
-  static getDerivedStateFromProps({ error }, state) {
+  static getDerivedStateFromProps({ error, value }, state) {
+    let update = {};
     /* Keep last received error in state */
     if (error && error !== state.error) {
-      return { error };
+      update.error = error;
+    }
+    /* Keep last value in state */
+    if (value !== state.text) {
+      update.text = value;
     }
 
-    return null;
+    return update;
   }
 
   constructor(props) {
@@ -224,6 +228,7 @@ export default class TextField extends PureComponent {
     let options = {
       toValue: this.focusState(),
       duration,
+      useNativeDriver: false,
     };
 
     startAnimation(focusAnimation, options, this.onFocusAnimationEnd);
@@ -493,13 +498,14 @@ export default class TextField extends PureComponent {
   }
 
   renderLabel(props) {
-    let offset = this.labelOffset();
 
     let {
       label,
       fontSize,
       labelFontSize,
       labelTextStyle,
+      animationOffset,
+      halfWidth,
     } = this.props;
 
     return (
@@ -507,7 +513,6 @@ export default class TextField extends PureComponent {
         {...props}
         fontSize={fontSize}
         activeFontSize={labelFontSize}
-        offset={offset}
         label={label}
         style={labelTextStyle}
       />
@@ -520,12 +525,18 @@ export default class TextField extends PureComponent {
     );
   }
 
-  renderAccessory(prop) {
-    let { [prop]: renderAccessory } = this.props;
+  renderAccessory() {
+    let { renderAccessory } = this.props;
 
-    return 'function' === typeof renderAccessory?
-      renderAccessory():
-      null;
+    if ('function' !== typeof renderAccessory) {
+      return null;
+    }
+
+    return (
+      <View style={styles.accessory}>
+        {renderAccessory()}
+      </View>
+    );
   }
 
   renderAffix(type) {
@@ -572,7 +583,6 @@ export default class TextField extends PureComponent {
     let containerStyle =  {
       paddingLeft: contentInset.left,
       paddingRight: contentInset.right,
-      minHeight: contentInset.bottom,
     };
 
     let styleProps = {
@@ -647,6 +657,8 @@ export default class TextField extends PureComponent {
       baseColor,
       errorColor,
       containerStyle,
+      renderLeftAccessory,
+      renderRightAccessory,
       inputContainerStyle: inputContainerStyleOverrides,
     } = this.props;
 
@@ -706,7 +718,7 @@ export default class TextField extends PureComponent {
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
           {this.renderLine(lineProps)}
-          {this.renderAccessory('renderLeftAccessory')}
+          {renderLeftAccessory ? this.renderAccessory('renderLeftAccessory') : null}
 
           <View style={styles.stack}>
             {this.renderLabel(styleProps)}
@@ -718,7 +730,7 @@ export default class TextField extends PureComponent {
             </View>
           </View>
 
-          {this.renderAccessory('renderRightAccessory')}
+          {renderRightAccessory ? this.renderAccessory('renderRightAccessory'): null}
         </Animated.View>
 
         {this.renderHelper()}
