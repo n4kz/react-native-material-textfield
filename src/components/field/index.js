@@ -19,7 +19,8 @@ import Counter from "../counter";
 import styles from "./styles";
 
 function startAnimation(animation, options, callback) {
-  Animated.timing(animation, options).start(callback);
+  let withoutNativeDriver = {useNativeDriver: false, ...options};
+  Animated.timing(animation, withoutNativeDriver).start(callback);
 }
 
 function labelStateFromProps(props, state) {
