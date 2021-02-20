@@ -100,7 +100,7 @@ export default class Label extends PureComponent {
         inputRange: [0, 1],
         outputRange: [fontSize, activeFontSize],
       }),
-      fontFamily: 'Lato-Regular',
+      fontFamily: 'SFProText-Regular',
       color,
     };
 

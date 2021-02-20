@@ -12,7 +12,7 @@ export default StyleSheet.create({
     padding: 0,
     margin: 0,
     flex: 1,
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'SFProText-Regular',
   },
 
   row: {

@@ -8,6 +8,6 @@ export default StyleSheet.create({
     right: -1.5,
     bottom: 0,
     borderWidth: 1,
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'SFProText-Regular',
   },
 });
