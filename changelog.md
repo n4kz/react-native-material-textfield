@@ -1,3 +1,33 @@
+## [1.0.3](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.3) (2021-04-03)
+
+
+### Bug Fixes
+
+* TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
+* TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
+
+
+
+## [1.0.3](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.3) (2021-04-03)
+
+
+### Bug Fixes
+
+* TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
+* TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
+
+
+
+## [1.0.3](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.3) (2021-04-03)
+
+
+### Bug Fixes
+
+* TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
+* TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
+
+
+
 ## [1.0.2](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.2) (2020-12-09)
 
 
