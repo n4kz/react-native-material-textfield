@@ -157,7 +157,7 @@ export default class TextField extends PureComponent {
     this.createGetter('contentInset')
     this.createGetter('labelOffset')
 
-    this.inputRef = React.createRef()
+    this.inputRef = this.props.inputRef ?? React.createRef()
     this.mounted = false
     this.focused = false
 
