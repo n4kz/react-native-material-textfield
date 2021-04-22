@@ -1,41 +1,35 @@
-## [1.0.3](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.3) (2021-04-03)
+## [1.0.4](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.3...v1.0.4) (2021-04-22)
 
+### Features
 
-### Bug Fixes
-
-* TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
-* TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
-
-
+- Add `inputRef` prop to TextField component
 
 ## [1.0.3](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.3) (2021-04-03)
 
-
 ### Bug Fixes
 
-* TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
-* TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
-
-
+- TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
+- TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
 
 ## [1.0.3](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.3) (2021-04-03)
 
+### Bug Fixes
+
+- TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
+- TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
+
+## [1.0.3](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.3) (2021-04-03)
 
 ### Bug Fixes
 
-* TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
-* TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
-
-
+- TextField not updating if value prop undefined ([906e002](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/906e0025c4da0c459865e50bf87fad19baa4d469))
+- TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
 
 ## [1.0.2](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.1...v1.0.2) (2020-12-09)
 
-
 ### Bug Fixes
 
-* TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
-
-
+- TextField value prop not updating internal text state ([b28dead](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/b28dead90dcd21acc2249a7eb221a7b3f66ed116))
 
 # Changelog
 
@@ -168,7 +162,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `inputContainerStyle` prop
 - `disabledLineType` prop
 
-[Unreleased]: https://github.com/n4kz/react-native-material-textfield/compare/0.16.0...HEAD
+[unreleased]: https://github.com/n4kz/react-native-material-textfield/compare/0.16.0...HEAD
 [0.16.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.15.0...0.16.0
 [0.15.0]: https://github.com/n4kz/react-native-material-textfield/compare/0.14.1...0.15.0
 [0.14.1]: https://github.com/n4kz/react-native-material-textfield/compare/0.14.0...0.14.1
