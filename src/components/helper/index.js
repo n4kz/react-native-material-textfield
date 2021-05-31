@@ -43,7 +43,8 @@ export default class Helper extends PureComponent {
       .addListener(this.onAnimation.bind(this));
   }
   componentDidUpdate(prevProps, prevState) {
-    this.setState({ errored: !! this.props.error})
+    
+    this.setState({ errored: !! this.props.error });
   }
 
   componentWillUnmount() {
@@ -54,11 +55,20 @@ export default class Helper extends PureComponent {
 
   onAnimation({ value }) {
     if (this.animationValue > -0.5 && value <= -0.5) {
-      this.setState({ errored: true });
+      this.
+      
+      
+      
+      
+      
+      
+      ({ errored: true });
     }
 
     if (this.animationValue < -0.5 && value >= -0.5) {
-      this.setState({ errored: false });
+      this.
+      
+      ({ errored: false });
     }
 
     this.animationValue = value;
