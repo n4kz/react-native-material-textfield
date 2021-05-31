@@ -42,11 +42,12 @@ export default class Helper extends PureComponent {
     this.listener = focusAnimation
       .addListener(this.onAnimation.bind(this));
   }
-  componentDidUpdate(prevProps, prevState) {
-    
-    this.setState({ errored: !! this.props.error });
-  }
 
+  componentDidUpdate(prevProps, prevState) {
+
+    this.setState({ errored: !!this.props.error });
+  }
+  
   componentWillUnmount() {
     let { focusAnimation } = this.props;
 
@@ -55,20 +56,11 @@ export default class Helper extends PureComponent {
 
   onAnimation({ value }) {
     if (this.animationValue > -0.5 && value <= -0.5) {
-      this.
-      
-      
-      
-      
-      
-      
-      ({ errored: true });
+      this.setState({ errored: true });
     }
 
     if (this.animationValue < -0.5 && value >= -0.5) {
-      this.
-      
-      ({ errored: false });
+      this.setState({ errored: false });
     }
 
     this.animationValue = value;
