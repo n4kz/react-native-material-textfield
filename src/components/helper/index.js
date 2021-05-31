@@ -42,6 +42,9 @@ export default class Helper extends PureComponent {
     this.listener = focusAnimation
       .addListener(this.onAnimation.bind(this));
   }
+  componentDidUpdate(prevProps, prevState) {
+    this.setState({ errored: !! this.props.error})
+  }
 
   componentWillUnmount() {
     let { focusAnimation } = this.props;
