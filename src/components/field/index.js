@@ -609,6 +609,7 @@ export default class TextField extends PureComponent {
       editable,
       tintColor,
       style: inputStyleOverrides,
+      textInputStyle,
     } = this.props;
 
     let props = this.inputProps();
@@ -620,7 +621,7 @@ export default class TextField extends PureComponent {
 
         {...props}
 
-        style={[styles.input, inputStyle, inputStyleOverrides]}
+        style={[styles.input, inputStyle, inputStyleOverrides, textInputStyle]}
         editable={!disabled && editable}
         onChange={this.onChange}
         onChangeText={this.onChangeText}
