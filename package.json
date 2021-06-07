@@ -1,5 +1,5 @@
 {
-  "name": "react-native-material-textfield",
+  "name": "@anasmasood94/react-native-material-textfield",
   "version": "0.16.1",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
@@ -25,7 +25,7 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/n4kz/react-native-material-textfield.git"
+    "url": "git://github.com/anasmasood94/react-native-material-textfield.git"
   },
 
   "dependencies": {
