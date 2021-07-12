@@ -630,7 +630,7 @@ export default class TextField extends PureComponent {
       style: containerStyle,
       onStartShouldSetResponder: () => true,
       onResponderRelease: this.onPress,
-      pointerEvents: !disabled && editable ? 'auto' : 'none',
+      pointerEvents: !disabled ? 'auto' : 'none',
     }
 
     let inputContainerProps = {
@@ -670,7 +670,7 @@ export default class TextField extends PureComponent {
         <Animated.View {...inputContainerProps}>
           {this.renderLine(lineProps)}
           {this.renderAccessory('renderLeftAccessory')}
-          <View style={styles.stack}>
+          <View style={styles.stack} pointerEvents={editable ? 'auto' : 'none'}>
             {this.renderLabel(styleProps)}
             <View style={styles.row}>
               {this.renderAffix('prefix')}
