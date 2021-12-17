@@ -45,6 +45,7 @@ export interface TextFieldProps extends TextInputProps {
 
   error?: string;
   errorColor?: string;
+  errortTestId?: string;
 
   lineWidth?: number;
   activeLineWidth?: number;

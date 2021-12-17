@@ -99,6 +99,7 @@ class Example extends Component {
  suffix                | Text field suffix text                      |   String | -
  error                 | Text field error text                       |   String | -
  errorColor            | Text field color for errored state          |   String | rgb(213, 0, 0)
+ errorTestId           | Text field error testID                     |   String | -
  lineType              | Text field line type                        |   String | solid
  disabledLineType      | Text field line type in disabled state      |   String | dotted
  animationDuration     | Text field animation duration in ms         |   Number | 225

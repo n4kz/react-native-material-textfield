@@ -99,6 +99,7 @@ export default class TextField extends PureComponent {
 
     error: PropTypes.string,
     errorColor: PropTypes.string,
+    errorTestId: PropTypes.string,
 
     lineWidth: PropTypes.number,
     activeLineWidth: PropTypes.number,
@@ -573,6 +574,7 @@ export default class TextField extends PureComponent {
       disabled,
       baseColor,
       errorColor,
+      errorTestId,
       titleTextStyle: style,
       characterRestriction: limit,
     } = this.props;
@@ -601,6 +603,7 @@ export default class TextField extends PureComponent {
       ...styleProps,
       title,
       error,
+      testId: errorTestId,
       disabled,
       focusAnimation,
     };
