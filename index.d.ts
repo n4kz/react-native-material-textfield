@@ -19,6 +19,8 @@ export interface ContentInset {
   top?: number;
   label?: number;
   input?: number;
+  left?: number;
+  right?: number;
 }
 
 export interface TextFieldProps extends TextInputProps {
@@ -67,6 +69,8 @@ export interface TextFieldProps extends TextInputProps {
 
   renderLeftAccessory?(): JSX.Element | boolean;
   renderRightAccessory?(): JSX.Element | boolean;
+
+  disableLabelAnimation?: boolean;
 
   lineType?: 'solid' | 'dotted' | 'dashed' | 'none';
   disabledLineType?: 'solid' | 'dotted' | 'dashed' | 'none';

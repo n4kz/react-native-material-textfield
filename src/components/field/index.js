@@ -25,10 +25,10 @@ function startAnimation(animation, options, callback) {
 }
 
 function labelStateFromProps(props, state) {
-  let { placeholder, defaultValue } = props;
+  let { placeholder, defaultValue, disableLabelAnimation } = props;
   let { text, receivedFocus } = state;
 
-  return !!(placeholder || text || (!receivedFocus && defaultValue));
+  return !!(placeholder || text || (!receivedFocus && defaultValue) || disableLabelAnimation);
 }
 
 function errorStateFromProps(props, state) {
@@ -124,13 +124,20 @@ export default class TextField extends PureComponent {
 
   static inputContainerStyle = styles.inputContainer;
 
-  static contentInset = {
+  static _contentInset = {
     top: 16,
     label: 4,
     input: 8,
     left: 0,
     right: 0,
   };
+
+  contentInset() {
+    return {
+      ...TextField._contentInset,
+      ...(this.props.contentInset || {}),
+    }
+  }
 
   static labelOffset = {
     x0: 0,
@@ -164,7 +171,6 @@ export default class TextField extends PureComponent {
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
     this.onFocusAnimationEnd = this.onFocusAnimationEnd.bind(this);
 
-    this.createGetter('contentInset');
     this.createGetter('labelOffset');
 
     this.inputRef = React.createRef();
@@ -237,7 +243,11 @@ export default class TextField extends PureComponent {
 
   startLabelAnimation() {
     let { labelAnimation } = this.state;
-    let { animationDuration: duration } = this.props;
+    let { animationDuration: duration, disableLabelAnimation } = this.props;
+
+    if (disableLabelAnimation) {
+      return;
+    }
 
     let options = {
       toValue: this.labelState(),
