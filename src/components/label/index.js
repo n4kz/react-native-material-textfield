@@ -75,7 +75,7 @@ export default class Label extends PureComponent {
         })
 
     let textStyle = {
-      lineHeight: fontSize,
+      lineHeight: (style && style.lineHeight) || fontSize,
       fontSize,
       color,
     }
