@@ -1,3 +1,9 @@
+## [1.0.6](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.4...v1.0.6) (2022-03-04)
+
+### Bug Fixes
+
+- Fix line-height glitch on TextField's label([681265f](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/681265f))
+
 ## [1.0.5](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.4...v1.0.5) (2021-07-18)
 
 ### Features
