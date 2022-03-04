@@ -1,3 +1,9 @@
+## [1.0.5](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.4...v1.0.5) (2021-07-18)
+
+### Features
+
+- Allow pressing on accessories if input not disabled ([0cc7053](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/0cc7053605059b36af78c3fda555d9bd3f8e81be))
+
 ## [1.0.4](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.3...v1.0.4) (2021-04-22)
 
 ### Features
