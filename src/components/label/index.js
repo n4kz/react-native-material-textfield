@@ -11,42 +11,6 @@ export default class Label extends PureComponent {
     restricted: false,
   };
 
-  static propTypes = {
-    numberOfLines: PropTypes.number,
-
-    disabled: PropTypes.bool,
-    restricted: PropTypes.bool,
-
-    fontSize: PropTypes.number.isRequired,
-    activeFontSize: PropTypes.number.isRequired,
-
-    baseColor: PropTypes.string.isRequired,
-    tintColor: PropTypes.string.isRequired,
-    errorColor: PropTypes.string.isRequired,
-
-    focusAnimation: PropTypes
-      .instanceOf(Animated.Value)
-      .isRequired,
-
-    labelAnimation: PropTypes
-      .instanceOf(Animated.Value)
-      .isRequired,
-
-    contentInset: PropTypes.shape({
-      label: PropTypes.number,
-    }),
-
-    offset: PropTypes.shape({
-      x0: PropTypes.number,
-      y0: PropTypes.number,
-      x1: PropTypes.number,
-      y1: PropTypes.number,
-    }),
-
-    style: Animated.Text.propTypes.style,
-    label: PropTypes.string,
-  };
-
   render() {
     let {
       label,

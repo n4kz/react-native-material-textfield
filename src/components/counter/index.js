@@ -5,15 +5,6 @@ import { Text } from 'react-native';
 import styles from './styles';
 
 export default class Counter extends PureComponent {
-  static propTypes = {
-    count: PropTypes.number.isRequired,
-    limit: PropTypes.number,
-
-    baseColor: PropTypes.string.isRequired,
-    errorColor: PropTypes.string.isRequired,
-
-    style: Text.propTypes.style,
-  };
 
   render() {
     let { count, limit, baseColor, errorColor, style } = this.props;

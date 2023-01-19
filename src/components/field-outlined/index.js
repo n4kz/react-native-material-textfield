@@ -33,7 +33,7 @@ export default class OutlinedTextField extends TextField {
     super(props);
 
     this.onTextLayout = this.onTextLayout.bind(this);
-    this.state.labelWidth = new Animated.Value(0);
+    this.state.labelWidth = new Animated.Value(0,{useNativeDriver: true});
   }
 
   onTextLayout({ nativeEvent: { lines } }) {

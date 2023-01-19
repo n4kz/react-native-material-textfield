@@ -5,20 +5,6 @@ import { Animated } from 'react-native';
 import styles from './styles';
 
 export default class Helper extends PureComponent {
-  static propTypes = {
-    title: PropTypes.string,
-    error: PropTypes.string,
-
-    disabled: PropTypes.bool,
-
-    style: Animated.Text.propTypes.style,
-
-    baseColor: PropTypes.string,
-    errorColor: PropTypes.string,
-
-    focusAnimation: PropTypes.instanceOf(Animated.Value),
-  };
-
   constructor(props) {
     super(props);
 
