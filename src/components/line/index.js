@@ -16,24 +16,6 @@ export default class Line extends PureComponent {
     restricted: false,
   };
 
-  static propTypes = {
-    lineType: lineTypes,
-    disabledLineType: lineTypes,
-
-    disabled: PropTypes.bool,
-    restricted: PropTypes.bool,
-
-    tintColor: PropTypes.string,
-    baseColor: PropTypes.string,
-    errorColor: PropTypes.string,
-
-    lineWidth: PropTypes.number,
-    activeLineWidth: PropTypes.number,
-    disabledLineWidth: PropTypes.number,
-
-    focusAnimation: PropTypes.instanceOf(Animated.Value),
-  };
-
   static getDerivedStateFromProps(props, state) {
     let { lineWidth, activeLineWidth, disabledLineWidth } = props;
 

@@ -65,61 +65,61 @@ export default class TextField extends PureComponent {
     disabled: false,
   };
 
-  static propTypes = {
-    ...TextInput.propTypes,
+  // static propTypes = {
+  //   ...TextInput.propTypes,
 
-    animationDuration: PropTypes.number,
+  //   animationDuration: PropTypes.number,
 
-    fontSize: PropTypes.number,
-    labelFontSize: PropTypes.number,
+  //   fontSize: PropTypes.number,
+  //   labelFontSize: PropTypes.number,
 
-    contentInset: PropTypes.shape({
-      top: PropTypes.number,
-      label: PropTypes.number,
-      input: PropTypes.number,
-      left: PropTypes.number,
-      right: PropTypes.number,
-      bottom: PropTypes.number,
-    }),
+  //   contentInset: PropTypes.shape({
+  //     top: PropTypes.number,
+  //     label: PropTypes.number,
+  //     input: PropTypes.number,
+  //     left: PropTypes.number,
+  //     right: PropTypes.number,
+  //     bottom: PropTypes.number,
+  //   }),
 
-    labelOffset: Label.propTypes.offset,
+  //   labelOffset: Label.propTypes.offset,
 
-    labelTextStyle: Text.propTypes.style,
-    titleTextStyle: Text.propTypes.style,
-    affixTextStyle: Text.propTypes.style,
+  //   labelTextStyle: Text.propTypes.style,
+  //   titleTextStyle: Text.propTypes.style,
+  //   affixTextStyle: Text.propTypes.style,
 
-    tintColor: PropTypes.string,
-    textColor: PropTypes.string,
-    baseColor: PropTypes.string,
+  //   tintColor: PropTypes.string,
+  //   textColor: PropTypes.string,
+  //   baseColor: PropTypes.string,
 
-    label: PropTypes.string,
-    title: PropTypes.string,
+  //   label: PropTypes.string,
+  //   title: PropTypes.string,
 
-    characterRestriction: PropTypes.number,
+  //   characterRestriction: PropTypes.number,
 
-    error: PropTypes.string,
-    errorColor: PropTypes.string,
+  //   error: PropTypes.string,
+  //   errorColor: PropTypes.string,
 
-    lineWidth: PropTypes.number,
-    activeLineWidth: PropTypes.number,
-    disabledLineWidth: PropTypes.number,
+  //   lineWidth: PropTypes.number,
+  //   activeLineWidth: PropTypes.number,
+  //   disabledLineWidth: PropTypes.number,
 
-    lineType: Line.propTypes.lineType,
-    disabledLineType: Line.propTypes.lineType,
+  //   lineType: Line.propTypes.lineType,
+  //   disabledLineType: Line.propTypes.lineType,
 
-    disabled: PropTypes.bool,
+  //   disabled: PropTypes.bool,
 
-    formatText: PropTypes.func,
+  //   formatText: PropTypes.func,
 
-    renderLeftAccessory: PropTypes.func,
-    renderRightAccessory: PropTypes.func,
+  //   renderLeftAccessory: PropTypes.func,
+  //   renderRightAccessory: PropTypes.func,
 
-    prefix: PropTypes.string,
-    suffix: PropTypes.string,
+  //   prefix: PropTypes.string,
+  //   suffix: PropTypes.string,
 
-    containerStyle: (ViewPropTypes || View.propTypes).style,
-    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
-  };
+  //   containerStyle: (ViewPropTypes || View.propTypes).style,
+  //   inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+  // };
 
   static inputContainerStyle = styles.inputContainer;
 
@@ -175,8 +175,8 @@ export default class TextField extends PureComponent {
       text,
       error,
 
-      focusAnimation: new Animated.Value(focusState),
-      labelAnimation: new Animated.Value(labelState),
+      focusAnimation: new Animated.Value(focusState,{useNativeDriver: false}),
+      labelAnimation: new Animated.Value(labelState, {useNativeDriver: false}),
 
       receivedFocus: false,
 
@@ -223,6 +223,7 @@ export default class TextField extends PureComponent {
 
     let options = {
       toValue: this.focusState(),
+      useNativeDriver: false,
       duration,
     };
 

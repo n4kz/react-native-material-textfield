@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { Fragment, PureComponent } from 'react';
 import { View, Animated, I18nManager } from 'react-native';
 
@@ -9,30 +8,6 @@ export default class Line extends PureComponent {
     lineType: 'solid',
     disabled: false,
     restricted: false,
-  };
-
-  static propTypes = {
-    lineType: PropTypes.oneOf(['solid', 'none']),
-
-    disabled: PropTypes.bool,
-    restricted: PropTypes.bool,
-
-    tintColor: PropTypes.string,
-    baseColor: PropTypes.string,
-    errorColor: PropTypes.string,
-
-    lineWidth: PropTypes.number,
-    activeLineWidth: PropTypes.number,
-    disabledLineWidth: PropTypes.number,
-
-    focusAnimation: PropTypes.instanceOf(Animated.Value),
-    labelAnimation: PropTypes.instanceOf(Animated.Value),
-    labelWidth: PropTypes.instanceOf(Animated.Value),
-
-    contentInset: PropTypes.shape({
-      left: PropTypes.number,
-      right: PropTypes.number,
-    }),
   };
 
   borderProps() {
@@ -87,10 +62,10 @@ export default class Line extends PureComponent {
 
     let labelOffset = 2 * (contentInset.left - 2 * borderRadius);
     let lineOffset = Animated.add(labelWidth, labelOffset);
-
+    
     let topLineContainerStyle = {
       transform: [{
-        scaleX: I18nManager.isRTL? -1 : 1,
+        scaleX: I18nManager.isRTL ? -1 : 1,
       }, {
         translateX: Animated.multiply(labelAnimation, lineOffset),
       }],

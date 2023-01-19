@@ -17,6 +17,8 @@
 [![travis][travis-badge]][travis-url]
 [![codeclimate][codeclimate-badge]][codeclimate-url]
 
+This is fork from react-native-material-textfield it has solved issues of proptypes and native driver warning 
+
 Material texfield with consistent behaviour on iOS and Android
 
 ![example][example-url]
@@ -41,7 +43,12 @@ Material texfield with consistent behaviour on iOS and Android
 ## Installation
 
 ```bash
-npm install --save react-native-material-textfield
+npm install Uzef1997/react-native-material-textfield
+```
+To use it with typescript 
+
+```bash
+npm install @types/react-native-material-textfield
 ```
 
 ## Usage
