@@ -45,6 +45,11 @@ Material texfield with consistent behaviour on iOS and Android
 ```bash
 npm install --save react-native-material-textfield
 ```
+To use it with typescript 
+
+```bash
+npm install @types/react-native-material-textfield
+```
 
 ## Usage
 
