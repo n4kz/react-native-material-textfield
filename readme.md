@@ -17,6 +17,8 @@
 [![travis][travis-badge]][travis-url]
 [![codeclimate][codeclimate-badge]][codeclimate-url]
 
+This is fork from react-native-material-textfield it has solved issues of proptypes and native driver warning 
+
 Material texfield with consistent behaviour on iOS and Android
 
 ![example][example-url]
